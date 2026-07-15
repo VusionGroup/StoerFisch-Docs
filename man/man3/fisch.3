@@ -1,0 +1,119 @@
+.TH "fisch" 3 "StoerFisch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fisch
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBActuatorStatePayload\fP"
+.br
+.RI "Payload für #6 (ActuatorState): Zustand des Jammers zum Zeitpunkt der Änderung -- Basis für die Tracking-Genauigkeit (Korrelation c) und die Leistungs-/Wirkungs-Kurve (Korrelation d)\&. "
+.ti -1c
+.RI "struct \fBBufferHealthPayload\fP"
+.br
+.RI "Payload für #8 (BufferHealth): Validitätsprüfung der Messung\&. Wird gebraucht, um Latenz-Ausreißer als Messartefakt vs\&. echtes Reglerverhalten zu unterscheiden (siehe Korrelation e)\&. "
+.ti -1c
+.RI "struct \fBChannelOccupancyPayload\fP"
+.br
+.RI "Payload für #2 (ChannelOccupancy): Snapshot aller 40 BLE-Kanäle in einem Record statt 40 Einzel-Records pro Sweep\&. "
+.ti -1c
+.RI "struct \fBControllerStatePayload\fP"
+.br
+.RI "Payload für #5 (ControllerState): Fehlersignal des Regelkreises (siehe Korrelation f) -- Soll/Ist-Abweichung, State-Machine- Zustand und die daraus abgeleitete Entscheidung\&. "
+.ti -1c
+.RI "struct \fBDetectionEventPayload\fP"
+.br
+.RI "Payload für #3 (DetectionEvent): einzelnes sporadisches Ereignis, z\&.B\&. 'Advertising auf CH37'\&. Zeitstempel liegt bereits im umgebenden \fBTelemetryRecord\fP, nicht nochmal hier\&. "
+.ti -1c
+.RI "struct \fBLatencyTimestampsPayload\fP"
+.br
+.RI "Payload für #4 (LatencyTimestamps)\&. Alle Zeitstempel in Nanosekunden seit CLOCK_MONOTONIC, damit Drift durch Systemzeit-Sprünge ausgeschlossen ist\&. "
+.ti -1c
+.RI "struct \fBRingHeader\fP"
+.br
+.RI "Kopfdaten des Ringpuffers, liegen am Anfang des Shared-Memory- Segments\&. Enthält Metadaten zur Validierung sowie die Producer-/Consumer-Indizes\&. "
+.ti -1c
+.RI "struct \fBSuccessMetricPayload\fP"
+.br
+.RI "Payload für #7 (SuccessMetric): Restenergie/SNR auf dem Zielkanal während aktiver Störung -- die eigentliche Robustheits-Kennzahl des Prüfstands\&. "
+.ti -1c
+.RI "struct \fBTelemetryRecord\fP"
+.br
+.RI "Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über \fCtype\fP\&. "
+.ti -1c
+.RI "class \fBTelemetryRing\fP"
+.br
+.RI "SPSC-Ringpuffer-Producer für Telemetrie-Records\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBRecordType\fP : std::uint32_t { \fBChannelOccupancy\fP = 2, \fBDetectionEvent\fP = 3, \fBLatencyTimestamp\fP = 4, \fBControllerState\fP = 5, \fBActuatorState\fP = 6, \fBSuccessMetric\fP = 7, \fBBufferHealth\fP = 8 }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr std::uint32_t \fBkSchemaVersion\fP = 1"
+.br
+.ti -1c
+.RI "constexpr std::uint32_t \fBkRingMagic\fP = 0x56555253"
+.br
+.ti -1c
+.RI "constexpr std::size_t \fBkPayloadSize\fP = 64"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum class \fBfisch::RecordType\fP : std::uint32_t\fC [strong]\fP"
+Typ-Tag für die verschiedenen Telemetrie-Records aus der Korrelationsanalyse\&. Numeriert passend zu den Datenströmen #2-#8\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIChannelOccupancy \fP\fP
+Energie pro BLE Kanal + Detektions Flag\&. 
+.TP
+\fB\fIDetectionEvent \fP\fP
+z\&.B\&. Advertising auf CH37 mit Zeitstempel 
+.TP
+\fB\fILatencyTimestamp \fP\fP
+t1\&.\&.\&.t4: ADC-Ankunft, FFT fertig, Entscheidung, DAC-Ausgabe 
+.TP
+\fB\fIControllerState \fP\fP
+Soll/Ist Abweichung, State-Machine Status\&. 
+.TP
+\fB\fIActuatorState \fP\fP
+aktiver Kanal, TX-Gain, Muster Parameter, on/off 
+.TP
+\fB\fISuccessMetric \fP\fP
+Rest Energie/SNR auf Zielkanal während der Störung\&. 
+.TP
+\fB\fIBufferHealth \fP\fP
+USB Over-/Underruns, dropped samples, PLL-Lock\&. 
+.PP
+Definition at line \fB57\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "constexpr std::size_t fisch::kPayloadSize = 64\fC [inline]\fP, \fC [constexpr]\fP"
+Feste Payload-Größe pro Slot in Byte\&. Deckt alle Telemetrie-Record-Typen (#2-#8) ab, NICHT den FFT-Strom (#1) -- der braucht seinen eigenen Ring mit größeren Slots\&. 
+.PP
+Definition at line \fB53\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "constexpr std::uint32_t fisch::kRingMagic = 0x56555253\fC [inline]\fP, \fC [constexpr]\fP"
+'Magic Number' zur Erkennung, ob ein Shared-Memory-Segment tatsächlich ein gültiger \fBTelemetryRing\fP ist (statt z\&.B\&. Altdaten aus einem Crash)\&. 
+.PP
+Definition at line \fB48\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "constexpr std::uint32_t fisch::kSchemaVersion = 1\fC [inline]\fP, \fC [constexpr]\fP"
+Schema-Version des Binär-Layouts\&. Bei jeder inkompatiblen Änderung an \fBTelemetryRecord\fP oder den Payload-Structs unbedingt erhöhen -- Python prüft dieses Feld beim Öffnen und bricht bei Mismatch ab\&. 
+.PP
+Definition at line \fB44\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for StoerFisch from the source code\&.

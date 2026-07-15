@@ -1,0 +1,23 @@
+<map id="StoerFisch&#45;Core/include/telemetry_ring.cpp" name="StoerFisch&#45;Core/include/telemetry_ring.cpp">
+<area shape="rect" id="Node000001" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="371,5,546,45"/>
+<area shape="rect" id="Node000002" href="$telemetry__ring_8hpp.html" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="149,93,296,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,48,271,92,269,87,401,43"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="321,93,383,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="434,48,381,87,378,83,431,43"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="407,93,510,119"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="461,46,461,79,456,79,456,46"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="535,93,620,119"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="489,43,550,84,547,88,486,48"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="644,93,719,119"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="513,43,636,86,635,91,511,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,72,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,121,83,164,81,159,192,116"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="96,167,163,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="209,121,157,160,154,156,206,117"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="187,167,258,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="225,119,225,153,220,153,220,119"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="283,167,349,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="239,117,292,156,288,160,236,121"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="373,167,432,192"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="253,116,362,159,360,164,251,121"/>
+</map>

@@ -1,0 +1,48 @@
+.TH "fisch::ChannelOccupancyPayload" 3 "StoerFisch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fisch::ChannelOccupancyPayload \- Payload für #2 (ChannelOccupancy): Snapshot aller 40 BLE-Kanäle in einem Record statt 40 Einzel-Records pro Sweep\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <telemetry_ring\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::uint64_t \fBchannel_occupied_mask\fP"
+.br
+.RI "Bit i = Kanal i (0\&.\&.\&.39) aktuell belegt\&. "
+.ti -1c
+.RI "std::int8_t \fBenergy_dbm\fP [40]"
+.br
+.RI "je Kanal, 1dB Auflösung "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Payload für #2 (ChannelOccupancy): Snapshot aller 40 BLE-Kanäle in einem Record statt 40 Einzel-Records pro Sweep\&. 
+
+Energie ist auf int8 (1 dB Auflösung, Wertebereich -128\&.\&.127 dBm) quantisiert, um mit der Bitmaske zusammen unter kPayloadSize zu bleiben\&. Für feinere Auflösung siehe \fBSuccessMetricPayload\fP (float), das für die eigentliche Wirkungs-Kurve (Korrelation d) verwendet wird\&. 
+.PP
+Definition at line \fB122\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::uint64_t fisch::ChannelOccupancyPayload::channel_occupied_mask"
+
+.PP
+Bit i = Kanal i (0\&.\&.\&.39) aktuell belegt\&. 
+.PP
+Definition at line \fB123\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::int8_t fisch::ChannelOccupancyPayload::energy_dbm[40]"
+
+.PP
+je Kanal, 1dB Auflösung 
+.PP
+Definition at line \fB124\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for StoerFisch from the source code\&.

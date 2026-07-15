@@ -1,0 +1,56 @@
+.TH "fisch::SuccessMetricPayload" 3 "StoerFisch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fisch::SuccessMetricPayload \- Payload für #7 (SuccessMetric): Restenergie/SNR auf dem Zielkanal während aktiver Störung -- die eigentliche Robustheits-Kennzahl des Prüfstands\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <telemetry_ring\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::uint32_t \fBtarget_channel\fP"
+.br
+.RI "BLE-Kanalindex (0\&.\&.\&.39) "
+.ti -1c
+.RI "float \fBresidual_energy_dbm\fP"
+.br
+.RI "Restenergie auf dem Zielkanal\&. "
+.ti -1c
+.RI "float \fBsnr_db\fP"
+.br
+.RI "Signal-Rausch-Abstand zum Rauschboden\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Payload für #7 (SuccessMetric): Restenergie/SNR auf dem Zielkanal während aktiver Störung -- die eigentliche Robustheits-Kennzahl des Prüfstands\&. 
+.PP
+Definition at line \fB87\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "float fisch::SuccessMetricPayload::residual_energy_dbm"
+
+.PP
+Restenergie auf dem Zielkanal\&. 
+.PP
+Definition at line \fB89\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "float fisch::SuccessMetricPayload::snr_db"
+
+.PP
+Signal-Rausch-Abstand zum Rauschboden\&. 
+.PP
+Definition at line \fB90\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::uint32_t fisch::SuccessMetricPayload::target_channel"
+
+.PP
+BLE-Kanalindex (0\&.\&.\&.39) 
+.PP
+Definition at line \fB88\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for StoerFisch from the source code\&.

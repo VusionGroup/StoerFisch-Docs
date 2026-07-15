@@ -1,0 +1,70 @@
+.TH "fisch::ControllerStatePayload" 3 "StoerFisch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fisch::ControllerStatePayload \- Payload für #5 (ControllerState): Fehlersignal des Regelkreises (siehe Korrelation f) -- Soll/Ist-Abweichung, State-Machine- Zustand und die daraus abgeleitete Entscheidung\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <telemetry_ring\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::uint32_t \fBtarget_channel\fP"
+.br
+.ti -1c
+.RI "std::uint32_t \fBobserved_channel\fP"
+.br
+.ti -1c
+.RI "std::uint32_t \fBstate\fP"
+.br
+.RI "enum: Idle/Tracking/Jamming/Lost "
+.ti -1c
+.RI "float \fBerror_metric\fP"
+.br
+.RI "Soll/Ist Abweichung, Definiton je nach Reglertyp\&. "
+.ti -1c
+.RI "std::uint32_t \fBdecision\fP"
+.br
+.RI "enum: Hold/Retune/Widen/\&.\&.\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Payload für #5 (ControllerState): Fehlersignal des Regelkreises (siehe Korrelation f) -- Soll/Ist-Abweichung, State-Machine- Zustand und die daraus abgeleitete Entscheidung\&. 
+.PP
+Definition at line \fB153\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::uint32_t fisch::ControllerStatePayload::decision"
+
+.PP
+enum: Hold/Retune/Widen/\&.\&.\&. 
+.PP
+Definition at line \fB158\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "float fisch::ControllerStatePayload::error_metric"
+
+.PP
+Soll/Ist Abweichung, Definiton je nach Reglertyp\&. 
+.PP
+Definition at line \fB157\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::uint32_t fisch::ControllerStatePayload::observed_channel"
+
+.PP
+Definition at line \fB155\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::uint32_t fisch::ControllerStatePayload::state"
+
+.PP
+enum: Idle/Tracking/Jamming/Lost 
+.PP
+Definition at line \fB156\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::uint32_t fisch::ControllerStatePayload::target_channel"
+
+.PP
+Definition at line \fB154\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for StoerFisch from the source code\&.

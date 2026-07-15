@@ -1,0 +1,88 @@
+.TH "fisch::TelemetryRecord" 3 "StoerFisch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fisch::TelemetryRecord \- Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über \fCtype\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <telemetry_ring\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > void \fBsetPayload\fP (\fBRecordType\fP rt, std::uint32_t seq, std::uint64_t ts_ns, const T &value)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::uint64_t \fBtimestamp_ns\fP"
+.br
+.RI "CLOCK_MONOTONIC-Zeitstempel des Records\&. "
+.ti -1c
+.RI "std::uint32_t \fBtype\fP"
+.br
+.RI "Wert aus RecordType\&. "
+.ti -1c
+.RI "std::uint32_t \fBsequence\fP"
+.br
+.RI "monoton steigender Zähler "
+.ti -1c
+.RI "std::uint8_t \fBpayload\fP [\fBkPayloadSize\fP]"
+.br
+.RI "interpretiert je nach Type "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über \fCtype\fP\&. 
+
+Layout ist absichtlich flach und ohne Zeiger/virtuelle Funktionen, damit es 1:1 als Bytes in Shared Memory liegen und in Python per numpy-structured-dtype ausgelesen werden kann (siehe python/telemetry_layout\&.py)\&. 
+.PP
+Definition at line \fB199\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > void fisch::TelemetryRecord::setPayload (\fBRecordType\fP rt, std::uint32_t seq, std::uint64_t ts_ns, const T & value)\fC [inline]\fP"
+Schreibt einen typisierten Payload in the Record 
+.PP
+\fBTemplate Parameters\fP
+.RS 4
+\fIT\fP Payload-Struct, z\&.B\&. LatencytimestampsPayload\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB208\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::uint8_t fisch::TelemetryRecord::payload[\fBkPayloadSize\fP]"
+
+.PP
+interpretiert je nach Type 
+.PP
+Definition at line \fB203\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::uint32_t fisch::TelemetryRecord::sequence"
+
+.PP
+monoton steigender Zähler 
+.PP
+Definition at line \fB202\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::uint64_t fisch::TelemetryRecord::timestamp_ns"
+
+.PP
+CLOCK_MONOTONIC-Zeitstempel des Records\&. 
+.PP
+Definition at line \fB200\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+.SS "std::uint32_t fisch::TelemetryRecord::type"
+
+.PP
+Wert aus RecordType\&. 
+.PP
+Definition at line \fB201\fP of file \fBtelemetry_ring\&.hpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for StoerFisch from the source code\&.
