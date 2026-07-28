@@ -1,0 +1,22 @@
+<map id="StoerFisch&#45;Core/src/hardware/sdr_device.cpp" name="StoerFisch&#45;Core/src/hardware/sdr_device.cpp">
+<area shape="rect" id="Node000001" title="Implementierung des HackRF&#45;Wrappers (siehe sdr_device.hpp für die Design&#45;Begründungen und die Callbac..." alt="" coords="430,5,618,45"/>
+<area shape="rect" id="Node000002" href="$sdr__device_8hpp.html" title="RAII&#45;Wrapper um die HackRF&#45;Hardware (libhackrf)." alt="" coords="202,93,387,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,48,342,91,340,86,468,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="453,167,512,192"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="509,47,493,69,481,94,477,124,480,153,474,153,472,124,476,93,489,66,505,44"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="491,93,557,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="527,46,527,79,521,79,521,46"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="581,93,645,119"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="547,44,592,82,588,86,544,48"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="670,93,757,119"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="570,43,674,85,672,90,568,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,72,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,121,86,168,85,162,253,116"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,167,183,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="271,121,179,163,177,158,269,116"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="326,116,441,160,440,165,324,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="207,167,270,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="288,121,258,157,254,154,283,117"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="294,167,429,192"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="308,117,343,155,339,158,304,121"/>
+</map>

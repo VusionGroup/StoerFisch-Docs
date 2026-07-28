@@ -1,0 +1,16 @@
+<map id="StoerFisch&#45;Core/include/spectral/spectral_ring.hpp" name="StoerFisch&#45;Core/include/spectral/spectral_ring.hpp">
+<area shape="rect" id="Node000001" title="SPSC&#45;Ringpuffer im Shared Memory für den hochratigen Spektral&#45;/ FFT&#45;Strom (#1 der Korrelationsanalyse..." alt="" coords="175,5,369,45"/>
+<area shape="rect" id="Node000002" href="$policy_8hpp.html" title="Gemeinsame Policy&#45;Typen, die sowohl der Kommandopfad als auch die Ringpuffer kennen müssen." alt="" coords="5,93,117,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,48,106,91,104,86,221,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="75,167,141,192"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="244,48,182,95,152,127,127,157,123,154,148,123,178,91,241,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="192,93,259,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,47,242,83,237,80,258,44"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="283,93,354,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="286,44,307,80,302,83,281,47"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="379,93,437,119"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="306,43,377,84,375,89,303,48"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="462,93,525,119"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="326,43,450,87,448,92,324,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="71,118,95,154,91,157,67,120"/>
+</map>

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['kpayloadsize_0',['kPayloadSize',['../namespacefisch.html#a42d92f9a8b7a547cfda15a2292ff185c',1,'fisch']]],
-  ['kringmagic_1',['kRingMagic',['../namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e',1,'fisch']]],
-  ['kschemaversion_2',['kSchemaVersion',['../namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd',1,'fisch']]]
+  ['enabled_0',['enabled',['../structfisch_1_1ActuatorStatePayload.html#a03fa40b5f801822b49ebff7d4e6f40a0',1,'fisch::ActuatorStatePayload::enabled'],['../structfisch_1_1PipelineActuatorState.html#a770795c3ac93994637eb8d1a4b9c7ac3',1,'fisch::PipelineActuatorState::enabled']]],
+  ['energy_5fdbm_1',['energy_dbm',['../structfisch_1_1ChannelOccupancyPayload.html#ac8594e3ab4f7cbaf4cee5d1755d3feb0',1,'fisch::ChannelOccupancyPayload::energy_dbm'],['../structfisch_1_1ChannelEvent.html#a24ea091760cadeae5d83cb1651307997',1,'fisch::ChannelEvent::energy_dbm']]],
+  ['error_5fmetric_2',['error_metric',['../structfisch_1_1ControllerOutput.html#ac2ea3054cff3197a00ae3245d5aad0b9',1,'fisch::ControllerOutput::error_metric'],['../structfisch_1_1ControllerStatePayload.html#a356905f0f88be4aa129336c214e14f78',1,'fisch::ControllerStatePayload::error_metric']]],
+  ['event_5fkind_3',['event_kind',['../structfisch_1_1DetectionEventPayload.html#a2b056d054c9eb58b987f87981ac99b61',1,'fisch::DetectionEventPayload']]]
 ];

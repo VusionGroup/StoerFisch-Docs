@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['read_5findex_0',['read_index',['../structfisch_1_1RingHeader.html#a51940b144cfa6f38f3dd5d79763163dd',1,'fisch::RingHeader']]],
-  ['readme_1',['README',['../md_StoerFisch-Rod_2README.html',1,'']]],
-  ['readme_2emd_2',['README.md',['../README_8md.html',1,'']]],
-  ['recordtype_3',['RecordType',['../namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58',1,'fisch']]],
-  ['reserved_4',['reserved',['../structfisch_1_1ActuatorStatePayload.html#a587b162344120a1e0c812fa17b86d2c8',1,'fisch::ActuatorStatePayload']]],
-  ['residual_5fenergy_5fdbm_5',['residual_energy_dbm',['../structfisch_1_1SuccessMetricPayload.html#a1acfa48e6dcbe452d144eaa6c6d44188',1,'fisch::SuccessMetricPayload']]],
-  ['ringheader_6',['RingHeader',['../structfisch_1_1RingHeader.html',1,'fisch']]],
-  ['rssi_5fdbm_7',['rssi_dbm',['../structfisch_1_1DetectionEventPayload.html#abb0c84a95e95b3c621e6669cf01582a7',1,'fisch::DetectionEventPayload']]]
+  ['lappedcount_0',['lappedCount',['../classfisch_1_1SpectralRingReader.html#a8ab7704822c84303e38f4fe35ab08d91',1,'fisch::SpectralRingReader']]],
+  ['latencytimestamps_1',['LatencyTimestamps',['../namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58af2aa9a84410089ad99d60c957403bc35',1,'fisch']]],
+  ['latencytimestampspayload_2',['LatencyTimestampsPayload',['../structfisch_1_1LatencyTimestampsPayload.html',1,'fisch']]],
+  ['lost_3',['Lost',['../namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529ab578b733cbb788fc6ad208314d2c4c2b',1,'fisch']]],
+  ['lost_5fhold_5fcycles_4',['lost_hold_cycles',['../structfisch_1_1ControllerConfig.html#a46f44f2629b00b8e7bba2fbb456788bd',1,'fisch::ControllerConfig']]]
 ];

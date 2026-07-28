@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['successmetricpayload_0',['SuccessMetricPayload',['../structfisch_1_1SuccessMetricPayload.html',1,'fisch']]]
+  ['latencytimestampspayload_0',['LatencyTimestampsPayload',['../structfisch_1_1LatencyTimestampsPayload.html',1,'fisch']]]
 ];

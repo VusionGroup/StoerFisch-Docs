@@ -1,0 +1,7 @@
+<map id="StoerFisch&#45;Core/include/recording/iq_recorder.hpp" name="StoerFisch&#45;Core/include/recording/iq_recorder.hpp">
+<area shape="rect" id="Node000001" title="Zeichnet rohe IQ&#45;Samples (interleaved int8, HackRF&#45;Format) in eine .cs8&#45;Datei auf,..." alt="" coords="95,5,286,45"/>
+<area shape="rect" id="Node000002" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,93,173,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,56,113,95,110,91,156,52"/>
+<area shape="rect" id="Node000003" href="$iq__recorder_8cpp.html" title="Implementierung des IqRecorder (siehe Header für das Echtzeit&#45;Design)." alt="" coords="198,93,389,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,52,272,91,269,95,222,56"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>StoerFisch: StoerFisch-Core/include/telemetry_ring.cpp Source File</title>
+<title>StoerFisch: StoerFisch-Core/src/telemetry/telemetry_ring.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,134 +98,166 @@ $(document).ready(function(){initNavTree('telemetry__ring_8cpp_source.html','');
 </div><!--header-->
 <div class="contents">
 <a href="telemetry__ring_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="telemetry__ring_8hpp.html">telemetry_ring.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="telemetry__ring_8hpp.html">telemetry/telemetry_ring.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;sys/mman.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacefisch.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefisch.html">fisch</a> {</div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f">   15</a></span>    <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f">TelemetryRing::TelemetryRing</a>(<span class="keyword">const</span> std::string &amp;shm_name, std::uint64_t capacity_slots) : shm_name_(shm_name) {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        mapped_size_ = <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structfisch_1_1RingHeader.html">RingHeader</a>) + capacity_slots * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structfisch_1_1TelemetryRecord.html">TelemetryRecord</a>);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="comment">// Segment neu anlegen. O_EXCL bewusst NICHT gesetzt: bei einem Neustart</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">// nach Absturz soll ein Restsegment überschreibbar sein, statt den</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="comment">// Start zu blockieren.</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        fd_ = shm_open(shm_name_.c_str(), O_CREAT | O_RDWR, 0660);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">if</span> (fd_ &lt; 0) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;shm_open fehlgeschlagen für &quot;</span> + shm_name_);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">if</span> (ftruncate(fd_, <span class="keyword">static_cast&lt;</span>off_t<span class="keyword">&gt;</span>(mapped_size_)) != 0) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            close(fd_);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;ftruncate fehlgeschlagen für &quot;</span> + shm_name_);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        mapped_base_ = mmap(<span class="keyword">nullptr</span>, mapped_size_, PROT_READ | PROT_WRITE,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                            MAP_SHARED, fd_, 0);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (mapped_base_ == MAP_FAILED) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            close(fd_);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;mmap fehlgeschlagen für &quot;</span> + shm_name_);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        header_ = <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="structfisch_1_1RingHeader.html">RingHeader</a> *<span class="keyword">&gt;</span>(mapped_base_);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        slots_ = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structfisch_1_1TelemetryRecord.html">TelemetryRecord</a> *<span class="keyword">&gt;</span>(</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keyword">static_cast&lt;</span>std::uint8_t*<span class="keyword">&gt;</span>(mapped_base_) + <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structfisch_1_1RingHeader.html">RingHeader</a>));</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">// Header initialisieren. Da wir Owner/Producer sind, dürfen wir das</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// Segment hier unbedingt (re-)initialisieren -- ein Consumer darf erst</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// öffnen, nachdem dies abgeschlossen ist (Koordination via</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// CommandChannel/Startup-Protokoll, nicht Teil dieser Klasse).</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a637293c814e603f41c0651d34f153250">magic</a> = <a class="code hl_variable" href="namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e">kRingMagic</a>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a95556b853972578ea04017d2bf0e5a2e">schema_version</a> = <a class="code hl_variable" href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">kSchemaVersion</a>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a29d857905a41fa617bc0febe183a54ad">capacity_slots</a> = capacity_slots;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#ae049625745386f9ba5dc72faab8f1d5b">write_index</a>.store(0, std::memory_order_relaxed);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a51940b144cfa6f38f3dd5d79763163dd">read_index</a>.store(0, std::memory_order_relaxed);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679">dropped_count</a>.store(0, std::memory_order_relaxed);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;sys/mman.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefisch.html">fisch</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f">   17</a></span><a class="code hl_function" href="classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f">TelemetryRing::TelemetryRing</a>(<span class="keyword">const</span> std::string&amp; shm_name, std::uint64_t capacity_slots)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    : shm_name_(shm_name) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    mapped_size_ = <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structfisch_1_1RingHeader.html">RingHeader</a>) + capacity_slots * <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structfisch_1_1TelemetryRecord.html">TelemetryRecord</a>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Ein evtl. vorhandenes Altsegment (Leiche nach Core-Absturz) aus dem</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// Namensraum nehmen. Fehler wird bewusst ignoriert: ENOENT ist der</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Normalfall (nichts aufzuräumen). Ein noch daran hängender</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// Python-Prozess verliert sein Mapping dadurch NICHT -- das Segment</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// wird erst freigegeben, wenn der letzte Nutzer es unmappt.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    shm_unlink(shm_name_.c_str());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// O_EXCL: Wir bestehen auf einem frischen Segment. Schlägt das trotz</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// des unlink oben fehl, hat ein zweiter Core-Prozess gerade parallel</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// dasselbe Segment angelegt -- das ist ein Konfigurationsfehler, den</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// wir laut melden statt uns gegenseitig die Daten zu überschreiben.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    fd_ = shm_open(shm_name_.c_str(), O_CREAT | O_EXCL | O_RDWR, 0660);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">if</span> (fd_ &lt; 0) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="stringliteral">&quot;shm_open fehlgeschlagen für &quot;</span> + shm_name_ +</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="stringliteral">&quot; (laeuft bereits ein zweiter Core auf demselben Segment?)&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> (ftruncate(fd_, <span class="keyword">static_cast&lt;</span>off_t<span class="keyword">&gt;</span>(mapped_size_)) != 0) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        close(fd_);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;ftruncate fehlgeschlagen für &quot;</span> + shm_name_);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    mapped_base_ = mmap(<span class="keyword">nullptr</span>, mapped_size_, PROT_READ | PROT_WRITE,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                         MAP_SHARED, fd_, 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (mapped_base_ == MAP_FAILED) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        close(fd_);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;mmap fehlgeschlagen für &quot;</span> + shm_name_);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    header_ = <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="structfisch_1_1RingHeader.html">RingHeader</a>*<span class="keyword">&gt;</span>(mapped_base_);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    slots_  = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structfisch_1_1TelemetryRecord.html">TelemetryRecord</a>*<span class="keyword">&gt;</span>(</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">static_cast&lt;</span>std::uint8_t*<span class="keyword">&gt;</span>(mapped_base_) + <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structfisch_1_1RingHeader.html">RingHeader</a>));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Header initialisieren. Dank O_EXCL oben ist das Segment garantiert</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// frisch, kein Consumer kann es zu diesem Zeitpunkt bereits gemappt</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// haben (der Name existierte bis eben nicht).</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Reihenfolge ist bindend: erst alle Nutzdaten-Felder, DANN magic.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a95556b853972578ea04017d2bf0e5a2e">schema_version</a> = <a class="code hl_variable" href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">kSchemaVersion</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a29d857905a41fa617bc0febe183a54ad">capacity_slots</a> = capacity_slots;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a271a74a375581cf36257261e4df7e9f7">generation</a> = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::chrono::duration_cast&lt;std::chrono::nanoseconds&gt;(</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            std::chrono::system_clock::now().time_since_epoch()).count());</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#ae049625745386f9ba5dc72faab8f1d5b">write_index</a>.store(0, std::memory_order_relaxed);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a51940b144cfa6f38f3dd5d79763163dd">read_index</a>.store(0, std::memory_order_relaxed);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679">dropped_count</a>.store(0, std::memory_order_relaxed);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Publikation: Release-Store stellt sicher, dass alle Schreibvorgänge</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// oben für jeden Consumer sichtbar sind, der dieses magic liest.</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// Ab hier ist das Segment für Python gültig -- keine Sekunde vorher.</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a45513eb9d83c42255fb40efb38729c7e">magic</a>.store(<a class="code hl_variable" href="namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e">kRingMagic</a>, std::memory_order_release);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a4a2192703984119b58f8a9da6c37e197">   54</a></span>    <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a4a2192703984119b58f8a9da6c37e197">TelemetryRing::~TelemetryRing</a>() {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">if</span> (mapped_base_ != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            munmap(mapped_base_, mapped_size_);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">if</span> (fd_ &gt;= 0) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            close(fd_);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">// Bewusst KEIN shm_unlink hier -- siehe destroy() und die</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">// Ownership-Regel im Header-Kommentar.</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a4a2192703984119b58f8a9da6c37e197">   76</a></span><a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a4a2192703984119b58f8a9da6c37e197">TelemetryRing::~TelemetryRing</a>() {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">if</span> (mapped_base_ != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        munmap(mapped_base_, mapped_size_);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> (fd_ &gt;= 0) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        close(fd_);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Bewusst KEIN shm_unlink hier -- siehe destroy() und die</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// Ownership-Regel im Header-Kommentar.</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632">   65</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632">TelemetryRing::push</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structfisch_1_1TelemetryRecord.html">TelemetryRecord</a> &amp;record) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">const</span> std::uint64_t capacity = header_-&gt;capacity_slots;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">// Acquire, weil wir gegen den read_index des Consumers prüfen -- wir</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">// müssen dessen bisherige Slot-Reads sehen, bevor wir den Slot überschreiben</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">const</span> std::uint64_t read = header_-&gt;read_index.load(std::memory_order_acquire);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">const</span> std::uint64_t write = header_-&gt;write_index.load(std::memory_order_relaxed);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">const</span> std::uint64_t next_write = (write+1) % capacity;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">if</span> (next_write == read) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="comment">// Ring voll -- niemals blockieren, stattdessen zählen (Overflow-</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="comment">// Policy: drop-newest). Der Drop-Counter fließt selbst als</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="comment">// Buffer-Health-Telemetrie (#8) zurück.</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            header_-&gt;dropped_count.fetch_add(1, std::memory_order_relaxed);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment">// 1) Slot vollständig beschreiben, BEVOR der Index vorrückt.</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        slots_[write] = record;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// 2) Release-Store: garantiert, dass der obige Slot-Write für den Consumer</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="comment">//    sichtbar ist, sobald er den neuen write_index sieht.</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        header_-&gt;write_index.store(next_write, std::memory_order_relaxed);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
-</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88">   92</a></span>    std::uint64_t <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88">TelemetryRing::droppedCount</a>() const noexcept {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span> header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679">dropped_count</a>.load(std::memory_order_relaxed);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
-</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632">   87</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632">TelemetryRing::push</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structfisch_1_1TelemetryRecord.html">TelemetryRecord</a>&amp; record) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">const</span> std::uint64_t capacity = header_-&gt;capacity_slots;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// Acquire, weil wir gegen den read_index des Consumers prüfen -- wir</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// müssen dessen bisherige Slot-Reads &quot;sehen&quot;, bevor wir den Slot</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// überschreiben.</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">const</span> std::uint64_t read = header_-&gt;read_index.load(std::memory_order_acquire);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">const</span> std::uint64_t write = header_-&gt;write_index.load(std::memory_order_relaxed);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">TelemetryRing::destroy</a>() {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        shm_unlink(shm_name_.c_str());</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">const</span> std::uint64_t next_write = (write + 1) % capacity;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> (next_write == read) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="comment">// Ring voll -- niemals blockieren, stattdessen zählen (Overflow-</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="comment">// Policy: drop-newest). Der Drop-Counter fließt selbst als</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">// Buffer-Health-Telemetrie (#8) zurück.</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        header_-&gt;dropped_count.fetch_add(1, std::memory_order_relaxed);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// 1) Slot vollständig beschreiben, BEVOR der Index vorrückt.</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    slots_[write] = record;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// 2) Release-Store: garantiert, dass der obige Slot-Write für den</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">//    Consumer sichtbar ist, sobald er den neuen write_index sieht.</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    header_-&gt;write_index.store(next_write, std::memory_order_release);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
 </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88">  115</a></span>std::uint64_t <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88">TelemetryRing::droppedCount</a>() const noexcept {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">return</span> header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679">dropped_count</a>.load(std::memory_order_relaxed);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
 </div>
-<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a09fb250cfbf6d2c8eb7a67b92fb9fa88"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88">fisch::TelemetryRing::droppedCount</a></div><div class="ttdeci">std::uint64_t droppedCount() const noexcept</div><div class="ttdoc">Gibt den aktuellen Drop-Zähler zurück (Buffer-Health #8)</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00092">telemetry_ring.cpp:92</a></div></div>
-<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a3dec6cc6f8355f0618ffee425e7fe9ed"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">fisch::TelemetryRing::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00096">telemetry_ring.cpp:96</a></div></div>
-<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a4a2192703984119b58f8a9da6c37e197"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a4a2192703984119b58f8a9da6c37e197">fisch::TelemetryRing::~TelemetryRing</a></div><div class="ttdeci">~TelemetryRing()</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00054">telemetry_ring.cpp:54</a></div></div>
-<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a6888f3c7c55579100155784ec2b1d632"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632">fisch::TelemetryRing::push</a></div><div class="ttdeci">bool push(const TelemetryRecord &amp;record) noexcept</div><div class="ttdoc">Schreibt einen Record in den nächsten freien Slot.</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00065">telemetry_ring.cpp:65</a></div></div>
-<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_ac01a17736ba01305aaf652427267968f"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f">fisch::TelemetryRing::TelemetryRing</a></div><div class="ttdeci">TelemetryRing(const std::string &amp;shm_name, std::uint64_t capacity_slots)</div><div class="ttdoc">Erstellt ein neues Shared-Memory-Segment und initialisiert den Ring-Header. Wirft std::runtime_error ...</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00015">telemetry_ring.cpp:15</a></div></div>
-<div class="ttc" id="anamespacefisch_html"><div class="ttname"><a href="namespacefisch.html">fisch</a></div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00014">telemetry_ring.cpp:14</a></div></div>
-<div class="ttc" id="anamespacefisch_html_a2e2038405e0507ee3ad034cce78505cd"><div class="ttname"><a href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">fisch::kSchemaVersion</a></div><div class="ttdeci">constexpr std::uint32_t kSchemaVersion</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00044">telemetry_ring.hpp:44</a></div></div>
-<div class="ttc" id="anamespacefisch_html_a38d6b6e7d8239fc8e1335748b331fa2e"><div class="ttname"><a href="namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e">fisch::kRingMagic</a></div><div class="ttdeci">constexpr std::uint32_t kRingMagic</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00048">telemetry_ring.hpp:48</a></div></div>
-<div class="ttc" id="astructfisch_1_1RingHeader_html"><div class="ttname"><a href="structfisch_1_1RingHeader.html">fisch::RingHeader</a></div><div class="ttdoc">Kopfdaten des Ringpuffers, liegen am Anfang des Shared-Memory- Segments. Enthält Metadaten zur Validi...</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00232">telemetry_ring.hpp:232</a></div></div>
-<div class="ttc" id="astructfisch_1_1RingHeader_html_a19c9afbff9b5450b9ac69edad75de679"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679">fisch::RingHeader::dropped_count</a></div><div class="ttdeci">std::atomic&lt; std::uint64_t &gt; dropped_count</div><div class="ttdoc">von #8 geloggte Statistik</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00238">telemetry_ring.hpp:238</a></div></div>
-<div class="ttc" id="astructfisch_1_1RingHeader_html_a29d857905a41fa617bc0febe183a54ad"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a29d857905a41fa617bc0febe183a54ad">fisch::RingHeader::capacity_slots</a></div><div class="ttdeci">std::uint64_t capacity_slots</div><div class="ttdoc">Anzahl Slots im Ring (2er Potenz pls)</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00235">telemetry_ring.hpp:235</a></div></div>
-<div class="ttc" id="astructfisch_1_1RingHeader_html_a51940b144cfa6f38f3dd5d79763163dd"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a51940b144cfa6f38f3dd5d79763163dd">fisch::RingHeader::read_index</a></div><div class="ttdeci">std::atomic&lt; std::uint64_t &gt; read_index</div><div class="ttdoc">nächster ungelesener Slot (Consumer)</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00237">telemetry_ring.hpp:237</a></div></div>
-<div class="ttc" id="astructfisch_1_1RingHeader_html_a637293c814e603f41c0651d34f153250"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a637293c814e603f41c0651d34f153250">fisch::RingHeader::magic</a></div><div class="ttdeci">std::uint32_t magic</div><div class="ttdoc">muss kRingMagic sein</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00233">telemetry_ring.hpp:233</a></div></div>
-<div class="ttc" id="astructfisch_1_1RingHeader_html_a95556b853972578ea04017d2bf0e5a2e"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a95556b853972578ea04017d2bf0e5a2e">fisch::RingHeader::schema_version</a></div><div class="ttdeci">std::uint32_t schema_version</div><div class="ttdoc">muss kSchemaVersion sein</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00234">telemetry_ring.hpp:234</a></div></div>
-<div class="ttc" id="astructfisch_1_1RingHeader_html_ae049625745386f9ba5dc72faab8f1d5b"><div class="ttname"><a href="structfisch_1_1RingHeader.html#ae049625745386f9ba5dc72faab8f1d5b">fisch::RingHeader::write_index</a></div><div class="ttdeci">std::atomic&lt; std::uint64_t &gt; write_index</div><div class="ttdoc">nächster freier Slot (Producer)</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00236">telemetry_ring.hpp:236</a></div></div>
-<div class="ttc" id="astructfisch_1_1TelemetryRecord_html"><div class="ttname"><a href="structfisch_1_1TelemetryRecord.html">fisch::TelemetryRecord</a></div><div class="ttdoc">Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über type.</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00199">telemetry_ring.hpp:199</a></div></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582">  119</a></span>std::uint64_t <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582">TelemetryRing::generation</a>() const noexcept {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">// Nicht-atomar, aber nach dem Konstruktor unveränderlich -- daher</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// kein Ordering nötig.</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> header_-&gt;<a class="code hl_variable" href="structfisch_1_1RingHeader.html#a271a74a375581cf36257261e4df7e9f7">generation</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">  125</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">TelemetryRing::destroy</a>() {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    shm_unlink(shm_name_.c_str());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a0486a0a668e4b33d2f40ccccf3dda582"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582">fisch::TelemetryRing::generation</a></div><div class="ttdeci">std::uint64_t generation() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00119">telemetry_ring.cpp:119</a></div></div>
+<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a09fb250cfbf6d2c8eb7a67b92fb9fa88"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88">fisch::TelemetryRing::droppedCount</a></div><div class="ttdeci">std::uint64_t droppedCount() const noexcept</div><div class="ttdoc">Gibt den aktuellen Drop-Zähler zurück (für Buffer-Health-Logging #8).</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00115">telemetry_ring.cpp:115</a></div></div>
+<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a3dec6cc6f8355f0618ffee425e7fe9ed"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">fisch::TelemetryRing::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00125">telemetry_ring.cpp:125</a></div></div>
+<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a4a2192703984119b58f8a9da6c37e197"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a4a2192703984119b58f8a9da6c37e197">fisch::TelemetryRing::~TelemetryRing</a></div><div class="ttdeci">~TelemetryRing()</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00076">telemetry_ring.cpp:76</a></div></div>
+<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_a6888f3c7c55579100155784ec2b1d632"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632">fisch::TelemetryRing::push</a></div><div class="ttdeci">bool push(const TelemetryRecord &amp;record) noexcept</div><div class="ttdoc">Schreibt einen Record in den nächsten freien Slot.</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00087">telemetry_ring.cpp:87</a></div></div>
+<div class="ttc" id="aclassfisch_1_1TelemetryRing_html_ac01a17736ba01305aaf652427267968f"><div class="ttname"><a href="classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f">fisch::TelemetryRing::TelemetryRing</a></div><div class="ttdeci">TelemetryRing(const std::string &amp;shm_name, std::uint64_t capacity_slots)</div><div class="ttdoc">Erstellt ein FRISCHES Shared-Memory-Segment und initialisiert den Ring-Header. Wirft std::runtime_err...</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8cpp_source.html#l00017">telemetry_ring.cpp:17</a></div></div>
+<div class="ttc" id="anamespacefisch_html"><div class="ttname"><a href="namespacefisch.html">fisch</a></div><div class="ttdef"><b>Definition</b> <a href="command_8hpp_source.html#l00030">command.hpp:30</a></div></div>
+<div class="ttc" id="anamespacefisch_html_a2e2038405e0507ee3ad034cce78505cd"><div class="ttname"><a href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">fisch::kSchemaVersion</a></div><div class="ttdeci">constexpr std::uint32_t kSchemaVersion</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00054">telemetry_ring.hpp:54</a></div></div>
+<div class="ttc" id="anamespacefisch_html_a38d6b6e7d8239fc8e1335748b331fa2e"><div class="ttname"><a href="namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e">fisch::kRingMagic</a></div><div class="ttdeci">constexpr std::uint32_t kRingMagic</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00058">telemetry_ring.hpp:58</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html"><div class="ttname"><a href="structfisch_1_1RingHeader.html">fisch::RingHeader</a></div><div class="ttdoc">Kopfdaten des Ringpuffers, liegen am Anfang des Shared-Memory- Segments. Enthält Metadaten zur Validi...</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00262">telemetry_ring.hpp:262</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html_a19c9afbff9b5450b9ac69edad75de679"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679">fisch::RingHeader::dropped_count</a></div><div class="ttdeci">std::atomic&lt; std::uint64_t &gt; dropped_count</div><div class="ttdoc">von #8 mitgeloggte Drop-Statistik</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00273">telemetry_ring.hpp:273</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html_a271a74a375581cf36257261e4df7e9f7"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a271a74a375581cf36257261e4df7e9f7">fisch::RingHeader::generation</a></div><div class="ttdeci">std::uint64_t generation</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00270">telemetry_ring.hpp:270</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html_a29d857905a41fa617bc0febe183a54ad"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a29d857905a41fa617bc0febe183a54ad">fisch::RingHeader::capacity_slots</a></div><div class="ttdeci">std::uint64_t capacity_slots</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00265">telemetry_ring.hpp:265</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html_a45513eb9d83c42255fb40efb38729c7e"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a45513eb9d83c42255fb40efb38729c7e">fisch::RingHeader::magic</a></div><div class="ttdeci">std::atomic&lt; std::uint32_t &gt; magic</div><div class="ttdoc">kRingMagic; wird als LETZTES geschrieben (Release)</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00263">telemetry_ring.hpp:263</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html_a51940b144cfa6f38f3dd5d79763163dd"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a51940b144cfa6f38f3dd5d79763163dd">fisch::RingHeader::read_index</a></div><div class="ttdeci">std::atomic&lt; std::uint64_t &gt; read_index</div><div class="ttdoc">nächster ungelesener Slot (Consumer)</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00272">telemetry_ring.hpp:272</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html_a95556b853972578ea04017d2bf0e5a2e"><div class="ttname"><a href="structfisch_1_1RingHeader.html#a95556b853972578ea04017d2bf0e5a2e">fisch::RingHeader::schema_version</a></div><div class="ttdeci">std::uint32_t schema_version</div><div class="ttdoc">muss kSchemaVersion sein</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00264">telemetry_ring.hpp:264</a></div></div>
+<div class="ttc" id="astructfisch_1_1RingHeader_html_ae049625745386f9ba5dc72faab8f1d5b"><div class="ttname"><a href="structfisch_1_1RingHeader.html#ae049625745386f9ba5dc72faab8f1d5b">fisch::RingHeader::write_index</a></div><div class="ttdeci">std::atomic&lt; std::uint64_t &gt; write_index</div><div class="ttdoc">nächster freier Slot (Producer)</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00271">telemetry_ring.hpp:271</a></div></div>
+<div class="ttc" id="astructfisch_1_1TelemetryRecord_html"><div class="ttname"><a href="structfisch_1_1TelemetryRecord.html">fisch::TelemetryRecord</a></div><div class="ttdoc">Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über type.</div><div class="ttdef"><b>Definition</b> <a href="telemetry__ring_8hpp_source.html#l00220">telemetry_ring.hpp:220</a></div></div>
 <div class="ttc" id="atelemetry__ring_8hpp_html"><div class="ttname"><a href="telemetry__ring_8hpp.html">telemetry_ring.hpp</a></div><div class="ttdoc">SPSC-Ringpuffer (Single-Producer/Single-Consumer) im POSIX Shared Memory, für den Telemetrie-/Event-D...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d8424022c8f08972bc7a301092243797.html">StoerFisch-Core</a></li><li class="navelem"><a class="el" href="dir_53e8b403d6d92b1895b37e57deaf4e71.html">include</a></li><li class="navelem"><a class="el" href="telemetry__ring_8cpp.html">telemetry_ring.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d8424022c8f08972bc7a301092243797.html">StoerFisch-Core</a></li><li class="navelem"><a class="el" href="dir_5df2e51e2103e4f85b6c4d417c1bda6b.html">src</a></li><li class="navelem"><a class="el" href="dir_a342f1ccac45472c0a44c321c4ad1b2c.html">telemetry</a></li><li class="navelem"><a class="el" href="telemetry__ring_8cpp.html">telemetry_ring.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

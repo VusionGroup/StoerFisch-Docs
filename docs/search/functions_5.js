@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['telemetryring_0',['telemetryring',['../classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f',1,'fisch::TelemetryRing::TelemetryRing(const std::string &amp;shm_name, std::uint64_t capacity_slots)'],['../classfisch_1_1TelemetryRing.html#a6246cfef0e386fc9c2ca09ffe6738790',1,'fisch::TelemetryRing::TelemetryRing(const TelemetryRing &amp;)=delete']]]
+  ['generation_0',['generation',['../classfisch_1_1SpectralRing.html#a87b856b79c504314e94c21eb77be252f',1,'fisch::SpectralRing::generation()'],['../classfisch_1_1SpectralRingReader.html#ae01bfd74ddfb456a69e017c499303b81',1,'fisch::SpectralRingReader::generation()'],['../classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582',1,'fisch::TelemetryRing::generation()']]]
 ];

@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classfisch_1_1TelemetryRing.html','');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac01a17736ba01305aaf652427267968f" id="r_ac01a17736ba01305aaf652427267968f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f">TelemetryRing</a> (const std::string &amp;shm_name, std::uint64_t capacity_slots)</td></tr>
-<tr class="memdesc:ac01a17736ba01305aaf652427267968f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstellt ein neues Shared-Memory-Segment und initialisiert den Ring-Header. Wirft std::runtime_error bei Systemfehlern.  <br /></td></tr>
+<tr class="memdesc:ac01a17736ba01305aaf652427267968f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstellt ein FRISCHES Shared-Memory-Segment und initialisiert den Ring-Header. Wirft std::runtime_error bei Systemfehlern.  <br /></td></tr>
 <tr class="separator:ac01a17736ba01305aaf652427267968f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2192703984119b58f8a9da6c37e197" id="r_a4a2192703984119b58f8a9da6c37e197"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1TelemetryRing.html#a4a2192703984119b58f8a9da6c37e197">~TelemetryRing</a> ()</td></tr>
 <tr class="separator:a4a2192703984119b58f8a9da6c37e197"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,8 +116,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6888f3c7c55579100155784ec2b1d632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schreibt einen Record in den nächsten freien Slot.  <br /></td></tr>
 <tr class="separator:a6888f3c7c55579100155784ec2b1d632"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09fb250cfbf6d2c8eb7a67b92fb9fa88" id="r_a09fb250cfbf6d2c8eb7a67b92fb9fa88"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88">droppedCount</a> () const noexcept</td></tr>
-<tr class="memdesc:a09fb250cfbf6d2c8eb7a67b92fb9fa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt den aktuellen Drop-Zähler zurück (Buffer-Health #8)  <br /></td></tr>
+<tr class="memdesc:a09fb250cfbf6d2c8eb7a67b92fb9fa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt den aktuellen Drop-Zähler zurück (für Buffer-Health-Logging #8).  <br /></td></tr>
 <tr class="separator:a09fb250cfbf6d2c8eb7a67b92fb9fa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0486a0a668e4b33d2f40ccccf3dda582" id="r_a0486a0a668e4b33d2f40ccccf3dda582"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582">generation</a> () const noexcept</td></tr>
+<tr class="separator:a0486a0a668e4b33d2f40ccccf3dda582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dec6cc6f8355f0618ffee425e7fe9ed" id="r_a3dec6cc6f8355f0618ffee425e7fe9ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">destroy</a> ()</td></tr>
 <tr class="separator:a3dec6cc6f8355f0618ffee425e7fe9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -126,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <p>RAII: Konstruktor erstellt und mappt das Shared-Memory-Segment, Destruktor unmappt und schließt das File-Descriptor (aber unlinkt NICHT automatisch &ndash; siehe <a class="el" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">destroy()</a>).</p>
 <p>Threading: Diese Klasse ist NICHT threadsicher für mehrere Producer. Sie ist für genau einen Schreiber (den Housekeeping-Thread aus dem Core, nicht den zeitkritischen RX-Thread direkt) ausgelegt. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00252">252</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00306">306</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac01a17736ba01305aaf652427267968f" name="ac01a17736ba01305aaf652427267968f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac01a17736ba01305aaf652427267968f">&#9670;&#160;</a></span>TelemetryRing() <span class="overload">[1/2]</span></h2>
@@ -154,16 +156,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Erstellt ein neues Shared-Memory-Segment und initialisiert den Ring-Header. Wirft std::runtime_error bei Systemfehlern. </p>
+<p>Erstellt ein FRISCHES Shared-Memory-Segment und initialisiert den Ring-Header. Wirft std::runtime_error bei Systemfehlern. </p>
+<p>Ein evtl. vorhandenes Segment gleichen Namens (z.B. Leiche nach einem Core-Absturz) wird zuerst per shm_unlink() aus dem Namensraum entfernt und danach mit O_EXCL neu angelegt. Wichtig: Das Segment wird NICHT in-place reinitialisiert. Grund: Hängt noch ein alter Python-Prozess am Altsegment, würden wir ihm sonst die Indizes unter den Füßen zurücksetzen. Durch unlink+neu behält der Altprozess sein Mapping auf die alten Pages &ndash; verwaist und eingefroren, aber unbeschädigt. Dass er verwaist ist, erkennt er über check_stale() (Python-Seite).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shm_name</td><td>Name des Segments, z.B. "/vusion_telemetry". Muss mit '/' beginnen (POSIX shm_open-Konvention). </td></tr>
+    <tr><td class="paramname">shm_name</td><td>Name des Segments, z.B. "/vusion_telemetry". Muss mit genau einem '/' beginnen (POSIX shm_open-Konvention); auf der Python-Seite wird der Name ohne führenden '/' übergeben. </td></tr>
     <tr><td class="paramname">capacity_slots</td><td>Anzahl Slots, sollte Potenz von 2 sein (schnellere Modulo-Berechnung via Bitmaske). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00015">15</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00017">17</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -183,7 +186,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Schließt die Mapping/File-Descriptoren. Unlinkt das Segment NICHT &ndash; dafür explizit <a class="el" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">destroy()</a> aufrufen, um Race Conditions mit einem gerade lesenden Python-Prozess zu vermeiden. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00054">54</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00076">76</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -228,9 +231,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unlinked das Shared-Memory Segment. Nur von Producer aufrufen! und erst nachdem sichergestellt ist, dass kein Consumer mehr aktiv gemappt hat(z.B. per Shutdown über CommandChannel). </p>
+<p>Unlinkt das Shared-Memory-Segment. Nur vom Producer/Owner aufrufen, und erst nachdem sichergestellt ist, dass kein Consumer mehr aktiv gemappt hat (z.B. per sauberem Shutdown-Protokoll über <a class="el" href="classfisch_1_1CommandChannel.html" title="Unix-Domain-Socket-Server für den Kommandopfad.">CommandChannel</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00096">96</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00125">125</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -257,9 +260,37 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gibt den aktuellen Drop-Zähler zurück (Buffer-Health #8) </p>
+<p>Gibt den aktuellen Drop-Zähler zurück (für Buffer-Health-Logging #8). </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00092">92</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00115">115</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0486a0a668e4b33d2f40ccccf3dda582" name="a0486a0a668e4b33d2f40ccccf3dda582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0486a0a668e4b33d2f40ccccf3dda582">&#9670;&#160;</a></span>generation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint64_t fisch::TelemetryRing::generation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kennung dieser Ring-Instanz. Der <a class="el" href="classfisch_1_1CommandChannel.html" title="Unix-Domain-Socket-Server für den Kommandopfad.">CommandChannel</a> (Phase 2) wird diesen Wert beim Verbindungsaufbau an Python melden, damit der Consumer verifizieren kann, dass er dasselbe Segment gemappt hat, über das dieser Core gerade spricht. </p>
+
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00119">119</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -323,13 +354,13 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true wenn geschrieben, false wenn wegen vollem Ring verworfen. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00065">65</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00087">87</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>StoerFisch-Core/include/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
-<li>StoerFisch-Core/include/<a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a></li>
+<li>StoerFisch-Core/include/telemetry/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
+<li>StoerFisch-Core/src/telemetry/<a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

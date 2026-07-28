@@ -1,0 +1,9 @@
+<map id="StoerFisch&#45;Core/include/command/command_queue.hpp" name="StoerFisch&#45;Core/include/command/command_queue.hpp">
+<area shape="rect" id="Node000001" title="Lock&#45;freie SPSC&#45;Warteschlange für validierte Kommandos zwischen CommandChannel (Producer) und dem Con..." alt="" coords="125,5,360,45"/>
+<area shape="rect" id="Node000002" href="$command__channel_8hpp.html" title="Transport für den Kommandopfad Rod (Python) &#45;&gt; Core (C++), über einen Unix Domain Socket." alt="" coords="119,93,366,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,59,245,93,240,93,240,59"/>
+<area shape="rect" id="Node000003" href="$command__channel_8cpp.html" title="Implementierung von CommandChannel (siehe command_channel.hpp für die vollständige Dokumentation von ..." alt="" coords="5,181,251,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,144,155,183,152,179,205,140"/>
+<area shape="rect" id="Node000004" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="275,181,443,221"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="281,140,335,179,331,183,278,144"/>
+</map>

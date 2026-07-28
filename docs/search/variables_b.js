@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['usb_5foverruns_0',['usb_overruns',['../structfisch_1_1BufferHealthPayload.html#af5a968249f833ec63402568977d91e95',1,'fisch::BufferHealthPayload']]],
-  ['usb_5funderruns_1',['usb_underruns',['../structfisch_1_1BufferHealthPayload.html#aaa2613f8744669a44bb6f56c7b007b43',1,'fisch::BufferHealthPayload']]]
+  ['lost_5fhold_5fcycles_0',['lost_hold_cycles',['../structfisch_1_1ControllerConfig.html#a46f44f2629b00b8e7bba2fbb456788bd',1,'fisch::ControllerConfig']]]
 ];

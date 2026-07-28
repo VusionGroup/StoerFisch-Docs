@@ -109,16 +109,20 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a151d13dfe8f164593619e9c648e871db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83c37536645859bb60bde780d98f3a1f" id="r_a83c37536645859bb60bde780d98f3a1f"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ActuatorStatePayload.html#a83c37536645859bb60bde780d98f3a1f">pattern_id</a></td></tr>
 <tr class="separator:a83c37536645859bb60bde780d98f3a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4c2feac00965b0394345bbaf316412" id="r_a3e4c2feac00965b0394345bbaf316412"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ActuatorStatePayload.html#a3e4c2feac00965b0394345bbaf316412">enable</a></td></tr>
-<tr class="separator:a3e4c2feac00965b0394345bbaf316412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dedeca25379e1020d86127537c2a8ec" id="r_a4dedeca25379e1020d86127537c2a8ec"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ActuatorStatePayload.html#a4dedeca25379e1020d86127537c2a8ec">applied_command_seq</a></td></tr>
+<tr class="memdesc:a4dedeca25379e1020d86127537c2a8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">command_seq des zuletzt übernommenen Kommandos  <br /></td></tr>
+<tr class="separator:a4dedeca25379e1020d86127537c2a8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fa40b5f801822b49ebff7d4e6f40a0" id="r_a03fa40b5f801822b49ebff7d4e6f40a0"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ActuatorStatePayload.html#a03fa40b5f801822b49ebff7d4e6f40a0">enabled</a></td></tr>
+<tr class="separator:a03fa40b5f801822b49ebff7d4e6f40a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a587b162344120a1e0c812fa17b86d2c8" id="r_a587b162344120a1e0c812fa17b86d2c8"><td class="memItemLeft" align="right" valign="top">std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ActuatorStatePayload.html#a587b162344120a1e0c812fa17b86d2c8">reserved</a> [3]</td></tr>
 <tr class="separator:a587b162344120a1e0c812fa17b86d2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Payload für #6 (ActuatorState): Zustand des Jammers zum Zeitpunkt der Änderung &ndash; Basis für die Tracking-Genauigkeit (Korrelation c) und die Leistungs-/Wirkungs-Kurve (Korrelation d). </p>
-<p><code>reserved</code> ist explizites Padding: ohne die 3 Byte würde der Compiler das Struct auf 16 Byte auffüllen, aber implizit &ndash; das numpy-dtype müsste das exakt nachbilden. Explizit ist robuster als sich auf gleiches Compiler-Verhalten auf beiden Seiten zu verlassen. </p>
+<p><code>applied_command_seq</code> ist zugleich die Rückmeldung "Kommando wirkt jetzt" an Rod (Ack-Ebene 3, siehe <a class="el" href="command_8hpp.html" title="Wire-Schema des Kommandopfads Rod (Python) -&gt; Core (C++).">command.hpp</a>): Der RX-Thread trägt hier die command_seq des zuletzt tatsächlich übernommenen Kommandos ein. Damit braucht der Kommandopfad KEINE synchrone Bestätigung vom RX-Thread &ndash; die Wirkung wird ohnehin über die Telemetrie sichtbar, ohne Cross-Thread-Synchronisation und ohne Risiko fürs Latenzbudget.</p>
+<p><code>reserved</code> ist explizites Padding: ohne die 3 Byte würde der Compiler das Struct implizit auffüllen &ndash; das numpy-dtype müsste das exakt nachbilden. Explizit ist robuster als sich auf gleiches Compiler-Verhalten auf beiden Seiten zu verlassen. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00177">177</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00198">198</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ac6b1a826b16e3a84c7e55c4334ead75e" name="ac6b1a826b16e3a84c7e55c4334ead75e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6b1a826b16e3a84c7e55c4334ead75e">&#9670;&#160;</a></span>active_channel</h2>
@@ -132,23 +136,41 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00178">178</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00199">199</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a3e4c2feac00965b0394345bbaf316412" name="a3e4c2feac00965b0394345bbaf316412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e4c2feac00965b0394345bbaf316412">&#9670;&#160;</a></span>enable</h2>
+<a id="a4dedeca25379e1020d86127537c2a8ec" name="a4dedeca25379e1020d86127537c2a8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dedeca25379e1020d86127537c2a8ec">&#9670;&#160;</a></span>applied_command_seq</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::uint8_t fisch::ActuatorStatePayload::enable</td>
+          <td class="memname">std::uint32_t fisch::ActuatorStatePayload::applied_command_seq</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00181">181</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p>command_seq des zuletzt übernommenen Kommandos </p>
+
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00202">202</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a03fa40b5f801822b49ebff7d4e6f40a0" name="a03fa40b5f801822b49ebff7d4e6f40a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03fa40b5f801822b49ebff7d4e6f40a0">&#9670;&#160;</a></span>enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint8_t fisch::ActuatorStatePayload::enabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00203">203</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -164,7 +186,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00180">180</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00201">201</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -180,7 +202,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00182">182</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00204">204</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -196,12 +218,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00179">179</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00200">200</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>StoerFisch-Core/include/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
+<li>StoerFisch-Core/include/telemetry/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

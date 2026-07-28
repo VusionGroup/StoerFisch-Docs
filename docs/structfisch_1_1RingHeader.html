@@ -103,15 +103,16 @@ $(document).ready(function(){initNavTree('structfisch_1_1RingHeader.html',''); i
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a637293c814e603f41c0651d34f153250" id="r_a637293c814e603f41c0651d34f153250"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html#a637293c814e603f41c0651d34f153250">magic</a></td></tr>
-<tr class="memdesc:a637293c814e603f41c0651d34f153250"><td class="mdescLeft">&#160;</td><td class="mdescRight">muss kRingMagic sein  <br /></td></tr>
-<tr class="separator:a637293c814e603f41c0651d34f153250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45513eb9d83c42255fb40efb38729c7e" id="r_a45513eb9d83c42255fb40efb38729c7e"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html#a45513eb9d83c42255fb40efb38729c7e">magic</a></td></tr>
+<tr class="memdesc:a45513eb9d83c42255fb40efb38729c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">kRingMagic; wird als LETZTES geschrieben (Release)  <br /></td></tr>
+<tr class="separator:a45513eb9d83c42255fb40efb38729c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95556b853972578ea04017d2bf0e5a2e" id="r_a95556b853972578ea04017d2bf0e5a2e"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html#a95556b853972578ea04017d2bf0e5a2e">schema_version</a></td></tr>
 <tr class="memdesc:a95556b853972578ea04017d2bf0e5a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">muss kSchemaVersion sein  <br /></td></tr>
 <tr class="separator:a95556b853972578ea04017d2bf0e5a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29d857905a41fa617bc0febe183a54ad" id="r_a29d857905a41fa617bc0febe183a54ad"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html#a29d857905a41fa617bc0febe183a54ad">capacity_slots</a></td></tr>
-<tr class="memdesc:a29d857905a41fa617bc0febe183a54ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anzahl Slots im Ring (2er Potenz pls)  <br /></td></tr>
 <tr class="separator:a29d857905a41fa617bc0febe183a54ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a271a74a375581cf36257261e4df7e9f7" id="r_a271a74a375581cf36257261e4df7e9f7"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html#a271a74a375581cf36257261e4df7e9f7">generation</a></td></tr>
+<tr class="separator:a271a74a375581cf36257261e4df7e9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae049625745386f9ba5dc72faab8f1d5b" id="r_ae049625745386f9ba5dc72faab8f1d5b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html#ae049625745386f9ba5dc72faab8f1d5b">write_index</a></td></tr>
 <tr class="memdesc:ae049625745386f9ba5dc72faab8f1d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">nächster freier Slot (Producer)  <br /></td></tr>
 <tr class="separator:ae049625745386f9ba5dc72faab8f1d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,14 +120,16 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a51940b144cfa6f38f3dd5d79763163dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">nächster ungelesener Slot (Consumer)  <br /></td></tr>
 <tr class="separator:a51940b144cfa6f38f3dd5d79763163dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19c9afbff9b5450b9ac69edad75de679" id="r_a19c9afbff9b5450b9ac69edad75de679"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679">dropped_count</a></td></tr>
-<tr class="memdesc:a19c9afbff9b5450b9ac69edad75de679"><td class="mdescLeft">&#160;</td><td class="mdescRight">von #8 geloggte Statistik  <br /></td></tr>
+<tr class="memdesc:a19c9afbff9b5450b9ac69edad75de679"><td class="mdescLeft">&#160;</td><td class="mdescRight">von #8 mitgeloggte Drop-Statistik  <br /></td></tr>
 <tr class="separator:a19c9afbff9b5450b9ac69edad75de679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kopfdaten des Ringpuffers, liegen am Anfang des Shared-Memory- Segments. Enthält Metadaten zur Validierung sowie die Producer-/Consumer-Indizes. </p>
-<p>write_index/read_index sind std::atomic, damit Producer und Consumer ohne Lock synchronisieren können (siehe Memory-Ordering-Hinweis oben). Auf Python-Seite werden diese als schlichte, alignte uint64 gelesen &ndash; auf x86-64 ist das Lesen eines einzelnen alignten 64-Bit-Worts atomar genug für diesen Zweck; das ist eine bewusste, dokumentierte Annahme. </p>
+<p>write_index/read_index sind std::atomic, damit Producer und Consumer ohne Lock synchronisieren können (siehe Memory-Ordering-Hinweis oben). Auf Python-Seite werden diese als schlichte, alignte uint64 gelesen &ndash; auf x86-64 ist das Lesen eines einzelnen alignten 64-Bit-Worts atomar genug für diesen Zweck; das ist eine bewusste, dokumentierte Annahme.</p>
+<p>PUBLIKATIONS-REGEL für <code>magic</code>: Der Producer schreibt <code>magic</code> als ALLERLETZTES Feld mit einem Release-Store. Damit gilt für den Consumer: "magic == kRingMagic gesehen" impliziert "alle anderen Header-Felder sind
+bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit gültigem magic, aber noch uninitialisierter capacity_slots lesen. (Bei einem frisch per ftruncate() angelegten, nullgefüllten Segment würde das zufällig noch am schema_version-Check scheitern &ndash; auf einem wiederverwendeten Segment nicht mehr. Deshalb explizit.) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00232">232</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00262">262</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a29d857905a41fa617bc0febe183a54ad" name="a29d857905a41fa617bc0febe183a54ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29d857905a41fa617bc0febe183a54ad">&#9670;&#160;</a></span>capacity_slots</h2>
@@ -139,10 +142,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Anzahl Slots im Ring (Potenz von 2 empfohlen) </p>
 
-<p>Anzahl Slots im Ring (2er Potenz pls) </p>
-
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00235">235</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00265">265</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -158,27 +160,44 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>von #8 geloggte Statistik </p>
+<p>von #8 mitgeloggte Drop-Statistik </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00238">238</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00273">273</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a637293c814e603f41c0651d34f153250" name="a637293c814e603f41c0651d34f153250"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a637293c814e603f41c0651d34f153250">&#9670;&#160;</a></span>magic</h2>
+<a id="a271a74a375581cf36257261e4df7e9f7" name="a271a74a375581cf36257261e4df7e9f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a271a74a375581cf36257261e4df7e9f7">&#9670;&#160;</a></span>generation</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::uint32_t fisch::RingHeader::magic</td>
+          <td class="memname">std::uint64_t fisch::RingHeader::generation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Kennung dieser konkreten Core-Instanz (Wall-Clock-ns beim Anlegen). Ändert sich bei jedem Core-Neustart. Dient dazu, dass ein Consumer feststellen kann, ob er noch am aktuellen Core hängt &ndash; siehe TelemetryRingReader.check_stale() in python/telemetry_layout.py. </p>
+
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00270">270</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a45513eb9d83c42255fb40efb38729c7e" name="a45513eb9d83c42255fb40efb38729c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45513eb9d83c42255fb40efb38729c7e">&#9670;&#160;</a></span>magic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::uint32_t&gt; fisch::RingHeader::magic</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>muss kRingMagic sein </p>
+<p>kRingMagic; wird als LETZTES geschrieben (Release) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00233">233</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00263">263</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -196,7 +215,7 @@ Public Attributes</h2></td></tr>
 
 <p>nächster ungelesener Slot (Consumer) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00237">237</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00272">272</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -214,7 +233,7 @@ Public Attributes</h2></td></tr>
 
 <p>muss kSchemaVersion sein </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00234">234</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00264">264</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -232,12 +251,12 @@ Public Attributes</h2></td></tr>
 
 <p>nächster freier Slot (Producer) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00236">236</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00271">271</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>StoerFisch-Core/include/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
+<li>StoerFisch-Core/include/telemetry/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

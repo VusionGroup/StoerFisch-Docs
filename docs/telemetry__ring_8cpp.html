@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>StoerFisch: StoerFisch-Core/include/telemetry_ring.cpp File Reference</title>
+<title>StoerFisch: StoerFisch-Core/src/telemetry/telemetry_ring.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,7 +97,8 @@ $(document).ready(function(){initNavTree('telemetry__ring_8cpp.html',''); initRe
 
 <p>Implementierung des TelemetryRing-Producers (siehe <a class="el" href="telemetry__ring_8hpp.html" title="SPSC-Ringpuffer (Single-Producer/Single-Consumer) im POSIX Shared Memory, für den Telemetrie-/Event-D...">telemetry_ring.hpp</a> für die vollständige Dokumentation von Layout und Ordering-Regeln).  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="telemetry__ring_8hpp_source.html">telemetry/telemetry_ring.hpp</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;fcntl.h&gt;</code><br />
 <code>#include &lt;sys/mman.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
@@ -105,29 +106,33 @@ $(document).ready(function(){initNavTree('telemetry__ring_8cpp.html',''); initRe
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for telemetry_ring.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="telemetry__ring_8cpp__incl.png" border="0" usemap="#aStoerFisch-Core_2include_2telemetry__ring_8cpp" alt=""/></div>
-<map name="aStoerFisch-Core_2include_2telemetry__ring_8cpp" id="aStoerFisch-Core_2include_2telemetry__ring_8cpp">
-<area shape="rect" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="371,5,546,45"/>
-<area shape="rect" href="telemetry__ring_8hpp.html" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="149,93,296,119"/>
-<area shape="poly" title=" " alt="" coords="403,48,271,92,269,87,401,43"/>
-<area shape="rect" title=" " alt="" coords="321,93,383,119"/>
-<area shape="poly" title=" " alt="" coords="434,48,381,87,378,83,431,43"/>
-<area shape="rect" title=" " alt="" coords="407,93,510,119"/>
-<area shape="poly" title=" " alt="" coords="461,46,461,79,456,79,456,46"/>
-<area shape="rect" title=" " alt="" coords="535,93,620,119"/>
-<area shape="poly" title=" " alt="" coords="489,43,550,84,547,88,486,48"/>
-<area shape="rect" title=" " alt="" coords="644,93,719,119"/>
-<area shape="poly" title=" " alt="" coords="513,43,636,86,635,91,511,48"/>
-<area shape="rect" title=" " alt="" coords="5,167,72,192"/>
-<area shape="poly" title=" " alt="" coords="194,121,83,164,81,159,192,116"/>
-<area shape="rect" title=" " alt="" coords="96,167,163,192"/>
-<area shape="poly" title=" " alt="" coords="209,121,157,160,154,156,206,117"/>
-<area shape="rect" title=" " alt="" coords="187,167,258,192"/>
-<area shape="poly" title=" " alt="" coords="225,119,225,153,220,153,220,119"/>
-<area shape="rect" title=" " alt="" coords="283,167,349,192"/>
-<area shape="poly" title=" " alt="" coords="239,117,292,156,288,160,236,121"/>
-<area shape="rect" title=" " alt="" coords="373,167,432,192"/>
-<area shape="poly" title=" " alt="" coords="253,116,362,159,360,164,251,121"/>
+<div class="center"><img src="telemetry__ring_8cpp__incl.png" border="0" usemap="#aStoerFisch-Core_2src_2telemetry_2telemetry__ring_8cpp" alt=""/></div>
+<map name="aStoerFisch-Core_2src_2telemetry_2telemetry__ring_8cpp" id="aStoerFisch-Core_2src_2telemetry_2telemetry__ring_8cpp">
+<area shape="rect" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="467,5,626,60"/>
+<area shape="rect" href="telemetry__ring_8hpp.html" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="192,108,347,148"/>
+<area shape="poly" title=" " alt="" coords="470,63,339,106,337,101,468,58"/>
+<area shape="rect" title=" " alt="" coords="371,115,437,141"/>
+<area shape="poly" title=" " alt="" coords="508,62,434,110,431,106,505,58"/>
+<area shape="rect" title=" " alt="" coords="462,115,525,141"/>
+<area shape="poly" title=" " alt="" coords="534,62,509,104,505,102,529,59"/>
+<area shape="rect" title=" " alt="" coords="549,115,651,141"/>
+<area shape="poly" title=" " alt="" coords="564,59,589,102,584,104,559,62"/>
+<area shape="rect" title=" " alt="" coords="676,115,761,141"/>
+<area shape="poly" title=" " alt="" coords="596,58,687,106,684,111,594,62"/>
+<area shape="rect" title=" " alt="" coords="785,115,860,141"/>
+<area shape="poly" title=" " alt="" coords="627,56,774,105,781,108,779,113,772,111,625,61"/>
+<area shape="rect" title=" " alt="" coords="5,196,72,221"/>
+<area shape="poly" title=" " alt="" coords="215,151,86,194,84,189,213,145"/>
+<area shape="rect" title=" " alt="" coords="96,196,163,221"/>
+<area shape="poly" title=" " alt="" coords="237,150,163,191,161,187,235,146"/>
+<area shape="rect" title=" " alt="" coords="187,196,258,221"/>
+<area shape="poly" title=" " alt="" coords="260,150,239,185,234,183,256,147"/>
+<area shape="rect" title=" " alt="" coords="283,196,349,221"/>
+<area shape="poly" title=" " alt="" coords="283,147,304,183,300,185,278,150"/>
+<area shape="rect" title=" " alt="" coords="373,196,432,221"/>
+<area shape="poly" title=" " alt="" coords="303,146,373,187,370,191,300,150"/>
+<area shape="rect" title=" " alt="" coords="457,196,543,221"/>
+<area shape="poly" title=" " alt="" coords="325,145,454,189,452,194,324,151"/>
 </map>
 </div>
 </div>
@@ -147,7 +152,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d8424022c8f08972bc7a301092243797.html">StoerFisch-Core</a></li><li class="navelem"><a class="el" href="dir_53e8b403d6d92b1895b37e57deaf4e71.html">include</a></li><li class="navelem"><a class="el" href="telemetry__ring_8cpp.html">telemetry_ring.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d8424022c8f08972bc7a301092243797.html">StoerFisch-Core</a></li><li class="navelem"><a class="el" href="dir_5df2e51e2103e4f85b6c4d417c1bda6b.html">src</a></li><li class="navelem"><a class="el" href="dir_a342f1ccac45472c0a44c321c4ad1b2c.html">telemetry</a></li><li class="navelem"><a class="el" href="telemetry__ring_8cpp.html">telemetry_ring.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

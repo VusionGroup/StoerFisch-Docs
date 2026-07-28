@@ -1,0 +1,20 @@
+<map id="StoerFisch&#45;Core/include/spectral/spectrum_analyzer.hpp" name="StoerFisch&#45;Core/include/spectral/spectrum_analyzer.hpp">
+<area shape="rect" id="Node000001" title="Wandelt IQ&#45;Sample&#45;Blöcke in Spektral&#45;Magnituden (dB) und BLE&#45;Kanal&#45;Energien um. Entspricht [1...." alt="" coords="151,5,385,45"/>
+<area shape="rect" id="Node000002" href="$ble__channels_8hpp.html" title="Zentrale Umrechnung zwischen BLE&#45;Kanalnummer, Frequenz&#45;Index und Frequenz. EINE Quelle der Wahrheit f..." alt="" coords="5,93,165,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,48,126,90,124,85,223,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="76,167,143,192"/>
+<area shape="poly" id="edge9_Node000001_Node000003" title=" " alt="" coords="252,47,179,121,135,160,132,156,176,117,248,44"/>
+<area shape="rect" id="Node000004" href="$sdr__device_8hpp.html" title="RAII&#45;Wrapper um die HackRF&#45;Hardware (libhackrf)." alt="" coords="241,93,426,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="286,44,317,81,313,84,282,47"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="521,167,583,192"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="328,43,383,64,440,91,490,123,531,156,527,160,487,128,437,96,381,69,326,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,118,104,153,99,154,87,120"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="298,121,156,166,155,161,297,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="167,167,254,192"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="315,121,244,162,241,157,312,116"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="279,167,337,192"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="332,120,319,155,314,153,327,118"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="369,116,508,161,507,166,368,121"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="362,167,497,192"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="350,117,404,156,401,160,347,121"/>
+</map>

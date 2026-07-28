@@ -1,0 +1,46 @@
+var command_8hpp =
+[
+    [ "fisch::CommandRequest", "structfisch_1_1CommandRequest.html", "structfisch_1_1CommandRequest" ],
+    [ "fisch::CommandResponse", "structfisch_1_1CommandResponse.html", "structfisch_1_1CommandResponse" ],
+    [ "CommandKind", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9ca", [
+      [ "Ping", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caab85815d04cec053ce6deb8021f2df1b8", null ],
+      [ "Start", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caaa6122a65eaa676f700ae68d393054a37", null ],
+      [ "Stop", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa11a755d598c0c417f9a36758c3da7481", null ],
+      [ "SetTarget", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa0bfa67e5fc94d24a0ad83f838454884e", null ],
+      [ "SetTxGain", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa1f4cd317151e9f3866ad27e7afc37123", null ],
+      [ "SetOverflowPolicy", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caaa55dceda8e25056bfac86df5799db61a", null ],
+      [ "Shutdown", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa1a4ebb180ba59b067782515ffee6e975", null ],
+      [ "SetSampleRate", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caab445c9cfb653e77f7e14a5f861c5dbb1", null ],
+      [ "SetCenterFreq", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa02def85152aae48a597ca3bd8568e2f9", null ],
+      [ "StartRecording", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa1be0cafca6f3374b24cc833bac2c7380", null ],
+      [ "StopRecording", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa0711c4b9ecefa0a637e6a7b6c3759859", null ],
+      [ "StartJamming", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa7f4abc3dfd2f163681df3f0327aacae3", null ],
+      [ "StartReplay", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa3149f9c06c3db5bb6888534232fd20b5", null ],
+      [ "StopTransmit", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0", null ]
+    ] ],
+    [ "CommandStatus", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121", [
+      [ "Ok", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115", null ],
+      [ "SchemaMismatch", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a45037b851653a6ba3f3d8f6c508e03d4", null ],
+      [ "UnknownKind", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a8da24985f13f84c15af0130f7decf4fd", null ],
+      [ "InvalidChannel", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a94a9e4213f08b322090d83fa5a8be5e4", null ],
+      [ "InvalidGain", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a327c36153b3f4221843badf676c4c09d", null ],
+      [ "InvalidPolicy", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121aa021763f4cdb62145be4d266a4554c4c", null ],
+      [ "InvalidSampleRate", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d", null ],
+      [ "InvalidFrequency", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121ac3b03efc3eaa590f88945364781491a5", null ],
+      [ "InvalidPattern", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121ad1ce9254e48e9dabe6d8c52029b52839", null ],
+      [ "NotRunning", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121ae457ff7a83d0a8681fa483f898788515", null ],
+      [ "AlreadyRunning", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121adcf8635f774078c5b7d83e7627eff502", null ],
+      [ "HardwareError", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a4852946e074a1f48ed7de9a024b10c03", null ],
+      [ "InternalError", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a8462b58246e70e5c83e5b939a9332cb5", null ]
+    ] ],
+    [ "validateCommand", "command_8hpp.html#aaed90c9f3c950ce02538955c44e7920c", null ],
+    [ "kCommandMagic", "command_8hpp.html#a21ba808f48c00c02f21b36fae7cfcf49", null ],
+    [ "kCommandSchemaVersion", "command_8hpp.html#ae2c6a28654b7c16ee9c7fdb1b4700a81", null ],
+    [ "kMaxBleChannel", "command_8hpp.html#ace661611c40c59f6f8fd36f46684e34f", null ],
+    [ "kMaxCenterFreqHz", "command_8hpp.html#aebd58246f852cc6a9676ab1792190ea6", null ],
+    [ "kMaxSampleRateHz", "command_8hpp.html#afcc3eb94d9bc7bd9cd20bd39e4d5a1f9", null ],
+    [ "kMaxTxGainDb", "command_8hpp.html#a459b47363518753401825ff3cd736052", null ],
+    [ "kMinCenterFreqHz", "command_8hpp.html#a4c94e470d3740474a81cf786c0ef42f8", null ],
+    [ "kMinSampleRateHz", "command_8hpp.html#ab1f2de65fd3e562e142364f5e7bbaffd", null ],
+    [ "kMinTxGainDb", "command_8hpp.html#ab00b58fc17cf3dfb141d9e1bb1e0f33f", null ]
+];

@@ -1,0 +1,10 @@
+<map id="StoerFisch&#45;Core/src/command/command.cpp" name="StoerFisch&#45;Core/src/command/command.cpp">
+<area shape="rect" id="Node000001" title="Implementierung der zustandslosen Kommando&#45;Validierung (siehe command.hpp für die vollständige Dokume..." alt="" coords="15,5,201,45"/>
+<area shape="rect" id="Node000002" href="$command_8hpp.html" title="Wire&#45;Schema des Kommandopfads Rod (Python) &#45;&gt; Core (C++)." alt="" coords="16,93,200,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,46,111,79,105,79,105,46"/>
+<area shape="rect" id="Node000003" href="$policy_8hpp.html" title="Gemeinsame Policy&#45;Typen, die sowohl der Kommandopfad als auch die Ringpuffer kennen müssen." alt="" coords="5,167,117,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,120,79,157,74,154,98,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="75,240,141,265"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="116,118,132,166,131,199,122,228,117,227,126,198,127,167,111,120"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="71,191,95,227,91,230,67,194"/>
+</map>

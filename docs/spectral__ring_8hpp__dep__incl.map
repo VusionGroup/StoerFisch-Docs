@@ -1,0 +1,12 @@
+<map id="StoerFisch&#45;Core/include/spectral/spectral_ring.hpp" name="StoerFisch&#45;Core/include/spectral/spectral_ring.hpp">
+<area shape="rect" id="Node000001" title="SPSC&#45;Ringpuffer im Shared Memory für den hochratigen Spektral&#45;/ FFT&#45;Strom (#1 der Korrelationsanalyse..." alt="" coords="119,5,313,45"/>
+<area shape="rect" id="Node000002" href="$signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="127,93,305,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,59,219,93,213,93,213,59"/>
+<area shape="rect" id="Node000003" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,181,173,221"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="163,55,138,72,117,95,106,116,98,139,92,181,87,181,93,138,101,114,112,92,134,68,160,50"/>
+<area shape="rect" id="Node000005" href="$spectral__ring_8cpp.html" title="Implementierung von SpectralRing/SpectralRingReader. Siehe spectral_ring.hpp für Design&#45;Begründungen ..." alt="" coords="329,93,522,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="276,48,381,91,378,96,274,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,144,119,183,116,179,175,139"/>
+<area shape="rect" id="Node000004" href="$signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="197,181,373,221"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,143,272,179,268,183,238,146"/>
+</map>

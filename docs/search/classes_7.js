@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['telemetryrecord_0',['TelemetryRecord',['../structfisch_1_1TelemetryRecord.html',1,'fisch']]],
-  ['telemetryring_1',['TelemetryRing',['../classfisch_1_1TelemetryRing.html',1,'fisch']]]
+  ['pendingretune_0',['PendingRetune',['../structfisch_1_1SignalPipeline_1_1PendingRetune.html',1,'fisch::SignalPipeline']]],
+  ['pipelineactuatorstate_1',['PipelineActuatorState',['../structfisch_1_1PipelineActuatorState.html',1,'fisch']]]
 ];

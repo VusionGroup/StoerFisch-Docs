@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['decision_0',['decision',['../structfisch_1_1ControllerStatePayload.html#adc57ebe1487a7354da3babbb9fbd0d25',1,'fisch::ControllerStatePayload']]],
-  ['dropped_5fcount_1',['dropped_count',['../structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679',1,'fisch::RingHeader']]],
-  ['dropped_5fsamples_2',['dropped_samples',['../structfisch_1_1BufferHealthPayload.html#a494333440b1d90b7afdfd8a5415ea48e',1,'fisch::BufferHealthPayload']]]
+  ['capacity_5fslots_0',['capacity_slots',['../structfisch_1_1SpectralRingHeader.html#a7ba2b23fa20bc669b6f81718a5809010',1,'fisch::SpectralRingHeader::capacity_slots'],['../structfisch_1_1RingHeader.html#a29d857905a41fa617bc0febe183a54ad',1,'fisch::RingHeader::capacity_slots']]],
+  ['center_5ffreq_5fhz_1',['center_freq_hz',['../structfisch_1_1CommandRequest.html#a96ea7754b46e06ea365abc1ae460e57e',1,'fisch::CommandRequest::center_freq_hz'],['../structfisch_1_1SpectralSlotHeader.html#adf2f34c708bf7b31f97a9f6f0b3255c0',1,'fisch::SpectralSlotHeader::center_freq_hz'],['../structfisch_1_1SpectralFrame.html#a0ef38ef15ea56d433e9820cf9b5c9547',1,'fisch::SpectralFrame::center_freq_hz'],['../structfisch_1_1SignalPipeline_1_1PendingRetune.html#ac99b86f60d141e05c5beef1f2d832e0f',1,'fisch::SignalPipeline::PendingRetune::center_freq_hz']]],
+  ['channel_2',['channel',['../structfisch_1_1DetectionEventPayload.html#a9be8fdecbb85359e23054aa945396374',1,'fisch::DetectionEventPayload::channel'],['../structfisch_1_1ChannelEvent.html#a4de398c763fcbba48a22611bf76601aa',1,'fisch::ChannelEvent::channel']]],
+  ['channel_5foccupied_5fmask_3',['channel_occupied_mask',['../structfisch_1_1ChannelOccupancyPayload.html#a1891ef29e572d526e5f25785361c80fa',1,'fisch::ChannelOccupancyPayload']]],
+  ['command_5fseq_4',['command_seq',['../structfisch_1_1CommandRequest.html#a8c36386ce0a53d3e5445e7c719d62ff5',1,'fisch::CommandRequest::command_seq'],['../structfisch_1_1CommandResponse.html#a7dbc887de497f98790ebb475978a91be',1,'fisch::CommandResponse::command_seq'],['../structfisch_1_1SignalPipeline_1_1PendingRetune.html#afc0ec3965e62607cde60101d60cb602d',1,'fisch::SignalPipeline::PendingRetune::command_seq']]]
 ];

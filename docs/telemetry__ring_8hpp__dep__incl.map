@@ -1,5 +1,12 @@
-<map id="StoerFisch&#45;Core/include/telemetry_ring.hpp" name="StoerFisch&#45;Core/include/telemetry_ring.hpp">
-<area shape="rect" id="Node000001" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="5,5,180,45"/>
-<area shape="rect" id="Node000002" href="$telemetry__ring_8cpp.html" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="5,93,180,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,59,95,93,90,93,90,59"/>
+<map id="StoerFisch&#45;Core/include/telemetry/telemetry_ring.hpp" name="StoerFisch&#45;Core/include/telemetry/telemetry_ring.hpp">
+<area shape="rect" id="Node000001" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="107,5,325,45"/>
+<area shape="rect" id="Node000002" href="$signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="127,101,305,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,59,219,101,213,101,213,59"/>
+<area shape="rect" id="Node000003" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,196,173,236"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="162,54,137,72,117,95,104,120,97,147,92,196,86,195,91,146,99,118,112,92,134,68,159,50"/>
+<area shape="rect" id="Node000005" href="$telemetry__ring_8cpp.html" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="329,93,487,148"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="268,49,355,91,353,96,266,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,151,117,198,113,194,178,147"/>
+<area shape="rect" id="Node000004" href="$signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="197,196,373,236"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,150,273,194,269,198,236,153"/>
 </map>

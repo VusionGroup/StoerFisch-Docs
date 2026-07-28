@@ -1,0 +1,13 @@
+<map id="StoerFisch&#45;Core/src/controller.cpp" name="StoerFisch&#45;Core/src/controller.cpp">
+<area shape="rect" id="Node000001" title="Implementierung des Closed&#45;Loop&#45;Controllers (siehe Header für die Zustandsmaschine und die Strategie&#45;..." alt="" coords="38,5,184,45"/>
+<area shape="rect" id="Node000002" href="$controller_8hpp.html" title="Closed&#45;Loop&#45;Regelkreis: entscheidet auf Basis der Kanal&#45;Belegung, welchen Kanal der Störsender (Jamme..." alt="" coords="56,93,166,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,46,114,79,108,79,108,46"/>
+<area shape="rect" id="Node000003" href="$channel__tracker_8hpp.html" title="Wandelt BLE&#45;Kanal&#45;Energien in Belegungszustände und Detektions&#45; Events um. Entspricht [1...." alt="" coords="22,167,200,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,119,114,153,108,153,108,119"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="23,240,90,265"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="74,121,39,139,24,152,12,168,8,183,12,199,34,229,30,232,7,201,3,183,7,166,20,149,36,135,72,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="133,240,196,265"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="150,116,186,135,202,149,215,166,219,183,214,202,191,232,187,229,210,199,214,183,210,168,198,152,183,139,148,121"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="104,194,76,231,71,228,100,191"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="122,191,150,228,145,231,118,194"/>
+</map>

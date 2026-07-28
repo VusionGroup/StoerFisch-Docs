@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['latencytimestamp_0',['LatencyTimestamp',['../namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58a8b45b08afba78f28e241e348556089be',1,'fisch']]]
+  ['enable_0',['Enable',['../namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615a2faec1f9f8cc7f8f40d521c4dd574f49',1,'fisch']]]
 ];

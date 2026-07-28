@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['schema_5fversion_0',['schema_version',['../structfisch_1_1RingHeader.html#a95556b853972578ea04017d2bf0e5a2e',1,'fisch::RingHeader']]],
-  ['sequence_1',['sequence',['../structfisch_1_1TelemetryRecord.html#a040a72d296f467ce2b06d61c154f196f',1,'fisch::TelemetryRecord']]],
-  ['setpayload_2',['setPayload',['../structfisch_1_1TelemetryRecord.html#a117ddaec12d257e920df1498061af1bb',1,'fisch::TelemetryRecord']]],
-  ['snr_5fdb_3',['snr_db',['../structfisch_1_1SuccessMetricPayload.html#a91eac02fb850a3ccba066f52eb695808',1,'fisch::SuccessMetricPayload']]],
-  ['state_4',['state',['../structfisch_1_1ControllerStatePayload.html#acc9fb73fe822982b06cab531e377c5a7',1,'fisch::ControllerStatePayload']]],
-  ['successmetric_5',['SuccessMetric',['../namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3',1,'fisch']]],
-  ['successmetricpayload_6',['SuccessMetricPayload',['../structfisch_1_1SuccessMetricPayload.html',1,'fisch']]]
+  ['magic_0',['magic',['../structfisch_1_1CommandRequest.html#af093465e5af1c3a696a99b5f7802f4c1',1,'fisch::CommandRequest::magic'],['../structfisch_1_1CommandResponse.html#a95e7dd29ed2b439371f0361c15d9fe44',1,'fisch::CommandResponse::magic'],['../structfisch_1_1SpectralRingHeader.html#a74c7ba8e29c811c620272b4a6149741b',1,'fisch::SpectralRingHeader::magic'],['../structfisch_1_1RingHeader.html#a45513eb9d83c42255fb40efb38729c7e',1,'fisch::RingHeader::magic']]],
+  ['main_1',['main',['../namespacemain.html',1,'main'],['../main__loop__hackrf_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main_loop_hackrf.cpp'],['../namespacemain.html#a3140e9a5b6a71ffbf498198cfc471b88',1,'main.main()']]],
+  ['main_2epy_2',['main.py',['../main_8py.html',1,'']]],
+  ['main_5floop_5fhackrf_2ecpp_3',['main_loop_hackrf.cpp',['../main__loop__hackrf_8cpp.html',1,'']]]
 ];

@@ -103,14 +103,14 @@ $(document).ready(function(){initNavTree('structfisch_1_1LatencyTimestampsPayloa
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4fa87d8a66bc7c72255621d2f105e68d" id="r_a4fa87d8a66bc7c72255621d2f105e68d"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1LatencyTimestampsPayload.html#a4fa87d8a66bc7c72255621d2f105e68d">t1adc_ns</a></td></tr>
-<tr class="memdesc:a4fa87d8a66bc7c72255621d2f105e68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample-Ankunft an ADC / SDR-Callback.  <br /></td></tr>
-<tr class="separator:a4fa87d8a66bc7c72255621d2f105e68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7c7a7c178338fa63add1a88df11d39" id="r_a5b7c7a7c178338fa63add1a88df11d39"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1LatencyTimestampsPayload.html#a5b7c7a7c178338fa63add1a88df11d39">t1_adc_ns</a></td></tr>
+<tr class="memdesc:a5b7c7a7c178338fa63add1a88df11d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample-Ankunft am ADC / SDR-Callback.  <br /></td></tr>
+<tr class="separator:a5b7c7a7c178338fa63add1a88df11d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19d94e1ff70bd42d4149a532b6359e2c" id="r_a19d94e1ff70bd42d4149a532b6359e2c"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1LatencyTimestampsPayload.html#a19d94e1ff70bd42d4149a532b6359e2c">t2_fft_done_ns</a></td></tr>
 <tr class="memdesc:a19d94e1ff70bd42d4149a532b6359e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">FFT-Verarbeitung abgeschlossen.  <br /></td></tr>
 <tr class="separator:a19d94e1ff70bd42d4149a532b6359e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d04afe55f74c594e9111c7f8fa32ab1" id="r_a3d04afe55f74c594e9111c7f8fa32ab1"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1LatencyTimestampsPayload.html#a3d04afe55f74c594e9111c7f8fa32ab1">t3_decision_ns</a></td></tr>
-<tr class="memdesc:a3d04afe55f74c594e9111c7f8fa32ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regler Entscheidung getroffen.  <br /></td></tr>
+<tr class="memdesc:a3d04afe55f74c594e9111c7f8fa32ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regler-Entscheidung getroffen.  <br /></td></tr>
 <tr class="separator:a3d04afe55f74c594e9111c7f8fa32ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3ce3b0b2a45698a9eb454b0a922a497" id="r_ab3ce3b0b2a45698a9eb454b0a922a497"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1LatencyTimestampsPayload.html#ab3ce3b0b2a45698a9eb454b0a922a497">t4_dac_out_ns</a></td></tr>
 <tr class="memdesc:ab3ce3b0b2a45698a9eb454b0a922a497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stellsignal am DAC/TX ausgegeben.  <br /></td></tr>
@@ -119,23 +119,23 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Payload für #4 (LatencyTimestamps). Alle Zeitstempel in Nanosekunden seit CLOCK_MONOTONIC, damit Drift durch Systemzeit-Sprünge ausgeschlossen ist. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00072">72</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00082">82</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4fa87d8a66bc7c72255621d2f105e68d" name="a4fa87d8a66bc7c72255621d2f105e68d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fa87d8a66bc7c72255621d2f105e68d">&#9670;&#160;</a></span>t1adc_ns</h2>
+<a id="a5b7c7a7c178338fa63add1a88df11d39" name="a5b7c7a7c178338fa63add1a88df11d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b7c7a7c178338fa63add1a88df11d39">&#9670;&#160;</a></span>t1_adc_ns</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::uint64_t fisch::LatencyTimestampsPayload::t1adc_ns</td>
+          <td class="memname">std::uint64_t fisch::LatencyTimestampsPayload::t1_adc_ns</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sample-Ankunft an ADC / SDR-Callback. </p>
+<p>Sample-Ankunft am ADC / SDR-Callback. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00073">73</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00083">83</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -153,7 +153,7 @@ Public Attributes</h2></td></tr>
 
 <p>FFT-Verarbeitung abgeschlossen. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00074">74</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00084">84</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -169,9 +169,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Regler Entscheidung getroffen. </p>
+<p>Regler-Entscheidung getroffen. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00075">75</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00085">85</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -189,12 +189,12 @@ Public Attributes</h2></td></tr>
 
 <p>Stellsignal am DAC/TX ausgegeben. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00076">76</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00086">86</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>StoerFisch-Core/include/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
+<li>StoerFisch-Core/include/telemetry/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

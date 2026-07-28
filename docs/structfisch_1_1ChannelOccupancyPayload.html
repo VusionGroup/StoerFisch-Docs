@@ -104,17 +104,17 @@ $(document).ready(function(){initNavTree('structfisch_1_1ChannelOccupancyPayload
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a1891ef29e572d526e5f25785361c80fa" id="r_a1891ef29e572d526e5f25785361c80fa"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ChannelOccupancyPayload.html#a1891ef29e572d526e5f25785361c80fa">channel_occupied_mask</a></td></tr>
-<tr class="memdesc:a1891ef29e572d526e5f25785361c80fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit i = Kanal i (0...39) aktuell belegt.  <br /></td></tr>
+<tr class="memdesc:a1891ef29e572d526e5f25785361c80fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit i = Kanal i (0..39) aktuell belegt.  <br /></td></tr>
 <tr class="separator:a1891ef29e572d526e5f25785361c80fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8594e3ab4f7cbaf4cee5d1755d3feb0" id="r_ac8594e3ab4f7cbaf4cee5d1755d3feb0"><td class="memItemLeft" align="right" valign="top">std::int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ChannelOccupancyPayload.html#ac8594e3ab4f7cbaf4cee5d1755d3feb0">energy_dbm</a> [40]</td></tr>
-<tr class="memdesc:ac8594e3ab4f7cbaf4cee5d1755d3feb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">je Kanal, 1dB Auflösung  <br /></td></tr>
+<tr class="memdesc:ac8594e3ab4f7cbaf4cee5d1755d3feb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">je Kanal, 1 dB Auflösung  <br /></td></tr>
 <tr class="separator:ac8594e3ab4f7cbaf4cee5d1755d3feb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Payload für #2 (ChannelOccupancy): Snapshot aller 40 BLE-Kanäle in einem Record statt 40 Einzel-Records pro Sweep. </p>
 <p>Energie ist auf int8 (1 dB Auflösung, Wertebereich -128..127 dBm) quantisiert, um mit der Bitmaske zusammen unter kPayloadSize zu bleiben. Für feinere Auflösung siehe <a class="el" href="structfisch_1_1SuccessMetricPayload.html" title="Payload für #7 (SuccessMetric): Restenergie/SNR auf dem Zielkanal während aktiver Störung – die eigen...">SuccessMetricPayload</a> (float), das für die eigentliche Wirkungs-Kurve (Korrelation d) verwendet wird. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00122">122</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00140">140</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a1891ef29e572d526e5f25785361c80fa" name="a1891ef29e572d526e5f25785361c80fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1891ef29e572d526e5f25785361c80fa">&#9670;&#160;</a></span>channel_occupied_mask</h2>
@@ -128,9 +128,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Bit i = Kanal i (0...39) aktuell belegt. </p>
+<p>Bit i = Kanal i (0..39) aktuell belegt. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00123">123</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00141">141</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -146,14 +146,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>je Kanal, 1dB Auflösung </p>
+<p>je Kanal, 1 dB Auflösung </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00124">124</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00142">142</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>StoerFisch-Core/include/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
+<li>StoerFisch-Core/include/telemetry/<a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

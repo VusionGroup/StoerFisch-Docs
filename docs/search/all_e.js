@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['usb_5foverruns_0',['usb_overruns',['../structfisch_1_1BufferHealthPayload.html#af5a968249f833ec63402568977d91e95',1,'fisch::BufferHealthPayload']]],
-  ['usb_5funderruns_1',['usb_underruns',['../structfisch_1_1BufferHealthPayload.html#aaa2613f8744669a44bb6f56c7b007b43',1,'fisch::BufferHealthPayload']]]
+  ['observed_5fchannel_0',['observed_channel',['../structfisch_1_1ControllerStatePayload.html#aa73ae903ce9b2b6d8acd12a0dbaf6462',1,'fisch::ControllerStatePayload']]],
+  ['occupancymask_1',['occupancyMask',['../classfisch_1_1ChannelTracker.html#a1bf78214ec4d99ea39d16ffde5345a4b',1,'fisch::ChannelTracker']]],
+  ['ok_2',['Ok',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115',1,'fisch']]],
+  ['open_3',['open',['../classfisch_1_1IqFilePlayer.html#a174054ce43ed31d15c8cb0a2ec98e952',1,'fisch::IqFilePlayer']]],
+  ['opendevicecount_4',['openDeviceCount',['../classfisch_1_1SdrDevice.html#ad3901e0a34b87fe442320b09f4d856f0',1,'fisch::SdrDevice']]],
+  ['operator_3d_5',['operator=',['../classfisch_1_1CommandChannel.html#a8509dcae64a8be2f92bfd56d7236eb85',1,'fisch::CommandChannel::operator=()'],['../classfisch_1_1SdrDevice.html#a566dc25fb8a37a354b9d0c80ca44bed6',1,'fisch::SdrDevice::operator=(const SdrDevice &amp;)=delete'],['../classfisch_1_1SdrDevice.html#afe768c64dc49ce89d9b3ceaf5ee4be03',1,'fisch::SdrDevice::operator=(SdrDevice &amp;&amp;)=delete'],['../classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1',1,'fisch::IqRecorder::operator=()'],['../classfisch_1_1SpectralRing.html#a7e2a74f34d5d71da63df67cb25743c95',1,'fisch::SpectralRing::operator=()'],['../classfisch_1_1SpectralRingReader.html#af364f0e58340b1e43211a1c98486629a',1,'fisch::SpectralRingReader::operator=()'],['../classfisch_1_1TelemetryRing.html#a9f5ce39edb40ccf2ee375ba57161b84b',1,'fisch::TelemetryRing::operator=()']]],
+  ['overflow_5fpolicy_6',['overflow_policy',['../structfisch_1_1CommandRequest.html#a3fe9f3d495d68cecb0388978be68ab5b',1,'fisch::CommandRequest::overflow_policy'],['../structfisch_1_1SpectralRingHeader.html#a861374fb579c1765abb92b609b8f5ab0',1,'fisch::SpectralRingHeader::overflow_policy']]],
+  ['overflowpolicy_7',['overflowpolicy',['../classfisch_1_1SpectralRing.html#a5477f02e88874c6918175532f430a016',1,'fisch::SpectralRing::overflowPolicy()'],['../namespacefisch.html#a660d3c7a13e0addcc9c9c14699ed4004',1,'fisch::OverflowPolicy']]]
 ];

@@ -1,0 +1,26 @@
+<map id="StoerFisch&#45;Core/src/spectral/spectral_analzyer.cpp" name="StoerFisch&#45;Core/src/spectral/spectral_analzyer.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="327,5,550,45"/>
+<area shape="rect" id="Node000002" href="$spectrum__analyzer_8hpp.html" title="Wandelt IQ&#45;Sample&#45;Blöcke in Spektral&#45;Magnituden (dB) und BLE&#45;Kanal&#45;Energien um. Entspricht [1...." alt="" coords="153,93,383,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="399,48,306,90,304,85,397,43"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="407,93,470,119"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="441,46,441,79,436,79,436,46"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="494,93,581,119"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="464,43,513,82,510,87,461,48"/>
+<area shape="rect" id="Node000003" href="$ble__channels_8hpp.html" title="Zentrale Umrechnung zwischen BLE&#45;Kanalnummer, Frequenz&#45;Index und Frequenz. EINE Quelle der Wahrheit f..." alt="" coords="5,167,165,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,121,129,164,127,159,238,116"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="76,240,143,265"/>
+<area shape="poly" id="edge10_Node000002_Node000004" title=" " alt="" coords="258,121,179,194,135,233,131,229,176,190,254,117"/>
+<area shape="rect" id="Node000005" href="$sdr__device_8hpp.html" title="RAII&#45;Wrapper um die HackRF&#45;Hardware (libhackrf)." alt="" coords="241,167,426,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="281,117,315,155,312,158,277,121"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="521,240,583,265"/>
+<area shape="poly" id="edge11_Node000002_Node000008" title=" " alt="" coords="313,116,374,136,440,164,490,196,531,229,527,233,487,201,437,169,373,141,312,121"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="92,191,104,226,99,228,87,193"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="298,195,156,239,155,234,297,189"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="167,240,254,265"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="315,194,244,235,241,231,312,190"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="279,240,337,265"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="332,193,319,228,314,226,327,191"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="369,189,508,234,507,239,368,195"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="362,240,497,265"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="350,190,404,229,401,234,347,194"/>
+</map>

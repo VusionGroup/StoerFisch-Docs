@@ -1,0 +1,20 @@
+<map id="StoerFisch&#45;Core/include/command/command.hpp" name="StoerFisch&#45;Core/include/command/command.hpp">
+<area shape="rect" id="Node000001" title="Wire&#45;Schema des Kommandopfads Rod (Python) &#45;&gt; Core (C++)." alt="" coords="280,5,468,45"/>
+<area shape="rect" id="Node000002" href="$command__channel_8hpp.html" title="Transport für den Kommandopfad Rod (Python) &#45;&gt; Core (C++), über einen Unix Domain Socket." alt="" coords="20,181,266,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,34,192,42,117,54,54,71,31,82,16,95,9,107,9,119,14,130,24,141,54,162,90,179,88,184,52,167,21,145,10,133,4,120,4,106,12,92,28,78,52,66,116,48,191,36,266,29"/>
+<area shape="rect" id="Node000005" href="$command__queue_8hpp.html" title="Lock&#45;freie SPSC&#45;Warteschlange für validierte Kommandos zwischen CommandChannel (Producer) und dem Con..." alt="" coords="26,93,260,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="311,53,195,96,193,91,310,48"/>
+<area shape="rect" id="Node000006" href="$signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="285,93,462,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="376,59,376,93,371,93,371,59"/>
+<area shape="rect" id="Node000007" href="$signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="411,181,587,221"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="430,50,456,68,477,92,489,114,496,138,502,181,496,181,491,139,484,116,473,95,452,72,427,54"/>
+<area shape="rect" id="Node000008" href="$command_8cpp.html" title="Implementierung der zustandslosen Kommando&#45;Validierung (siehe command.hpp für die vollständige Dokume..." alt="" coords="538,93,724,133"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="444,47,576,91,574,96,442,52"/>
+<area shape="rect" id="Node000003" href="$command__channel_8cpp.html" title="Implementierung von CommandChannel (siehe command_channel.hpp für die vollständige Dokumentation von ..." alt="" coords="20,269,266,309"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,235,146,269,140,269,140,235"/>
+<area shape="rect" id="Node000004" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="290,269,458,309"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="207,224,324,267,322,272,205,229"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="146,147,146,181,140,181,140,147"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="376,147,376,269,371,269,371,147"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="414,139,473,179,470,183,411,144"/>
+</map>

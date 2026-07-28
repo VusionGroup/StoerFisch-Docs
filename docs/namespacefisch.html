@@ -91,7 +91,9 @@ $(document).ready(function(){initNavTree('namespacefisch.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">fisch Namespace Reference</div></div>
 </div><!--header-->
@@ -105,8 +107,32 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1BufferHealthPayload.html">BufferHealthPayload</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Payload für #8 (BufferHealth): Validitätsprüfung der Messung. Wird gebraucht, um Latenz-Ausreißer als Messartefakt vs. echtes Reglerverhalten zu unterscheiden (siehe Korrelation e).  <a href="structfisch_1_1BufferHealthPayload.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ChannelEvent.html">ChannelEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein einzelnes Flankenereignis auf einem Kanal.  <a href="structfisch_1_1ChannelEvent.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ChannelOccupancyPayload.html">ChannelOccupancyPayload</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Payload für #2 (ChannelOccupancy): Snapshot aller 40 BLE-Kanäle in einem Record statt 40 Einzel-Records pro Sweep.  <a href="structfisch_1_1ChannelOccupancyPayload.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1ChannelTracker.html">ChannelTracker</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1CommandChannel.html">CommandChannel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unix-Domain-Socket-Server für den Kommandopfad.  <a href="classfisch_1_1CommandChannel.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1CommandQueue.html">CommandQueue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPSC-Ringpuffer für <a class="el" href="structfisch_1_1CommandRequest.html" title="Ein Kommando von Rod (Python) an den Core.">CommandRequest</a>, feste Kapazität zur Compile-Zeit.  <a href="classfisch_1_1CommandQueue.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1CommandRequest.html">CommandRequest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Kommando von Rod (Python) an den Core.  <a href="structfisch_1_1CommandRequest.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1CommandResponse.html">CommandResponse</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Antwort des Cores auf ein Kommando.  <a href="structfisch_1_1CommandResponse.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1Controller.html">Controller</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ControllerConfig.html">ControllerConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konfiguration der Reglerstrategie.  <a href="structfisch_1_1ControllerConfig.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ControllerOutput.html">ControllerOutput</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1ControllerStatePayload.html">ControllerStatePayload</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Payload für #5 (ControllerState): Fehlersignal des Regelkreises (siehe Korrelation f) &ndash; Soll/Ist-Abweichung, State-Machine- Zustand und die daraus abgeleitete Entscheidung.  <a href="structfisch_1_1ControllerStatePayload.html#details">More...</a><br /></td></tr>
@@ -114,11 +140,50 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1DetectionEventPayload.html">DetectionEventPayload</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Payload für #3 (DetectionEvent): einzelnes sporadisches Ereignis, z.B. "Advertising auf CH37". Zeitstempel liegt bereits im umgebenden <a class="el" href="structfisch_1_1TelemetryRecord.html" title="Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über type.">TelemetryRecord</a>, nicht nochmal hier.  <a href="structfisch_1_1DetectionEventPayload.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1IqBlock.html">IqBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Block empfangener IQ-Samples, an den Nutzer-Callback übergeben.  <a href="structfisch_1_1IqBlock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1IqFilePlayer.html">IqFilePlayer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spielt eine .cs8-Aufnahme als Sendesignal ab (Waveform-Replay).  <a href="classfisch_1_1IqFilePlayer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1IqRecorder.html">IqRecorder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1Jammer.html">Jammer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt ein Störsignal zum aktiven Blockieren eines Kanals.  <a href="classfisch_1_1Jammer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1LatencyTimestampsPayload.html">LatencyTimestampsPayload</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Payload für #4 (LatencyTimestamps). Alle Zeitstempel in Nanosekunden seit CLOCK_MONOTONIC, damit Drift durch Systemzeit-Sprünge ausgeschlossen ist.  <a href="structfisch_1_1LatencyTimestampsPayload.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1PipelineActuatorState.html">PipelineActuatorState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Laufzeit-Zustand des Aktors, gespiegelt in ActuatorState (#6).  <a href="structfisch_1_1PipelineActuatorState.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RecorderStats.html">RecorderStats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aufnahme-Statistik, jederzeit threadsicher abfragbar (für Telemetrie oder eine Statuszeile).  <a href="structfisch_1_1RecorderStats.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1RingHeader.html">RingHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopfdaten des Ringpuffers, liegen am Anfang des Shared-Memory- Segments. Enthält Metadaten zur Validierung sowie die Producer-/Consumer-Indizes.  <a href="structfisch_1_1RingHeader.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1SdrDevice.html">SdrDevice</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII-Wrapper um ein einzelnes HackRF-Gerät.  <a href="classfisch_1_1SdrDevice.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1SignalPipeline.html">SignalPipeline</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1SpectralFrame.html">SpectralFrame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein aus dem Ring gelesener Frame (nur für die C++-Consumer-Seite, siehe <a class="el" href="classfisch_1_1SpectralRingReader.html" title="Consumer-Seite des Spektral-Rings (C++).">SpectralRingReader</a>).  <a href="structfisch_1_1SpectralFrame.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1SpectralRing.html">SpectralRing</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Producer-Seite des Spektral-Rings.  <a href="classfisch_1_1SpectralRing.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1SpectralRingHeader.html">SpectralRingHeader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopfdaten des Spektral-Rings, am Anfang des Segments.  <a href="structfisch_1_1SpectralRingHeader.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1SpectralRingReader.html">SpectralRingReader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consumer-Seite des Spektral-Rings (C++).  <a href="classfisch_1_1SpectralRingReader.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1SpectralSlotHeader.html">SpectralSlotHeader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopfdaten eines einzelnen Slots. Direkt dahinter folgen <code>fft_size</code> floats mit den Bin-Magnituden.  <a href="structfisch_1_1SpectralSlotHeader.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1SpectrumAnalyzer.html">SpectrumAnalyzer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfisch_1_1SuccessMetricPayload.html">SuccessMetricPayload</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Payload für #7 (SuccessMetric): Restenergie/SNR auf dem Zielkanal während aktiver Störung &ndash; die eigentliche Robustheits-Kennzahl des Prüfstands.  <a href="structfisch_1_1SuccessMetricPayload.html#details">More...</a><br /></td></tr>
@@ -130,12 +195,84 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPSC-Ringpuffer-Producer für Telemetrie-Records.  <a href="classfisch_1_1TelemetryRing.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a0671d5c579ce67b3a2d56bea9ae4e6ff" id="r_a0671d5c579ce67b3a2d56bea9ae4e6ff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a0671d5c579ce67b3a2d56bea9ae4e6ff">GenerationProvider</a> = std::function&lt; std::uint64_t()&gt;</td></tr>
+<tr class="separator:a0671d5c579ce67b3a2d56bea9ae4e6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d95529ce54c4d44c68ee425153aaf61" id="r_a3d95529ce54c4d44c68ee425153aaf61"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a3d95529ce54c4d44c68ee425153aaf61">RxCallback</a> = std::function&lt; void(const <a class="el" href="structfisch_1_1IqBlock.html">IqBlock</a> &amp;)&gt;</td></tr>
+<tr class="separator:a3d95529ce54c4d44c68ee425153aaf61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77da6374db30f44069fc9546543a22f7" id="r_a77da6374db30f44069fc9546543a22f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a77da6374db30f44069fc9546543a22f7">TxCallback</a> = std::function&lt; std::size_t(std::int8_t *buffer, std::size_t max_bytes)&gt;</td></tr>
+<tr class="memdesc:a77da6374db30f44069fc9546543a22f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nutzer-Callback für den Sendebetrieb. Läuft im libusb-Streaming- Kontext, dieselben Einschränkungen wie RxCallback (schnell, nicht blockierend, keine SdrDevice-Methoden).  <br /></td></tr>
+<tr class="separator:a77da6374db30f44069fc9546543a22f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a01b3e4f4a6281957d632878a2aefc9ca" id="r_a01b3e4f4a6281957d632878a2aefc9ca"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9ca">CommandKind</a> : std::uint32_t { <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caab85815d04cec053ce6deb8021f2df1b8">Ping</a> = 0
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caaa6122a65eaa676f700ae68d393054a37">Start</a> = 1
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa11a755d598c0c417f9a36758c3da7481">Stop</a> = 2
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa0bfa67e5fc94d24a0ad83f838454884e">SetTarget</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa1f4cd317151e9f3866ad27e7afc37123">SetTxGain</a> = 4
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caaa55dceda8e25056bfac86df5799db61a">SetOverflowPolicy</a> = 5
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa1a4ebb180ba59b067782515ffee6e975">Shutdown</a> = 6
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caab445c9cfb653e77f7e14a5f861c5dbb1">SetSampleRate</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa02def85152aae48a597ca3bd8568e2f9">SetCenterFreq</a> = 8
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa1be0cafca6f3374b24cc833bac2c7380">StartRecording</a> = 9
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa0711c4b9ecefa0a637e6a7b6c3759859">StopRecording</a> = 10
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa7f4abc3dfd2f163681df3f0327aacae3">StartJamming</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa3149f9c06c3db5bb6888534232fd20b5">StartReplay</a> = 12
+, <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0">StopTransmit</a> = 13
+<br />
+ }</td></tr>
+<tr class="memdesc:a01b3e4f4a6281957d632878a2aefc9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Art des Kommandos. Bestimmt, welche Felder in CommandRequest ausgewertet werden, alle übrigen Felder werden ignoriert.  <a href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9ca">More...</a><br /></td></tr>
+<tr class="separator:a01b3e4f4a6281957d632878a2aefc9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71079e4415ffadaa8576261ece2e4121" id="r_a71079e4415ffadaa8576261ece2e4121"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121">CommandStatus</a> : std::uint32_t { <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115">Ok</a> = 0
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a45037b851653a6ba3f3d8f6c508e03d4">SchemaMismatch</a> = 1
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a8da24985f13f84c15af0130f7decf4fd">UnknownKind</a> = 2
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a94a9e4213f08b322090d83fa5a8be5e4">InvalidChannel</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a327c36153b3f4221843badf676c4c09d">InvalidGain</a> = 4
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121aa021763f4cdb62145be4d266a4554c4c">InvalidPolicy</a> = 5
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d">InvalidSampleRate</a> = 11
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ac3b03efc3eaa590f88945364781491a5">InvalidFrequency</a> = 12
+, <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ad1ce9254e48e9dabe6d8c52029b52839">InvalidPattern</a> = 6
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ae457ff7a83d0a8681fa483f898788515">NotRunning</a> = 7
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121adcf8635f774078c5b7d83e7627eff502">AlreadyRunning</a> = 8
+, <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a4852946e074a1f48ed7de9a024b10c03">HardwareError</a> = 9
+, <br />
+&#160;&#160;<a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a8462b58246e70e5c83e5b939a9332cb5">InternalError</a> = 10
+<br />
+ }</td></tr>
+<tr class="memdesc:a71079e4415ffadaa8576261ece2e4121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ergebnis eines Kommandos, aus Sicht der Validierung.  <a href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121">More...</a><br /></td></tr>
+<tr class="separator:a71079e4415ffadaa8576261ece2e4121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c1a3abcceebf4bd3420e329f643529" id="r_a42c1a3abcceebf4bd3420e329f643529"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529">ControllerState</a> : std::uint32_t { <a class="el" href="namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529ae599161956d626eda4cb0a5ffb85271c">Idle</a> = 0
+, <a class="el" href="namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529a843627586c62e389041a4d8800143974">Searching</a> = 1
+, <a class="el" href="namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529a2205dc082ba550b67ad71e3e2241d9a6">Tracking</a> = 2
+, <a class="el" href="namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529ab578b733cbb788fc6ad208314d2c4c2b">Lost</a> = 3
+ }</td></tr>
+<tr class="memdesc:a42c1a3abcceebf4bd3420e329f643529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zustände des Reglers. Werte passen zu ControllerStatePayload.state (#5).  <a href="namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529">More...</a><br /></td></tr>
+<tr class="separator:a42c1a3abcceebf4bd3420e329f643529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfba05f5657ac303db95e12ae44f615" id="r_a0bfba05f5657ac303db95e12ae44f615"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615">ControllerDecision</a> : std::uint32_t { <a class="el" href="namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615abcd8db575b47c838e5d551e3973db4ac">Hold</a> = 0
+, <a class="el" href="namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615acf6262b6e31fe42482ab838523801a90">Retune</a> = 1
+, <a class="el" href="namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615abcfaccebf745acfd5e75351095a5394a">Disable</a> = 2
+, <a class="el" href="namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615a2faec1f9f8cc7f8f40d521c4dd574f49">Enable</a> = 3
+ }</td></tr>
+<tr class="separator:a0bfba05f5657ac303db95e12ae44f615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26b7eafb687478064a45ea62bb5f359b" id="r_a26b7eafb687478064a45ea62bb5f359b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a26b7eafb687478064a45ea62bb5f359b">WindowType</a> { <a class="el" href="namespacefisch.html#a26b7eafb687478064a45ea62bb5f359ba6adf97f83acf6453d4a6a4b1070f3754">None</a>
+, <a class="el" href="namespacefisch.html#a26b7eafb687478064a45ea62bb5f359ba0218ace760f65b32ad5b254bf7a95ab5">Hann</a>
+, <a class="el" href="namespacefisch.html#a26b7eafb687478064a45ea62bb5f359ba718179b3bcff69a9d3f010aca0e9901a">Hamming</a>
+ }</td></tr>
+<tr class="memdesc:a26b7eafb687478064a45ea62bb5f359b"><td class="mdescLeft">&#160;</td><td class="mdescRight">BLE hat 40 Kanäle (0..39) im 2,4-GHz-ISM-Band. Die Zuordnung von Kanalnummer zu Frequenz ist NICHT linear &ndash; siehe <a class="el" href="ble__channels_8hpp.html" title="Zentrale Umrechnung zwischen BLE-Kanalnummer, Frequenz-Index und Frequenz. EINE Quelle der Wahrheit f...">ble_channels.hpp</a>. kBleChannelCount ist dort zentral definiert.  <a href="namespacefisch.html#a26b7eafb687478064a45ea62bb5f359b">More...</a><br /></td></tr>
+<tr class="separator:a26b7eafb687478064a45ea62bb5f359b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21c1dd70df07f14d742f28734ec72f58" id="r_a21c1dd70df07f14d742f28734ec72f58"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58">RecordType</a> : std::uint32_t { <br />
 &#160;&#160;<a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db">ChannelOccupancy</a> = 2
 , <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58ab1b944e106d26e58e02fa3c38e5f92c7">DetectionEvent</a> = 3
-, <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58a8b45b08afba78f28e241e348556089be">LatencyTimestamp</a> = 4
+, <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58af2aa9a84410089ad99d60c957403bc35">LatencyTimestamps</a> = 4
 , <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58adfeba3a4e3797429ca26461f13b86b5e">ControllerState</a> = 5
 , <br />
 &#160;&#160;<a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58ab9d489273d218ec66eea69d53be78662">ActuatorState</a> = 6
@@ -144,17 +281,381 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a21c1dd70df07f14d742f28734ec72f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7911539610ab7568566406a265dae98c" id="r_a7911539610ab7568566406a265dae98c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a7911539610ab7568566406a265dae98c">ChannelEventKind</a> : std::uint32_t { <a class="el" href="namespacefisch.html#a7911539610ab7568566406a265dae98cab2c68fe1088fd623290274c0343cad6d">BecameOccupied</a> = 0
+, <a class="el" href="namespacefisch.html#a7911539610ab7568566406a265dae98ca21fd435c3213f37b50170ccc164f4e11">BecameFree</a> = 1
+ }</td></tr>
+<tr class="memdesc:a7911539610ab7568566406a265dae98c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Art einer Kanal-Zustandsänderung, passend zu DetectionEventPayload.event_kind.  <a href="namespacefisch.html#a7911539610ab7568566406a265dae98c">More...</a><br /></td></tr>
+<tr class="separator:a7911539610ab7568566406a265dae98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660d3c7a13e0addcc9c9c14699ed4004" id="r_a660d3c7a13e0addcc9c9c14699ed4004"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a660d3c7a13e0addcc9c9c14699ed4004">OverflowPolicy</a> : std::uint32_t { <a class="el" href="namespacefisch.html#a660d3c7a13e0addcc9c9c14699ed4004aeeea1e87070782ec3cdd75c78984baaa">DropNewest</a> = 0
+, <a class="el" href="namespacefisch.html#a660d3c7a13e0addcc9c9c14699ed4004ae273dab723fc345684a50d971853ccbd">DropOldest</a> = 1
+ }</td></tr>
+<tr class="memdesc:a660d3c7a13e0addcc9c9c14699ed4004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verhalten eines Ringpuffers, wenn der Producer schneller ist als der Consumer.  <a href="namespacefisch.html#a660d3c7a13e0addcc9c9c14699ed4004">More...</a><br /></td></tr>
+<tr class="separator:a660d3c7a13e0addcc9c9c14699ed4004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aaed90c9f3c950ce02538955c44e7920c" id="r_aaed90c9f3c950ce02538955c44e7920c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121">CommandStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#aaed90c9f3c950ce02538955c44e7920c">validateCommand</a> (const <a class="el" href="structfisch_1_1CommandRequest.html">CommandRequest</a> &amp;req) noexcept</td></tr>
+<tr class="memdesc:aaed90c9f3c950ce02538955c44e7920c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zustandslose Validierung eines Kommandos.  <br /></td></tr>
+<tr class="separator:aaed90c9f3c950ce02538955c44e7920c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad649cbf3b0cc968b8b21e6d740011303" id="r_ad649cbf3b0cc968b8b21e6d740011303"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#ad649cbf3b0cc968b8b21e6d740011303">freqIndexToBleChannel</a> (std::uint32_t index)</td></tr>
+<tr class="memdesc:ad649cbf3b0cc968b8b21e6d740011303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequenz-Index (0..39, f = 2402 + 2k MHz) -&gt; BLE-Kanalnummer.  <br /></td></tr>
+<tr class="separator:ad649cbf3b0cc968b8b21e6d740011303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce1f9ca2a76d5596cdb0f4223be8a80" id="r_a9ce1f9ca2a76d5596cdb0f4223be8a80"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a9ce1f9ca2a76d5596cdb0f4223be8a80">bleChannelToFreqIndex</a> (std::uint32_t channel)</td></tr>
+<tr class="memdesc:a9ce1f9ca2a76d5596cdb0f4223be8a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">BLE-Kanalnummer -&gt; Frequenz-Index (0..39). Umkehrung von oben.  <br /></td></tr>
+<tr class="separator:a9ce1f9ca2a76d5596cdb0f4223be8a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62bae95988b6a5c2f668126904188f6" id="r_ae62bae95988b6a5c2f668126904188f6"><td class="memItemLeft" align="right" valign="top">constexpr std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#ae62bae95988b6a5c2f668126904188f6">bleChannelCenterHz</a> (std::uint32_t channel)</td></tr>
+<tr class="memdesc:ae62bae95988b6a5c2f668126904188f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mittenfrequenz eines BLE-Kanals in Hz.  <br /></td></tr>
+<tr class="separator:ae62bae95988b6a5c2f668126904188f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ec0d80255208d4f6bb3ca3a33bd82f" id="r_a19ec0d80255208d4f6bb3ca3a33bd82f"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a19ec0d80255208d4f6bb3ca3a33bd82f">isBleAdvertisingChannel</a> (std::uint32_t channel)</td></tr>
+<tr class="memdesc:a19ec0d80255208d4f6bb3ca3a33bd82f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ob ein BLE-Kanal ein Advertising-Kanal (37/38/39) ist.  <br /></td></tr>
+<tr class="separator:a19ec0d80255208d4f6bb3ca3a33bd82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2e2038405e0507ee3ad034cce78505cd" id="r_a2e2038405e0507ee3ad034cce78505cd"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">kSchemaVersion</a> = 1</td></tr>
+<tr class="memitem:ae2c6a28654b7c16ee9c7fdb1b4700a81" id="r_ae2c6a28654b7c16ee9c7fdb1b4700a81"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#ae2c6a28654b7c16ee9c7fdb1b4700a81">kCommandSchemaVersion</a> = 1</td></tr>
+<tr class="separator:ae2c6a28654b7c16ee9c7fdb1b4700a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ba808f48c00c02f21b36fae7cfcf49" id="r_a21ba808f48c00c02f21b36fae7cfcf49"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a21ba808f48c00c02f21b36fae7cfcf49">kCommandMagic</a> = 0x56555343</td></tr>
+<tr class="separator:a21ba808f48c00c02f21b36fae7cfcf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace661611c40c59f6f8fd36f46684e34f" id="r_ace661611c40c59f6f8fd36f46684e34f"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#ace661611c40c59f6f8fd36f46684e34f">kMaxBleChannel</a> = 39</td></tr>
+<tr class="memdesc:ace661611c40c59f6f8fd36f46684e34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Höchster gültiger BLE-Kanalindex (0..39).  <br /></td></tr>
+<tr class="separator:ace661611c40c59f6f8fd36f46684e34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00b58fc17cf3dfb141d9e1bb1e0f33f" id="r_ab00b58fc17cf3dfb141d9e1bb1e0f33f"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#ab00b58fc17cf3dfb141d9e1bb1e0f33f">kMinTxGainDb</a> = 0.0f</td></tr>
+<tr class="memdesc:ab00b58fc17cf3dfb141d9e1bb1e0f33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zulässiger TX-Gain-Bereich.  <br /></td></tr>
+<tr class="separator:ab00b58fc17cf3dfb141d9e1bb1e0f33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459b47363518753401825ff3cd736052" id="r_a459b47363518753401825ff3cd736052"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a459b47363518753401825ff3cd736052">kMaxTxGainDb</a> = 47.0f</td></tr>
+<tr class="separator:a459b47363518753401825ff3cd736052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f2de65fd3e562e142364f5e7bbaffd" id="r_ab1f2de65fd3e562e142364f5e7bbaffd"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#ab1f2de65fd3e562e142364f5e7bbaffd">kMinSampleRateHz</a> = 2000000</td></tr>
+<tr class="separator:ab1f2de65fd3e562e142364f5e7bbaffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc3eb94d9bc7bd9cd20bd39e4d5a1f9" id="r_afcc3eb94d9bc7bd9cd20bd39e4d5a1f9"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#afcc3eb94d9bc7bd9cd20bd39e4d5a1f9">kMaxSampleRateHz</a> = 20000000</td></tr>
+<tr class="separator:afcc3eb94d9bc7bd9cd20bd39e4d5a1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c94e470d3740474a81cf786c0ef42f8" id="r_a4c94e470d3740474a81cf786c0ef42f8"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a4c94e470d3740474a81cf786c0ef42f8">kMinCenterFreqHz</a> = 2300000000u</td></tr>
+<tr class="separator:a4c94e470d3740474a81cf786c0ef42f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd58246f852cc6a9676ab1792190ea6" id="r_aebd58246f852cc6a9676ab1792190ea6"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#aebd58246f852cc6a9676ab1792190ea6">kMaxCenterFreqHz</a> = 2600000000u</td></tr>
+<tr class="separator:aebd58246f852cc6a9676ab1792190ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05357c8788dcd5ec237d456ea3b9910" id="r_ac05357c8788dcd5ec237d456ea3b9910"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#ac05357c8788dcd5ec237d456ea3b9910">kSpectralSchemaVersion</a> = 1</td></tr>
+<tr class="separator:ac05357c8788dcd5ec237d456ea3b9910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe56f759144a682466557fc57b09d363" id="r_afe56f759144a682466557fc57b09d363"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#afe56f759144a682466557fc57b09d363">kSpectralMagic</a> = 0x56555353</td></tr>
+<tr class="memdesc:afe56f759144a682466557fc57b09d363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic für Spektral-Segmente. Bytes im Speicher (little-endian): 'S','S','U','V'.  <br /></td></tr>
+<tr class="separator:afe56f759144a682466557fc57b09d363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2038405e0507ee3ad034cce78505cd" id="r_a2e2038405e0507ee3ad034cce78505cd"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">kSchemaVersion</a> = 3</td></tr>
 <tr class="separator:a2e2038405e0507ee3ad034cce78505cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38d6b6e7d8239fc8e1335748b331fa2e" id="r_a38d6b6e7d8239fc8e1335748b331fa2e"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e">kRingMagic</a> = 0x56555253</td></tr>
 <tr class="separator:a38d6b6e7d8239fc8e1335748b331fa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d92f9a8b7a547cfda15a2292ff185c" id="r_a42d92f9a8b7a547cfda15a2292ff185c"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a42d92f9a8b7a547cfda15a2292ff185c">kPayloadSize</a> = 64</td></tr>
 <tr class="separator:a42d92f9a8b7a547cfda15a2292ff185c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6ecaea3f3856bf59df28120e53e50a" id="r_aff6ecaea3f3856bf59df28120e53e50a"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#aff6ecaea3f3856bf59df28120e53e50a">kBleChannelCount</a> = 40</td></tr>
+<tr class="separator:aff6ecaea3f3856bf59df28120e53e50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e75394a8dd1f3f4ce39feadb3cc5c0" id="r_af5e75394a8dd1f3f4ce39feadb3cc5c0"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#af5e75394a8dd1f3f4ce39feadb3cc5c0">kBleInvalidChannel</a> = 0xFFFFFFFFu</td></tr>
+<tr class="memdesc:af5e75394a8dd1f3f4ce39feadb3cc5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ungültig-Marker für Kanal-/Indexumrechnungen außerhalb des Bandes.  <br /></td></tr>
+<tr class="separator:af5e75394a8dd1f3f4ce39feadb3cc5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04484a61af2a6384557721c4301b09e8" id="r_a04484a61af2a6384557721c4301b09e8"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a04484a61af2a6384557721c4301b09e8">kMaxOverflowPolicyValue</a></td></tr>
+<tr class="separator:a04484a61af2a6384557721c4301b09e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a0671d5c579ce67b3a2d56bea9ae4e6ff" name="a0671d5c579ce67b3a2d56bea9ae4e6ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0671d5c579ce67b3a2d56bea9ae4e6ff">&#9670;&#160;</a></span>GenerationProvider</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacefisch.html#a0671d5c579ce67b3a2d56bea9ae4e6ff">fisch::GenerationProvider</a> = typedef std::function&lt;std::uint64_t()&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Liefert die aktuelle generation() des Cores, damit jede <a class="el" href="structfisch_1_1CommandResponse.html" title="Antwort des Cores auf ein Kommando.">CommandResponse</a> sie mitschicken kann (siehe <a class="el" href="command_8hpp.html" title="Wire-Schema des Kommandopfads Rod (Python) -&gt; Core (C++).">command.hpp</a>: Rod erkennt einen Core-Neustart dadurch beim nächsten Kommando, nicht erst über den Ring-Inode-Check). </p>
+
+<p class="definition">Definition at line <a class="el" href="command__channel_8hpp_source.html#l00039">39</a> of file <a class="el" href="command__channel_8hpp_source.html">command_channel.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3d95529ce54c4d44c68ee425153aaf61" name="a3d95529ce54c4d44c68ee425153aaf61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d95529ce54c4d44c68ee425153aaf61">&#9670;&#160;</a></span>RxCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacefisch.html#a3d95529ce54c4d44c68ee425153aaf61">fisch::RxCallback</a> = typedef std::function&lt;void(const <a class="el" href="structfisch_1_1IqBlock.html">IqBlock</a> &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Nutzer-Callback für empfangene Samples. Läuft im libusb-Streaming-Kontext MUSS schnell und nicht-blockierend sein und darf keine SdrDevice-Methode aufrufen. </p>
+
+<p class="definition">Definition at line <a class="el" href="sdr__device_8hpp_source.html#l00051">51</a> of file <a class="el" href="sdr__device_8hpp_source.html">sdr_device.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a77da6374db30f44069fc9546543a22f7" name="a77da6374db30f44069fc9546543a22f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77da6374db30f44069fc9546543a22f7">&#9670;&#160;</a></span>TxCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacefisch.html#a77da6374db30f44069fc9546543a22f7">fisch::TxCallback</a> = typedef std::function&lt;std::size_t(std::int8_t *buffer, std::size_t max_bytes)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Nutzer-Callback für den Sendebetrieb. Läuft im libusb-Streaming- Kontext, dieselben Einschränkungen wie RxCallback (schnell, nicht blockierend, keine SdrDevice-Methoden). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Zielpuffer (int8, interleaved I/Q), vom Aufrufer bereitgestellt. </td></tr>
+    <tr><td class="paramname">max_bytes</td><td>Kapazität des Puffers in Bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Anzahl tatsächlich gefüllter Bytes. 0 bedeutet "keine Daten mehr" der Sendebetrieb endet dann (z.B. Ende einer Replay-Datei ohne Loop). Ein Wert &lt; max_bytes ist erlaubt, der Rest des Puffers wird mit Null (Trägerpause) aufgefüllt. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="sdr__device_8hpp_source.html#l00066">66</a> of file <a class="el" href="sdr__device_8hpp_source.html">sdr_device.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a7911539610ab7568566406a265dae98c" name="a7911539610ab7568566406a265dae98c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7911539610ab7568566406a265dae98c">&#9670;&#160;</a></span>ChannelEventKind</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacefisch.html#a7911539610ab7568566406a265dae98c">fisch::ChannelEventKind</a> : std::uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Art einer Kanal-Zustandsänderung, passend zu <a class="el" href="structfisch_1_1DetectionEventPayload.html#a2b056d054c9eb58b987f87981ac99b61" title="0=AdvertisingPDU, 1=DataPDU, 2=UnknownBurst">DetectionEventPayload.event_kind</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7911539610ab7568566406a265dae98cab2c68fe1088fd623290274c0343cad6d" name="a7911539610ab7568566406a265dae98cab2c68fe1088fd623290274c0343cad6d"></a>BecameOccupied&#160;</td><td class="fielddoc"><p>Kanal hat enter_dbm überschritten. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7911539610ab7568566406a265dae98ca21fd435c3213f37b50170ccc164f4e11" name="a7911539610ab7568566406a265dae98ca21fd435c3213f37b50170ccc164f4e11"></a>BecameFree&#160;</td><td class="fielddoc"><p>Kanal ist unter exit_dbm gefallen. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="channel__tracker_8hpp_source.html#l00030">30</a> of file <a class="el" href="channel__tracker_8hpp_source.html">channel_tracker.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a01b3e4f4a6281957d632878a2aefc9ca" name="a01b3e4f4a6281957d632878a2aefc9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b3e4f4a6281957d632878a2aefc9ca">&#9670;&#160;</a></span>CommandKind</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9ca">fisch::CommandKind</a> : std::uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Art des Kommandos. Bestimmt, welche Felder in <a class="el" href="structfisch_1_1CommandRequest.html" title="Ein Kommando von Rod (Python) an den Core.">CommandRequest</a> ausgewertet werden, alle übrigen Felder werden ignoriert. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caab85815d04cec053ce6deb8021f2df1b8" name="a01b3e4f4a6281957d632878a2aefc9caab85815d04cec053ce6deb8021f2df1b8"></a>Ping&#160;</td><td class="fielddoc"><p>Keine Wirkung. Dient dem Verbindungsaufbau: die Antwort trägt die <code>generation</code> des Cores, womit Python prüfen kann, ob sein Ring-Mapping zu genau diesem Core gehört. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caaa6122a65eaa676f700ae68d393054a37" name="a01b3e4f4a6281957d632878a2aefc9caaa6122a65eaa676f700ae68d393054a37"></a>Start&#160;</td><td class="fielddoc"><p>Regelkreis starten. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa11a755d598c0c417f9a36758c3da7481" name="a01b3e4f4a6281957d632878a2aefc9caa11a755d598c0c417f9a36758c3da7481"></a>Stop&#160;</td><td class="fielddoc"><p>Regelkreis anhalten, Prozess bleibt am Leben. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa0bfa67e5fc94d24a0ad83f838454884e" name="a01b3e4f4a6281957d632878a2aefc9caa0bfa67e5fc94d24a0ad83f838454884e"></a>SetTarget&#160;</td><td class="fielddoc"><p>Nutzt target_channel + pattern_id. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa1f4cd317151e9f3866ad27e7afc37123" name="a01b3e4f4a6281957d632878a2aefc9caa1f4cd317151e9f3866ad27e7afc37123"></a>SetTxGain&#160;</td><td class="fielddoc"><p>Nutzt tx_gain_db. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caaa55dceda8e25056bfac86df5799db61a" name="a01b3e4f4a6281957d632878a2aefc9caaa55dceda8e25056bfac86df5799db61a"></a>SetOverflowPolicy&#160;</td><td class="fielddoc"><p>Nutzt overflow_policy (betrifft den <a class="el" href="classfisch_1_1SpectralRing.html" title="Producer-Seite des Spektral-Rings.">SpectralRing</a>). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa1a4ebb180ba59b067782515ffee6e975" name="a01b3e4f4a6281957d632878a2aefc9caa1a4ebb180ba59b067782515ffee6e975"></a>Shutdown&#160;</td><td class="fielddoc"><p>Core sauber beenden (inkl. destroy() der Ringe). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caab445c9cfb653e77f7e14a5f861c5dbb1" name="a01b3e4f4a6281957d632878a2aefc9caab445c9cfb653e77f7e14a5f861c5dbb1"></a>SetSampleRate&#160;</td><td class="fielddoc"><p>Nutzt sample_rate_hz. Konfiguriert die HackRF-HW zur Laufzeit um, NICHT im RX-Callback, sondern über einen Retune-Wunsch (siehe main_loop_hackrf). Kurze RX-Unterbrechung während der Umschaltung. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa02def85152aae48a597ca3bd8568e2f9" name="a01b3e4f4a6281957d632878a2aefc9caa02def85152aae48a597ca3bd8568e2f9"></a>SetCenterFreq&#160;</td><td class="fielddoc"><p>Nutzt center_freq_hz. Wie SetSampleRate: HW-Retune mit kurzer RX-Unterbrechung. Verschiebt das beobachtete Frequenzfenster. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa1be0cafca6f3374b24cc833bac2c7380" name="a01b3e4f4a6281957d632878a2aefc9caa1be0cafca6f3374b24cc833bac2c7380"></a>StartRecording&#160;</td><td class="fielddoc"><p>Startet die IQ-Aufnahme in eine .cs8-Datei im per CLI gesetzten &ndash;recording-dir. Manueller Start (kein Auto-Trigger). Kein Parameter, Rate/Frequenz kommen aus dem aktuellen Zustand. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa0711c4b9ecefa0a637e6a7b6c3759859" name="a01b3e4f4a6281957d632878a2aefc9caa0711c4b9ecefa0a637e6a7b6c3759859"></a>StopRecording&#160;</td><td class="fielddoc"><p>Beendet die laufende IQ-Aufnahme. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa7f4abc3dfd2f163681df3f0327aacae3" name="a01b3e4f4a6281957d632878a2aefc9caa7f4abc3dfd2f163681df3f0327aacae3"></a>StartJamming&#160;</td><td class="fielddoc"><p>Blockiert einen Kanal aktiv durch Senden eines Störsignals. Nutzt target_channel (BLE-Kanal) und pattern_id (0=Dauerträger, 1=Rauschen). HALBDUPLEX: stoppt den RX-Betrieb. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa3149f9c06c3db5bb6888534232fd20b5" name="a01b3e4f4a6281957d632878a2aefc9caa3149f9c06c3db5bb6888534232fd20b5"></a>StartReplay&#160;</td><td class="fielddoc"><p>Sendet die zuletzt aufgenommene (oder per CLI &ndash;replay-file gesetzte) .cs8-Datei. Optional auf einen anderen Kanal verschoben via target_channel (0xFFFFFFFF = Originalfrequenz). pattern_id != 0 = Loop. HALBDUPLEX: stoppt den RX-Betrieb. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0" name="a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0"></a>StopTransmit&#160;</td><td class="fielddoc"><p>RX-Betrieb zurück. </p>
+<p>Beendet Jamming/Replay und kehrt in den </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00064">64</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a71079e4415ffadaa8576261ece2e4121" name="a71079e4415ffadaa8576261ece2e4121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71079e4415ffadaa8576261ece2e4121">&#9670;&#160;</a></span>CommandStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121">fisch::CommandStatus</a> : std::uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ergebnis eines Kommandos, aus Sicht der Validierung. </p>
+<p>Aufgeteilt in zustandslose Codes (von <a class="el" href="namespacefisch.html#aaed90c9f3c950ce02538955c44e7920c" title="Zustandslose Validierung eines Kommandos.">validateCommand()</a> vergeben) und zustandsbehaftete (nur der <a class="el" href="classfisch_1_1Controller.html">Controller</a> kann sie kennen). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115" name="a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115"></a>Ok&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121a45037b851653a6ba3f3d8f6c508e03d4" name="a71079e4415ffadaa8576261ece2e4121a45037b851653a6ba3f3d8f6c508e03d4"></a>SchemaMismatch&#160;</td><td class="fielddoc"><p>magic oder schema_version passen nicht. Retry sinnlos. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121a8da24985f13f84c15af0130f7decf4fd" name="a71079e4415ffadaa8576261ece2e4121a8da24985f13f84c15af0130f7decf4fd"></a>UnknownKind&#160;</td><td class="fielddoc"><p>kind ist kein bekannter CommandKind-Wert. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121a94a9e4213f08b322090d83fa5a8be5e4" name="a71079e4415ffadaa8576261ece2e4121a94a9e4213f08b322090d83fa5a8be5e4"></a>InvalidChannel&#160;</td><td class="fielddoc"><p>target_channel &gt; kMaxBleChannel. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121a327c36153b3f4221843badf676c4c09d" name="a71079e4415ffadaa8576261ece2e4121a327c36153b3f4221843badf676c4c09d"></a>InvalidGain&#160;</td><td class="fielddoc"><p>tx_gain_db außerhalb [kMinTxGainDb, kMaxTxGainDb] oder NaN. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121aa021763f4cdb62145be4d266a4554c4c" name="a71079e4415ffadaa8576261ece2e4121aa021763f4cdb62145be4d266a4554c4c"></a>InvalidPolicy&#160;</td><td class="fielddoc"><p>overflow_policy ist kein bekannter OverflowPolicy-Wert. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d" name="a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d"></a>InvalidSampleRate&#160;</td><td class="fielddoc"><p>sample_rate_hz außerhalb [kMinSampleRateHz, kMaxSampleRateHz]. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121ac3b03efc3eaa590f88945364781491a5" name="a71079e4415ffadaa8576261ece2e4121ac3b03efc3eaa590f88945364781491a5"></a>InvalidFrequency&#160;</td><td class="fielddoc"><p>center_freq_hz außerhalb des zulässigen HackRF-Bereichs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121ad1ce9254e48e9dabe6d8c52029b52839" name="a71079e4415ffadaa8576261ece2e4121ad1ce9254e48e9dabe6d8c52029b52839"></a>InvalidPattern&#160;</td><td class="fielddoc"><p>die Mustermenge nicht feststeht, siehe <a class="el" href="namespacefisch.html#aaed90c9f3c950ce02538955c44e7920c" title="Zustandslose Validierung eines Kommandos.">validateCommand()</a>. </p>
+<p>pattern_id unbekannt. Zustandslos nicht prüfbar, solange </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121ae457ff7a83d0a8681fa483f898788515" name="a71079e4415ffadaa8576261ece2e4121ae457ff7a83d0a8681fa483f898788515"></a>NotRunning&#160;</td><td class="fielddoc"><p>z.B. SetTarget, obwohl der Regelkreis nicht läuft. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121adcf8635f774078c5b7d83e7627eff502" name="a71079e4415ffadaa8576261ece2e4121adcf8635f774078c5b7d83e7627eff502"></a>AlreadyRunning&#160;</td><td class="fielddoc"><p>Start, obwohl bereits gestartet. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121a4852946e074a1f48ed7de9a024b10c03" name="a71079e4415ffadaa8576261ece2e4121a4852946e074a1f48ed7de9a024b10c03"></a>HardwareError&#160;</td><td class="fielddoc"><p>SDR hat das Kommando abgelehnt. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a71079e4415ffadaa8576261ece2e4121a8462b58246e70e5c83e5b939a9332cb5" name="a71079e4415ffadaa8576261ece2e4121a8462b58246e70e5c83e5b939a9332cb5"></a>InternalError&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00113">113</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0bfba05f5657ac303db95e12ae44f615" name="a0bfba05f5657ac303db95e12ae44f615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfba05f5657ac303db95e12ae44f615">&#9670;&#160;</a></span>ControllerDecision</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615">fisch::ControllerDecision</a> : std::uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Entscheidung des Reglers pro Zyklus. Werte passen zu <a class="el" href="structfisch_1_1ControllerStatePayload.html#adc57ebe1487a7354da3babbb9fbd0d25" title="enum: Hold/Retune/Widen/...">ControllerStatePayload.decision</a> (#5). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0bfba05f5657ac303db95e12ae44f615abcd8db575b47c838e5d551e3973db4ac" name="a0bfba05f5657ac303db95e12ae44f615abcd8db575b47c838e5d551e3973db4ac"></a>Hold&#160;</td><td class="fielddoc"><p>Zielkanal unverändert lassen. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0bfba05f5657ac303db95e12ae44f615acf6262b6e31fe42482ab838523801a90" name="a0bfba05f5657ac303db95e12ae44f615acf6262b6e31fe42482ab838523801a90"></a>Retune&#160;</td><td class="fielddoc"><p>auf einen anderen Zielkanal wechseln </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0bfba05f5657ac303db95e12ae44f615abcfaccebf745acfd5e75351095a5394a" name="a0bfba05f5657ac303db95e12ae44f615abcfaccebf745acfd5e75351095a5394a"></a>Disable&#160;</td><td class="fielddoc"><p><a class="el" href="classfisch_1_1Jammer.html" title="Erzeugt ein Störsignal zum aktiven Blockieren eines Kanals.">Jammer</a> aus (kein Ziel) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0bfba05f5657ac303db95e12ae44f615a2faec1f9f8cc7f8f40d521c4dd574f49" name="a0bfba05f5657ac303db95e12ae44f615a2faec1f9f8cc7f8f40d521c4dd574f49"></a>Enable&#160;</td><td class="fielddoc"><p><a class="el" href="classfisch_1_1Jammer.html" title="Erzeugt ein Störsignal zum aktiven Blockieren eines Kanals.">Jammer</a> an (Ziel gefunden) </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00050">50</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a42c1a3abcceebf4bd3420e329f643529" name="a42c1a3abcceebf4bd3420e329f643529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c1a3abcceebf4bd3420e329f643529">&#9670;&#160;</a></span>ControllerState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529">fisch::ControllerState</a> : std::uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zustände des Reglers. Werte passen zu <a class="el" href="structfisch_1_1ControllerStatePayload.html#acc9fb73fe822982b06cab531e377c5a7" title="enum: Idle/Tracking/Jamming/Lost">ControllerStatePayload.state</a> (#5). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a42c1a3abcceebf4bd3420e329f643529ae599161956d626eda4cb0a5ffb85271c" name="a42c1a3abcceebf4bd3420e329f643529ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42c1a3abcceebf4bd3420e329f643529a843627586c62e389041a4d8800143974" name="a42c1a3abcceebf4bd3420e329f643529a843627586c62e389041a4d8800143974"></a>Searching&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42c1a3abcceebf4bd3420e329f643529a2205dc082ba550b67ad71e3e2241d9a6" name="a42c1a3abcceebf4bd3420e329f643529a2205dc082ba550b67ad71e3e2241d9a6"></a>Tracking&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a42c1a3abcceebf4bd3420e329f643529ab578b733cbb788fc6ad208314d2c4c2b" name="a42c1a3abcceebf4bd3420e329f643529ab578b733cbb788fc6ad208314d2c4c2b"></a>Lost&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00041">41</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a660d3c7a13e0addcc9c9c14699ed4004" name="a660d3c7a13e0addcc9c9c14699ed4004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660d3c7a13e0addcc9c9c14699ed4004">&#9670;&#160;</a></span>OverflowPolicy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacefisch.html#a660d3c7a13e0addcc9c9c14699ed4004">fisch::OverflowPolicy</a> : std::uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verhalten eines Ringpuffers, wenn der Producer schneller ist als der Consumer. </p>
+<p>Gilt aktuell nur für den <a class="el" href="classfisch_1_1SpectralRing.html" title="Producer-Seite des Spektral-Rings.">SpectralRing</a> (#1), dessen Policy zur Laufzeit per <a class="el" href="namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caaa55dceda8e25056bfac86df5799db61a" title="Nutzt overflow_policy (betrifft den SpectralRing).">CommandKind::SetOverflowPolicy</a> umgeschaltet werden kann. Der <a class="el" href="classfisch_1_1TelemetryRing.html" title="SPSC-Ringpuffer-Producer für Telemetrie-Records.">TelemetryRing</a> (#2-#8) ist bewusst fest auf DropNewest &ndash; dort werden Slots nie überschrieben, sondern nur verworfen, weshalb sich die Torn-Read-Problematik gar nicht erst stellt. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a660d3c7a13e0addcc9c9c14699ed4004aeeea1e87070782ec3cdd75c78984baaa" name="a660d3c7a13e0addcc9c9c14699ed4004aeeea1e87070782ec3cdd75c78984baaa"></a>DropNewest&#160;</td><td class="fielddoc"><p>Neuen Record verwerfen, bereits gepufferte behalten. Der Producer fasst nie einen Slot an, an dem der Consumer arbeiten könnte. Gut für lückenlose Historie, schlecht für Aktualität. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a660d3c7a13e0addcc9c9c14699ed4004ae273dab723fc345684a50d971853ccbd" name="a660d3c7a13e0addcc9c9c14699ed4004ae273dab723fc345684a50d971853ccbd"></a>DropOldest&#160;</td><td class="fielddoc"><p>Ältesten Record überschreiben, damit der Consumer immer die aktuellsten Daten sieht. Erfordert zwingend das Seqlock pro Slot, weil der Producer hier einen Slot überschreiben kann, den der Consumer gerade liest. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="policy_8hpp_source.html#l00027">27</a> of file <a class="el" href="policy_8hpp_source.html">policy.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a21c1dd70df07f14d742f28734ec72f58" name="a21c1dd70df07f14d742f28734ec72f58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21c1dd70df07f14d742f28734ec72f58">&#9670;&#160;</a></span>RecordType</h2>
 
@@ -176,27 +677,525 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Typ-Tag für die verschiedenen Telemetrie-Records aus der Korrelationsanalyse. Numeriert passend zu den Datenströmen #2-#8. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db" name="a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db"></a>ChannelOccupancy&#160;</td><td class="fielddoc"><p>Energie pro BLE Kanal + Detektions Flag. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db" name="a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db"></a>ChannelOccupancy&#160;</td><td class="fielddoc"><p>Energie pro BLE-Kanal + Detektions-Flag. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58ab1b944e106d26e58e02fa3c38e5f92c7" name="a21c1dd70df07f14d742f28734ec72f58ab1b944e106d26e58e02fa3c38e5f92c7"></a>DetectionEvent&#160;</td><td class="fielddoc"><p>z.B. Advertising auf CH37 mit Zeitstempel </p>
+<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58ab1b944e106d26e58e02fa3c38e5f92c7" name="a21c1dd70df07f14d742f28734ec72f58ab1b944e106d26e58e02fa3c38e5f92c7"></a>DetectionEvent&#160;</td><td class="fielddoc"><p>z.B. "Advertising auf CH37" mit Zeitstempel </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58a8b45b08afba78f28e241e348556089be" name="a21c1dd70df07f14d742f28734ec72f58a8b45b08afba78f28e241e348556089be"></a>LatencyTimestamp&#160;</td><td class="fielddoc"><p>t1...t4: ADC-Ankunft, FFT fertig, Entscheidung, DAC-Ausgabe </p>
+<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58af2aa9a84410089ad99d60c957403bc35" name="a21c1dd70df07f14d742f28734ec72f58af2aa9a84410089ad99d60c957403bc35"></a>LatencyTimestamps&#160;</td><td class="fielddoc"><p>t1..t4: ADC-Ankunft, FFT fertig, Entscheidung, DAC-Ausgabe </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58adfeba3a4e3797429ca26461f13b86b5e" name="a21c1dd70df07f14d742f28734ec72f58adfeba3a4e3797429ca26461f13b86b5e"></a>ControllerState&#160;</td><td class="fielddoc"><p>Soll/Ist Abweichung, State-Machine Status. </p>
+<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58adfeba3a4e3797429ca26461f13b86b5e" name="a21c1dd70df07f14d742f28734ec72f58adfeba3a4e3797429ca26461f13b86b5e"></a>ControllerState&#160;</td><td class="fielddoc"><p>Soll/Ist-Abweichung, State-Machine-State. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58ab9d489273d218ec66eea69d53be78662" name="a21c1dd70df07f14d742f28734ec72f58ab9d489273d218ec66eea69d53be78662"></a>ActuatorState&#160;</td><td class="fielddoc"><p>aktiver Kanal, TX-Gain, Muster Parameter, on/off </p>
+<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58ab9d489273d218ec66eea69d53be78662" name="a21c1dd70df07f14d742f28734ec72f58ab9d489273d218ec66eea69d53be78662"></a>ActuatorState&#160;</td><td class="fielddoc"><p>aktiver Kanal, TX-Gain, Muster-Parameter, on/off </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3" name="a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3"></a>SuccessMetric&#160;</td><td class="fielddoc"><p>Rest Energie/SNR auf Zielkanal während der Störung. </p>
+<tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3" name="a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3"></a>SuccessMetric&#160;</td><td class="fielddoc"><p>Rest-Energie/SNR auf Zielkanal während Störung. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a21c1dd70df07f14d742f28734ec72f58a594445c9554d1dc16c6942a43965591f" name="a21c1dd70df07f14d742f28734ec72f58a594445c9554d1dc16c6942a43965591f"></a>BufferHealth&#160;</td><td class="fielddoc"><p>USB Over-/Underruns, dropped samples, PLL-Lock. </p>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00057">57</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00067">67</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a26b7eafb687478064a45ea62bb5f359b" name="a26b7eafb687478064a45ea62bb5f359b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b7eafb687478064a45ea62bb5f359b">&#9670;&#160;</a></span>WindowType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacefisch.html#a26b7eafb687478064a45ea62bb5f359b">fisch::WindowType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BLE hat 40 Kanäle (0..39) im 2,4-GHz-ISM-Band. Die Zuordnung von Kanalnummer zu Frequenz ist NICHT linear &ndash; siehe <a class="el" href="ble__channels_8hpp.html" title="Zentrale Umrechnung zwischen BLE-Kanalnummer, Frequenz-Index und Frequenz. EINE Quelle der Wahrheit f...">ble_channels.hpp</a>. kBleChannelCount ist dort zentral definiert. </p>
+<p>Fenstertyp zur Reduktion von Spektral-Leakage vor der FFT. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a26b7eafb687478064a45ea62bb5f359ba6adf97f83acf6453d4a6a4b1070f3754" name="a26b7eafb687478064a45ea62bb5f359ba6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>kein Fenster (Rechteck) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a26b7eafb687478064a45ea62bb5f359ba0218ace760f65b32ad5b254bf7a95ab5" name="a26b7eafb687478064a45ea62bb5f359ba0218ace760f65b32ad5b254bf7a95ab5"></a>Hann&#160;</td><td class="fielddoc"><p>Hann-Fenster, guter Allrounder. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a26b7eafb687478064a45ea62bb5f359ba718179b3bcff69a9d3f010aca0e9901a" name="a26b7eafb687478064a45ea62bb5f359ba718179b3bcff69a9d3f010aca0e9901a"></a>Hamming&#160;</td><td class="fielddoc"><p>Hamming-Fenster. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00028">28</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae62bae95988b6a5c2f668126904188f6" name="ae62bae95988b6a5c2f668126904188f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62bae95988b6a5c2f668126904188f6">&#9670;&#160;</a></span>bleChannelCenterHz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint64_t fisch::bleChannelCenterHz </td>
+          <td>(</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mittenfrequenz eines BLE-Kanals in Hz. </p>
+<dl class="section return"><dt>Returns</dt><dd>Frequenz in Hz, oder 0 wenn channel &gt; 39. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ble__channels_8hpp_source.html#l00077">77</a> of file <a class="el" href="ble__channels_8hpp_source.html">ble_channels.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9ce1f9ca2a76d5596cdb0f4223be8a80" name="a9ce1f9ca2a76d5596cdb0f4223be8a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce1f9ca2a76d5596cdb0f4223be8a80">&#9670;&#160;</a></span>bleChannelToFreqIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::bleChannelToFreqIndex </td>
+          <td>(</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BLE-Kanalnummer -&gt; Frequenz-Index (0..39). Umkehrung von oben. </p>
+<dl class="section return"><dt>Returns</dt><dd>Frequenz-Index 0..39, oder kBleInvalidChannel wenn channel &gt; 39. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ble__channels_8hpp_source.html#l00064">64</a> of file <a class="el" href="ble__channels_8hpp_source.html">ble_channels.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad649cbf3b0cc968b8b21e6d740011303" name="ad649cbf3b0cc968b8b21e6d740011303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad649cbf3b0cc968b8b21e6d740011303">&#9670;&#160;</a></span>freqIndexToBleChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::freqIndexToBleChannel </td>
+          <td>(</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Frequenz-Index (0..39, f = 2402 + 2k MHz) -&gt; BLE-Kanalnummer. </p>
+<dl class="section return"><dt>Returns</dt><dd>BLE-Kanal 0..39, oder kBleInvalidChannel wenn index &gt; 39. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ble__channels_8hpp_source.html#l00048">48</a> of file <a class="el" href="ble__channels_8hpp_source.html">ble_channels.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a19ec0d80255208d4f6bb3ca3a33bd82f" name="a19ec0d80255208d4f6bb3ca3a33bd82f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ec0d80255208d4f6bb3ca3a33bd82f">&#9670;&#160;</a></span>isBleAdvertisingChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool fisch::isBleAdvertisingChannel </td>
+          <td>(</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ob ein BLE-Kanal ein Advertising-Kanal (37/38/39) ist. </p>
+
+<p class="definition">Definition at line <a class="el" href="ble__channels_8hpp_source.html#l00084">84</a> of file <a class="el" href="ble__channels_8hpp_source.html">ble_channels.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aaed90c9f3c950ce02538955c44e7920c" name="aaed90c9f3c950ce02538955c44e7920c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed90c9f3c950ce02538955c44e7920c">&#9670;&#160;</a></span>validateCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121">CommandStatus</a> fisch::validateCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structfisch_1_1CommandRequest.html">CommandRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zustandslose Validierung eines Kommandos. </p>
+<p>Prüft ausschließlich, was ohne Kenntnis des Core-Zustands prüfbar ist: Magic, Schema-Version, bekannter Kind, Wertebereiche. Damit deckt sie genau die Fehlerklasse ab, für die Acks überhaupt gebaut wurden Tippfehler, falsche Einheiten, Wertebereichsverletzungen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>Zu prüfendes Kommando. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacefisch.html#a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115">CommandStatus::Ok</a> oder der erste gefundene Fehler. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="command_8cpp_source.html#l00011">11</a> of file <a class="el" href="command_8cpp_source.html">command.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="aff6ecaea3f3856bf59df28120e53e50a" name="aff6ecaea3f3856bf59df28120e53e50a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff6ecaea3f3856bf59df28120e53e50a">&#9670;&#160;</a></span>kBleChannelCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kBleChannelCount = 40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ble__channels_8hpp_source.html#l00038">38</a> of file <a class="el" href="ble__channels_8hpp_source.html">ble_channels.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af5e75394a8dd1f3f4ce39feadb3cc5c0" name="af5e75394a8dd1f3f4ce39feadb3cc5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e75394a8dd1f3f4ce39feadb3cc5c0">&#9670;&#160;</a></span>kBleInvalidChannel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kBleInvalidChannel = 0xFFFFFFFFu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ungültig-Marker für Kanal-/Indexumrechnungen außerhalb des Bandes. </p>
+
+<p class="definition">Definition at line <a class="el" href="ble__channels_8hpp_source.html#l00041">41</a> of file <a class="el" href="ble__channels_8hpp_source.html">ble_channels.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a21ba808f48c00c02f21b36fae7cfcf49" name="a21ba808f48c00c02f21b36fae7cfcf49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ba808f48c00c02f21b36fae7cfcf49">&#9670;&#160;</a></span>kCommandMagic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kCommandMagic = 0x56555343</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Magic für Kommando-Frames ("VUSC"). Fängt den Fall ab, dass jemand versehentlich auf den falschen Socket schreibt. </p>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00038">38</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2c6a28654b7c16ee9c7fdb1b4700a81" name="ae2c6a28654b7c16ee9c7fdb1b4700a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c6a28654b7c16ee9c7fdb1b4700a81">&#9670;&#160;</a></span>kCommandSchemaVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kCommandSchemaVersion = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Wire-Schema-Version des Kommandopfads. BEWUSST unabhängig von kSchemaVersion (Ring-Layout). Kommando- und Datenpfad dürfen sich getrennt weiterentwickeln, ohne einander Versionssprünge aufzuzwingen. </p>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00034">34</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ace661611c40c59f6f8fd36f46684e34f" name="ace661611c40c59f6f8fd36f46684e34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace661611c40c59f6f8fd36f46684e34f">&#9670;&#160;</a></span>kMaxBleChannel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kMaxBleChannel = 39</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Höchster gültiger BLE-Kanalindex (0..39). </p>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00041">41</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aebd58246f852cc6a9676ab1792190ea6" name="aebd58246f852cc6a9676ab1792190ea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd58246f852cc6a9676ab1792190ea6">&#9670;&#160;</a></span>kMaxCenterFreqHz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kMaxCenterFreqHz = 2600000000u</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00058">58</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a04484a61af2a6384557721c4301b09e8" name="a04484a61af2a6384557721c4301b09e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04484a61af2a6384557721c4301b09e8">&#9670;&#160;</a></span>kMaxOverflowPolicyValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kMaxOverflowPolicyValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(OverflowPolicy::DropOldest)</div>
+</div><!-- fragment --><p>Größter gültiger Wert von OverflowPolicy &ndash; für die Validierung von Kommandos. Bei Erweiterung der Enum mit anpassen. </p>
+
+<p class="definition">Definition at line <a class="el" href="policy_8hpp_source.html#l00042">42</a> of file <a class="el" href="policy_8hpp_source.html">policy.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afcc3eb94d9bc7bd9cd20bd39e4d5a1f9" name="afcc3eb94d9bc7bd9cd20bd39e4d5a1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc3eb94d9bc7bd9cd20bd39e4d5a1f9">&#9670;&#160;</a></span>kMaxSampleRateHz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kMaxSampleRateHz = 20000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00051">51</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a459b47363518753401825ff3cd736052" name="a459b47363518753401825ff3cd736052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459b47363518753401825ff3cd736052">&#9670;&#160;</a></span>kMaxTxGainDb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr float fisch::kMaxTxGainDb = 47.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00045">45</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c94e470d3740474a81cf786c0ef42f8" name="a4c94e470d3740474a81cf786c0ef42f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c94e470d3740474a81cf786c0ef42f8">&#9670;&#160;</a></span>kMinCenterFreqHz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kMinCenterFreqHz = 2300000000u</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Erlaubter Frequenzbereich. Der HackRF One kann 1 MHz..6 GHz, aber für dieses Projekt (BLE im 2,4-GHz-Band) grenzen wir bewusst auf ein Fenster um das ISM-Band ein. Werte in Hz. </p>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00057">57</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab1f2de65fd3e562e142364f5e7bbaffd" name="ab1f2de65fd3e562e142364f5e7bbaffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f2de65fd3e562e142364f5e7bbaffd">&#9670;&#160;</a></span>kMinSampleRateHz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kMinSampleRateHz = 2000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>HackRF-One-Samplerate: 2..20 MHz ist der sinnvoll nutzbare Bereich. Die HW kann formal bis 20 MHz, darunter wird das Basisbandfilter eng. Werte gelten in Hz. </p>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00050">50</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab00b58fc17cf3dfb141d9e1bb1e0f33f" name="ab00b58fc17cf3dfb141d9e1bb1e0f33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00b58fc17cf3dfb141d9e1bb1e0f33f">&#9670;&#160;</a></span>kMinTxGainDb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr float fisch::kMinTxGainDb = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zulässiger TX-Gain-Bereich. </p>
+
+<p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00044">44</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a42d92f9a8b7a547cfda15a2292ff185c" name="a42d92f9a8b7a547cfda15a2292ff185c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42d92f9a8b7a547cfda15a2292ff185c">&#9670;&#160;</a></span>kPayloadSize</h2>
 
@@ -218,7 +1217,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Feste Payload-Größe pro Slot in Byte. Deckt alle Telemetrie-Record-Typen (#2-#8) ab, NICHT den FFT-Strom (#1) &ndash; der braucht seinen eigenen Ring mit größeren Slots. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00053">53</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00063">63</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +1242,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>"Magic Number" zur Erkennung, ob ein Shared-Memory-Segment tatsächlich ein gültiger <a class="el" href="classfisch_1_1TelemetryRing.html" title="SPSC-Ringpuffer-Producer für Telemetrie-Records.">TelemetryRing</a> ist (statt z.B. Altdaten aus einem Crash). </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00048">48</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00058">58</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +1256,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr std::uint32_t fisch::kSchemaVersion = 1</td>
+          <td class="memname">constexpr std::uint32_t fisch::kSchemaVersion = 3</td>
         </tr>
       </table>
   </td>
@@ -266,9 +1265,61 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Schema-Version des Binär-Layouts. Bei jeder inkompatiblen Änderung an <a class="el" href="structfisch_1_1TelemetryRecord.html" title="Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über type.">TelemetryRecord</a> oder den Payload-Structs unbedingt erhöhen &ndash; Python prüft dieses Feld beim Öffnen und bricht bei Mismatch ab. </p>
+<p>Schema-Version des Binär-Layouts. Bei jeder inkompatiblen Änderung an <a class="el" href="structfisch_1_1RingHeader.html" title="Kopfdaten des Ringpuffers, liegen am Anfang des Shared-Memory- Segments. Enthält Metadaten zur Validi...">RingHeader</a>, <a class="el" href="structfisch_1_1TelemetryRecord.html" title="Ein einzelner Slot im Ringpuffer: fixe Größe, versioniert, selbstbeschreibend über type.">TelemetryRecord</a> oder den Payload-Structs unbedingt erhöhen &ndash; Python prüft dieses Feld beim Öffnen und bricht bei Mismatch ab.</p>
+<p>Version 2: <code>generation</code> im Header ergänzt, <code>magic</code> ist jetzt atomar und wird als letztes Feld geschrieben (Publikations-Barriere). Version 3: <code>applied_command_seq</code> in <a class="el" href="structfisch_1_1ActuatorStatePayload.html" title="Payload für #6 (ActuatorState): Zustand des Jammers zum Zeitpunkt der Änderung – Basis für die Tracki...">ActuatorStatePayload</a> ergänzt (16 -&gt; 20 Byte) &ndash; Rückmeldung "Kommando wirkt" über die Telemetrie statt über den Kommandopfad, siehe <a class="el" href="command_8hpp.html" title="Wire-Schema des Kommandopfads Rod (Python) -&gt; Core (C++).">command.hpp</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00044">44</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00054">54</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afe56f759144a682466557fc57b09d363" name="afe56f759144a682466557fc57b09d363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe56f759144a682466557fc57b09d363">&#9670;&#160;</a></span>kSpectralMagic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kSpectralMagic = 0x56555353</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Magic für Spektral-Segmente. Bytes im Speicher (little-endian): 'S','S','U','V'. </p>
+
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00057">57</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac05357c8788dcd5ec237d456ea3b9910" name="ac05357c8788dcd5ec237d456ea3b9910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac05357c8788dcd5ec237d456ea3b9910">&#9670;&#160;</a></span>kSpectralSchemaVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::uint32_t fisch::kSpectralSchemaVersion = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schema-Version des Spektral-Layouts. Unabhängig von kSchemaVersion (<a class="el" href="classfisch_1_1TelemetryRing.html" title="SPSC-Ringpuffer-Producer für Telemetrie-Records.">TelemetryRing</a>) und kCommandSchemaVersion </p>
+
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00054">54</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
 
 </div>
 </div>

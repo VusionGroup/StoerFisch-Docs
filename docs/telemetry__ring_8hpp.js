@@ -13,7 +13,7 @@ var telemetry__ring_8hpp =
     [ "RecordType", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58", [
       [ "ChannelOccupancy", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db", null ],
       [ "DetectionEvent", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58ab1b944e106d26e58e02fa3c38e5f92c7", null ],
-      [ "LatencyTimestamp", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58a8b45b08afba78f28e241e348556089be", null ],
+      [ "LatencyTimestamps", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58af2aa9a84410089ad99d60c957403bc35", null ],
       [ "ControllerState", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58adfeba3a4e3797429ca26461f13b86b5e", null ],
       [ "ActuatorState", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58ab9d489273d218ec66eea69d53be78662", null ],
       [ "SuccessMetric", "telemetry__ring_8hpp.html#a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3", null ],

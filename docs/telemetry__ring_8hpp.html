@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>StoerFisch: StoerFisch-Core/include/telemetry_ring.hpp File Reference</title>
+<title>StoerFisch: StoerFisch-Core/include/telemetry/telemetry_ring.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -105,32 +105,42 @@ $(document).ready(function(){initNavTree('telemetry__ring_8hpp.html',''); initRe
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for telemetry_ring.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="telemetry__ring_8hpp__incl.png" border="0" usemap="#aStoerFisch-Core_2include_2telemetry__ring_8hpp" alt=""/></div>
-<map name="aStoerFisch-Core_2include_2telemetry__ring_8hpp" id="aStoerFisch-Core_2include_2telemetry__ring_8hpp">
-<area shape="rect" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="135,5,310,45"/>
+<div class="center"><img src="telemetry__ring_8hpp__incl.png" border="0" usemap="#aStoerFisch-Core_2include_2telemetry_2telemetry__ring_8hpp" alt=""/></div>
+<map name="aStoerFisch-Core_2include_2telemetry_2telemetry__ring_8hpp" id="aStoerFisch-Core_2include_2telemetry_2telemetry__ring_8hpp">
+<area shape="rect" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="160,5,379,45"/>
 <area shape="rect" title=" " alt="" coords="5,93,72,119"/>
-<area shape="poly" title=" " alt="" coords="180,48,79,90,77,85,178,43"/>
+<area shape="poly" title=" " alt="" coords="215,48,86,92,84,86,213,43"/>
 <area shape="rect" title=" " alt="" coords="96,93,163,119"/>
-<area shape="poly" title=" " alt="" coords="202,48,156,86,152,82,198,44"/>
+<area shape="poly" title=" " alt="" coords="237,48,163,89,161,84,235,43"/>
 <area shape="rect" title=" " alt="" coords="187,93,258,119"/>
-<area shape="poly" title=" " alt="" coords="225,46,225,79,220,79,220,46"/>
+<area shape="poly" title=" " alt="" coords="260,47,239,83,234,80,256,44"/>
 <area shape="rect" title=" " alt="" coords="283,93,349,119"/>
-<area shape="poly" title=" " alt="" coords="247,44,293,82,290,86,244,48"/>
+<area shape="poly" title=" " alt="" coords="283,44,304,80,300,83,278,47"/>
 <area shape="rect" title=" " alt="" coords="373,93,432,119"/>
-<area shape="poly" title=" " alt="" coords="267,43,365,85,363,90,265,48"/>
+<area shape="poly" title=" " alt="" coords="303,43,373,84,370,89,300,48"/>
+<area shape="rect" title=" " alt="" coords="457,93,543,119"/>
+<area shape="poly" title=" " alt="" coords="325,43,454,86,452,91,324,48"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="telemetry__ring_8hpp__dep__incl.png" border="0" usemap="#aStoerFisch-Core_2include_2telemetry__ring_8hppdep" alt=""/></div>
-<map name="aStoerFisch-Core_2include_2telemetry__ring_8hppdep" id="aStoerFisch-Core_2include_2telemetry__ring_8hppdep">
-<area shape="rect" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="5,5,180,45"/>
-<area shape="rect" href="telemetry__ring_8cpp.html" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="5,93,180,133"/>
-<area shape="poly" title=" " alt="" coords="95,59,95,93,90,93,90,59"/>
+<div class="center"><img src="telemetry__ring_8hpp__dep__incl.png" border="0" usemap="#aStoerFisch-Core_2include_2telemetry_2telemetry__ring_8hppdep" alt=""/></div>
+<map name="aStoerFisch-Core_2include_2telemetry_2telemetry__ring_8hppdep" id="aStoerFisch-Core_2include_2telemetry_2telemetry__ring_8hppdep">
+<area shape="rect" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="107,5,325,45"/>
+<area shape="rect" href="signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="127,101,305,141"/>
+<area shape="poly" title=" " alt="" coords="219,59,219,101,213,101,213,59"/>
+<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,196,173,236"/>
+<area shape="poly" title=" " alt="" coords="162,54,137,72,117,95,104,120,97,147,92,196,86,195,91,146,99,118,112,92,134,68,159,50"/>
+<area shape="rect" href="telemetry__ring_8cpp.html" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="329,93,487,148"/>
+<area shape="poly" title=" " alt="" coords="268,49,355,91,353,96,266,54"/>
+<area shape="poly" title=" " alt="" coords="181,151,117,198,113,194,178,147"/>
+<area shape="rect" href="signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="197,196,373,236"/>
+<area shape="poly" title=" " alt="" coords="240,150,273,194,269,198,236,153"/>
 </map>
 </div>
 </div>
@@ -179,7 +189,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a21c1dd70df07f14d742f28734ec72f58" id="r_a21c1dd70df07f14d742f28734ec72f58"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58">fisch::RecordType</a> : std::uint32_t { <br />
 &#160;&#160;<a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db">fisch::ChannelOccupancy</a> = 2
 , <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58ab1b944e106d26e58e02fa3c38e5f92c7">fisch::DetectionEvent</a> = 3
-, <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58a8b45b08afba78f28e241e348556089be">fisch::LatencyTimestamp</a> = 4
+, <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58af2aa9a84410089ad99d60c957403bc35">fisch::LatencyTimestamps</a> = 4
 , <a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58adfeba3a4e3797429ca26461f13b86b5e">fisch::ControllerState</a> = 5
 , <br />
 &#160;&#160;<a class="el" href="namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58ab9d489273d218ec66eea69d53be78662">fisch::ActuatorState</a> = 6
@@ -191,7 +201,7 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2e2038405e0507ee3ad034cce78505cd" id="r_a2e2038405e0507ee3ad034cce78505cd"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">fisch::kSchemaVersion</a> = 1</td></tr>
+<tr class="memitem:a2e2038405e0507ee3ad034cce78505cd" id="r_a2e2038405e0507ee3ad034cce78505cd"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd">fisch::kSchemaVersion</a> = 3</td></tr>
 <tr class="separator:a2e2038405e0507ee3ad034cce78505cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38d6b6e7d8239fc8e1335748b331fa2e" id="r_a38d6b6e7d8239fc8e1335748b331fa2e"><td class="memItemLeft" align="right" valign="top">constexpr std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e">fisch::kRingMagic</a> = 0x56555253</td></tr>
 <tr class="separator:a38d6b6e7d8239fc8e1335748b331fa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,7 +227,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d8424022c8f08972bc7a301092243797.html">StoerFisch-Core</a></li><li class="navelem"><a class="el" href="dir_53e8b403d6d92b1895b37e57deaf4e71.html">include</a></li><li class="navelem"><a class="el" href="telemetry__ring_8hpp.html">telemetry_ring.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d8424022c8f08972bc7a301092243797.html">StoerFisch-Core</a></li><li class="navelem"><a class="el" href="dir_53e8b403d6d92b1895b37e57deaf4e71.html">include</a></li><li class="navelem"><a class="el" href="dir_e730e74dc46aa403c816e884957e0860.html">telemetry</a></li><li class="navelem"><a class="el" href="telemetry__ring_8hpp.html">telemetry_ring.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -1,0 +1,16 @@
+<map id="StoerFisch&#45;Core/include/util/channel_tracker.hpp" name="StoerFisch&#45;Core/include/util/channel_tracker.hpp">
+<area shape="rect" id="Node000001" title="Wandelt BLE&#45;Kanal&#45;Energien in Belegungszustände und Detektions&#45; Events um. Entspricht [1...." alt="" coords="221,5,403,45"/>
+<area shape="rect" id="Node000002" href="$controller_8hpp.html" title="Closed&#45;Loop&#45;Regelkreis: entscheidet auf Basis der Kanal&#45;Belegung, welchen Kanal der Störsender (Jamme..." alt="" coords="225,93,399,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="315,59,315,93,309,93,309,59"/>
+<area shape="rect" id="Node000003" href="$signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="98,181,275,221"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="260,54,235,72,214,95,203,116,196,139,190,181,184,181,191,138,198,114,210,92,231,68,257,50"/>
+<area shape="rect" id="Node000007" href="$channel__tracker_8cpp.html" title="Implementierung des ChannelTracker (siehe Header für Design)." alt="" coords="423,93,603,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="370,48,470,91,468,96,368,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="274,144,216,183,213,179,271,139"/>
+<area shape="rect" id="Node000006" href="$controller_8cpp.html" title="Implementierung des Closed&#45;Loop&#45;Controllers (siehe Header für die Zustandsmaschine und die Strategie&#45;..." alt="" coords="300,181,447,221"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="336,143,362,180,358,183,331,146"/>
+<area shape="rect" id="Node000004" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,269,173,309"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="157,232,113,271,109,267,153,228"/>
+<area shape="rect" id="Node000005" href="$signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="197,269,373,309"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="220,228,265,267,262,271,217,232"/>
+</map>

@@ -1,11 +1,24 @@
 var searchData=
 [
-  ['t1adc_5fns_0',['t1adc_ns',['../structfisch_1_1LatencyTimestampsPayload.html#a4fa87d8a66bc7c72255621d2f105e68d',1,'fisch::LatencyTimestampsPayload']]],
-  ['t2_5ffft_5fdone_5fns_1',['t2_fft_done_ns',['../structfisch_1_1LatencyTimestampsPayload.html#a19d94e1ff70bd42d4149a532b6359e2c',1,'fisch::LatencyTimestampsPayload']]],
-  ['t3_5fdecision_5fns_2',['t3_decision_ns',['../structfisch_1_1LatencyTimestampsPayload.html#a3d04afe55f74c594e9111c7f8fa32ab1',1,'fisch::LatencyTimestampsPayload']]],
-  ['t4_5fdac_5fout_5fns_3',['t4_dac_out_ns',['../structfisch_1_1LatencyTimestampsPayload.html#ab3ce3b0b2a45698a9eb454b0a922a497',1,'fisch::LatencyTimestampsPayload']]],
-  ['target_5fchannel_4',['target_channel',['../structfisch_1_1SuccessMetricPayload.html#a38c25cba3a12d6e59e6cdcba111ccc15',1,'fisch::SuccessMetricPayload::target_channel'],['../structfisch_1_1ControllerStatePayload.html#a18b4d8eea857bcf1392b560d40165e17',1,'fisch::ControllerStatePayload::target_channel']]],
-  ['timestamp_5fns_5',['timestamp_ns',['../structfisch_1_1TelemetryRecord.html#a2a89512e2476c32e21f6c2338eb1e5d7',1,'fisch::TelemetryRecord']]],
-  ['tx_5fgain_5fdb_6',['tx_gain_db',['../structfisch_1_1ActuatorStatePayload.html#a151d13dfe8f164593619e9c648e871db',1,'fisch::ActuatorStatePayload']]],
-  ['type_7',['type',['../structfisch_1_1TelemetryRecord.html#a2b0b8c9324b5290c020ab4129fd5edf5',1,'fisch::TelemetryRecord']]]
+  ['kblechannelcount_0',['kBleChannelCount',['../namespacefisch.html#aff6ecaea3f3856bf59df28120e53e50a',1,'fisch']]],
+  ['kbleinvalidchannel_1',['kBleInvalidChannel',['../namespacefisch.html#af5e75394a8dd1f3f4ce39feadb3cc5c0',1,'fisch']]],
+  ['kbufferhealthinterval_2',['kBufferHealthInterval',['../classfisch_1_1SignalPipeline.html#a6fb972460905e5ae6133c1f30f0aa8a6',1,'fisch::SignalPipeline']]],
+  ['kcommandmagic_3',['kCommandMagic',['../namespacefisch.html#a21ba808f48c00c02f21b36fae7cfcf49',1,'fisch']]],
+  ['kcommandschemaversion_4',['kCommandSchemaVersion',['../namespacefisch.html#ae2c6a28654b7c16ee9c7fdb1b4700a81',1,'fisch']]],
+  ['kfloordb_5',['kFloorDb',['../classfisch_1_1SpectrumAnalyzer.html#a0aa6d141c0f8c9a8e453fc0d4f33cbaf',1,'fisch::SpectrumAnalyzer']]],
+  ['kind_6',['kind',['../structfisch_1_1CommandRequest.html#a1ba6c64178b2d1328ffa29fab79c04f7',1,'fisch::CommandRequest::kind'],['../structfisch_1_1ChannelEvent.html#a800ca58b8b1b36847174f2a19f6ebb0b',1,'fisch::ChannelEvent::kind']]],
+  ['kmaxblechannel_7',['kMaxBleChannel',['../namespacefisch.html#ace661611c40c59f6f8fd36f46684e34f',1,'fisch']]],
+  ['kmaxcenterfreqhz_8',['kMaxCenterFreqHz',['../namespacefisch.html#aebd58246f852cc6a9676ab1792190ea6',1,'fisch']]],
+  ['kmaxoverflowpolicyvalue_9',['kMaxOverflowPolicyValue',['../namespacefisch.html#a04484a61af2a6384557721c4301b09e8',1,'fisch']]],
+  ['kmaxsampleratehz_10',['kMaxSampleRateHz',['../namespacefisch.html#afcc3eb94d9bc7bd9cd20bd39e4d5a1f9',1,'fisch']]],
+  ['kmaxtxgaindb_11',['kMaxTxGainDb',['../namespacefisch.html#a459b47363518753401825ff3cd736052',1,'fisch']]],
+  ['kmincenterfreqhz_12',['kMinCenterFreqHz',['../namespacefisch.html#a4c94e470d3740474a81cf786c0ef42f8',1,'fisch']]],
+  ['kminsampleratehz_13',['kMinSampleRateHz',['../namespacefisch.html#ab1f2de65fd3e562e142364f5e7bbaffd',1,'fisch']]],
+  ['kmintxgaindb_14',['kMinTxGainDb',['../namespacefisch.html#ab00b58fc17cf3dfb141d9e1bb1e0f33f',1,'fisch']]],
+  ['kpayloadsize_15',['kPayloadSize',['../namespacefisch.html#a42d92f9a8b7a547cfda15a2292ff185c',1,'fisch']]],
+  ['kqueuecapacity_16',['kQueueCapacity',['../classfisch_1_1CommandChannel.html#a2e437f066d483eac2156279514f0f8ac',1,'fisch::CommandChannel']]],
+  ['kringmagic_17',['kRingMagic',['../namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e',1,'fisch']]],
+  ['kschemaversion_18',['kSchemaVersion',['../namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd',1,'fisch']]],
+  ['kspectralmagic_19',['kSpectralMagic',['../namespacefisch.html#afe56f759144a682466557fc57b09d363',1,'fisch']]],
+  ['kspectralschemaversion_20',['kSpectralSchemaVersion',['../namespacefisch.html#ac05357c8788dcd5ec237d456ea3b9910',1,'fisch']]]
 ];

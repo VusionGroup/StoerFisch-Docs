@@ -5,6 +5,7 @@ var classfisch_1_1TelemetryRing =
     [ "TelemetryRing", "classfisch_1_1TelemetryRing.html#a6246cfef0e386fc9c2ca09ffe6738790", null ],
     [ "destroy", "classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed", null ],
     [ "droppedCount", "classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88", null ],
+    [ "generation", "classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582", null ],
     [ "operator=", "classfisch_1_1TelemetryRing.html#a9f5ce39edb40ccf2ee375ba57161b84b", null ],
     [ "push", "classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632", null ]
 ];
