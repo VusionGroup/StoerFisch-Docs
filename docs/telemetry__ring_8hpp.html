@@ -214,7 +214,7 @@ Variables</h2></td></tr>
 <p>WICHTIG: Der hochratige FFT-/Spektral-Strom (#1) gehört NICHT in diesen Ring, sondern in einen zweiten, separaten Ringpuffer mit eigenem Layout (größere Slots, ggf. andere Overflow-Policy). Sonst verdrängt der Massenstrom die Events. Siehe Notiz "Zwei Ringpuffer" aus der Korrelationsanalyse.</p>
 <p>Ownership-Regel (wichtig wegen Python resource_tracker):</p><ul>
 <li>Nur der Producer (C++, dieser Header) ruft create() auf und ist Eigentümer des Segments -&gt; nur er darf destroy()/unlink() aufrufen.</li>
-<li>Python öffnet das Segment ausschließlich mit multiprocessing.shared_memory.SharedMemory(name=..., create=False) und ruft NIEMALS unlink() auf. Siehe python/telemetry_layout.py.</li>
+<li>Python öffnet das Segment ausschließlich mit multiprocessing.shared_memory.SharedMemory(name=..., create=False) und ruft NIEMALS unlink() auf. Siehe <a class="el" href="telemetry__layout_8py.html">python/telemetry_layout.py</a>.</li>
 </ul>
 <p>Speicher-Ordering:</p><ul>
 <li>Producer: Slot vollständig schreiben, DANACH write_index mit memory_order_release vorrücken.</li>

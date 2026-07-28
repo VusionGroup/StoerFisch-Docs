@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validatecommand_0',['validateCommand',['../namespacefisch.html#aaed90c9f3c950ce02538955c44e7920c',1,'fisch']]]
+  ['quantize_5fdb_0',['quantize_db',['../namespacerod_1_1hub_1_1quantize.html#aa7a24577e9eb75d280e2208ae144e552',1,'rod::hub::quantize']]]
 ];

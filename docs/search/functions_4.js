@@ -1,8 +1,21 @@
 var searchData=
 [
-  ['feed_0',['feed',['../classfisch_1_1IqRecorder.html#afb530a9c7e9e954f82f00e33d4632239',1,'fisch::IqRecorder']]],
-  ['fftsize_1',['fftsize',['../classfisch_1_1SpectralRing.html#a6379095c00b55a8fc508c34ea6718d23',1,'fisch::SpectralRing::fftSize()'],['../classfisch_1_1SpectralRingReader.html#a44bb4138f981de180754e1df11839a29',1,'fisch::SpectralRingReader::fftSize()'],['../classfisch_1_1SpectrumAnalyzer.html#aa934258ff3310548b1acd5afefef8097',1,'fisch::SpectrumAnalyzer::fftSize()']]],
-  ['fill_2',['fill',['../classfisch_1_1Jammer.html#aa2eb007d310ebeaa1f94b786071b7650',1,'fisch::Jammer::fill()'],['../classfisch_1_1IqFilePlayer.html#add7c190ce3ea461b9a6f266ee27b763a',1,'fisch::IqFilePlayer::fill(std::int8_t *buffer, std::size_t max_bytes) noexcept']]],
-  ['finished_3',['finished',['../classfisch_1_1IqFilePlayer.html#ae0b7a2e832aaea5cd33a97d91242963a',1,'fisch::IqFilePlayer']]],
-  ['freqindextoblechannel_4',['freqIndexToBleChannel',['../namespacefisch.html#ad649cbf3b0cc968b8b21e6d740011303',1,'fisch']]]
+  ['decide_0',['decide',['../classfisch_1_1Controller.html#aeb9dc8cf37f56371e7c859674fb82cf5',1,'fisch::Controller']]],
+  ['decode_1',['decode',['../namespacepython_1_1telemetry__layout.html#ad1c212bfef5cd7abae2152cbe887fe30',1,'python::telemetry_layout']]],
+  ['decode_5factuator_5fstate_2',['decode_actuator_state',['../namespacepython_1_1telemetry__layout.html#af5a2848e7dab1000f0cc540f015ea96b',1,'python::telemetry_layout']]],
+  ['decode_5fbuffer_5fhealth_3',['decode_buffer_health',['../namespacepython_1_1telemetry__layout.html#aac6af69c4712405806f848a34bfc8687',1,'python::telemetry_layout']]],
+  ['decode_5fchannel_5foccupancy_4',['decode_channel_occupancy',['../namespacepython_1_1telemetry__layout.html#a60028bd647274cf3f92bdc8a82e65a98',1,'python::telemetry_layout']]],
+  ['decode_5fcontroller_5fstate_5',['decode_controller_state',['../namespacepython_1_1telemetry__layout.html#afc6af026a43ec31e10c17b25edfca188',1,'python::telemetry_layout']]],
+  ['decode_5fdetection_5fevent_6',['decode_detection_event',['../namespacepython_1_1telemetry__layout.html#ab984b2e020e3d38273e0b309a3a3e0db',1,'python::telemetry_layout']]],
+  ['decode_5flatency_5ftimestamps_7',['decode_latency_timestamps',['../namespacepython_1_1telemetry__layout.html#a8eadaf00d6052f5fa4ef0c62eaf60c8d',1,'python::telemetry_layout']]],
+  ['decode_5fsuccess_5fmetric_8',['decode_success_metric',['../namespacepython_1_1telemetry__layout.html#a78192dc2fd2a6e1f480d3cf1227eb979',1,'python::telemetry_layout']]],
+  ['destroy_9',['destroy',['../classfisch_1_1SpectralRing.html#a13cb98ab1eb97cd8b0e0680116bdd1db',1,'fisch::SpectralRing::destroy()'],['../classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed',1,'fisch::TelemetryRing::destroy()']]],
+  ['disarm_10',['disarm',['../classrod_1_1control_1_1safety_1_1SafetyState.html#ae174839e3db4c84e561a56da70b39fdd',1,'rod::control::safety::SafetyState']]],
+  ['disarm_5ftx_11',['disarm_tx',['../classrod_1_1control_1_1controller_1_1Controller.html#ae78744e50bcccab4857517ae47f64fca',1,'rod::control::controller::Controller']]],
+  ['dropped_5fcount_12',['dropped_count',['../classtests_1_1test__hub_1_1__StubSource.html#ae589d9b895d99beb10f80e38b44b4733',1,'tests.test_hub._StubSource.dropped_count()'],['../classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource.html#aa8f57afab897e3a3f73a5c22b2777382',1,'rod.sources.shm_telemetry.ShmTelemetrySource.dropped_count()'],['../classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html#a586eb168e56db28f50cf566d798a05b8',1,'rod.sources.fake_telemetry.FakeTelemetrySource.dropped_count()'],['../classrod_1_1sources_1_1base_1_1TelemetrySource.html#a76bfeb86d988aa7ab2fe0a25726f387c',1,'rod.sources.base.TelemetrySource.dropped_count()'],['../classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#ad03fd1f93fb7b73249954c1ed349d154',1,'rod.hub.telemetry_hub.TelemetryHub.dropped_count()'],['../classpython_1_1telemetry__layout_1_1TelemetryRingReader.html#a6eff5a17087eca71d0612e82e5f411d0',1,'python.telemetry_layout.TelemetryRingReader.dropped_count()']]],
+  ['dropped_5fnewest_5fcount_13',['dropped_newest_count',['../classpython_1_1spectral__layout_1_1SpectralRingReader.html#a4337640be06c1d37d9855510331389b7',1,'python::spectral_layout::SpectralRingReader']]],
+  ['dropped_5foldest_5fcount_14',['dropped_oldest_count',['../classpython_1_1spectral__layout_1_1SpectralRingReader.html#a6248e5b63a424c27534cf07d3abcc2ac',1,'python::spectral_layout::SpectralRingReader']]],
+  ['droppedcount_15',['droppedCount',['../classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88',1,'fisch::TelemetryRing']]],
+  ['droppednewestcount_16',['droppedNewestCount',['../classfisch_1_1SpectralRing.html#a2713d54ff4090d9d0021daa592f5b151',1,'fisch::SpectralRing']]],
+  ['droppedoldestcount_17',['droppedOldestCount',['../classfisch_1_1SpectralRing.html#aee955963b8213e1ac3b1d43298395c31',1,'fisch::SpectralRing']]]
 ];

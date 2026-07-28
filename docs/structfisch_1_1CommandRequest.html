@@ -133,7 +133,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ein Kommando von Rod (Python) an den Core. </p>
-<p>Flaches Layout mit fester Größe, alle Felder 4-Byte-aligned, damit ist es paddingfrei und in Python mit struct.pack('&lt;...') byte-identisch erzeugbar (siehe python/command.py).</p>
+<p>Flaches Layout mit fester Größe, alle Felder 4-Byte-aligned, damit ist es paddingfrei und in Python mit struct.pack('&lt;...') byte-identisch erzeugbar (siehe <a class="el" href="command_8py.html">python/command.py</a>).</p>
 <p><code>reserved</code> erlaubt, später Felder zu ergänzen, ohne die Framegröße zu ändern. Ein neues Feld dort erfordert trotzdem einen Bump von kCommandSchemaVersion, sobald der Core es tatsächlich auswertet. </p>
 
 <p class="definition">Definition at line <a class="el" href="command_8hpp_source.html#l00146">146</a> of file <a class="el" href="command_8hpp_source.html">command.hpp</a>.</p>

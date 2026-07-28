@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['takependingretune_0',['takePendingRetune',['../classfisch_1_1SignalPipeline.html#ab7f87c4daec743ec692e085d14105fb1',1,'fisch::SignalPipeline']]],
-  ['telemetryring_1',['telemetryring',['../classfisch_1_1TelemetryRing.html#ac01a17736ba01305aaf652427267968f',1,'fisch::TelemetryRing::TelemetryRing(const std::string &amp;shm_name, std::uint64_t capacity_slots)'],['../classfisch_1_1TelemetryRing.html#a6246cfef0e386fc9c2ca09ffe6738790',1,'fisch::TelemetryRing::TelemetryRing(const TelemetryRing &amp;)=delete']]],
-  ['torncount_2',['tornCount',['../classfisch_1_1SpectralRingReader.html#ad962216a3ffb140536d0e41b4915cfce',1,'fisch::SpectralRingReader']]],
-  ['trypop_3',['trypop',['../classfisch_1_1CommandQueue.html#a72b87541e94c625f6419b869ce435944',1,'fisch::CommandQueue::tryPop()'],['../classfisch_1_1SpectralRingReader.html#a61310695e279f2eec24253a985dcd78f',1,'fisch::SpectralRingReader::tryPop()']]],
-  ['trypopcommand_4',['tryPopCommand',['../classfisch_1_1CommandChannel.html#a01a87da731666b429d7c177f3d7c8809',1,'fisch::CommandChannel']]]
+  ['occupancymask_0',['occupancyMask',['../classfisch_1_1ChannelTracker.html#a1bf78214ec4d99ea39d16ffde5345a4b',1,'fisch::ChannelTracker']]],
+  ['open_1',['open',['../classfisch_1_1IqFilePlayer.html#a174054ce43ed31d15c8cb0a2ec98e952',1,'fisch::IqFilePlayer::open()'],['../classpython_1_1telemetry__layout_1_1TelemetryRingReader.html#a291b73f9a97e8caa4c6e7a12bca62708',1,'python.telemetry_layout.TelemetryRingReader.open()']]],
+  ['opendevicecount_2',['openDeviceCount',['../classfisch_1_1SdrDevice.html#ad3901e0a34b87fe442320b09f4d856f0',1,'fisch::SdrDevice']]],
+  ['operator_3d_3',['operator=',['../classfisch_1_1CommandChannel.html#a8509dcae64a8be2f92bfd56d7236eb85',1,'fisch::CommandChannel::operator=()'],['../classfisch_1_1SdrDevice.html#a566dc25fb8a37a354b9d0c80ca44bed6',1,'fisch::SdrDevice::operator=(const SdrDevice &amp;)=delete'],['../classfisch_1_1SdrDevice.html#afe768c64dc49ce89d9b3ceaf5ee4be03',1,'fisch::SdrDevice::operator=(SdrDevice &amp;&amp;)=delete'],['../classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1',1,'fisch::IqRecorder::operator=()'],['../classfisch_1_1SpectralRing.html#a7e2a74f34d5d71da63df67cb25743c95',1,'fisch::SpectralRing::operator=()'],['../classfisch_1_1SpectralRingReader.html#af364f0e58340b1e43211a1c98486629a',1,'fisch::SpectralRingReader::operator=()'],['../classfisch_1_1TelemetryRing.html#a9f5ce39edb40ccf2ee375ba57161b84b',1,'fisch::TelemetryRing::operator=()']]],
+  ['overflowpolicy_4',['overflowPolicy',['../classfisch_1_1SpectralRing.html#a5477f02e88874c6918175532f430a016',1,'fisch::SpectralRing']]],
+  ['owner_5',['owner',['../classrod_1_1control_1_1safety_1_1SafetyState.html#a1f15da4e7ae5711d9222a2d922ccf1dc',1,'rod::control::safety::SafetyState']]],
+  ['owner_5fgone_6',['owner_gone',['../classrod_1_1control_1_1safety_1_1SafetyState.html#a0eff35da93f7a4134a29b3a919a01bef',1,'rod::control::safety::SafetyState']]]
 ];

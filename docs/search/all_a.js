@@ -1,24 +1,12 @@
 var searchData=
 [
-  ['kblechannelcount_0',['kBleChannelCount',['../namespacefisch.html#aff6ecaea3f3856bf59df28120e53e50a',1,'fisch']]],
-  ['kbleinvalidchannel_1',['kBleInvalidChannel',['../namespacefisch.html#af5e75394a8dd1f3f4ce39feadb3cc5c0',1,'fisch']]],
-  ['kbufferhealthinterval_2',['kBufferHealthInterval',['../classfisch_1_1SignalPipeline.html#a6fb972460905e5ae6133c1f30f0aa8a6',1,'fisch::SignalPipeline']]],
-  ['kcommandmagic_3',['kCommandMagic',['../namespacefisch.html#a21ba808f48c00c02f21b36fae7cfcf49',1,'fisch']]],
-  ['kcommandschemaversion_4',['kCommandSchemaVersion',['../namespacefisch.html#ae2c6a28654b7c16ee9c7fdb1b4700a81',1,'fisch']]],
-  ['kfloordb_5',['kFloorDb',['../classfisch_1_1SpectrumAnalyzer.html#a0aa6d141c0f8c9a8e453fc0d4f33cbaf',1,'fisch::SpectrumAnalyzer']]],
-  ['kind_6',['kind',['../structfisch_1_1CommandRequest.html#a1ba6c64178b2d1328ffa29fab79c04f7',1,'fisch::CommandRequest::kind'],['../structfisch_1_1ChannelEvent.html#a800ca58b8b1b36847174f2a19f6ebb0b',1,'fisch::ChannelEvent::kind']]],
-  ['kmaxblechannel_7',['kMaxBleChannel',['../namespacefisch.html#ace661611c40c59f6f8fd36f46684e34f',1,'fisch']]],
-  ['kmaxcenterfreqhz_8',['kMaxCenterFreqHz',['../namespacefisch.html#aebd58246f852cc6a9676ab1792190ea6',1,'fisch']]],
-  ['kmaxoverflowpolicyvalue_9',['kMaxOverflowPolicyValue',['../namespacefisch.html#a04484a61af2a6384557721c4301b09e8',1,'fisch']]],
-  ['kmaxsampleratehz_10',['kMaxSampleRateHz',['../namespacefisch.html#afcc3eb94d9bc7bd9cd20bd39e4d5a1f9',1,'fisch']]],
-  ['kmaxtxgaindb_11',['kMaxTxGainDb',['../namespacefisch.html#a459b47363518753401825ff3cd736052',1,'fisch']]],
-  ['kmincenterfreqhz_12',['kMinCenterFreqHz',['../namespacefisch.html#a4c94e470d3740474a81cf786c0ef42f8',1,'fisch']]],
-  ['kminsampleratehz_13',['kMinSampleRateHz',['../namespacefisch.html#ab1f2de65fd3e562e142364f5e7bbaffd',1,'fisch']]],
-  ['kmintxgaindb_14',['kMinTxGainDb',['../namespacefisch.html#ab00b58fc17cf3dfb141d9e1bb1e0f33f',1,'fisch']]],
-  ['kpayloadsize_15',['kPayloadSize',['../namespacefisch.html#a42d92f9a8b7a547cfda15a2292ff185c',1,'fisch']]],
-  ['kqueuecapacity_16',['kQueueCapacity',['../classfisch_1_1CommandChannel.html#a2e437f066d483eac2156279514f0f8ac',1,'fisch::CommandChannel']]],
-  ['kringmagic_17',['kRingMagic',['../namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e',1,'fisch']]],
-  ['kschemaversion_18',['kSchemaVersion',['../namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd',1,'fisch']]],
-  ['kspectralmagic_19',['kSpectralMagic',['../namespacefisch.html#afe56f759144a682466557fc57b09d363',1,'fisch']]],
-  ['kspectralschemaversion_20',['kSpectralSchemaVersion',['../namespacefisch.html#ac05357c8788dcd5ec237d456ea3b9910',1,'fisch']]]
+  ['jambody_0',['JamBody',['../classrod_1_1api_1_1rest_1_1JamBody.html',1,'rod::api::rest']]],
+  ['jammer_1',['jammer',['../classfisch_1_1Jammer.html',1,'fisch::Jammer'],['../classrod_1_1control_1_1controller_1_1Controller.html#adf397f852fd263bcacd4289ee1ba71dc',1,'rod.control.controller.Controller.jammer()'],['../classfisch_1_1Jammer.html#a3238360bcf2807e4a88dd8b10fa331e1',1,'fisch::Jammer::Jammer()']]],
+  ['jammer_5fenabled_2',['jammer_enabled',['../structfisch_1_1ControllerOutput.html#a6afdfe65a1d1e62ed5f9ad3a07be9c14',1,'fisch::ControllerOutput']]],
+  ['jammer_5fstate_3',['jammer_state',['../classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html#aa67581fafdb4f9635e52947ddba144e1',1,'rod::sources::fake_telemetry::FakeTelemetrySource']]],
+  ['jammerbody_4',['JammerBody',['../classrod_1_1api_1_1rest_1_1JammerBody.html',1,'rod::api::rest']]],
+  ['jammerconfig_5',['JammerConfig',['../classrod_1_1control_1_1controller_1_1JammerConfig.html',1,'rod::control::controller']]],
+  ['jammerprobe_6',['JammerProbe',['../namespacerod_1_1sources_1_1fake__spectrum.html#a9fd21475272dbf8c32451572b26f4778',1,'rod::sources::fake_spectrum']]],
+  ['jamming_5fpattern_5fcarrier_7',['JAMMING_PATTERN_CARRIER',['../namespacerod_1_1control_1_1controller.html#a687c12dd7dc8aced3238f9292134c546',1,'rod::control::controller']]],
+  ['jamming_5fpattern_5fnoise_8',['JAMMING_PATTERN_NOISE',['../namespacerod_1_1control_1_1controller.html#afec7d7485d2ea596f496734697cfa75d',1,'rod::control::controller']]]
 ];

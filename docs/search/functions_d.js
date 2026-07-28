@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['samplerate_0',['sampleRate',['../classfisch_1_1SpectrumAnalyzer.html#a0c452515475ad0bc762c9fffa6987607',1,'fisch::SpectrumAnalyzer']]],
-  ['sdrdevice_1',['sdrdevice',['../classfisch_1_1SdrDevice.html#abd5c95a337a28d20395ba4d51a98b7e8',1,'fisch::SdrDevice::SdrDevice(const std::string &amp;serial=&quot;&quot;)'],['../classfisch_1_1SdrDevice.html#aff5c747abf7dce117119ae4f0ad63418',1,'fisch::SdrDevice::SdrDevice(const SdrDevice &amp;)=delete'],['../classfisch_1_1SdrDevice.html#a98fc57865cdb893f2cf5905d33a340b3',1,'fisch::SdrDevice::SdrDevice(SdrDevice &amp;&amp;)=delete']]],
-  ['serial_2',['serial',['../classfisch_1_1SdrDevice.html#aaa6f1f5f9f00c7b348d422e7ed0c4412',1,'fisch::SdrDevice']]],
-  ['setampenable_3',['setAmpEnable',['../classfisch_1_1SdrDevice.html#ae4377b8b8a6fb6734417d70142b41779',1,'fisch::SdrDevice']]],
-  ['setfrequency_4',['setFrequency',['../classfisch_1_1SdrDevice.html#a3d819602d985e5363f9a3a471ea3af69',1,'fisch::SdrDevice']]],
-  ['setoverflowpolicy_5',['setOverflowPolicy',['../classfisch_1_1SpectralRing.html#a2178948d1eb1c0a20d62826a03c2dcf6',1,'fisch::SpectralRing']]],
-  ['setpayload_6',['setPayload',['../structfisch_1_1TelemetryRecord.html#a117ddaec12d257e920df1498061af1bb',1,'fisch::TelemetryRecord']]],
-  ['setreportedsamplerate_7',['setReportedSampleRate',['../classfisch_1_1SignalPipeline.html#a23a92346c05b4c753c29396283202e61',1,'fisch::SignalPipeline']]],
-  ['setrxgain_8',['setRxGain',['../classfisch_1_1SdrDevice.html#abd86c5a02e101a620de0ab8109c3154b',1,'fisch::SdrDevice']]],
-  ['setsamplerate_9',['setSampleRate',['../classfisch_1_1SdrDevice.html#ad1c279acbcab0204cf272b7caba24c80',1,'fisch::SdrDevice']]],
-  ['settxgain_10',['setTxGain',['../classfisch_1_1SdrDevice.html#a7177b9f37fd09c974a3f093cef393841',1,'fisch::SdrDevice']]],
-  ['signalpipeline_11',['SignalPipeline',['../classfisch_1_1SignalPipeline.html#a108f6eda3cdbbf2d5cadd4ca06541efa',1,'fisch::SignalPipeline']]],
-  ['spectralring_12',['spectralring',['../classfisch_1_1SpectralRing.html#a1b10d822889ea751005d9e4496dbb5c1',1,'fisch::SpectralRing::SpectralRing(const SpectralRing &amp;)=delete'],['../classfisch_1_1SpectralRing.html#aec3f45953c056e9a650999315159120b',1,'fisch::SpectralRing::SpectralRing(const std::string &amp;shm_name, std::uint64_t capacity_slots, std::uint32_t fft_size, OverflowPolicy initial_policy=OverflowPolicy::DropNewest)']]],
-  ['spectralringreader_13',['spectralringreader',['../classfisch_1_1SpectralRingReader.html#a701f66c33dab1fe7e418e291cd4ef33c',1,'fisch::SpectralRingReader::SpectralRingReader(const std::string &amp;shm_name)'],['../classfisch_1_1SpectralRingReader.html#af430ae0b60de0fa209342131f727c7ac',1,'fisch::SpectralRingReader::SpectralRingReader(const SpectralRingReader &amp;)=delete']]],
-  ['spectrumanalyzer_14',['SpectrumAnalyzer',['../classfisch_1_1SpectrumAnalyzer.html#a069f597084328a9327e9b6d55d055d59',1,'fisch::SpectrumAnalyzer']]],
-  ['start_15',['start',['../classfisch_1_1CommandChannel.html#af5c216064069a8b5642a91d1dfc8b510',1,'fisch::CommandChannel::start()'],['../classfisch_1_1Controller.html#affd588c4c4a465de62e72a783866655d',1,'fisch::Controller::start()'],['../classfisch_1_1IqRecorder.html#af82af6eab90ad451929d338808abcc32',1,'fisch::IqRecorder::start()']]],
-  ['startrx_16',['startRx',['../classfisch_1_1SdrDevice.html#ac455f8af95bcd57434d1fd89335ce867',1,'fisch::SdrDevice']]],
-  ['starttx_17',['startTx',['../classfisch_1_1SdrDevice.html#a2d26ac15bd8a09a531e82771fe533645',1,'fisch::SdrDevice']]],
-  ['state_18',['state',['../classfisch_1_1Controller.html#aeefc321a1bf94de5abd500f6e1588543',1,'fisch::Controller']]],
-  ['stats_19',['stats',['../classfisch_1_1IqRecorder.html#aa47f1c2c090fab6920208bed391600b5',1,'fisch::IqRecorder']]],
-  ['stop_20',['stop',['../classfisch_1_1CommandChannel.html#ab629b94b9ddfc20c459a9a9e6297bc4a',1,'fisch::CommandChannel::stop()'],['../classfisch_1_1Controller.html#a472285f6a1a81ae810f1f019f68223db',1,'fisch::Controller::stop()'],['../classfisch_1_1IqRecorder.html#a80e94bb96ed327c079842d56d93d0d34',1,'fisch::IqRecorder::stop()']]],
-  ['stoprx_21',['stopRx',['../classfisch_1_1SdrDevice.html#a4d5086bb80af8e0f377034007c142952',1,'fisch::SdrDevice']]],
-  ['stoptx_22',['stopTx',['../classfisch_1_1SdrDevice.html#ad4b49f44a56f57629d21967dd918013a',1,'fisch::SdrDevice']]]
+  ['notch_5fdc_0',['notch_dc',['../namespacerod_1_1hub_1_1quantize.html#a44e2b58a7ae4eeb6e19bd7556223349a',1,'rod::hub::quantize']]]
 ];

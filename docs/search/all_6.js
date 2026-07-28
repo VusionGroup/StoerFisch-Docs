@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['generation_0',['generation',['../structfisch_1_1CommandResponse.html#a21123c42031e894f2a2194aa39469c70',1,'fisch::CommandResponse::generation'],['../structfisch_1_1SpectralRingHeader.html#a9d794570943651cdaaed07b55369db51',1,'fisch::SpectralRingHeader::generation'],['../structfisch_1_1RingHeader.html#a271a74a375581cf36257261e4df7e9f7',1,'fisch::RingHeader::generation'],['../classfisch_1_1SpectralRing.html#a87b856b79c504314e94c21eb77be252f',1,'fisch::SpectralRing::generation()'],['../classfisch_1_1SpectralRingReader.html#ae01bfd74ddfb456a69e017c499303b81',1,'fisch::SpectralRingReader::generation()'],['../classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582',1,'fisch::TelemetryRing::generation()']]],
-  ['generationprovider_1',['GenerationProvider',['../namespacefisch.html#a0671d5c579ce67b3a2d56bea9ae4e6ff',1,'fisch']]]
+  ['fake_0',['fake',['../classrod_1_1config_1_1Config.html#a0e28397711b2b911425dad747f9df710',1,'rod::config::Config']]],
+  ['fake_5fspectral_5fring_2epy_1',['fake_spectral_ring.py',['../fake__spectral__ring_8py.html',1,'']]],
+  ['fake_5fspectrum_2epy_2',['fake_spectrum.py',['../fake__spectrum_8py.html',1,'']]],
+  ['fake_5ftelemetry_2epy_3',['fake_telemetry.py',['../fake__telemetry_8py.html',1,'']]],
+  ['fake_5ftelemetry_5fring_2epy_4',['fake_telemetry_ring.py',['../fake__telemetry__ring_8py.html',1,'']]],
+  ['fakecommandtransport_5',['FakeCommandTransport',['../classrod_1_1control_1_1command__client_1_1FakeCommandTransport.html',1,'rod::control::command_client']]],
+  ['fakespectralring_6',['FakeSpectralRing',['../classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing.html',1,'tests::fixtures::fake_spectral_ring']]],
+  ['fakespectrumsource_7',['FakeSpectrumSource',['../classrod_1_1sources_1_1fake__spectrum_1_1FakeSpectrumSource.html',1,'rod::sources::fake_spectrum']]],
+  ['faketelemetryring_8',['FakeTelemetryRing',['../classtests_1_1fixtures_1_1fake__telemetry__ring_1_1FakeTelemetryRing.html',1,'tests::fixtures::fake_telemetry_ring']]],
+  ['faketelemetrysource_9',['FakeTelemetrySource',['../classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html',1,'rod::sources::fake_telemetry']]],
+  ['feed_10',['feed',['../classfisch_1_1IqRecorder.html#afb530a9c7e9e954f82f00e33d4632239',1,'fisch::IqRecorder']]],
+  ['fft_5fsize_11',['fft_size',['../classpython_1_1spectral__layout_1_1SpectralRingReader.html#aceea5ea8bf4f70f5e5ca487271e5e948',1,'python.spectral_layout.SpectralRingReader.fft_size()'],['../classrod_1_1sources_1_1shm__spectral_1_1ShmSpectralSource.html#a5ee16288b471e98bc51171e049cb511c',1,'rod.sources.shm_spectral.ShmSpectralSource.fft_size()'],['../classrod_1_1sources_1_1fake__spectrum_1_1FakeSpectrumSource.html#a309b98a1197a1d25af667beaf8dc3aee',1,'rod.sources.fake_spectrum.FakeSpectrumSource.fft_size()'],['../classrod_1_1sources_1_1base_1_1SpectrumSource.html#a97b45dcecb8bb17a948d67f97600c039',1,'rod.sources.base.SpectrumSource.fft_size()'],['../classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing.html#a93cab6a8343af1ee9954d7e99f4896ea',1,'tests.fixtures.fake_spectral_ring.FakeSpectralRing.fft_size'],['../classrod_1_1sources_1_1base_1_1SpectralStats.html#a3df0615ab240b2ee4db03cd038b139f3',1,'rod.sources.base.SpectralStats.fft_size'],['../structfisch_1_1SpectralRingHeader.html#a8c011e302f3dc8ce91f46ded3f67dde6',1,'fisch::SpectralRingHeader::fft_size']]],
+  ['fftsize_12',['fftsize',['../classfisch_1_1SpectralRing.html#a6379095c00b55a8fc508c34ea6718d23',1,'fisch::SpectralRing::fftSize()'],['../classfisch_1_1SpectralRingReader.html#a44bb4138f981de180754e1df11839a29',1,'fisch::SpectralRingReader::fftSize()'],['../classfisch_1_1SpectrumAnalyzer.html#aa934258ff3310548b1acd5afefef8097',1,'fisch::SpectrumAnalyzer::fftSize()']]],
+  ['fill_13',['fill',['../classfisch_1_1Jammer.html#aa2eb007d310ebeaa1f94b786071b7650',1,'fisch::Jammer::fill()'],['../classfisch_1_1IqFilePlayer.html#add7c190ce3ea461b9a6f266ee27b763a',1,'fisch::IqFilePlayer::fill(std::int8_t *buffer, std::size_t max_bytes) noexcept']]],
+  ['finished_14',['finished',['../classfisch_1_1IqFilePlayer.html#ae0b7a2e832aaea5cd33a97d91242963a',1,'fisch::IqFilePlayer']]],
+  ['fisch_15',['fisch',['../namespacefisch.html',1,'']]],
+  ['frames_5fdropped_5fin_5fdrain_16',['frames_dropped_in_drain',['../classrod_1_1sources_1_1base_1_1SpectralStats.html#a6c76a9d176f1c0ca7fb4707f6507b22c',1,'rod::sources::base::SpectralStats']]],
+  ['frames_5fread_17',['frames_read',['../classrod_1_1sources_1_1base_1_1SpectralStats.html#afc41b44e81df199e3fcd7edec31bf37e',1,'rod::sources::base::SpectralStats']]],
+  ['freq_5forder_18',['FREQ_ORDER',['../namespacerod_1_1ble.html#a7dd0551bc8199deb9fa827fb21f6f7b2',1,'rod::ble']]],
+  ['freqindextoblechannel_19',['freqIndexToBleChannel',['../namespacefisch.html#ad649cbf3b0cc968b8b21e6d740011303',1,'fisch']]],
+  ['from_5fenv_20',['from_env',['../classrod_1_1config_1_1Config.html#ad4b4fa7cb1db298cbcb838d700ab4f3f',1,'rod::config::Config']]]
 ];

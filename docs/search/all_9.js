@@ -1,5 +1,31 @@
 var searchData=
 [
-  ['jammer_0',['jammer',['../classfisch_1_1Jammer.html',1,'fisch::Jammer'],['../classfisch_1_1Jammer.html#a3238360bcf2807e4a88dd8b10fa331e1',1,'fisch::Jammer::Jammer()']]],
-  ['jammer_5fenabled_1',['jammer_enabled',['../structfisch_1_1ControllerOutput.html#a6afdfe65a1d1e62ed5f9ad3a07be9c14',1,'fisch::ControllerOutput']]]
+  ['idle_0',['Idle',['../namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529ae599161956d626eda4cb0a5ffb85271c',1,'fisch']]],
+  ['inode_1',['inode',['../classpython_1_1telemetry__layout_1_1TelemetryRingReader.html#ae5b62c7a993f9f4ae20db565c8125a35',1,'python::telemetry_layout::TelemetryRingReader']]],
+  ['internal_5ferror_2',['INTERNAL_ERROR',['../classpython_1_1command_1_1CommandStatus.html#abdaf9ca86c49c5c96b2fc9b510f4c09f',1,'python::command::CommandStatus']]],
+  ['internalerror_3',['InternalError',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a8462b58246e70e5c83e5b939a9332cb5',1,'fisch']]],
+  ['invalid_5fchannel_4',['INVALID_CHANNEL',['../classpython_1_1command_1_1CommandStatus.html#a1599d39a4be8706ca1937a8e3da6e370',1,'python::command::CommandStatus']]],
+  ['invalid_5ffrequency_5',['INVALID_FREQUENCY',['../classpython_1_1command_1_1CommandStatus.html#a403c335a6a290fa51624f0d99bd2a04e',1,'python::command::CommandStatus']]],
+  ['invalid_5fgain_6',['INVALID_GAIN',['../classpython_1_1command_1_1CommandStatus.html#ad4f0d81717ca7ba912094f2cb2e7fc66',1,'python::command::CommandStatus']]],
+  ['invalid_5fpattern_7',['INVALID_PATTERN',['../classpython_1_1command_1_1CommandStatus.html#a3f66699f008389d0903faa23128fbd92',1,'python::command::CommandStatus']]],
+  ['invalid_5fpolicy_8',['INVALID_POLICY',['../classpython_1_1command_1_1CommandStatus.html#a991f8251d3195251987b32339a5cbc4e',1,'python::command::CommandStatus']]],
+  ['invalid_5fsample_5frate_9',['INVALID_SAMPLE_RATE',['../classpython_1_1command_1_1CommandStatus.html#ae1876f83da00e7ef1bf44dfe78d0f188',1,'python::command::CommandStatus']]],
+  ['invalidchannel_10',['InvalidChannel',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a94a9e4213f08b322090d83fa5a8be5e4',1,'fisch']]],
+  ['invalidfrequency_11',['InvalidFrequency',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ac3b03efc3eaa590f88945364781491a5',1,'fisch']]],
+  ['invalidgain_12',['InvalidGain',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a327c36153b3f4221843badf676c4c09d',1,'fisch']]],
+  ['invalidpattern_13',['InvalidPattern',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ad1ce9254e48e9dabe6d8c52029b52839',1,'fisch']]],
+  ['invalidpolicy_14',['InvalidPolicy',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121aa021763f4cdb62145be4d266a4554c4c',1,'fisch']]],
+  ['invalidsamplerate_15',['InvalidSampleRate',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d',1,'fisch']]],
+  ['iq_16',['iq',['../structfisch_1_1IqBlock.html#ac1a2f60c24a4719339a536b7e5590f6e',1,'fisch::IqBlock']]],
+  ['iq_5frecorder_2ecpp_17',['iq_recorder.cpp',['../iq__recorder_8cpp.html',1,'']]],
+  ['iq_5frecorder_2ehpp_18',['iq_recorder.hpp',['../iq__recorder_8hpp.html',1,'']]],
+  ['iqblock_19',['IqBlock',['../structfisch_1_1IqBlock.html',1,'fisch']]],
+  ['iqfileplayer_20',['iqfileplayer',['../classfisch_1_1IqFilePlayer.html#a27172412c25e66f15c4fa692d3a2a1cc',1,'fisch::IqFilePlayer::IqFilePlayer()'],['../classfisch_1_1IqFilePlayer.html',1,'fisch::IqFilePlayer']]],
+  ['iqrecorder_21',['iqrecorder',['../classfisch_1_1IqRecorder.html#aaf6dcd112923c2cba2738cf11dcf171d',1,'fisch::IqRecorder::IqRecorder(std::size_t ring_capacity_bytes=(16u&lt;&lt; 20))'],['../classfisch_1_1IqRecorder.html#ae1a9fa974525c006a1ef42ee5bfff435',1,'fisch::IqRecorder::IqRecorder(const IqRecorder &amp;)=delete'],['../classfisch_1_1IqRecorder.html',1,'fisch::IqRecorder']]],
+  ['is_5fpending_22',['is_pending',['../classrod_1_1control_1_1pending_1_1PendingTracker.html#a570932430f55b2c6e0290f384d4ec092',1,'rod::control::pending::PendingTracker']]],
+  ['isbleadvertisingchannel_23',['isBleAdvertisingChannel',['../namespacefisch.html#a19ec0d80255208d4f6bb3ca3a33bd82f',1,'fisch']]],
+  ['isoccupied_24',['isOccupied',['../classfisch_1_1ChannelTracker.html#a5a928efefabe53adfbdd006f463fd8aa',1,'fisch::ChannelTracker']]],
+  ['isrecording_25',['isRecording',['../classfisch_1_1IqRecorder.html#af7950c1b88ec685f1cff7c140f899eb3',1,'fisch::IqRecorder']]],
+  ['isrunning_26',['isRunning',['../classfisch_1_1Controller.html#a86d3ef1d5a5dcb08fc2d45b5dec3c059',1,'fisch::Controller']]],
+  ['isstreaming_27',['isStreaming',['../classfisch_1_1SdrDevice.html#ac96abdb84d243ae8f4db36d7363b5374',1,'fisch::SdrDevice']]]
 ];

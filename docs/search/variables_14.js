@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['write_5findex_0',['write_index',['../structfisch_1_1SpectralRingHeader.html#a81b0de346664c53fe9bd1d7e250dad47',1,'fisch::SpectralRingHeader::write_index'],['../structfisch_1_1RingHeader.html#ae049625745386f9ba5dc72faab8f1d5b',1,'fisch::RingHeader::write_index']]]
+  ['unknown_5fkind_0',['UNKNOWN_KIND',['../classpython_1_1command_1_1CommandStatus.html#a9675b2dfc2583cd053a706dd4cb5e546',1,'python::command::CommandStatus']]],
+  ['usb_5foverruns_1',['usb_overruns',['../structfisch_1_1BufferHealthPayload.html#af5a968249f833ec63402568977d91e95',1,'fisch::BufferHealthPayload']]],
+  ['usb_5funderruns_2',['usb_underruns',['../structfisch_1_1BufferHealthPayload.html#aaa2613f8744669a44bb6f56c7b007b43',1,'fisch::BufferHealthPayload']]]
 ];

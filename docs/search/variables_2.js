@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['capacity_5fslots_0',['capacity_slots',['../structfisch_1_1SpectralRingHeader.html#a7ba2b23fa20bc669b6f81718a5809010',1,'fisch::SpectralRingHeader::capacity_slots'],['../structfisch_1_1RingHeader.html#a29d857905a41fa617bc0febe183a54ad',1,'fisch::RingHeader::capacity_slots']]],
-  ['center_5ffreq_5fhz_1',['center_freq_hz',['../structfisch_1_1CommandRequest.html#a96ea7754b46e06ea365abc1ae460e57e',1,'fisch::CommandRequest::center_freq_hz'],['../structfisch_1_1SpectralSlotHeader.html#adf2f34c708bf7b31f97a9f6f0b3255c0',1,'fisch::SpectralSlotHeader::center_freq_hz'],['../structfisch_1_1SpectralFrame.html#a0ef38ef15ea56d433e9820cf9b5c9547',1,'fisch::SpectralFrame::center_freq_hz'],['../structfisch_1_1SignalPipeline_1_1PendingRetune.html#ac99b86f60d141e05c5beef1f2d832e0f',1,'fisch::SignalPipeline::PendingRetune::center_freq_hz']]],
-  ['channel_2',['channel',['../structfisch_1_1DetectionEventPayload.html#a9be8fdecbb85359e23054aa945396374',1,'fisch::DetectionEventPayload::channel'],['../structfisch_1_1ChannelEvent.html#a4de398c763fcbba48a22611bf76601aa',1,'fisch::ChannelEvent::channel']]],
-  ['channel_5foccupied_5fmask_3',['channel_occupied_mask',['../structfisch_1_1ChannelOccupancyPayload.html#a1891ef29e572d526e5f25785361c80fa',1,'fisch::ChannelOccupancyPayload']]],
-  ['command_5fseq_4',['command_seq',['../structfisch_1_1CommandRequest.html#a8c36386ce0a53d3e5445e7c719d62ff5',1,'fisch::CommandRequest::command_seq'],['../structfisch_1_1CommandResponse.html#a7dbc887de497f98790ebb475978a91be',1,'fisch::CommandResponse::command_seq'],['../structfisch_1_1SignalPipeline_1_1PendingRetune.html#afc0ec3965e62607cde60101d60cb602d',1,'fisch::SignalPipeline::PendingRetune::command_seq']]]
+  ['base_5ffreq_5fhz_0',['BASE_FREQ_HZ',['../namespacerod_1_1ble.html#a46f12aaee46e3dbb5c09fb537b7f29b3',1,'rod::ble']]],
+  ['bins_1',['bins',['../structfisch_1_1SpectralFrame.html#a8329b922758a09f31748e22a525b869e',1,'fisch::SpectralFrame::bins'],['../classpython_1_1spectral__layout_1_1SpectralFrame.html#af071766cf36623664f5bf1565b199357',1,'python.spectral_layout.SpectralFrame.bins'],['../classrod_1_1sources_1_1base_1_1SpectrumFrame.html#a8aebf4c965d28cdb6efcf2384a5559b3',1,'rod.sources.base.SpectrumFrame.bins']]],
+  ['buffer_5fhealth_5fdtype_2',['BUFFER_HEALTH_DTYPE',['../namespacepython_1_1telemetry__layout.html#ae5e3dc059d88e6a104ecf80ed83f35ae',1,'python::telemetry_layout']]],
+  ['bytes_5fdropped_3',['bytes_dropped',['../structfisch_1_1RecorderStats.html#ae75036829ce7332d1c962a40f4bbede9',1,'fisch::RecorderStats']]],
+  ['bytes_5fwritten_4',['bytes_written',['../structfisch_1_1RecorderStats.html#a6882b7d50d613229a9668c8b89483423',1,'fisch::RecorderStats']]]
 ];

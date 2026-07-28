@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['observed_5fchannel_0',['observed_channel',['../structfisch_1_1ControllerStatePayload.html#aa73ae903ce9b2b6d8acd12a0dbaf6462',1,'fisch::ControllerStatePayload']]],
-  ['occupancymask_1',['occupancyMask',['../classfisch_1_1ChannelTracker.html#a1bf78214ec4d99ea39d16ffde5345a4b',1,'fisch::ChannelTracker']]],
-  ['ok_2',['Ok',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115',1,'fisch']]],
-  ['open_3',['open',['../classfisch_1_1IqFilePlayer.html#a174054ce43ed31d15c8cb0a2ec98e952',1,'fisch::IqFilePlayer']]],
-  ['opendevicecount_4',['openDeviceCount',['../classfisch_1_1SdrDevice.html#ad3901e0a34b87fe442320b09f4d856f0',1,'fisch::SdrDevice']]],
-  ['operator_3d_5',['operator=',['../classfisch_1_1CommandChannel.html#a8509dcae64a8be2f92bfd56d7236eb85',1,'fisch::CommandChannel::operator=()'],['../classfisch_1_1SdrDevice.html#a566dc25fb8a37a354b9d0c80ca44bed6',1,'fisch::SdrDevice::operator=(const SdrDevice &amp;)=delete'],['../classfisch_1_1SdrDevice.html#afe768c64dc49ce89d9b3ceaf5ee4be03',1,'fisch::SdrDevice::operator=(SdrDevice &amp;&amp;)=delete'],['../classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1',1,'fisch::IqRecorder::operator=()'],['../classfisch_1_1SpectralRing.html#a7e2a74f34d5d71da63df67cb25743c95',1,'fisch::SpectralRing::operator=()'],['../classfisch_1_1SpectralRingReader.html#af364f0e58340b1e43211a1c98486629a',1,'fisch::SpectralRingReader::operator=()'],['../classfisch_1_1TelemetryRing.html#a9f5ce39edb40ccf2ee375ba57161b84b',1,'fisch::TelemetryRing::operator=()']]],
-  ['overflow_5fpolicy_6',['overflow_policy',['../structfisch_1_1CommandRequest.html#a3fe9f3d495d68cecb0388978be68ab5b',1,'fisch::CommandRequest::overflow_policy'],['../structfisch_1_1SpectralRingHeader.html#a861374fb579c1765abb92b609b8f5ab0',1,'fisch::SpectralRingHeader::overflow_policy']]],
-  ['overflowpolicy_7',['overflowpolicy',['../classfisch_1_1SpectralRing.html#a5477f02e88874c6918175532f430a016',1,'fisch::SpectralRing::overflowPolicy()'],['../namespacefisch.html#a660d3c7a13e0addcc9c9c14699ed4004',1,'fisch::OverflowPolicy']]]
+  ['name_0',['name',['../classrod_1_1testrun_1_1scenario_1_1Scenario.html#ad8406922ae0f98c6559f86a106552328',1,'rod.testrun.scenario.Scenario.name'],['../classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing.html#af098105235e29bc1318f81d4ccd7aac5',1,'tests.fixtures.fake_spectral_ring.FakeSpectralRing.name'],['../classtests_1_1fixtures_1_1fake__telemetry__ring_1_1FakeTelemetryRing.html#a17db0d50915b821dc2df44578a0dd542',1,'tests.fixtures.fake_telemetry_ring.FakeTelemetryRing.name']]],
+  ['noise_1',['Noise',['../classfisch_1_1Jammer.html#adabda6d584a628ddece453418c2e60a4a9b27ee4c75799bd59f202735ce258699',1,'fisch::Jammer']]],
+  ['none_2',['None',['../namespacefisch.html#a26b7eafb687478064a45ea62bb5f359ba6adf97f83acf6453d4a6a4b1070f3754',1,'fisch']]],
+  ['not_5frunning_3',['NOT_RUNNING',['../classpython_1_1command_1_1CommandStatus.html#a84e48b85305620d2fb04cefd8274013d',1,'python::command::CommandStatus']]],
+  ['notch_5fdc_4',['notch_dc',['../namespacerod_1_1hub_1_1quantize.html#a44e2b58a7ae4eeb6e19bd7556223349a',1,'rod::hub::quantize']]],
+  ['note_5',['note',['../classrod_1_1testrun_1_1scenario_1_1Step.html#a4b7e55bd6b6c24369fb26a30ef2ad25b',1,'rod::testrun::scenario::Step']]],
+  ['notrunning_6',['NotRunning',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ae457ff7a83d0a8681fa483f898788515',1,'fisch']]],
+  ['num_5fchannels_7',['NUM_CHANNELS',['../namespacerod_1_1ble.html#a09b48e01567cb9d272a97be616b18f46',1,'rod::ble']]],
+  ['num_5fsamples_8',['num_samples',['../structfisch_1_1IqBlock.html#a159d5221e544e89e0f5051fbf24af630',1,'fisch::IqBlock']]]
 ];

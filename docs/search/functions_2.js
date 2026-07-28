@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['centerfreq_0',['centerFreq',['../classfisch_1_1SpectrumAnalyzer.html#a878d2f69eebc0879f30bb0e6614e6b25',1,'fisch::SpectrumAnalyzer']]],
-  ['channelenergies_1',['channelEnergies',['../classfisch_1_1SpectrumAnalyzer.html#a58287d86a129fc142359f575650c845e',1,'fisch::SpectrumAnalyzer']]],
-  ['channeltracker_2',['ChannelTracker',['../classfisch_1_1ChannelTracker.html#a1884c2bc8b0f523f606e6c2ae93dbcbc',1,'fisch::ChannelTracker']]],
-  ['commandchannel_3',['commandchannel',['../classfisch_1_1CommandChannel.html#aae0635e2a32392ea9d19f686848ba346',1,'fisch::CommandChannel::CommandChannel(std::string socket_path, GenerationProvider generation_provider)'],['../classfisch_1_1CommandChannel.html#a8fdbccacce0f3e9738cee1999a680b0e',1,'fisch::CommandChannel::CommandChannel(const CommandChannel &amp;)=delete']]],
-  ['controller_4',['Controller',['../classfisch_1_1Controller.html#ab0cf211674f3d79aac9030cc464dbe9a',1,'fisch::Controller']]],
-  ['controllerstate_5',['controllerState',['../classfisch_1_1SignalPipeline.html#a72ca2250255dd9d68d05afa1b2d6accb',1,'fisch::SignalPipeline']]]
+  ['ble_5fchannel_5ffreq_5fhz_0',['ble_channel_freq_hz',['../namespacerod_1_1ble.html#aee49a4b69b504ba3ef761b8f0320f1bf',1,'rod::ble']]],
+  ['ble_5ffreq_5findex_1',['ble_freq_index',['../namespacerod_1_1ble.html#a957aebef8e7da536619e419c95234ff0',1,'rod::ble']]],
+  ['blechannelcenterhz_2',['bleChannelCenterHz',['../namespacefisch.html#ae62bae95988b6a5c2f668126904188f6',1,'fisch']]],
+  ['blechanneltofreqindex_3',['bleChannelToFreqIndex',['../namespacefisch.html#a9ce1f9ca2a76d5596cdb0f4223be8a80',1,'fisch']]],
+  ['build_5frequest_4',['build_request',['../namespacepython_1_1command.html#a9171ba376fe203113ae8d898c8a5fe2a',1,'python::command']]],
+  ['bytecount_5',['byteCount',['../classfisch_1_1IqFilePlayer.html#ad0a3ea133258e9c30e32b0524ac4c185',1,'fisch::IqFilePlayer']]]
 ];

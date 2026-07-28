@@ -34,5 +34,116 @@ var annotated_dup =
       [ "SuccessMetricPayload", "structfisch_1_1SuccessMetricPayload.html", "structfisch_1_1SuccessMetricPayload" ],
       [ "TelemetryRecord", "structfisch_1_1TelemetryRecord.html", "structfisch_1_1TelemetryRecord" ],
       [ "TelemetryRing", "classfisch_1_1TelemetryRing.html", "classfisch_1_1TelemetryRing" ]
+    ] ],
+    [ "python", "namespacepython.html", [
+      [ "command", "namespacepython_1_1command.html", [
+        [ "CommandError", "classpython_1_1command_1_1CommandError.html", "classpython_1_1command_1_1CommandError" ],
+        [ "CommandKind", "classpython_1_1command_1_1CommandKind.html", null ],
+        [ "CommandResponse", "classpython_1_1command_1_1CommandResponse.html", "classpython_1_1command_1_1CommandResponse" ],
+        [ "CommandStatus", "classpython_1_1command_1_1CommandStatus.html", null ],
+        [ "OverflowPolicy", "classpython_1_1command_1_1OverflowPolicy.html", null ]
+      ] ],
+      [ "spectral_layout", "namespacepython_1_1spectral__layout.html", [
+        [ "SpectralFrame", "classpython_1_1spectral__layout_1_1SpectralFrame.html", null ],
+        [ "SpectralRingNotReadyError", "classpython_1_1spectral__layout_1_1SpectralRingNotReadyError.html", null ],
+        [ "SpectralRingReader", "classpython_1_1spectral__layout_1_1SpectralRingReader.html", "classpython_1_1spectral__layout_1_1SpectralRingReader" ],
+        [ "SpectralRingSchemaError", "classpython_1_1spectral__layout_1_1SpectralRingSchemaError.html", null ]
+      ] ],
+      [ "telemetry_layout", "namespacepython_1_1telemetry__layout.html", [
+        [ "RingNotReadyError", "classpython_1_1telemetry__layout_1_1RingNotReadyError.html", null ],
+        [ "RingSchemaError", "classpython_1_1telemetry__layout_1_1RingSchemaError.html", null ],
+        [ "StaleSegmentError", "classpython_1_1telemetry__layout_1_1StaleSegmentError.html", null ],
+        [ "TelemetryRingReader", "classpython_1_1telemetry__layout_1_1TelemetryRingReader.html", "classpython_1_1telemetry__layout_1_1TelemetryRingReader" ]
+      ] ]
+    ] ],
+    [ "rod", "namespacerod.html", [
+      [ "api", "namespacerod_1_1api.html", [
+        [ "rest", "namespacerod_1_1api_1_1rest.html", [
+          [ "ArmBody", "classrod_1_1api_1_1rest_1_1ArmBody.html", null ],
+          [ "JamBody", "classrod_1_1api_1_1rest_1_1JamBody.html", null ],
+          [ "JammerBody", "classrod_1_1api_1_1rest_1_1JammerBody.html", null ],
+          [ "OverflowBody", "classrod_1_1api_1_1rest_1_1OverflowBody.html", null ],
+          [ "ReplayBody", "classrod_1_1api_1_1rest_1_1ReplayBody.html", null ],
+          [ "SdrBody", "classrod_1_1api_1_1rest_1_1SdrBody.html", null ],
+          [ "SweepBody", "classrod_1_1api_1_1rest_1_1SweepBody.html", null ]
+        ] ]
+      ] ],
+      [ "config", "namespacerod_1_1config.html", [
+        [ "Config", "classrod_1_1config_1_1Config.html", "classrod_1_1config_1_1Config" ]
+      ] ],
+      [ "control", "namespacerod_1_1control.html", [
+        [ "command_client", "namespacerod_1_1control_1_1command__client.html", [
+          [ "CommandTransport", "classrod_1_1control_1_1command__client_1_1CommandTransport.html", "classrod_1_1control_1_1command__client_1_1CommandTransport" ],
+          [ "CommandTransportError", "classrod_1_1control_1_1command__client_1_1CommandTransportError.html", null ],
+          [ "FakeCommandTransport", "classrod_1_1control_1_1command__client_1_1FakeCommandTransport.html", "classrod_1_1control_1_1command__client_1_1FakeCommandTransport" ],
+          [ "SocketCommandTransport", "classrod_1_1control_1_1command__client_1_1SocketCommandTransport.html", "classrod_1_1control_1_1command__client_1_1SocketCommandTransport" ]
+        ] ],
+        [ "controller", "namespacerod_1_1control_1_1controller.html", [
+          [ "Controller", "classrod_1_1control_1_1controller_1_1Controller.html", "classrod_1_1control_1_1controller_1_1Controller" ],
+          [ "JammerConfig", "classrod_1_1control_1_1controller_1_1JammerConfig.html", null ],
+          [ "SdrConfig", "classrod_1_1control_1_1controller_1_1SdrConfig.html", null ],
+          [ "TxSafetyError", "classrod_1_1control_1_1controller_1_1TxSafetyError.html", null ]
+        ] ],
+        [ "pending", "namespacerod_1_1control_1_1pending.html", [
+          [ "PendingSnapshot", "classrod_1_1control_1_1pending_1_1PendingSnapshot.html", null ],
+          [ "PendingTracker", "classrod_1_1control_1_1pending_1_1PendingTracker.html", "classrod_1_1control_1_1pending_1_1PendingTracker" ]
+        ] ],
+        [ "safety", "namespacerod_1_1control_1_1safety.html", [
+          [ "SafetySnapshot", "classrod_1_1control_1_1safety_1_1SafetySnapshot.html", null ],
+          [ "SafetyState", "classrod_1_1control_1_1safety_1_1SafetyState.html", "classrod_1_1control_1_1safety_1_1SafetyState" ]
+        ] ]
+      ] ],
+      [ "hub", "namespacerod_1_1hub.html", [
+        [ "spectrum_hub", "namespacerod_1_1hub_1_1spectrum__hub.html", [
+          [ "SpectrumHub", "classrod_1_1hub_1_1spectrum__hub_1_1SpectrumHub.html", "classrod_1_1hub_1_1spectrum__hub_1_1SpectrumHub" ]
+        ] ],
+        [ "telemetry_hub", "namespacerod_1_1hub_1_1telemetry__hub.html", [
+          [ "TelemetryHub", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub" ]
+        ] ]
+      ] ],
+      [ "sources", "namespacerod_1_1sources.html", [
+        [ "base", "namespacerod_1_1sources_1_1base.html", [
+          [ "SpectralStats", "classrod_1_1sources_1_1base_1_1SpectralStats.html", null ],
+          [ "SpectrumFrame", "classrod_1_1sources_1_1base_1_1SpectrumFrame.html", null ],
+          [ "SpectrumSource", "classrod_1_1sources_1_1base_1_1SpectrumSource.html", "classrod_1_1sources_1_1base_1_1SpectrumSource" ],
+          [ "TelemetrySource", "classrod_1_1sources_1_1base_1_1TelemetrySource.html", "classrod_1_1sources_1_1base_1_1TelemetrySource" ]
+        ] ],
+        [ "fake_spectrum", "namespacerod_1_1sources_1_1fake__spectrum.html", [
+          [ "FakeSpectrumSource", "classrod_1_1sources_1_1fake__spectrum_1_1FakeSpectrumSource.html", "classrod_1_1sources_1_1fake__spectrum_1_1FakeSpectrumSource" ]
+        ] ],
+        [ "fake_telemetry", "namespacerod_1_1sources_1_1fake__telemetry.html", [
+          [ "FakeTelemetrySource", "classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html", "classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource" ]
+        ] ],
+        [ "shm_spectral", "namespacerod_1_1sources_1_1shm__spectral.html", [
+          [ "ShmSpectralSource", "classrod_1_1sources_1_1shm__spectral_1_1ShmSpectralSource.html", "classrod_1_1sources_1_1shm__spectral_1_1ShmSpectralSource" ]
+        ] ],
+        [ "shm_telemetry", "namespacerod_1_1sources_1_1shm__telemetry.html", [
+          [ "ShmTelemetrySource", "classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource.html", "classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource" ]
+        ] ]
+      ] ],
+      [ "testrun", "namespacerod_1_1testrun.html", [
+        [ "scenario", "namespacerod_1_1testrun_1_1scenario.html", [
+          [ "RunStatus", "classrod_1_1testrun_1_1scenario_1_1RunStatus.html", null ],
+          [ "Scenario", "classrod_1_1testrun_1_1scenario_1_1Scenario.html", "classrod_1_1testrun_1_1scenario_1_1Scenario" ],
+          [ "ScenarioRunner", "classrod_1_1testrun_1_1scenario_1_1ScenarioRunner.html", "classrod_1_1testrun_1_1scenario_1_1ScenarioRunner" ],
+          [ "Step", "classrod_1_1testrun_1_1scenario_1_1Step.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "tests", "namespacetests.html", [
+      [ "fixtures", "namespacetests_1_1fixtures.html", [
+        [ "fake_spectral_ring", "namespacetests_1_1fixtures_1_1fake__spectral__ring.html", [
+          [ "FakeSpectralRing", "classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing.html", "classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing" ]
+        ] ],
+        [ "fake_telemetry_ring", "namespacetests_1_1fixtures_1_1fake__telemetry__ring.html", [
+          [ "FakeTelemetryRing", "classtests_1_1fixtures_1_1fake__telemetry__ring_1_1FakeTelemetryRing.html", "classtests_1_1fixtures_1_1fake__telemetry__ring_1_1FakeTelemetryRing" ]
+        ] ]
+      ] ],
+      [ "test_command_client", "namespacetests_1_1test__command__client.html", [
+        [ "_SpyTelemetry", "classtests_1_1test__command__client_1_1__SpyTelemetry.html", "classtests_1_1test__command__client_1_1__SpyTelemetry" ]
+      ] ],
+      [ "test_hub", "namespacetests_1_1test__hub.html", [
+        [ "_StubSource", "classtests_1_1test__hub_1_1__StubSource.html", "classtests_1_1test__hub_1_1__StubSource" ]
+      ] ]
     ] ]
 ];

@@ -1,7 +1,20 @@
 var searchData=
 [
-  ['enabled_0',['enabled',['../structfisch_1_1ActuatorStatePayload.html#a03fa40b5f801822b49ebff7d4e6f40a0',1,'fisch::ActuatorStatePayload::enabled'],['../structfisch_1_1PipelineActuatorState.html#a770795c3ac93994637eb8d1a4b9c7ac3',1,'fisch::PipelineActuatorState::enabled']]],
-  ['energy_5fdbm_1',['energy_dbm',['../structfisch_1_1ChannelOccupancyPayload.html#ac8594e3ab4f7cbaf4cee5d1755d3feb0',1,'fisch::ChannelOccupancyPayload::energy_dbm'],['../structfisch_1_1ChannelEvent.html#a24ea091760cadeae5d83cb1651307997',1,'fisch::ChannelEvent::energy_dbm']]],
-  ['error_5fmetric_2',['error_metric',['../structfisch_1_1ControllerOutput.html#ac2ea3054cff3197a00ae3245d5aad0b9',1,'fisch::ControllerOutput::error_metric'],['../structfisch_1_1ControllerStatePayload.html#a356905f0f88be4aa129336c214e14f78',1,'fisch::ControllerStatePayload::error_metric']]],
-  ['event_5fkind_3',['event_kind',['../structfisch_1_1DetectionEventPayload.html#a2b056d054c9eb58b987f87981ac99b61',1,'fisch::DetectionEventPayload']]]
+  ['db_5fceil_0',['db_ceil',['../classrod_1_1config_1_1Config.html#a65bf1babb54fdd886cf9f0b9fd096883',1,'rod::config::Config']]],
+  ['db_5ffloor_1',['db_floor',['../classrod_1_1config_1_1Config.html#ab40b85cedd0091326dd245aed6d821a5',1,'rod::config::Config']]],
+  ['dc_5fnotch_5fhalf_5fwidth_2',['dc_notch_half_width',['../classrod_1_1config_1_1Config.html#a2aadf48b40ef9efe4547adaddeee97e6',1,'rod::config::Config']]],
+  ['deadman_5ftimeout_5fs_3',['deadman_timeout_s',['../classrod_1_1config_1_1Config.html#a4ba65d45b69bc6c2406d3686ec14f68f',1,'rod::config::Config']]],
+  ['decision_4',['decision',['../structfisch_1_1ControllerOutput.html#a7ce3d83a78d1294f87fbfc803f4debcf',1,'fisch::ControllerOutput::decision'],['../structfisch_1_1ControllerStatePayload.html#adc57ebe1487a7354da3babbb9fbd0d25',1,'fisch::ControllerStatePayload::decision']]],
+  ['decoders_5',['DECODERS',['../namespacepython_1_1telemetry__layout.html#a8edebc135e0e0c3680f14ef35ec39a2f',1,'python::telemetry_layout']]],
+  ['default_5fcenter_5ffreq_5fhz_6',['default_center_freq_hz',['../classrod_1_1config_1_1Config.html#a629a1c8408080d7ef8ba65c4906476cb',1,'rod::config::Config']]],
+  ['default_5fsample_5frate_5fhz_7',['default_sample_rate_hz',['../classrod_1_1config_1_1Config.html#a9533e53d4b2b8e9d1ec25a8bd8e85446',1,'rod::config::Config']]],
+  ['detection_5fevent_5fdtype_8',['DETECTION_EVENT_DTYPE',['../namespacepython_1_1telemetry__layout.html#a8355a4283bc3042fcf09436c3bc45452',1,'python::telemetry_layout']]],
+  ['drop_5fnewest_9',['DROP_NEWEST',['../classpython_1_1command_1_1OverflowPolicy.html#ada6cdf30aa0cdc73745eec2f4178f245',1,'python::command::OverflowPolicy']]],
+  ['drop_5foldest_10',['DROP_OLDEST',['../classpython_1_1command_1_1OverflowPolicy.html#adf55e1cdb5e1fb4026a17f5366f899cc',1,'python::command::OverflowPolicy']]],
+  ['dropped_5fcount_11',['dropped_count',['../structfisch_1_1RingHeader.html#a19c9afbff9b5450b9ac69edad75de679',1,'fisch::RingHeader']]],
+  ['dropped_5fnewest_5fcount_12',['dropped_newest_count',['../structfisch_1_1SpectralRingHeader.html#a235ff2c85a51bf5ee65afbc639aa2ef8',1,'fisch::SpectralRingHeader::dropped_newest_count'],['../classrod_1_1sources_1_1base_1_1SpectralStats.html#a45a717b69aef8abae09a48b409291225',1,'rod.sources.base.SpectralStats.dropped_newest_count']]],
+  ['dropped_5foldest_5fcount_13',['dropped_oldest_count',['../structfisch_1_1SpectralRingHeader.html#a9a6ff3402cdcefc761a3d80e5b550d59',1,'fisch::SpectralRingHeader::dropped_oldest_count'],['../classrod_1_1sources_1_1base_1_1SpectralStats.html#aea449271ac3ad3df4135cc84210f7e9f',1,'rod.sources.base.SpectralStats.dropped_oldest_count']]],
+  ['dropped_5fsamples_14',['dropped_samples',['../structfisch_1_1BufferHealthPayload.html#a494333440b1d90b7afdfd8a5415ea48e',1,'fisch::BufferHealthPayload']]],
+  ['duration_5fs_15',['duration_s',['../classrod_1_1testrun_1_1scenario_1_1Step.html#a2a0f1837cf0fa70bf7633d494f4ff905',1,'rod::testrun::scenario::Step']]],
+  ['dwell_5fs_16',['dwell_s',['../classrod_1_1api_1_1rest_1_1SweepBody.html#ab98b28617c13262a2a848cecb3a3ce22',1,'rod::api::rest::SweepBody']]]
 ];

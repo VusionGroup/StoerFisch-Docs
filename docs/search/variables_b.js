@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['lost_5fhold_5fcycles_0',['lost_hold_cycles',['../structfisch_1_1ControllerConfig.html#a46f44f2629b00b8e7bba2fbb456788bd',1,'fisch::ControllerConfig']]]
+  ['kblechannelcount_0',['kBleChannelCount',['../namespacefisch.html#aff6ecaea3f3856bf59df28120e53e50a',1,'fisch']]],
+  ['kbleinvalidchannel_1',['kBleInvalidChannel',['../namespacefisch.html#af5e75394a8dd1f3f4ce39feadb3cc5c0',1,'fisch']]],
+  ['kbufferhealthinterval_2',['kBufferHealthInterval',['../classfisch_1_1SignalPipeline.html#a6fb972460905e5ae6133c1f30f0aa8a6',1,'fisch::SignalPipeline']]],
+  ['kcommandmagic_3',['kCommandMagic',['../namespacefisch.html#a21ba808f48c00c02f21b36fae7cfcf49',1,'fisch']]],
+  ['kcommandschemaversion_4',['kCommandSchemaVersion',['../namespacefisch.html#ae2c6a28654b7c16ee9c7fdb1b4700a81',1,'fisch']]],
+  ['kfloordb_5',['kFloorDb',['../classfisch_1_1SpectrumAnalyzer.html#a0aa6d141c0f8c9a8e453fc0d4f33cbaf',1,'fisch::SpectrumAnalyzer']]],
+  ['kind_6',['kind',['../structfisch_1_1CommandRequest.html#a1ba6c64178b2d1328ffa29fab79c04f7',1,'fisch::CommandRequest::kind'],['../structfisch_1_1ChannelEvent.html#a800ca58b8b1b36847174f2a19f6ebb0b',1,'fisch::ChannelEvent::kind']]],
+  ['kind_5fby_5ftype_7',['KIND_BY_TYPE',['../namespacerod_1_1hub_1_1serialize.html#a444eb04500f755c384a35a63d8b255eb',1,'rod::hub::serialize']]],
+  ['kmaxblechannel_8',['kMaxBleChannel',['../namespacefisch.html#ace661611c40c59f6f8fd36f46684e34f',1,'fisch']]],
+  ['kmaxcenterfreqhz_9',['kMaxCenterFreqHz',['../namespacefisch.html#aebd58246f852cc6a9676ab1792190ea6',1,'fisch']]],
+  ['kmaxoverflowpolicyvalue_10',['kMaxOverflowPolicyValue',['../namespacefisch.html#a04484a61af2a6384557721c4301b09e8',1,'fisch']]],
+  ['kmaxsampleratehz_11',['kMaxSampleRateHz',['../namespacefisch.html#afcc3eb94d9bc7bd9cd20bd39e4d5a1f9',1,'fisch']]],
+  ['kmaxtxgaindb_12',['kMaxTxGainDb',['../namespacefisch.html#a459b47363518753401825ff3cd736052',1,'fisch']]],
+  ['kmincenterfreqhz_13',['kMinCenterFreqHz',['../namespacefisch.html#a4c94e470d3740474a81cf786c0ef42f8',1,'fisch']]],
+  ['kminsampleratehz_14',['kMinSampleRateHz',['../namespacefisch.html#ab1f2de65fd3e562e142364f5e7bbaffd',1,'fisch']]],
+  ['kmintxgaindb_15',['kMinTxGainDb',['../namespacefisch.html#ab00b58fc17cf3dfb141d9e1bb1e0f33f',1,'fisch']]],
+  ['kpayloadsize_16',['kPayloadSize',['../namespacefisch.html#a42d92f9a8b7a547cfda15a2292ff185c',1,'fisch']]],
+  ['kqueuecapacity_17',['kQueueCapacity',['../classfisch_1_1CommandChannel.html#a2e437f066d483eac2156279514f0f8ac',1,'fisch::CommandChannel']]],
+  ['kringmagic_18',['kRingMagic',['../namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e',1,'fisch']]],
+  ['kschemaversion_19',['kSchemaVersion',['../namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd',1,'fisch']]],
+  ['kspectralmagic_20',['kSpectralMagic',['../namespacefisch.html#afe56f759144a682466557fc57b09d363',1,'fisch']]],
+  ['kspectralschemaversion_21',['kSpectralSchemaVersion',['../namespacefisch.html#ac05357c8788dcd5ec237d456ea3b9910',1,'fisch']]]
 ];

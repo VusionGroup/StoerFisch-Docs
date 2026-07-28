@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['feed_0',['feed',['../classfisch_1_1IqRecorder.html#afb530a9c7e9e954f82f00e33d4632239',1,'fisch::IqRecorder']]],
-  ['fft_5fsize_1',['fft_size',['../structfisch_1_1SpectralRingHeader.html#a8c011e302f3dc8ce91f46ded3f67dde6',1,'fisch::SpectralRingHeader']]],
-  ['fftsize_2',['fftsize',['../classfisch_1_1SpectralRing.html#a6379095c00b55a8fc508c34ea6718d23',1,'fisch::SpectralRing::fftSize()'],['../classfisch_1_1SpectralRingReader.html#a44bb4138f981de180754e1df11839a29',1,'fisch::SpectralRingReader::fftSize()'],['../classfisch_1_1SpectrumAnalyzer.html#aa934258ff3310548b1acd5afefef8097',1,'fisch::SpectrumAnalyzer::fftSize()']]],
-  ['fill_3',['fill',['../classfisch_1_1Jammer.html#aa2eb007d310ebeaa1f94b786071b7650',1,'fisch::Jammer::fill()'],['../classfisch_1_1IqFilePlayer.html#add7c190ce3ea461b9a6f266ee27b763a',1,'fisch::IqFilePlayer::fill(std::int8_t *buffer, std::size_t max_bytes) noexcept']]],
-  ['finished_4',['finished',['../classfisch_1_1IqFilePlayer.html#ae0b7a2e832aaea5cd33a97d91242963a',1,'fisch::IqFilePlayer']]],
-  ['fisch_5',['fisch',['../namespacefisch.html',1,'']]],
-  ['freqindextoblechannel_6',['freqIndexToBleChannel',['../namespacefisch.html#ad649cbf3b0cc968b8b21e6d740011303',1,'fisch']]]
+  ['emergency_5fstop_0',['emergency_stop',['../classrod_1_1control_1_1controller_1_1Controller.html#acc9e35eaebd51083f15d4cef7a2a254f',1,'rod::control::controller::Controller']]],
+  ['enable_1',['Enable',['../namespacefisch.html#a0bfba05f5657ac303db95e12ae44f615a2faec1f9f8cc7f8f40d521c4dd574f49',1,'fisch']]],
+  ['enabled_2',['enabled',['../structfisch_1_1ActuatorStatePayload.html#a03fa40b5f801822b49ebff7d4e6f40a0',1,'fisch::ActuatorStatePayload::enabled'],['../structfisch_1_1PipelineActuatorState.html#a770795c3ac93994637eb8d1a4b9c7ac3',1,'fisch::PipelineActuatorState::enabled']]],
+  ['energy_5fdbm_3',['energy_dbm',['../structfisch_1_1ChannelOccupancyPayload.html#ac8594e3ab4f7cbaf4cee5d1755d3feb0',1,'fisch::ChannelOccupancyPayload::energy_dbm'],['../structfisch_1_1ChannelEvent.html#a24ea091760cadeae5d83cb1651307997',1,'fisch::ChannelEvent::energy_dbm']]],
+  ['ensure_5fon_5fpath_4',['ensure_on_path',['../namespacerod_1_1__corepath.html#a075d389b7e7798866da03bcb55468399',1,'rod::_corepath']]],
+  ['error_5fmetric_5',['error_metric',['../structfisch_1_1ControllerOutput.html#ac2ea3054cff3197a00ae3245d5aad0b9',1,'fisch::ControllerOutput::error_metric'],['../structfisch_1_1ControllerStatePayload.html#a356905f0f88be4aa129336c214e14f78',1,'fisch::ControllerStatePayload::error_metric']]],
+  ['event_5fkind_6',['event_kind',['../structfisch_1_1DetectionEventPayload.html#a2b056d054c9eb58b987f87981ac99b61',1,'fisch::DetectionEventPayload']]],
+  ['export_2epy_7',['export.py',['../export_8py.html',1,'']]],
+  ['export_5fcsv_8',['export_csv',['../namespacerod_1_1api_1_1rest.html#a314ad5ade85f7ebc25f7e9fa2d5cd44f',1,'rod::api::rest']]]
 ];

@@ -1,0 +1,19 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,223,113,248"/>
+<area shape="rect" id="Node000001" href="$classpython_1_1command_1_1CommandError.html" title=" " alt="" coords="161,5,400,31"/>
+<area shape="poly" id="edge16_Node000000_Node000001" title=" " alt="" coords="64,209,76,171,95,126,122,80,160,41,182,29,185,33,163,45,127,83,100,128,81,173,69,210"/>
+<area shape="rect" id="Node000002" href="$classpython_1_1spectral__layout_1_1SpectralRingNotReadyError.html" title=" " alt="" coords="167,55,395,95"/>
+<area shape="poly" id="edge17_Node000000_Node000002" title=" " alt="" coords="71,209,106,156,131,129,160,105,182,93,185,98,163,110,135,132,111,160,76,212"/>
+<area shape="rect" id="Node000003" href="$classpython_1_1spectral__layout_1_1SpectralRingSchemaError.html" title=" " alt="" coords="167,119,395,159"/>
+<area shape="poly" id="edge18_Node000000_Node000003" title=" " alt="" coords="87,212,121,190,160,169,192,157,194,162,162,174,124,194,90,217"/>
+<area shape="rect" id="Node000004" href="$classpython_1_1telemetry__layout_1_1RingNotReadyError.html" title=" " alt="" coords="187,183,374,223"/>
+<area shape="poly" id="edge19_Node000000_Node000004" title=" " alt="" coords="127,223,187,214,188,219,127,228"/>
+<area shape="rect" id="Node000005" href="$classpython_1_1telemetry__layout_1_1RingSchemaError.html" title=" " alt="" coords="187,247,374,287"/>
+<area shape="poly" id="edge20_Node000000_Node000005" title=" " alt="" coords="127,242,188,251,187,256,127,248"/>
+<area shape="rect" id="Node000006" href="$classpython_1_1telemetry__layout_1_1StaleSegmentError.html" title=" " alt="" coords="187,311,374,351"/>
+<area shape="poly" id="edge21_Node000000_Node000006" title=" " alt="" coords="90,254,124,276,162,297,194,309,192,314,160,302,121,281,87,258"/>
+<area shape="rect" id="Node000007" href="$classrod_1_1control_1_1command__client_1_1CommandTransportError.html" title=" " alt="" coords="167,375,394,415"/>
+<area shape="poly" id="edge22_Node000000_Node000007" title=" " alt="" coords="76,259,111,311,135,338,163,361,185,373,182,378,160,366,131,342,106,314,71,261"/>
+<area shape="rect" id="Node000008" href="$classrod_1_1control_1_1controller_1_1TxSafetyError.html" title=" " alt="" coords="192,439,369,479"/>
+<area shape="poly" id="edge23_Node000000_Node000008" title=" " alt="" coords="70,260,82,298,101,342,127,387,163,425,193,442,190,447,160,429,123,390,96,345,77,300,65,262"/>
+</map>
