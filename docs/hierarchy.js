@@ -1,7 +1,5 @@
 var hierarchy =
 [
-    [ "tests.test_command_client._SpyTelemetry", "classtests_1_1test__command__client_1_1__SpyTelemetry.html", null ],
-    [ "tests.test_hub._StubSource", "classtests_1_1test__hub_1_1__StubSource.html", null ],
     [ "fisch::ActuatorStatePayload", "structfisch_1_1ActuatorStatePayload.html", null ],
     [ "fisch::BufferHealthPayload", "structfisch_1_1BufferHealthPayload.html", null ],
     [ "fisch::ChannelEvent", "structfisch_1_1ChannelEvent.html", null ],
@@ -12,7 +10,6 @@ var hierarchy =
     [ "fisch::CommandQueue< kQueueCapacity >", "classfisch_1_1CommandQueue.html", null ],
     [ "fisch::CommandRequest", "structfisch_1_1CommandRequest.html", null ],
     [ "fisch::CommandResponse", "structfisch_1_1CommandResponse.html", null ],
-    [ "python.command.CommandResponse", "classpython_1_1command_1_1CommandResponse.html", null ],
     [ "rod.config.Config", "classrod_1_1config_1_1Config.html", null ],
     [ "fisch::Controller", "classfisch_1_1Controller.html", null ],
     [ "rod.control.controller.Controller", "classrod_1_1control_1_1controller_1_1Controller.html", null ],
@@ -21,9 +18,7 @@ var hierarchy =
     [ "fisch::ControllerStatePayload", "structfisch_1_1ControllerStatePayload.html", null ],
     [ "fisch::DetectionEventPayload", "structfisch_1_1DetectionEventPayload.html", null ],
     [ "rod.control.command_client.FakeCommandTransport", "classrod_1_1control_1_1command__client_1_1FakeCommandTransport.html", null ],
-    [ "tests.fixtures.fake_spectral_ring.FakeSpectralRing", "classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing.html", null ],
     [ "rod.sources.fake_spectrum.FakeSpectrumSource", "classrod_1_1sources_1_1fake__spectrum_1_1FakeSpectrumSource.html", null ],
-    [ "tests.fixtures.fake_telemetry_ring.FakeTelemetryRing", "classtests_1_1fixtures_1_1fake__telemetry__ring_1_1FakeTelemetryRing.html", null ],
     [ "rod.sources.fake_telemetry.FakeTelemetrySource", "classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html", null ],
     [ "fisch::IqBlock", "structfisch_1_1IqBlock.html", null ],
     [ "fisch::IqFilePlayer", "classfisch_1_1IqFilePlayer.html", null ],
@@ -38,12 +33,6 @@ var hierarchy =
     [ "fisch::RingHeader", "structfisch_1_1RingHeader.html", null ],
     [ "rod.testrun.scenario.RunStatus", "classrod_1_1testrun_1_1scenario_1_1RunStatus.html", null ],
     [ "RuntimeError", null, [
-      [ "python.command.CommandError", "classpython_1_1command_1_1CommandError.html", null ],
-      [ "python.spectral_layout.SpectralRingNotReadyError", "classpython_1_1spectral__layout_1_1SpectralRingNotReadyError.html", null ],
-      [ "python.spectral_layout.SpectralRingSchemaError", "classpython_1_1spectral__layout_1_1SpectralRingSchemaError.html", null ],
-      [ "python.telemetry_layout.RingNotReadyError", "classpython_1_1telemetry__layout_1_1RingNotReadyError.html", null ],
-      [ "python.telemetry_layout.RingSchemaError", "classpython_1_1telemetry__layout_1_1RingSchemaError.html", null ],
-      [ "python.telemetry_layout.StaleSegmentError", "classpython_1_1telemetry__layout_1_1StaleSegmentError.html", null ],
       [ "rod.control.command_client.CommandTransportError", "classrod_1_1control_1_1command__client_1_1CommandTransportError.html", null ],
       [ "rod.control.controller.TxSafetyError", "classrod_1_1control_1_1controller_1_1TxSafetyError.html", null ]
     ] ],
@@ -57,11 +46,9 @@ var hierarchy =
     [ "fisch::SignalPipeline", "classfisch_1_1SignalPipeline.html", null ],
     [ "rod.control.command_client.SocketCommandTransport", "classrod_1_1control_1_1command__client_1_1SocketCommandTransport.html", null ],
     [ "fisch::SpectralFrame", "structfisch_1_1SpectralFrame.html", null ],
-    [ "python.spectral_layout.SpectralFrame", "classpython_1_1spectral__layout_1_1SpectralFrame.html", null ],
     [ "fisch::SpectralRing", "classfisch_1_1SpectralRing.html", null ],
     [ "fisch::SpectralRingHeader", "structfisch_1_1SpectralRingHeader.html", null ],
     [ "fisch::SpectralRingReader", "classfisch_1_1SpectralRingReader.html", null ],
-    [ "python.spectral_layout.SpectralRingReader", "classpython_1_1spectral__layout_1_1SpectralRingReader.html", null ],
     [ "fisch::SpectralSlotHeader", "structfisch_1_1SpectralSlotHeader.html", null ],
     [ "rod.sources.base.SpectralStats", "classrod_1_1sources_1_1base_1_1SpectralStats.html", null ],
     [ "fisch::SpectrumAnalyzer", "classfisch_1_1SpectrumAnalyzer.html", null ],
@@ -72,7 +59,6 @@ var hierarchy =
     [ "rod.hub.telemetry_hub.TelemetryHub", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html", null ],
     [ "fisch::TelemetryRecord", "structfisch_1_1TelemetryRecord.html", null ],
     [ "fisch::TelemetryRing", "classfisch_1_1TelemetryRing.html", null ],
-    [ "python.telemetry_layout.TelemetryRingReader", "classpython_1_1telemetry__layout_1_1TelemetryRingReader.html", null ],
     [ "BaseModel", null, [
       [ "rod.api.rest.ArmBody", "classrod_1_1api_1_1rest_1_1ArmBody.html", null ],
       [ "rod.api.rest.JamBody", "classrod_1_1api_1_1rest_1_1JamBody.html", null ],
@@ -86,11 +72,6 @@ var hierarchy =
     ] ],
     [ "BuildHookInterface", null, [
       [ "hatch_build.CustomBuildHook", "classhatch__build_1_1CustomBuildHook.html", null ]
-    ] ],
-    [ "IntEnum", null, [
-      [ "python.command.CommandKind", "classpython_1_1command_1_1CommandKind.html", null ],
-      [ "python.command.CommandStatus", "classpython_1_1command_1_1CommandStatus.html", null ],
-      [ "python.command.OverflowPolicy", "classpython_1_1command_1_1OverflowPolicy.html", null ]
     ] ],
     [ "Protocol", null, [
       [ "rod.control.command_client.CommandTransport", "classrod_1_1control_1_1command__client_1_1CommandTransport.html", null ],

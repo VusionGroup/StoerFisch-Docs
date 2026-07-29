@@ -4,6 +4,5 @@ var searchData=
   ['ble_5ffreq_5findex_1',['ble_freq_index',['../namespacerod_1_1ble.html#a957aebef8e7da536619e419c95234ff0',1,'rod::ble']]],
   ['blechannelcenterhz_2',['bleChannelCenterHz',['../namespacefisch.html#ae62bae95988b6a5c2f668126904188f6',1,'fisch']]],
   ['blechanneltofreqindex_3',['bleChannelToFreqIndex',['../namespacefisch.html#a9ce1f9ca2a76d5596cdb0f4223be8a80',1,'fisch']]],
-  ['build_5frequest_4',['build_request',['../namespacepython_1_1command.html#a9171ba376fe203113ae8d898c8a5fe2a',1,'python::command']]],
-  ['bytecount_5',['byteCount',['../classfisch_1_1IqFilePlayer.html#ad0a3ea133258e9c30e32b0524ac4c185',1,'fisch::IqFilePlayer']]]
+  ['bytecount_4',['byteCount',['../classfisch_1_1IqFilePlayer.html#ad0a3ea133258e9c30e32b0524ac4c185',1,'fisch::IqFilePlayer']]]
 ];

@@ -209,7 +209,7 @@ monotonen ``command_seq``-Zaehler.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<pre class="fragment">Merkt sich Transport, PendingTracker, Safety und die aktuelle SDR-Sicht.</pre> 
 <p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00087">87</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
@@ -238,8 +238,8 @@ monotonen ``command_seq``-Zaehler.</pre>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00109">109</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<pre class="fragment">Zieht die naechste, streng monoton steigende command_seq.</pre> 
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00112">112</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -291,7 +291,7 @@ monotonen ``command_seq``-Zaehler.</pre>
 <pre class="fragment">Zentraler Sendepfad: neue Sequenz ziehen, Frame bauen, senden,
 ``status == OK`` erzwingen (wirft sonst CommandError) und die Sequenz
 beim PendingTracker als angefordert vermerken.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00113">113</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00117">117</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -321,7 +321,7 @@ beim PendingTracker als angefordert vermerken.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Schaltet scharf und startet den Regelkreis (START).</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00260">260</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00264">264</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -345,7 +345,7 @@ beim PendingTracker als angefordert vermerken.</pre>
 STOP_TRANSMIT zuerst (best effort): Entschaerfen muss eine laufende
 Sendung beenden, nicht nur den Regelkreis. STOP_TRANSMIT ist idempotent,
 laeuft also auch ins Leere, wenn gerade nicht gesendet wird.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00269">269</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00273">273</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -369,7 +369,7 @@ laeuft also auch ins Leere, wenn gerade nicht gesendet wird.</pre>
 STOP_TRANSMIT zuerst -- ein unbeaufsichtigter Sender ist genau der Fall,
 fuer den der Dead-Man existiert; nur den Regelkreis zu stoppen wuerde ein
 laufendes Jamming nicht beenden. Beide best effort.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00282">282</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00286">286</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -388,8 +388,8 @@ laufendes Jamming nicht beenden. Beide best effort.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00106">106</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<pre class="fragment">Zuletzt gesetzte Jammer-Parameter.</pre> 
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00108">108</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -409,7 +409,7 @@ laufendes Jamming nicht beenden. Beide best effort.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">PING -- Verbindungstest; die Antwort traegt die ``generation`` des Cores.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00128">128</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00132">132</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -428,8 +428,8 @@ laufendes Jamming nicht beenden. Beide best effort.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00102">102</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<pre class="fragment">Aktuelle SDR-Konfiguration (Anzeige und was am Core steht).</pre> 
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00103">103</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -459,7 +459,7 @@ laufendes Jamming nicht beenden. Beide best effort.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">SET_CENTER_FREQ -- HW-Retune mit kurzer RX-Unterbrechung.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00171">171</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00175">175</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -489,7 +489,7 @@ laufendes Jamming nicht beenden. Beide best effort.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">SET_OVERFLOW_POLICY -- steuert das Verhalten des Spektral-Rings bei Ueberlauf.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00148">148</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00152">152</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -525,7 +525,7 @@ laufendes Jamming nicht beenden. Beide best effort.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">SET_TARGET -- setzt Stoermuster (und optional Zielkanal).</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00139">139</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00143">143</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -555,7 +555,7 @@ laufendes Jamming nicht beenden. Beide best effort.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">SET_SAMPLE_RATE -- HW-Retune mit kurzer RX-Unterbrechung.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00162">162</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00166">166</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -591,7 +591,7 @@ Sicht tatsaechlich geaendert haben: Jedes Kommando kostet einen echten
 HW-Retune samt RX-Luecke, und ein unveraendertes Feld noch einmal zu
 setzen wuerde die Luecke ohne Nutzen erzeugen.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00180">180</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00184">184</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -621,7 +621,7 @@ setzen wuerde die Luecke ohne Nutzen erzeugen.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">SET_TX_GAIN -- absoluter TX-Pegel; aktualisiert die Jammer-Anzeige.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00132">132</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00136">136</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -657,7 +657,7 @@ setzen wuerde die Luecke ohne Nutzen erzeugen.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">START_JAMMING -- blockiert einen Kanal aktiv. RX steht ab jetzt still.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00221">221</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00225">225</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -677,7 +677,7 @@ setzen wuerde die Luecke ohne Nutzen erzeugen.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">START_RECORDING -- IQ-Aufnahme starten (Core waehlt Datei/Verzeichnis).</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00202">202</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00206">206</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -719,7 +719,7 @@ setzen wuerde die Luecke ohne Nutzen erzeugen.
 ``loop=True`` wiederholt bis STOP_TRANSMIT; sonst schaltet der Core nach
 dem Dateiende von selbst in den RX-Betrieb zurueck.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00232">232</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00236">236</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -739,7 +739,7 @@ dem Dateiende von selbst in den RX-Betrieb zurueck.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">STOP_RECORDING -- laufende IQ-Aufnahme beenden.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00206">206</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00210">210</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -762,7 +762,7 @@ dem Dateiende von selbst in den RX-Betrieb zurueck.
 
 Idempotent: auch ohne laufende Sendung antwortet der Core OK. Deshalb
 gefahrlos als Teil von disarm/Dead-Man aufrufbar.</pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00251">251</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00255">255</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -787,7 +787,7 @@ gefahrlos als Teil von disarm/Dead-Man aufrufbar.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00098">98</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00099">99</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -811,7 +811,7 @@ gefahrlos als Teil von disarm/Dead-Man aufrufbar.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00095">95</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00096">96</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -835,7 +835,7 @@ gefahrlos als Teil von disarm/Dead-Man aufrufbar.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00096">96</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00097">97</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -859,7 +859,7 @@ gefahrlos als Teil von disarm/Dead-Man aufrufbar.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00097">97</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00098">98</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -883,7 +883,7 @@ gefahrlos als Teil von disarm/Dead-Man aufrufbar.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00099">99</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00100">100</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -907,7 +907,7 @@ gefahrlos als Teil von disarm/Dead-Man aufrufbar.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00094">94</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00095">95</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>

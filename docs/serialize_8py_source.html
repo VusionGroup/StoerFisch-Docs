@@ -126,135 +126,142 @@ $(document).ready(function(){initNavTree('serialize_8py_source.html',''); initRe
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="foldopen" id="foldopen00028" data-start="" data-end="">
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a9acf02355a411b4758476d1b739fd958">   28</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a9acf02355a411b4758476d1b739fd958">_occupancy</a>(payload: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    mask = int(payload[<span class="stringliteral">&quot;channel_occupied_mask&quot;</span>])</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    energy = [int(e) <span class="keywordflow">for</span> e <span class="keywordflow">in</span> payload[<span class="stringliteral">&quot;energy_dbm&quot;</span>]]</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    occupied = [(mask &gt;&gt; k) &amp; 1 == 1 <span class="keywordflow">for</span> k <span class="keywordflow">in</span> range(40)]</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">return</span> {<span class="stringliteral">&quot;occupied&quot;</span>: occupied, <span class="stringliteral">&quot;energy_dbm&quot;</span>: energy}</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="stringliteral">&quot;&quot;&quot;Serialisiert #2 channel_occupancy (Maske -&gt; bool[40] + energy_dbm[40]).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    mask = int(payload[<span class="stringliteral">&quot;channel_occupied_mask&quot;</span>])</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    energy = [int(e) <span class="keywordflow">for</span> e <span class="keywordflow">in</span> payload[<span class="stringliteral">&quot;energy_dbm&quot;</span>]]</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    occupied = [(mask &gt;&gt; k) &amp; 1 == 1 <span class="keywordflow">for</span> k <span class="keywordflow">in</span> range(40)]</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> {<span class="stringliteral">&quot;occupied&quot;</span>: occupied, <span class="stringliteral">&quot;energy_dbm&quot;</span>: energy}</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 </div>
-<div class="foldopen" id="foldopen00035" data-start="" data-end="">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a1b237759c0f2ed7953a34e9e58555ba1">   35</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a1b237759c0f2ed7953a34e9e58555ba1">_detection</a>(payload: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    kind = int(payload[<span class="stringliteral">&quot;event_kind&quot;</span>])</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">return</span> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="stringliteral">&quot;channel&quot;</span>: int(payload[<span class="stringliteral">&quot;channel&quot;</span>]),</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="stringliteral">&quot;event_kind&quot;</span>: kind,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="stringliteral">&quot;event_name&quot;</span>: tel.CHANNEL_EVENT_NAMES.get(kind, f<span class="stringliteral">&quot;unknown_{kind}&quot;</span>),</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="stringliteral">&quot;rssi_dbm&quot;</span>: float(payload[<span class="stringliteral">&quot;rssi_dbm&quot;</span>]),</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="" data-end="">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a1b237759c0f2ed7953a34e9e58555ba1">   36</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a1b237759c0f2ed7953a34e9e58555ba1">_detection</a>(payload: np.void) -&gt; dict[str, Any]:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="stringliteral">&quot;&quot;&quot;Serialisiert #3 detection_event (Kanal, Flanke, RSSI).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    kind = int(payload[<span class="stringliteral">&quot;event_kind&quot;</span>])</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="stringliteral">&quot;channel&quot;</span>: int(payload[<span class="stringliteral">&quot;channel&quot;</span>]),</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="stringliteral">&quot;event_kind&quot;</span>: kind,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="stringliteral">&quot;event_name&quot;</span>: tel.CHANNEL_EVENT_NAMES.get(kind, f<span class="stringliteral">&quot;unknown_{kind}&quot;</span>),</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="stringliteral">&quot;rssi_dbm&quot;</span>: float(payload[<span class="stringliteral">&quot;rssi_dbm&quot;</span>]),</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 </div>
-<div class="foldopen" id="foldopen00045" data-start="" data-end="">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a512ebaa2c6f1fba6419fac2127389042">   45</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a512ebaa2c6f1fba6419fac2127389042">_latency</a>(payload: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    t1 = int(payload[<span class="stringliteral">&quot;t1_adc_ns&quot;</span>])</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    t2 = int(payload[<span class="stringliteral">&quot;t2_fft_done_ns&quot;</span>])</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    t3 = int(payload[<span class="stringliteral">&quot;t3_decision_ns&quot;</span>])</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    t4 = int(payload[<span class="stringliteral">&quot;t4_dac_out_ns&quot;</span>])</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="stringliteral">&quot;t1_adc_ns&quot;</span>: t1,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="stringliteral">&quot;t2_fft_done_ns&quot;</span>: t2,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="stringliteral">&quot;t3_decision_ns&quot;</span>: t3,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="stringliteral">&quot;t4_dac_out_ns&quot;</span>: t4,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="stringliteral">&quot;fft_us&quot;</span>: (t2 - t1) / 1000.0,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="stringliteral">&quot;decision_us&quot;</span>: (t3 - t2) / 1000.0,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="stringliteral">&quot;dac_us&quot;</span>: (t4 - t3) / 1000.0,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="stringliteral">&quot;total_us&quot;</span>: (t4 - t1) / 1000.0,</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="" data-end="">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a512ebaa2c6f1fba6419fac2127389042">   47</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a512ebaa2c6f1fba6419fac2127389042">_latency</a>(payload: np.void) -&gt; dict[str, Any]:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="stringliteral">&quot;&quot;&quot;Serialisiert #4 latency (t1..t4 -&gt; µs-Segmente).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    t1 = int(payload[<span class="stringliteral">&quot;t1_adc_ns&quot;</span>])</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    t2 = int(payload[<span class="stringliteral">&quot;t2_fft_done_ns&quot;</span>])</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    t3 = int(payload[<span class="stringliteral">&quot;t3_decision_ns&quot;</span>])</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    t4 = int(payload[<span class="stringliteral">&quot;t4_dac_out_ns&quot;</span>])</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="stringliteral">&quot;t1_adc_ns&quot;</span>: t1,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="stringliteral">&quot;t2_fft_done_ns&quot;</span>: t2,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="stringliteral">&quot;t3_decision_ns&quot;</span>: t3,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="stringliteral">&quot;t4_dac_out_ns&quot;</span>: t4,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="stringliteral">&quot;fft_us&quot;</span>: (t2 - t1) / 1000.0,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="stringliteral">&quot;decision_us&quot;</span>: (t3 - t2) / 1000.0,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="stringliteral">&quot;dac_us&quot;</span>: (t4 - t3) / 1000.0,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="stringliteral">&quot;total_us&quot;</span>: (t4 - t1) / 1000.0,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 </div>
-<div class="foldopen" id="foldopen00062" data-start="" data-end="">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a4e0d763b9b5c8f944d30603f75b52091">   62</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a4e0d763b9b5c8f944d30603f75b52091">_controller</a>(payload: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    state = int(payload[<span class="stringliteral">&quot;state&quot;</span>])</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    decision = int(payload[<span class="stringliteral">&quot;decision&quot;</span>])</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="stringliteral">&quot;target_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;target_channel&quot;</span>]),</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="stringliteral">&quot;observed_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;observed_channel&quot;</span>]),</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="stringliteral">&quot;state&quot;</span>: state,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="stringliteral">&quot;state_name&quot;</span>: tel.CONTROLLER_STATE_NAMES.get(state, f<span class="stringliteral">&quot;unknown_{state}&quot;</span>),</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="stringliteral">&quot;error_metric&quot;</span>: float(payload[<span class="stringliteral">&quot;error_metric&quot;</span>]),</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="stringliteral">&quot;decision&quot;</span>: decision,</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="stringliteral">&quot;decision_name&quot;</span>: tel.CONTROLLER_DECISION_NAMES.get(decision, f<span class="stringliteral">&quot;unknown_{decision}&quot;</span>),</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="" data-end="">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a4e0d763b9b5c8f944d30603f75b52091">   65</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a4e0d763b9b5c8f944d30603f75b52091">_controller</a>(payload: np.void) -&gt; dict[str, Any]:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="stringliteral">&quot;&quot;&quot;Serialisiert #5 controller_state (Zustand + Entscheidung mit Namen).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    state = int(payload[<span class="stringliteral">&quot;state&quot;</span>])</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    decision = int(payload[<span class="stringliteral">&quot;decision&quot;</span>])</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="stringliteral">&quot;target_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;target_channel&quot;</span>]),</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="stringliteral">&quot;observed_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;observed_channel&quot;</span>]),</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="stringliteral">&quot;state&quot;</span>: state,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="stringliteral">&quot;state_name&quot;</span>: tel.CONTROLLER_STATE_NAMES.get(state, f<span class="stringliteral">&quot;unknown_{state}&quot;</span>),</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="stringliteral">&quot;error_metric&quot;</span>: float(payload[<span class="stringliteral">&quot;error_metric&quot;</span>]),</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="stringliteral">&quot;decision&quot;</span>: decision,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="stringliteral">&quot;decision_name&quot;</span>: tel.CONTROLLER_DECISION_NAMES.get(decision, f<span class="stringliteral">&quot;unknown_{decision}&quot;</span>),</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 </div>
-<div class="foldopen" id="foldopen00076" data-start="" data-end="">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a022a4eaa4ca49c65eb83f049129518ad">   76</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a022a4eaa4ca49c65eb83f049129518ad">_actuator</a>(payload: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="stringliteral">&quot;active_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;active_channel&quot;</span>]),</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="stringliteral">&quot;tx_gain_db&quot;</span>: float(payload[<span class="stringliteral">&quot;tx_gain_db&quot;</span>]),</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="stringliteral">&quot;pattern_id&quot;</span>: int(payload[<span class="stringliteral">&quot;pattern_id&quot;</span>]),</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="stringliteral">&quot;applied_command_seq&quot;</span>: int(payload[<span class="stringliteral">&quot;applied_command_seq&quot;</span>]),</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="stringliteral">&quot;enabled&quot;</span>: bool(payload[<span class="stringliteral">&quot;enabled&quot;</span>]),</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="" data-end="">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a022a4eaa4ca49c65eb83f049129518ad">   80</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a022a4eaa4ca49c65eb83f049129518ad">_actuator</a>(payload: np.void) -&gt; dict[str, Any]:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="stringliteral">&quot;&quot;&quot;Serialisiert #6 actuator_state (inkl. applied_command_seq).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="stringliteral">&quot;active_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;active_channel&quot;</span>]),</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="stringliteral">&quot;tx_gain_db&quot;</span>: float(payload[<span class="stringliteral">&quot;tx_gain_db&quot;</span>]),</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="stringliteral">&quot;pattern_id&quot;</span>: int(payload[<span class="stringliteral">&quot;pattern_id&quot;</span>]),</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="stringliteral">&quot;applied_command_seq&quot;</span>: int(payload[<span class="stringliteral">&quot;applied_command_seq&quot;</span>]),</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="stringliteral">&quot;enabled&quot;</span>: bool(payload[<span class="stringliteral">&quot;enabled&quot;</span>]),</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 </div>
-<div class="foldopen" id="foldopen00086" data-start="" data-end="">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a0b67dbb009abe6e1482dac7a1888b949">   86</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a0b67dbb009abe6e1482dac7a1888b949">_success</a>(payload: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">return</span> {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="stringliteral">&quot;target_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;target_channel&quot;</span>]),</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="stringliteral">&quot;residual_energy_dbm&quot;</span>: float(payload[<span class="stringliteral">&quot;residual_energy_dbm&quot;</span>]),</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="stringliteral">&quot;snr_db&quot;</span>: float(payload[<span class="stringliteral">&quot;snr_db&quot;</span>]),</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="" data-end="">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a0b67dbb009abe6e1482dac7a1888b949">   91</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a0b67dbb009abe6e1482dac7a1888b949">_success</a>(payload: np.void) -&gt; dict[str, Any]:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="stringliteral">&quot;&quot;&quot;Serialisiert #7 success_metric (Restenergie/SNR).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="stringliteral">&quot;target_channel&quot;</span>: int(payload[<span class="stringliteral">&quot;target_channel&quot;</span>]),</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="stringliteral">&quot;residual_energy_dbm&quot;</span>: float(payload[<span class="stringliteral">&quot;residual_energy_dbm&quot;</span>]),</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="stringliteral">&quot;snr_db&quot;</span>: float(payload[<span class="stringliteral">&quot;snr_db&quot;</span>]),</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 </div>
-<div class="foldopen" id="foldopen00094" data-start="" data-end="">
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a97e0f82d81bee307b1f1f5c1815f281f">   94</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a97e0f82d81bee307b1f1f5c1815f281f">_buffer_health</a>(payload: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="stringliteral">&quot;usb_overruns&quot;</span>: int(payload[<span class="stringliteral">&quot;usb_overruns&quot;</span>]),</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="stringliteral">&quot;usb_underruns&quot;</span>: int(payload[<span class="stringliteral">&quot;usb_underruns&quot;</span>]),</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="stringliteral">&quot;dropped_samples&quot;</span>: int(payload[<span class="stringliteral">&quot;dropped_samples&quot;</span>]),</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="stringliteral">&quot;actual_sample_rate_hz&quot;</span>: float(payload[<span class="stringliteral">&quot;actual_sample_rate_hz&quot;</span>]),</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="stringliteral">&quot;pll_locked&quot;</span>: bool(payload[<span class="stringliteral">&quot;pll_locked&quot;</span>]),</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="" data-end="">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#a97e0f82d81bee307b1f1f5c1815f281f">  100</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1hub_1_1serialize.html#a97e0f82d81bee307b1f1f5c1815f281f">_buffer_health</a>(payload: np.void) -&gt; dict[str, Any]:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="stringliteral">&quot;&quot;&quot;Serialisiert #8 buffer_health (USB/PLL).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="stringliteral">&quot;usb_overruns&quot;</span>: int(payload[<span class="stringliteral">&quot;usb_overruns&quot;</span>]),</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="stringliteral">&quot;usb_underruns&quot;</span>: int(payload[<span class="stringliteral">&quot;usb_underruns&quot;</span>]),</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="stringliteral">&quot;dropped_samples&quot;</span>: int(payload[<span class="stringliteral">&quot;dropped_samples&quot;</span>]),</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="stringliteral">&quot;actual_sample_rate_hz&quot;</span>: float(payload[<span class="stringliteral">&quot;actual_sample_rate_hz&quot;</span>]),</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="stringliteral">&quot;pll_locked&quot;</span>: bool(payload[<span class="stringliteral">&quot;pll_locked&quot;</span>]),</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#ad970f57aa5cded5d356163a31daf1a60">  104</a></span>_PAYLOAD_SERIALIZERS = {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    tel.RECORD_TYPE_CHANNEL_OCCUPANCY: (tel.decode_channel_occupancy, _occupancy),</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    tel.RECORD_TYPE_DETECTION_EVENT: (tel.decode_detection_event, _detection),</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    tel.RECORD_TYPE_LATENCY_TIMESTAMPS: (tel.decode_latency_timestamps, _latency),</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    tel.RECORD_TYPE_CONTROLLER_STATE: (tel.decode_controller_state, _controller),</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    tel.RECORD_TYPE_ACTUATOR_STATE: (tel.decode_actuator_state, _actuator),</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    tel.RECORD_TYPE_SUCCESS_METRIC: (tel.decode_success_metric, _success),</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    tel.RECORD_TYPE_BUFFER_HEALTH: (tel.decode_buffer_health, _buffer_health),</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="foldopen" id="foldopen00115" data-start="" data-end="">
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#afb14c090244a1574e4f2cbcbc686f032">  115</a></span><span class="keyword">def </span>serialize_record(record: np.void) -&gt; dict[str, Any]:</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="stringliteral">&quot;&quot;&quot;Wandelt einen Telemetrie-Record in ein JSON-taugliches dict.</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="stringliteral">    Unbekannte Typen liefern ``kind=&quot;unknown_&lt;N&gt;&quot;`` ohne Payload (deutet auf</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="stringliteral">    einen neueren C++-Stand hin).</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    rtype = int(record[<span class="stringliteral">&quot;type&quot;</span>])</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    base: dict[str, Any] = {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="stringliteral">&quot;sequence&quot;</span>: int(record[<span class="stringliteral">&quot;sequence&quot;</span>]),</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="stringliteral">&quot;timestamp_ns&quot;</span>: int(record[<span class="stringliteral">&quot;timestamp_ns&quot;</span>]),</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    entry = _PAYLOAD_SERIALIZERS.get(rtype)</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> entry <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        base[<span class="stringliteral">&quot;kind&quot;</span>] = f<span class="stringliteral">&quot;unknown_{rtype}&quot;</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">return</span> base</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    decoder, serializer = entry</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    payload = decoder(record)</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    base[<span class="stringliteral">&quot;kind&quot;</span>] = KIND_BY_TYPE[rtype]</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    base.update(serializer(payload))</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> base</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#ad970f57aa5cded5d356163a31daf1a60">  111</a></span>_PAYLOAD_SERIALIZERS = {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    tel.RECORD_TYPE_CHANNEL_OCCUPANCY: (tel.decode_channel_occupancy, _occupancy),</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    tel.RECORD_TYPE_DETECTION_EVENT: (tel.decode_detection_event, _detection),</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    tel.RECORD_TYPE_LATENCY_TIMESTAMPS: (tel.decode_latency_timestamps, _latency),</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    tel.RECORD_TYPE_CONTROLLER_STATE: (tel.decode_controller_state, _controller),</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    tel.RECORD_TYPE_ACTUATOR_STATE: (tel.decode_actuator_state, _actuator),</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    tel.RECORD_TYPE_SUCCESS_METRIC: (tel.decode_success_metric, _success),</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    tel.RECORD_TYPE_BUFFER_HEALTH: (tel.decode_buffer_health, _buffer_health),</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00122" data-start="" data-end="">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="namespacerod_1_1hub_1_1serialize.html#afb14c090244a1574e4f2cbcbc686f032">  122</a></span><span class="keyword">def </span>serialize_record(record: np.void) -&gt; dict[str, Any]:</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="stringliteral">&quot;&quot;&quot;Wandelt einen Telemetrie-Record in ein JSON-taugliches dict.</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="stringliteral">    Unbekannte Typen liefern ``kind=&quot;unknown_&lt;N&gt;&quot;`` ohne Payload (deutet auf</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="stringliteral">    einen neueren C++-Stand hin).</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    rtype = int(record[<span class="stringliteral">&quot;type&quot;</span>])</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    base: dict[str, Any] = {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="stringliteral">&quot;sequence&quot;</span>: int(record[<span class="stringliteral">&quot;sequence&quot;</span>]),</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="stringliteral">&quot;timestamp_ns&quot;</span>: int(record[<span class="stringliteral">&quot;timestamp_ns&quot;</span>]),</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    entry = _PAYLOAD_SERIALIZERS.get(rtype)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">if</span> entry <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        base[<span class="stringliteral">&quot;kind&quot;</span>] = f<span class="stringliteral">&quot;unknown_{rtype}&quot;</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">return</span> base</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    decoder, serializer = entry</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    payload = decoder(record)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    base[<span class="stringliteral">&quot;kind&quot;</span>] = KIND_BY_TYPE[rtype]</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    base.update(serializer(payload))</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">return</span> base</div>
 </div>
-<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a022a4eaa4ca49c65eb83f049129518ad"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a022a4eaa4ca49c65eb83f049129518ad">rod.hub.serialize._actuator</a></div><div class="ttdeci">dict[str, Any] _actuator(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00076">serialize.py:76</a></div></div>
-<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a0b67dbb009abe6e1482dac7a1888b949"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a0b67dbb009abe6e1482dac7a1888b949">rod.hub.serialize._success</a></div><div class="ttdeci">dict[str, Any] _success(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00086">serialize.py:86</a></div></div>
-<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a1b237759c0f2ed7953a34e9e58555ba1"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a1b237759c0f2ed7953a34e9e58555ba1">rod.hub.serialize._detection</a></div><div class="ttdeci">dict[str, Any] _detection(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00035">serialize.py:35</a></div></div>
-<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a4e0d763b9b5c8f944d30603f75b52091"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a4e0d763b9b5c8f944d30603f75b52091">rod.hub.serialize._controller</a></div><div class="ttdeci">dict[str, Any] _controller(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00062">serialize.py:62</a></div></div>
-<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a512ebaa2c6f1fba6419fac2127389042"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a512ebaa2c6f1fba6419fac2127389042">rod.hub.serialize._latency</a></div><div class="ttdeci">dict[str, Any] _latency(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00045">serialize.py:45</a></div></div>
-<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a97e0f82d81bee307b1f1f5c1815f281f"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a97e0f82d81bee307b1f1f5c1815f281f">rod.hub.serialize._buffer_health</a></div><div class="ttdeci">dict[str, Any] _buffer_health(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00094">serialize.py:94</a></div></div>
+<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a022a4eaa4ca49c65eb83f049129518ad"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a022a4eaa4ca49c65eb83f049129518ad">rod.hub.serialize._actuator</a></div><div class="ttdeci">dict[str, Any] _actuator(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00080">serialize.py:80</a></div></div>
+<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a0b67dbb009abe6e1482dac7a1888b949"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a0b67dbb009abe6e1482dac7a1888b949">rod.hub.serialize._success</a></div><div class="ttdeci">dict[str, Any] _success(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00091">serialize.py:91</a></div></div>
+<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a1b237759c0f2ed7953a34e9e58555ba1"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a1b237759c0f2ed7953a34e9e58555ba1">rod.hub.serialize._detection</a></div><div class="ttdeci">dict[str, Any] _detection(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00036">serialize.py:36</a></div></div>
+<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a4e0d763b9b5c8f944d30603f75b52091"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a4e0d763b9b5c8f944d30603f75b52091">rod.hub.serialize._controller</a></div><div class="ttdeci">dict[str, Any] _controller(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00065">serialize.py:65</a></div></div>
+<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a512ebaa2c6f1fba6419fac2127389042"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a512ebaa2c6f1fba6419fac2127389042">rod.hub.serialize._latency</a></div><div class="ttdeci">dict[str, Any] _latency(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00047">serialize.py:47</a></div></div>
+<div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a97e0f82d81bee307b1f1f5c1815f281f"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a97e0f82d81bee307b1f1f5c1815f281f">rod.hub.serialize._buffer_health</a></div><div class="ttdeci">dict[str, Any] _buffer_health(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00100">serialize.py:100</a></div></div>
 <div class="ttc" id="anamespacerod_1_1hub_1_1serialize_html_a9acf02355a411b4758476d1b739fd958"><div class="ttname"><a href="namespacerod_1_1hub_1_1serialize.html#a9acf02355a411b4758476d1b739fd958">rod.hub.serialize._occupancy</a></div><div class="ttdeci">dict[str, Any] _occupancy(np.void payload)</div><div class="ttdef"><b>Definition</b> <a href="serialize_8py_source.html#l00028">serialize.py:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

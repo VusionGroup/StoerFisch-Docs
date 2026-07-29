@@ -208,7 +208,7 @@ zieht applied_command_seq in den PendingTracker und pollt den Dead-Man.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<pre class="fragment">Merkt sich Quelle/Tracker/Safety und die Poll-/Push-Intervalle.</pre> 
 <p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00044">44</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
@@ -249,7 +249,7 @@ zieht applied_command_seq in den PendingTracker und pollt den Dead-Man.</pre>
 </div><div class="memdoc">
 <pre class="fragment">Legt die Nachricht in jede Abonnenten-Queue. Ist eine voll (Browser zu
 langsam), wird ihr aeltester Eintrag verworfen -- Aktualitaet vor Vollstaendigkeit.</pre> 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00158">158</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00163">163</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -279,7 +279,7 @@ langsam), wird ihr aeltester Eintrag verworfen -- Aktualitaet vor Vollstaendigke
 <pre class="fragment">Poll-Schleife: Ring drainen, Snapshot-Kinds coalescen und je Push-Tick
 fanen, diskrete Events sofort fanen, Dead-Man pollen. Quellfehler werden
 als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre> 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00102">102</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00107">107</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -298,8 +298,8 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00092">92</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<pre class="fragment">Zuletzt gelesener Drop-Zaehler der Quelle.</pre> 
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00094">94</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -318,8 +318,8 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00099">99</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<pre class="fragment">Kopie der aktuellen Snapshots (letzter Wert je kind).</pre> 
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00103">103</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -339,7 +339,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Startet den Hintergrund-Poll-Task.</pre> 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00068">68</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00069">69</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -359,7 +359,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Bricht den Poll-Task ab und wartet sauber auf sein Ende.</pre> 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00072">72</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00073">73</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -380,7 +380,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </div><div class="memdoc">
 <pre class="fragment">Meldet einen WebSocket an. Liefert dessen Queue und die Snapshots
 (letzter Wert je kind) zum sofortigen Nachspielen.</pre> 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00080">80</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00081">81</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -399,8 +399,8 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00096">96</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<pre class="fragment">Anzahl aktuell verbundener WebSockets.</pre> 
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00099">99</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -429,8 +429,8 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00088">88</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<pre class="fragment">Meldet einen WebSocket wieder ab.</pre> 
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00089">89</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00056">56</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00057">57</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -479,7 +479,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00066">66</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00067">67</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00061">61</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00062">62</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00054">54</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00055">55</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -551,7 +551,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00060">60</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00061">61</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -575,7 +575,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00055">55</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00056">56</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -599,7 +599,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00100">100</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00105">105</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -623,7 +623,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00053">53</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00054">54</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -647,7 +647,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00097">97</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00101">101</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ als ``source_error``-Event gemeldet statt die Schleife zu beenden.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00070">70</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__hub_8py_source.html#l00071">71</a> of file <a class="el" href="telemetry__hub_8py_source.html">telemetry_hub.py</a>.</p>
 
 </div>
 </div>

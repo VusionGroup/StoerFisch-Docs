@@ -28,7 +28,7 @@ var NAVTREE =
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
+        [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
@@ -58,15 +58,13 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"____main_____8py.html",
-"classfisch_1_1TelemetryRing.html",
-"classrod_1_1control_1_1controller_1_1TxSafetyError.html",
-"classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html#ac8b9ae9ad2b5a3b33bdd5696febb1918",
-"config_8py.html#a120ed1399ccbfe395046f1668fdceb3f",
-"namespacemembers_e.html",
-"namespacetests_1_1test__quantize.html#ac0f78904ff27ed19a2f43626ed3cb0dc",
-"structfisch_1_1DetectionEventPayload.html#a2b056d054c9eb58b987f87981ac99b61",
-"test__quantize_8py.html"
+"____init_____8py.html",
+"classfisch_1_1SpectrumAnalyzer.html#aa10d95c19863c2ebcfca7764b846d052",
+"classrod_1_1hub_1_1spectrum__hub_1_1SpectrumHub.html#abf9708e3cd6d508f545ad8b3c00aafec",
+"classrod_1_1testrun_1_1scenario_1_1ScenarioRunner.html#a9cb008b1dc0ead57ab089cccf41214dc",
+"namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58aebe04be16dbd54fd6ee1bdda2afc46db",
+"structfisch_1_1ActuatorStatePayload.html#a03fa40b5f801822b49ebff7d4e6f40a0",
+"telemetry__ring_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

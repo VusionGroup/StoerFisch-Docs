@@ -210,7 +210,7 @@ Wire-Paket bereit, das alle Spektrum-WebSockets nur noch abholen (PULL).</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<pre class="fragment">Merkt sich Quelle + Parameter; der Task startet erst in start().</pre> 
 <p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00032">32</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
@@ -241,7 +241,7 @@ Wire-Paket bereit, das alle Spektrum-WebSockets nur noch abholen (PULL).</pre>
 </div><div class="memdoc">
 <pre class="fragment">Drain-Schleife: neuesten Frame holen (aeltere ueberspringen), DC notchen,
 quantisieren, als Wire-Paket ablegen und die Sequenz erhoehen.</pre> 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00094">94</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00097">97</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -260,8 +260,8 @@ quantisieren, als Wire-Paket ablegen und die Sequenz erhoehen.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00072">72</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<pre class="fragment">Zuletzt vorbereitetes Wire-Paket (bytes) oder None.</pre> 
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00074">74</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -280,8 +280,8 @@ quantisieren, als Wire-Paket ablegen und die Sequenz erhoehen.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00068">68</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<pre class="fragment">Sequenz des zuletzt vorbereiteten Wire-Pakets.</pre> 
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00069">69</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -302,7 +302,7 @@ quantisieren, als Wire-Paket ablegen und die Sequenz erhoehen.</pre>
 </div><div class="memdoc">
 <pre class="fragment">Baut die ``spectrum_meta``-Nachricht: Ring-Kennzahlen (fft_size, Center,
 Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre> 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00075">75</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00078">78</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -322,7 +322,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Startet den Hintergrund-Drain-Task.</pre> 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00055">55</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00056">56</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -342,7 +342,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Bricht den Drain-Task ab und wartet sauber auf sein Ende.</pre> 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00059">59</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00060">60</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -367,7 +367,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00052">52</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00053">53</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -391,7 +391,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00045">45</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00046">46</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -415,7 +415,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00044">44</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00045">45</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -439,7 +439,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00048">48</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00049">49</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -463,7 +463,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00043">43</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00044">44</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -487,7 +487,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00102">102</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00105">105</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -511,7 +511,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00051">51</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00052">52</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -535,7 +535,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00046">46</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00047">47</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -559,7 +559,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00047">47</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00048">48</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -583,7 +583,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00042">42</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00043">43</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>
@@ -607,7 +607,7 @@ Qualitaetszaehler) plus die sample_rate aus dem Kontrollpfad.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00057">57</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__hub_8py_source.html#l00058">58</a> of file <a class="el" href="spectrum__hub_8py_source.html">spectrum_hub.py</a>.</p>
 
 </div>
 </div>

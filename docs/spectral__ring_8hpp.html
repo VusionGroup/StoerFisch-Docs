@@ -182,7 +182,7 @@ Variables</h2></td></tr>
 <p>Zweiter, vom TelemetryRing getrennter Ring. Grund für die Trennung: Der Massenstrom (#1) darf den Event-Strom (#2-#8) nicht verdrängen. Ein 1024-Punkt-Spektrum sind 4 KB pro Record, der feste 64-Byte-Payload des TelemetryRecord reicht dafür um Größenordnungen nicht.</p>
 <p>UNTERSCHIEDE ZUM TelemetryRing</p>
 <ol type="1">
-<li>VARIABLE SLOT-GRÖSSE. Die Slot-Größe hängt von <code>fft_size</code> ab, die erst zur Laufzeit feststeht. Deshalb kein typisiertes Array, sondern Byte-Offset-Arithmetik: slot_i = base + sizeof(Header) + i*record_stride. <code>fft_size</code> und <code>record_stride</code> stehen im Header, Python baut sein numpy-dtype daraus zur Laufzeit (siehe <a class="el" href="spectral__layout_8py.html">python/spectral_layout.py</a>).</li>
+<li>VARIABLE SLOT-GRÖSSE. Die Slot-Größe hängt von <code>fft_size</code> ab, die erst zur Laufzeit feststeht. Deshalb kein typisiertes Array, sondern Byte-Offset-Arithmetik: slot_i = base + sizeof(Header) + i*record_stride. <code>fft_size</code> und <code>record_stride</code> stehen im Header, Python baut sein numpy-dtype daraus zur Laufzeit (siehe python/spectral_layout.py).</li>
 <li>MONOTONE INDIZES statt Modulo-Indizes. write_index/read_index zählen endlos hoch und werden NIE zurückgesetzt; der Slot ergibt sich per <code>index % capacity</code>. Der TelemetryRing nutzt dagegen Modulo-Indizes und opfert einen Slot, um "voll" von "leer" zu unterscheiden.</li>
 <li>SEQLOCK PRO SLOT. Zwingend, sobald drop-oldest aktiv ist, siehe unten.</li>
 <li>ZWEI GETRENNTE DROP-ZÄHLER, einer je Policy. Ein Drop bedeutet je nach Policy etwas völlig anderes:<ul>

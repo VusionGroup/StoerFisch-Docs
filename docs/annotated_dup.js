@@ -38,27 +38,6 @@ var annotated_dup =
     [ "hatch_build", "namespacehatch__build.html", [
       [ "CustomBuildHook", "classhatch__build_1_1CustomBuildHook.html", "classhatch__build_1_1CustomBuildHook" ]
     ] ],
-    [ "python", "namespacepython.html", [
-      [ "command", "namespacepython_1_1command.html", [
-        [ "CommandError", "classpython_1_1command_1_1CommandError.html", "classpython_1_1command_1_1CommandError" ],
-        [ "CommandKind", "classpython_1_1command_1_1CommandKind.html", null ],
-        [ "CommandResponse", "classpython_1_1command_1_1CommandResponse.html", "classpython_1_1command_1_1CommandResponse" ],
-        [ "CommandStatus", "classpython_1_1command_1_1CommandStatus.html", null ],
-        [ "OverflowPolicy", "classpython_1_1command_1_1OverflowPolicy.html", null ]
-      ] ],
-      [ "spectral_layout", "namespacepython_1_1spectral__layout.html", [
-        [ "SpectralFrame", "classpython_1_1spectral__layout_1_1SpectralFrame.html", null ],
-        [ "SpectralRingNotReadyError", "classpython_1_1spectral__layout_1_1SpectralRingNotReadyError.html", null ],
-        [ "SpectralRingReader", "classpython_1_1spectral__layout_1_1SpectralRingReader.html", "classpython_1_1spectral__layout_1_1SpectralRingReader" ],
-        [ "SpectralRingSchemaError", "classpython_1_1spectral__layout_1_1SpectralRingSchemaError.html", null ]
-      ] ],
-      [ "telemetry_layout", "namespacepython_1_1telemetry__layout.html", [
-        [ "RingNotReadyError", "classpython_1_1telemetry__layout_1_1RingNotReadyError.html", null ],
-        [ "RingSchemaError", "classpython_1_1telemetry__layout_1_1RingSchemaError.html", null ],
-        [ "StaleSegmentError", "classpython_1_1telemetry__layout_1_1StaleSegmentError.html", null ],
-        [ "TelemetryRingReader", "classpython_1_1telemetry__layout_1_1TelemetryRingReader.html", "classpython_1_1telemetry__layout_1_1TelemetryRingReader" ]
-      ] ]
-    ] ],
     [ "rod", "namespacerod.html", [
       [ "api", "namespacerod_1_1api.html", [
         [ "rest", "namespacerod_1_1api_1_1rest.html", [
@@ -131,22 +110,6 @@ var annotated_dup =
           [ "ScenarioRunner", "classrod_1_1testrun_1_1scenario_1_1ScenarioRunner.html", "classrod_1_1testrun_1_1scenario_1_1ScenarioRunner" ],
           [ "Step", "classrod_1_1testrun_1_1scenario_1_1Step.html", null ]
         ] ]
-      ] ]
-    ] ],
-    [ "tests", "namespacetests.html", [
-      [ "fixtures", "namespacetests_1_1fixtures.html", [
-        [ "fake_spectral_ring", "namespacetests_1_1fixtures_1_1fake__spectral__ring.html", [
-          [ "FakeSpectralRing", "classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing.html", "classtests_1_1fixtures_1_1fake__spectral__ring_1_1FakeSpectralRing" ]
-        ] ],
-        [ "fake_telemetry_ring", "namespacetests_1_1fixtures_1_1fake__telemetry__ring.html", [
-          [ "FakeTelemetryRing", "classtests_1_1fixtures_1_1fake__telemetry__ring_1_1FakeTelemetryRing.html", "classtests_1_1fixtures_1_1fake__telemetry__ring_1_1FakeTelemetryRing" ]
-        ] ]
-      ] ],
-      [ "test_command_client", "namespacetests_1_1test__command__client.html", [
-        [ "_SpyTelemetry", "classtests_1_1test__command__client_1_1__SpyTelemetry.html", "classtests_1_1test__command__client_1_1__SpyTelemetry" ]
-      ] ],
-      [ "test_hub", "namespacetests_1_1test__hub.html", [
-        [ "_StubSource", "classtests_1_1test__hub_1_1__StubSource.html", "classtests_1_1test__hub_1_1__StubSource" ]
       ] ]
     ] ]
 ];
