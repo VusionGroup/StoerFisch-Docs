@@ -11,9 +11,11 @@ var searchData=
   ['commandtransport_8',['CommandTransport',['../classrod_1_1control_1_1command__client_1_1CommandTransport.html',1,'rod::control::command_client']]],
   ['commandtransporterror_9',['CommandTransportError',['../classrod_1_1control_1_1command__client_1_1CommandTransportError.html',1,'rod::control::command_client']]],
   ['config_10',['Config',['../classrod_1_1config_1_1Config.html',1,'rod::config']]],
-  ['controller_11',['controller',['../classfisch_1_1Controller.html',1,'fisch::Controller'],['../classrod_1_1control_1_1controller_1_1Controller.html',1,'rod.control.controller.Controller']]],
-  ['controllerconfig_12',['ControllerConfig',['../structfisch_1_1ControllerConfig.html',1,'fisch']]],
-  ['controlleroutput_13',['ControllerOutput',['../structfisch_1_1ControllerOutput.html',1,'fisch']]],
-  ['controllerstatepayload_14',['ControllerStatePayload',['../structfisch_1_1ControllerStatePayload.html',1,'fisch']]],
-  ['custombuildhook_15',['CustomBuildHook',['../classhatch__build_1_1CustomBuildHook.html',1,'hatch_build']]]
+  ['controlbody_11',['ControlBody',['../classrod_1_1api_1_1rest_1_1ControlBody.html',1,'rod::api::rest']]],
+  ['controllease_12',['ControlLease',['../classrod_1_1control_1_1lease_1_1ControlLease.html',1,'rod::control::lease']]],
+  ['controller_13',['controller',['../classfisch_1_1Controller.html',1,'fisch::Controller'],['../classrod_1_1control_1_1controller_1_1Controller.html',1,'rod.control.controller.Controller']]],
+  ['controllerconfig_14',['ControllerConfig',['../structfisch_1_1ControllerConfig.html',1,'fisch']]],
+  ['controlleroutput_15',['ControllerOutput',['../structfisch_1_1ControllerOutput.html',1,'fisch']]],
+  ['controllerstatepayload_16',['ControllerStatePayload',['../structfisch_1_1ControllerStatePayload.html',1,'fisch']]],
+  ['custombuildhook_17',['CustomBuildHook',['../classhatch__build_1_1CustomBuildHook.html',1,'hatch_build']]]
 ];

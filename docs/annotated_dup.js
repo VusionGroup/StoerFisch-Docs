@@ -42,6 +42,7 @@ var annotated_dup =
       [ "api", "namespacerod_1_1api.html", [
         [ "rest", "namespacerod_1_1api_1_1rest.html", [
           [ "ArmBody", "classrod_1_1api_1_1rest_1_1ArmBody.html", null ],
+          [ "ControlBody", "classrod_1_1api_1_1rest_1_1ControlBody.html", null ],
           [ "JamBody", "classrod_1_1api_1_1rest_1_1JamBody.html", null ],
           [ "JammerBody", "classrod_1_1api_1_1rest_1_1JammerBody.html", null ],
           [ "OverflowBody", "classrod_1_1api_1_1rest_1_1OverflowBody.html", null ],
@@ -65,6 +66,10 @@ var annotated_dup =
           [ "JammerConfig", "classrod_1_1control_1_1controller_1_1JammerConfig.html", null ],
           [ "SdrConfig", "classrod_1_1control_1_1controller_1_1SdrConfig.html", null ],
           [ "TxSafetyError", "classrod_1_1control_1_1controller_1_1TxSafetyError.html", null ]
+        ] ],
+        [ "lease", "namespacerod_1_1control_1_1lease.html", [
+          [ "ControlLease", "classrod_1_1control_1_1lease_1_1ControlLease.html", "classrod_1_1control_1_1lease_1_1ControlLease" ],
+          [ "LeaseSnapshot", "classrod_1_1control_1_1lease_1_1LeaseSnapshot.html", null ]
         ] ],
         [ "pending", "namespacerod_1_1control_1_1pending.html", [
           [ "PendingSnapshot", "classrod_1_1control_1_1pending_1_1PendingSnapshot.html", null ],

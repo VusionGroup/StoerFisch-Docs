@@ -101,6 +101,8 @@ $(document).ready(function(){initNavTree('namespacerod_1_1api_1_1rest.html','');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrod_1_1api_1_1rest_1_1ArmBody.html">ArmBody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrod_1_1api_1_1rest_1_1ControlBody.html">ControlBody</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrod_1_1api_1_1rest_1_1JamBody.html">JamBody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrod_1_1api_1_1rest_1_1JammerBody.html">JammerBody</a></td></tr>
@@ -120,36 +122,46 @@ Functions</h2></td></tr>
 <tr class="separator:a729ea5e4308137361b0101f5b13c22be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60ef8e7966b9dbfaec58420b2e2b5860" id="r_a60ef8e7966b9dbfaec58420b2e2b5860"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a60ef8e7966b9dbfaec58420b2e2b5860">_require_owner</a> (Request request, str owner)</td></tr>
 <tr class="separator:a60ef8e7966b9dbfaec58420b2e2b5860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af372b74662d8dc6f207cb5ce032d4dd9" id="r_af372b74662d8dc6f207cb5ce032d4dd9"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a> (Request request, str|None x_owner=Header(default=None))</td></tr>
+<tr class="separator:af372b74662d8dc6f207cb5ce032d4dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc80a9aed80b7019cf3c9653997b81bf" id="r_acc80a9aed80b7019cf3c9653997b81bf"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#acc80a9aed80b7019cf3c9653997b81bf">_lease_dict</a> (Request request)</td></tr>
+<tr class="separator:acc80a9aed80b7019cf3c9653997b81bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39ecbc0395a5b51c4867071ea0e0a0d" id="r_ad39ecbc0395a5b51c4867071ea0e0a0d"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ad39ecbc0395a5b51c4867071ea0e0a0d">control_request</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1ControlBody.html">ControlBody</a> body, Request request)</td></tr>
+<tr class="separator:ad39ecbc0395a5b51c4867071ea0e0a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76f935d448098992e06b63aaf520e8c" id="r_ab76f935d448098992e06b63aaf520e8c"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ab76f935d448098992e06b63aaf520e8c">control_release</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1ControlBody.html">ControlBody</a> body, Request request)</td></tr>
+<tr class="separator:ab76f935d448098992e06b63aaf520e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d665e73f5b1af30f943d13e49315134" id="r_a2d665e73f5b1af30f943d13e49315134"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a2d665e73f5b1af30f943d13e49315134">control_confirm</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1ControlBody.html">ControlBody</a> body, Request request)</td></tr>
+<tr class="separator:a2d665e73f5b1af30f943d13e49315134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f8e9ab5ec52d0db3d4117f9da49f09" id="r_a19f8e9ab5ec52d0db3d4117f9da49f09"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a19f8e9ab5ec52d0db3d4117f9da49f09">status</a> (Request request)</td></tr>
 <tr class="separator:a19f8e9ab5ec52d0db3d4117f9da49f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3b2d0c172ea8e014791136762f126e5" id="r_ae3b2d0c172ea8e014791136762f126e5"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ae3b2d0c172ea8e014791136762f126e5">set_sdr</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1SdrBody.html">SdrBody</a> body, Request request)</td></tr>
-<tr class="separator:ae3b2d0c172ea8e014791136762f126e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb9fa7175926e6106ddf2faf99cef1da" id="r_acb9fa7175926e6106ddf2faf99cef1da"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#acb9fa7175926e6106ddf2faf99cef1da">set_jammer</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1JammerBody.html">JammerBody</a> body, Request request)</td></tr>
-<tr class="separator:acb9fa7175926e6106ddf2faf99cef1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b412128a7fb6818658616704eb26849" id="r_a0b412128a7fb6818658616704eb26849"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a0b412128a7fb6818658616704eb26849">tx_arm</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1ArmBody.html">ArmBody</a> body, Request request)</td></tr>
-<tr class="separator:a0b412128a7fb6818658616704eb26849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ff36186d4fc9249d28c26281aaeeff" id="r_a65ff36186d4fc9249d28c26281aaeeff"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a65ff36186d4fc9249d28c26281aaeeff">tx_disarm</a> (Request request)</td></tr>
-<tr class="separator:a65ff36186d4fc9249d28c26281aaeeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c9ea2228e1844efa32bccf810a759e3" id="r_a4c9ea2228e1844efa32bccf810a759e3"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a4c9ea2228e1844efa32bccf810a759e3">recording_start</a> (Request request)</td></tr>
-<tr class="separator:a4c9ea2228e1844efa32bccf810a759e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a749b108aeb8c984d4f2822a92db87818" id="r_a749b108aeb8c984d4f2822a92db87818"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a749b108aeb8c984d4f2822a92db87818">recording_stop</a> (Request request)</td></tr>
-<tr class="separator:a749b108aeb8c984d4f2822a92db87818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7c156365fb96d7377dbdf7dabab62f4" id="r_ae7c156365fb96d7377dbdf7dabab62f4"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ae7c156365fb96d7377dbdf7dabab62f4">tx_jam</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1JamBody.html">JamBody</a> body, Request request)</td></tr>
-<tr class="separator:ae7c156365fb96d7377dbdf7dabab62f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac62e4dab105201e860a49290ffa5dbc9" id="r_ac62e4dab105201e860a49290ffa5dbc9"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ac62e4dab105201e860a49290ffa5dbc9">tx_replay</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1ReplayBody.html">ReplayBody</a> body, Request request)</td></tr>
-<tr class="separator:ac62e4dab105201e860a49290ffa5dbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df7f2b126cd09853d2cd1a81db9ebbc" id="r_a1df7f2b126cd09853d2cd1a81db9ebbc"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a1df7f2b126cd09853d2cd1a81db9ebbc">tx_stop</a> (Request request)</td></tr>
-<tr class="separator:a1df7f2b126cd09853d2cd1a81db9ebbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb60990b351e550f8b86f9b6ee1c111" id="r_aabb60990b351e550f8b86f9b6ee1c111"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#aabb60990b351e550f8b86f9b6ee1c111">set_sdr</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1SdrBody.html">SdrBody</a> body, Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:aabb60990b351e550f8b86f9b6ee1c111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc253fafb518fd3af946dace10eea13" id="r_a3dc253fafb518fd3af946dace10eea13"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a3dc253fafb518fd3af946dace10eea13">set_jammer</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1JammerBody.html">JammerBody</a> body, Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:a3dc253fafb518fd3af946dace10eea13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb222833585ad32f832167a13b889597" id="r_adb222833585ad32f832167a13b889597"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#adb222833585ad32f832167a13b889597">tx_arm</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1ArmBody.html">ArmBody</a> body, Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:adb222833585ad32f832167a13b889597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8009a44b1ae0d2f98896d1190af52fb" id="r_ac8009a44b1ae0d2f98896d1190af52fb"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ac8009a44b1ae0d2f98896d1190af52fb">tx_disarm</a> (Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:ac8009a44b1ae0d2f98896d1190af52fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151df05c9e1cdf18de4e57bacca7ae2e" id="r_a151df05c9e1cdf18de4e57bacca7ae2e"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a151df05c9e1cdf18de4e57bacca7ae2e">recording_start</a> (Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:a151df05c9e1cdf18de4e57bacca7ae2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cade9193a1b2d09d206192b3e4b6dfa" id="r_a3cade9193a1b2d09d206192b3e4b6dfa"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a3cade9193a1b2d09d206192b3e4b6dfa">recording_stop</a> (Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:a3cade9193a1b2d09d206192b3e4b6dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4dcab0ef73d2995241aafabade2f3d" id="r_ada4dcab0ef73d2995241aafabade2f3d"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ada4dcab0ef73d2995241aafabade2f3d">tx_jam</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1JamBody.html">JamBody</a> body, Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:ada4dcab0ef73d2995241aafabade2f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d5627386c903bc85fa826e8fdbb8c7" id="r_ae6d5627386c903bc85fa826e8fdbb8c7"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ae6d5627386c903bc85fa826e8fdbb8c7">tx_replay</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1ReplayBody.html">ReplayBody</a> body, Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:ae6d5627386c903bc85fa826e8fdbb8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e67b01cfc52aff00b333103affd2b91" id="r_a6e67b01cfc52aff00b333103affd2b91"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a6e67b01cfc52aff00b333103affd2b91">tx_stop</a> (Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:a6e67b01cfc52aff00b333103affd2b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12df912723ee14d66a4a405f556cf8c8" id="r_a12df912723ee14d66a4a405f556cf8c8"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a12df912723ee14d66a4a405f556cf8c8">ping</a> (Request request)</td></tr>
 <tr class="separator:a12df912723ee14d66a4a405f556cf8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7a291fce1d356ae4f8d2b33fba0303b" id="r_af7a291fce1d356ae4f8d2b33fba0303b"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#af7a291fce1d356ae4f8d2b33fba0303b">set_overflow</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1OverflowBody.html">OverflowBody</a> body, Request request)</td></tr>
-<tr class="separator:af7a291fce1d356ae4f8d2b33fba0303b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b99c3d391ea635558d16630400ae01" id="r_ae5b99c3d391ea635558d16630400ae01"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#ae5b99c3d391ea635558d16630400ae01">set_overflow</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1OverflowBody.html">OverflowBody</a> body, Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:ae5b99c3d391ea635558d16630400ae01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9925869512fb35084d0a415c9cd444e9" id="r_a9925869512fb35084d0a415c9cd444e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrod_1_1testrun_1_1scenario_1_1ScenarioRunner.html">ScenarioRunner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a9925869512fb35084d0a415c9cd444e9">_runner</a> (Request request)</td></tr>
 <tr class="separator:a9925869512fb35084d0a415c9cd444e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a221b16001cfc9bdf30e34b66c0e1cceb" id="r_a221b16001cfc9bdf30e34b66c0e1cceb"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a221b16001cfc9bdf30e34b66c0e1cceb">testrun_start</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1SweepBody.html">SweepBody</a> body, Request request)</td></tr>
-<tr class="separator:a221b16001cfc9bdf30e34b66c0e1cceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc46a1b6e213a216411c0563904d325f" id="r_acc46a1b6e213a216411c0563904d325f"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#acc46a1b6e213a216411c0563904d325f">testrun_stop</a> (Request request)</td></tr>
-<tr class="separator:acc46a1b6e213a216411c0563904d325f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2e4e2d9bdc76bf230dfde852f2b2aa" id="r_a7a2e4e2d9bdc76bf230dfde852f2b2aa"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a7a2e4e2d9bdc76bf230dfde852f2b2aa">testrun_start</a> (<a class="el" href="classrod_1_1api_1_1rest_1_1SweepBody.html">SweepBody</a> body, Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:a7a2e4e2d9bdc76bf230dfde852f2b2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6648921658a4a4e6f2a22b2f85eecf" id="r_a2e6648921658a4a4e6f2a22b2f85eecf"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a2e6648921658a4a4e6f2a22b2f85eecf">testrun_stop</a> (Request request, str _writer=Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>))</td></tr>
+<tr class="separator:a2e6648921658a4a4e6f2a22b2f85eecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a044376745af9b41f8a3c4d37f7f165cd" id="r_a044376745af9b41f8a3c4d37f7f165cd"><td class="memItemLeft" align="right" valign="top">dict[str, Any]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a044376745af9b41f8a3c4d37f7f165cd">testrun_status</a> (Request request)</td></tr>
 <tr class="separator:a044376745af9b41f8a3c4d37f7f165cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a314ad5ade85f7ebc25f7e9fa2d5cd44f" id="r_a314ad5ade85f7ebc25f7e9fa2d5cd44f"><td class="memItemLeft" align="right" valign="top">Response&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerod_1_1api_1_1rest.html#a314ad5ade85f7ebc25f7e9fa2d5cd44f">export_csv</a> (Request request)</td></tr>
@@ -169,6 +181,34 @@ Die POST-Routen sind duenne Huellen um den Controller. Fehler des Kommando-
 pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
 409, ein toter Transport (CommandTransportError) -&gt; 503.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="acc80a9aed80b7019cf3c9653997b81bf" name="acc80a9aed80b7019cf3c9653997b81bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc80a9aed80b7019cf3c9653997b81bf">&#9670;&#160;</a></span>_lease_dict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"> dict[str, Any] rod.api.rest._lease_dict </td>
+          <td>(</td>
+          <td class="paramtype">Request&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Serialisiert den Lease-Status fuer /status und die Control-Endpunkte.</pre> 
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00154">154</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+
+</div>
+</div>
 <a id="a729ea5e4308137361b0101f5b13c22be" name="a729ea5e4308137361b0101f5b13c22be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a729ea5e4308137361b0101f5b13c22be">&#9670;&#160;</a></span>_map_command_error()</h2>
 
@@ -193,7 +233,7 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Bildet Kommandopfad-Fehler auf HTTP ab: CommandError-&gt;409, Transport tot-&gt;503.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00101">101</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00109">109</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
@@ -231,7 +271,7 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Wie /tx/arm: ohne lebenden Control-Kanal fuer diesen Owner kein TX.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00115">115</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00123">123</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
@@ -259,7 +299,105 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Holt den ScenarioRunner aus app.state (legt ihn bei Bedarf an).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00314">314</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00406">406</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+
+</div>
+</div>
+<a id="a2d665e73f5b1af30f943d13e49315134" name="a2d665e73f5b1af30f943d13e49315134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d665e73f5b1af30f943d13e49315134">&#9670;&#160;</a></span>control_confirm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> dict[str, Any] rod.api.rest.control_confirm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrod_1_1api_1_1rest_1_1ControlBody.html">ControlBody</a>&#160;</td>
+          <td class="paramname"><em>body</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Request&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">POST /api/control/confirm -- „Ja, noch da": bestaetigt Anwesenheit auf die
+Rueckfrage, ohne dass ein echtes Steuerkommando noetig ist. Setzt die
+Untaetigkeitsuhr zurueck; No-op, wenn ``owner`` gar nicht Writer ist.</pre> 
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00188">188</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+
+</div>
+</div>
+<a id="ab76f935d448098992e06b63aaf520e8c" name="ab76f935d448098992e06b63aaf520e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab76f935d448098992e06b63aaf520e8c">&#9670;&#160;</a></span>control_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> dict[str, Any] rod.api.rest.control_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrod_1_1api_1_1rest_1_1ControlBody.html">ControlBody</a>&#160;</td>
+          <td class="paramname"><em>body</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Request&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">POST /api/control/release -- Schreibrecht abgeben (oder Anforderung
+zuruecknehmen). Vom Writer -&gt; naechster Wartender rueckt nach.</pre> 
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00180">180</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+
+</div>
+</div>
+<a id="ad39ecbc0395a5b51c4867071ea0e0a0d" name="ad39ecbc0395a5b51c4867071ea0e0a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39ecbc0395a5b51c4867071ea0e0a0d">&#9670;&#160;</a></span>control_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> dict[str, Any] rod.api.rest.control_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrod_1_1api_1_1rest_1_1ControlBody.html">ControlBody</a>&#160;</td>
+          <td class="paramname"><em>body</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Request&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">POST /api/control/request -- Schreibrecht anfordern.
+
+Ist gerade niemand Writer, wird ``owner`` sofort Writer; sonst reiht er sich
+in die FIFO-Warteschlange ein und rueckt nach, sobald der aktuelle Writer
+abgibt, die Verbindung verliert oder inaktiv wird.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00168">168</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
@@ -279,7 +417,7 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
       </table>
 </div><div class="memdoc">
 <pre class="fragment">GET /api/export.csv -- gesammelte Testlauf-Zeilen als CSV.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00361">361</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00457">457</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
@@ -299,12 +437,12 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/ping -- Verbindungstest zum Core (liefert dessen generation).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00289">289</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00379">379</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="a4c9ea2228e1844efa32bccf810a759e3" name="a4c9ea2228e1844efa32bccf810a759e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c9ea2228e1844efa32bccf810a759e3">&#9670;&#160;</a></span>recording_start()</h2>
+<a id="a151df05c9e1cdf18de4e57bacca7ae2e" name="a151df05c9e1cdf18de4e57bacca7ae2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a151df05c9e1cdf18de4e57bacca7ae2e">&#9670;&#160;</a></span>recording_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,18 +451,28 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
           <td class="memname"> dict[str, Any] rod.api.rest.recording_start </td>
           <td>(</td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/recording/start -- IQ-Aufnahme starten (reiner RX).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00230">230</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00310">310</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="a749b108aeb8c984d4f2822a92db87818" name="a749b108aeb8c984d4f2822a92db87818"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a749b108aeb8c984d4f2822a92db87818">&#9670;&#160;</a></span>recording_stop()</h2>
+<a id="a3cade9193a1b2d09d206192b3e4b6dfa" name="a3cade9193a1b2d09d206192b3e4b6dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cade9193a1b2d09d206192b3e4b6dfa">&#9670;&#160;</a></span>recording_stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,18 +481,64 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
           <td class="memname"> dict[str, Any] rod.api.rest.recording_stop </td>
           <td>(</td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/recording/stop -- laufende IQ-Aufnahme beenden.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00242">242</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00324">324</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="acb9fa7175926e6106ddf2faf99cef1da" name="acb9fa7175926e6106ddf2faf99cef1da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb9fa7175926e6106ddf2faf99cef1da">&#9670;&#160;</a></span>set_jammer()</h2>
+<a id="af372b74662d8dc6f207cb5ce032d4dd9" name="af372b74662d8dc6f207cb5ce032d4dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af372b74662d8dc6f207cb5ce032d4dd9">&#9670;&#160;</a></span>require_writer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> str rod.api.rest.require_writer </td>
+          <td>(</td>
+          <td class="paramtype">Request&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str | None &#160;</td>
+          <td class="paramname"><em>x_owner</em> = <code>Header(default=None)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">FastAPI-Dependency: laesst nur den aktuellen Schreibrecht-Inhaber durch.
+
+Liest die owner-id aus dem ``X-Owner``-Header und vergleicht sie mit dem
+Writer der Lease. Zuschauer (kein Schreibrecht) bekommen 403 -- jede
+schreibende Route ist damit serverseitig gesperrt, nicht nur im UI. Gibt die
+owner-id zurueck, damit die Route sie ohne erneutes Auslesen nutzen kann.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00133">133</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+
+</div>
+</div>
+<a id="a3dc253fafb518fd3af946dace10eea13" name="a3dc253fafb518fd3af946dace10eea13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc253fafb518fd3af946dace10eea13">&#9670;&#160;</a></span>set_jammer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -359,7 +553,13 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -369,12 +569,12 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/jammer -- setzt TX-Gain und Stoermuster.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00186">186</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00260">260</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="af7a291fce1d356ae4f8d2b33fba0303b" name="af7a291fce1d356ae4f8d2b33fba0303b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7a291fce1d356ae4f8d2b33fba0303b">&#9670;&#160;</a></span>set_overflow()</h2>
+<a id="ae5b99c3d391ea635558d16630400ae01" name="ae5b99c3d391ea635558d16630400ae01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b99c3d391ea635558d16630400ae01">&#9670;&#160;</a></span>set_overflow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +589,13 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -399,12 +605,12 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/overflow -- Overflow-Strategie des Spektral-Rings setzen.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00299">299</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00389">389</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="ae3b2d0c172ea8e014791136762f126e5" name="ae3b2d0c172ea8e014791136762f126e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3b2d0c172ea8e014791136762f126e5">&#9670;&#160;</a></span>set_sdr()</h2>
+<a id="aabb60990b351e550f8b86f9b6ee1c111" name="aabb60990b351e550f8b86f9b6ee1c111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb60990b351e550f8b86f9b6ee1c111">&#9670;&#160;</a></span>set_sdr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -419,7 +625,13 @@ pfads werden auf HTTP gemappt: ein abgelehntes Kommando (CommandError) -&gt;
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -436,7 +648,7 @@ kommen weder Spektral-Frames noch Telemetrie -- das ist erwartet. Ack-Ebene
 3 (``applied_seq`` in /api/status) zieht entsprechend spaeter nach; erst
 dann gehoeren die Frames zur neuen Einstellung.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00159">159</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00231">231</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
@@ -456,12 +668,12 @@ dann gehoeren die Frames zur neuen Einstellung.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">GET /api/status -- Gesamtzustand (Transport, Safety, Pending, SDR, Ringe).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00126">126</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00197">197</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="a221b16001cfc9bdf30e34b66c0e1cceb" name="a221b16001cfc9bdf30e34b66c0e1cceb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a221b16001cfc9bdf30e34b66c0e1cceb">&#9670;&#160;</a></span>testrun_start()</h2>
+<a id="a7a2e4e2d9bdc76bf230dfde852f2b2aa" name="a7a2e4e2d9bdc76bf230dfde852f2b2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2e4e2d9bdc76bf230dfde852f2b2aa">&#9670;&#160;</a></span>testrun_start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +688,13 @@ dann gehoeren die Frames zur neuen Einstellung.
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -486,7 +704,7 @@ dann gehoeren die Frames zur neuen Einstellung.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/testrun/start -- Leistungs-Sweep starten.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00328">328</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00420">420</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
@@ -506,12 +724,12 @@ dann gehoeren die Frames zur neuen Einstellung.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">GET /api/testrun/status -- Fortschritt des Testlaufs.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00348">348</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00444">444</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="acc46a1b6e213a216411c0563904d325f" name="acc46a1b6e213a216411c0563904d325f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc46a1b6e213a216411c0563904d325f">&#9670;&#160;</a></span>testrun_stop()</h2>
+<a id="a2e6648921658a4a4e6f2a22b2f85eecf" name="a2e6648921658a4a4e6f2a22b2f85eecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6648921658a4a4e6f2a22b2f85eecf">&#9670;&#160;</a></span>testrun_stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,18 +738,28 @@ dann gehoeren die Frames zur neuen Einstellung.
           <td class="memname"> dict[str, Any] rod.api.rest.testrun_stop </td>
           <td>(</td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/testrun/stop -- laufenden Testlauf abbrechen.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00341">341</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00435">435</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="a0b412128a7fb6818658616704eb26849" name="a0b412128a7fb6818658616704eb26849"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b412128a7fb6818658616704eb26849">&#9670;&#160;</a></span>tx_arm()</h2>
+<a id="adb222833585ad32f832167a13b889597" name="adb222833585ad32f832167a13b889597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb222833585ad32f832167a13b889597">&#9670;&#160;</a></span>tx_arm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +774,13 @@ dann gehoeren die Frames zur neuen Einstellung.
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -556,12 +790,12 @@ dann gehoeren die Frames zur neuen Einstellung.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/tx/arm -- schaltet TX scharf (braucht lebenden Owner + confirm).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00198">198</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00274">274</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="a65ff36186d4fc9249d28c26281aaeeff" name="a65ff36186d4fc9249d28c26281aaeeff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ff36186d4fc9249d28c26281aaeeff">&#9670;&#160;</a></span>tx_disarm()</h2>
+<a id="ac8009a44b1ae0d2f98896d1190af52fb" name="ac8009a44b1ae0d2f98896d1190af52fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8009a44b1ae0d2f98896d1190af52fb">&#9670;&#160;</a></span>tx_disarm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -570,18 +804,28 @@ dann gehoeren die Frames zur neuen Einstellung.
           <td class="memname"> dict[str, Any] rod.api.rest.tx_disarm </td>
           <td>(</td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/tx/disarm -- entschaerft (stoppt Sendung und Regelkreis).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00218">218</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00296">296</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="ae7c156365fb96d7377dbdf7dabab62f4" name="ae7c156365fb96d7377dbdf7dabab62f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7c156365fb96d7377dbdf7dabab62f4">&#9670;&#160;</a></span>tx_jam()</h2>
+<a id="ada4dcab0ef73d2995241aafabade2f3d" name="ada4dcab0ef73d2995241aafabade2f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4dcab0ef73d2995241aafabade2f3d">&#9670;&#160;</a></span>tx_jam()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -596,7 +840,13 @@ dann gehoeren die Frames zur neuen Einstellung.
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -606,12 +856,12 @@ dann gehoeren die Frames zur neuen Einstellung.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/tx/jam -- Jamming starten (Halbduplex; braucht scharfen Owner).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00254">254</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00338">338</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="ac62e4dab105201e860a49290ffa5dbc9" name="ac62e4dab105201e860a49290ffa5dbc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac62e4dab105201e860a49290ffa5dbc9">&#9670;&#160;</a></span>tx_replay()</h2>
+<a id="ae6d5627386c903bc85fa826e8fdbb8c7" name="ae6d5627386c903bc85fa826e8fdbb8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d5627386c903bc85fa826e8fdbb8c7">&#9670;&#160;</a></span>tx_replay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -626,7 +876,13 @@ dann gehoeren die Frames zur neuen Einstellung.
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -636,12 +892,12 @@ dann gehoeren die Frames zur neuen Einstellung.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/tx/replay -- letzte Aufnahme senden (Halbduplex).</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00266">266</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00352">352</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
-<a id="a1df7f2b126cd09853d2cd1a81db9ebbc" name="a1df7f2b126cd09853d2cd1a81db9ebbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1df7f2b126cd09853d2cd1a81db9ebbc">&#9670;&#160;</a></span>tx_stop()</h2>
+<a id="a6e67b01cfc52aff00b333103affd2b91" name="a6e67b01cfc52aff00b333103affd2b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e67b01cfc52aff00b333103affd2b91">&#9670;&#160;</a></span>tx_stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -650,13 +906,23 @@ dann gehoeren die Frames zur neuen Einstellung.
           <td class="memname"> dict[str, Any] rod.api.rest.tx_stop </td>
           <td>(</td>
           <td class="paramtype">Request&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">str &#160;</td>
+          <td class="paramname"><em>_writer</em> = <code>Depends(<a class="el" href="namespacerod_1_1api_1_1rest.html#af372b74662d8dc6f207cb5ce032d4dd9">require_writer</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">POST /api/tx/stop -- Sendung beenden, zurueck zu RX.</pre> 
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00279">279</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00367">367</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>
@@ -688,7 +954,7 @@ dann gehoeren die Frames zur neuen Einstellung.
 <div class="line"><span class="lineno">    6</span>    <span class="stringliteral">&quot;Queue verworfen. Fix gehoert in den Core (siehe Task.md).&quot;</span></div>
 <div class="line"><span class="lineno">    7</span>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00092">92</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rest_8py_source.html#l00100">100</a> of file <a class="el" href="rest_8py_source.html">rest.py</a>.</p>
 
 </div>
 </div>

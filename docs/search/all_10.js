@@ -8,16 +8,17 @@ var searchData=
   ['pendingretune_5',['PendingRetune',['../structfisch_1_1SignalPipeline_1_1PendingRetune.html',1,'fisch::SignalPipeline']]],
   ['pendingsnapshot_6',['PendingSnapshot',['../classrod_1_1control_1_1pending_1_1PendingSnapshot.html',1,'rod::control::pending']]],
   ['pendingtracker_7',['PendingTracker',['../classrod_1_1control_1_1pending_1_1PendingTracker.html',1,'rod::control::pending']]],
-  ['ping_8',['ping',['../namespacerod_1_1api_1_1rest.html#a12df912723ee14d66a4a405f556cf8c8',1,'rod.api.rest.ping()'],['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caab85815d04cec053ce6deb8021f2df1b8',1,'fisch::Ping'],['../classrod_1_1control_1_1controller_1_1Controller.html#a4c9478665757e7c1ad5bbb39b65155e1',1,'rod.control.controller.Controller.ping()']]],
+  ['ping_8',['ping',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caab85815d04cec053ce6deb8021f2df1b8',1,'fisch::Ping'],['../namespacerod_1_1api_1_1rest.html#a12df912723ee14d66a4a405f556cf8c8',1,'rod.api.rest.ping()'],['../classrod_1_1control_1_1controller_1_1Controller.html#a4c9478665757e7c1ad5bbb39b65155e1',1,'rod.control.controller.Controller.ping()']]],
   ['pipelineactuatorstate_9',['PipelineActuatorState',['../structfisch_1_1PipelineActuatorState.html',1,'fisch']]],
   ['pll_5flocked_10',['pll_locked',['../structfisch_1_1BufferHealthPayload.html#a629a98915717ed0a12808e41604129fd',1,'fisch::BufferHealthPayload']]],
   ['plugin_5fname_11',['PLUGIN_NAME',['../classhatch__build_1_1CustomBuildHook.html#a5f8bdcfb014adda2fcbbc099fe3336f9',1,'hatch_build::CustomBuildHook']]],
   ['policy_12',['policy',['../classrod_1_1api_1_1rest_1_1OverflowBody.html#aa3f6d8478b43fe3634e0aade0c732d7a',1,'rod::api::rest::OverflowBody']]],
   ['policy_2ehpp_13',['policy.hpp',['../policy_8hpp.html',1,'']]],
-  ['poll_14',['poll',['../classrod_1_1sources_1_1base_1_1TelemetrySource.html#a52c22174b440369b15211cd15d304ceb',1,'rod.sources.base.TelemetrySource.poll()'],['../classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html#a9af01d7c797971197a59af6f6bd4ab04',1,'rod.sources.fake_telemetry.FakeTelemetrySource.poll()'],['../classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource.html#ab5fa8d3d886feafbbe2cbebb84f6464f',1,'rod.sources.shm_telemetry.ShmTelemetrySource.poll()']]],
+  ['poll_14',['poll',['../classrod_1_1control_1_1lease_1_1ControlLease.html#a458f3491e453979551ad96c31a90474b',1,'rod.control.lease.ControlLease.poll()'],['../classrod_1_1sources_1_1base_1_1TelemetrySource.html#a52c22174b440369b15211cd15d304ceb',1,'rod.sources.base.TelemetrySource.poll()'],['../classrod_1_1sources_1_1fake__telemetry_1_1FakeTelemetrySource.html#a9af01d7c797971197a59af6f6bd4ab04',1,'rod.sources.fake_telemetry.FakeTelemetrySource.poll()'],['../classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource.html#ab5fa8d3d886feafbbe2cbebb84f6464f',1,'rod.sources.shm_telemetry.ShmTelemetrySource.poll()']]],
   ['poll_5fdeadman_15',['poll_deadman',['../classrod_1_1control_1_1safety_1_1SafetyState.html#ab170d1fbfb6e8c720a0c7cbc2ec5321a',1,'rod::control::safety::SafetyState']]],
-  ['port_16',['port',['../classrod_1_1config_1_1Config.html#a95013f7b05fc31726c62d7adb9d34eb8',1,'rod::config::Config']]],
-  ['process_17',['process',['../classfisch_1_1SpectrumAnalyzer.html#a27ed7a2d474a0d2d1dc1ee0a89340dc6',1,'fisch::SpectrumAnalyzer']]],
-  ['processiqblock_18',['processIqBlock',['../classfisch_1_1SignalPipeline.html#affa0c51b3bc68de9ae12f56f2b102dcf',1,'fisch::SignalPipeline']]],
-  ['push_19',['push',['../classfisch_1_1CommandQueue.html#a2062d238119a7a70850196bb3cd356a2',1,'fisch::CommandQueue::push()'],['../classfisch_1_1SpectralRing.html#a00b93918a36119af7150ce34fa911598',1,'fisch::SpectralRing::push()'],['../classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632',1,'fisch::TelemetryRing::push()']]]
+  ['poll_5ftimeout_16',['poll_timeout',['../classrod_1_1control_1_1lease_1_1ControlLease.html#a78bb30d15bf29a1f390d68c6b1b3551f',1,'rod::control::lease::ControlLease']]],
+  ['port_17',['port',['../classrod_1_1config_1_1Config.html#a95013f7b05fc31726c62d7adb9d34eb8',1,'rod::config::Config']]],
+  ['process_18',['process',['../classfisch_1_1SpectrumAnalyzer.html#a27ed7a2d474a0d2d1dc1ee0a89340dc6',1,'fisch::SpectrumAnalyzer']]],
+  ['processiqblock_19',['processIqBlock',['../classfisch_1_1SignalPipeline.html#affa0c51b3bc68de9ae12f56f2b102dcf',1,'fisch::SignalPipeline']]],
+  ['push_20',['push',['../classfisch_1_1CommandQueue.html#a2062d238119a7a70850196bb3cd356a2',1,'fisch::CommandQueue::push()'],['../classfisch_1_1SpectralRing.html#a00b93918a36119af7150ce34fa911598',1,'fisch::SpectralRing::push()'],['../classfisch_1_1TelemetryRing.html#a6888f3c7c55579100155784ec2b1d632',1,'fisch::TelemetryRing::push()']]]
 ];

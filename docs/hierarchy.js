@@ -11,6 +11,7 @@ var hierarchy =
     [ "fisch::CommandRequest", "structfisch_1_1CommandRequest.html", null ],
     [ "fisch::CommandResponse", "structfisch_1_1CommandResponse.html", null ],
     [ "rod.config.Config", "classrod_1_1config_1_1Config.html", null ],
+    [ "rod.control.lease.ControlLease", "classrod_1_1control_1_1lease_1_1ControlLease.html", null ],
     [ "fisch::Controller", "classfisch_1_1Controller.html", null ],
     [ "rod.control.controller.Controller", "classrod_1_1control_1_1controller_1_1Controller.html", null ],
     [ "fisch::ControllerConfig", "structfisch_1_1ControllerConfig.html", null ],
@@ -25,6 +26,7 @@ var hierarchy =
     [ "fisch::IqRecorder", "classfisch_1_1IqRecorder.html", null ],
     [ "fisch::Jammer", "classfisch_1_1Jammer.html", null ],
     [ "fisch::LatencyTimestampsPayload", "structfisch_1_1LatencyTimestampsPayload.html", null ],
+    [ "rod.control.lease.LeaseSnapshot", "classrod_1_1control_1_1lease_1_1LeaseSnapshot.html", null ],
     [ "fisch::SignalPipeline::PendingRetune", "structfisch_1_1SignalPipeline_1_1PendingRetune.html", null ],
     [ "rod.control.pending.PendingSnapshot", "classrod_1_1control_1_1pending_1_1PendingSnapshot.html", null ],
     [ "rod.control.pending.PendingTracker", "classrod_1_1control_1_1pending_1_1PendingTracker.html", null ],
@@ -61,6 +63,7 @@ var hierarchy =
     [ "fisch::TelemetryRing", "classfisch_1_1TelemetryRing.html", null ],
     [ "BaseModel", null, [
       [ "rod.api.rest.ArmBody", "classrod_1_1api_1_1rest_1_1ArmBody.html", null ],
+      [ "rod.api.rest.ControlBody", "classrod_1_1api_1_1rest_1_1ControlBody.html", null ],
       [ "rod.api.rest.JamBody", "classrod_1_1api_1_1rest_1_1JamBody.html", null ],
       [ "rod.api.rest.JammerBody", "classrod_1_1api_1_1rest_1_1JammerBody.html", null ],
       [ "rod.api.rest.OverflowBody", "classrod_1_1api_1_1rest_1_1OverflowBody.html", null ],

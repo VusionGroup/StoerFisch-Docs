@@ -7,7 +7,12 @@ var searchData=
   ['latencytimestampspayload_4',['LatencyTimestampsPayload',['../structfisch_1_1LatencyTimestampsPayload.html',1,'fisch']]],
   ['latest_5fpayload_5',['latest_payload',['../classrod_1_1hub_1_1spectrum__hub_1_1SpectrumHub.html#a8ec904bca9013f52dc4620c6687e21f7',1,'rod::hub::spectrum_hub::SpectrumHub']]],
   ['latest_5fseq_6',['latest_seq',['../classrod_1_1hub_1_1spectrum__hub_1_1SpectrumHub.html#a1b955825f6b7eaa57025a914c9398955',1,'rod::hub::spectrum_hub::SpectrumHub']]],
-  ['loop_7',['loop',['../classrod_1_1api_1_1rest_1_1ReplayBody.html#a8da1ede78422d5bed1bd7585d585f7e0',1,'rod::api::rest::ReplayBody']]],
-  ['lost_8',['Lost',['../namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529ab578b733cbb788fc6ad208314d2c4c2b',1,'fisch']]],
-  ['lost_5fhold_5fcycles_9',['lost_hold_cycles',['../structfisch_1_1ControllerConfig.html#a46f44f2629b00b8e7bba2fbb456788bd',1,'fisch::ControllerConfig']]]
+  ['lease_2epy_7',['lease.py',['../lease_8py.html',1,'']]],
+  ['lease_5fchallenge_5fgrace_5fs_8',['lease_challenge_grace_s',['../classrod_1_1config_1_1Config.html#a06a2f9e04c99cd9b27415e6cfaec2b95',1,'rod::config::Config']]],
+  ['lease_5fpresence_5finterval_5fs_9',['lease_presence_interval_s',['../classrod_1_1config_1_1Config.html#a227e0329c372e5e45c48ad62d27d0619',1,'rod::config::Config']]],
+  ['lease_5ftimeout_5fs_10',['lease_timeout_s',['../classrod_1_1config_1_1Config.html#a846f6fe11fc06319c67d25ec28c7eebf',1,'rod::config::Config']]],
+  ['leasesnapshot_11',['LeaseSnapshot',['../classrod_1_1control_1_1lease_1_1LeaseSnapshot.html',1,'rod::control::lease']]],
+  ['loop_12',['loop',['../classrod_1_1api_1_1rest_1_1ReplayBody.html#a8da1ede78422d5bed1bd7585d585f7e0',1,'rod::api::rest::ReplayBody']]],
+  ['lost_13',['Lost',['../namespacefisch.html#a42c1a3abcceebf4bd3420e329f643529ab578b733cbb788fc6ad208314d2c4c2b',1,'fisch']]],
+  ['lost_5fhold_5fcycles_14',['lost_hold_cycles',['../structfisch_1_1ControllerConfig.html#a46f44f2629b00b8e7bba2fbb456788bd',1,'fisch::ControllerConfig']]]
 ];

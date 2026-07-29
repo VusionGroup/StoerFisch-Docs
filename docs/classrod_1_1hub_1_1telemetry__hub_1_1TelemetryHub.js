@@ -1,6 +1,6 @@
 var classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub =
 [
-    [ "__init__", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a5bc687925ffae2292335b53d0ad17034", null ],
+    [ "__init__", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#aaa055d29b15c9ecf1e8a0880c59df294", null ],
     [ "_fanout", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a5b7db31b8e2accdf91e2def99ed3bb30", null ],
     [ "_run", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#afdc93b8b4e230d74b1d4abd28abcd032", null ],
     [ "dropped_count", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#ad03fd1f93fb7b73249954c1ed349d154", null ],
@@ -12,6 +12,7 @@ var classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub =
     [ "unsubscribe", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#ab2d9d3f7d45a2bbb13e87e9af0880e33", null ],
     [ "_interval", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a15e99d4244d64619768a2b6037957844", null ],
     [ "_last_dropped", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a40fdd95c66e6595b3ca06b7239936101", null ],
+    [ "_lease", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a30c99940245e6173b498e1f5d1433377", null ],
     [ "_on_deadman", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a66a1d308e6055f4c5cfc7e1a673526fa", null ],
     [ "_pending", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#af9ae9a890e4c5157e0f0eb737205cfd6", null ],
     [ "_push_interval", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#ad70890438f57450a4ffe0ce5feac8b72", null ],
@@ -19,5 +20,6 @@ var classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub =
     [ "_snapshot", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#aa0ecdbacf5d123784324b135cecd1cac", null ],
     [ "_source", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a38a6c5c9a4cc03d0115a739afe7163f0", null ],
     [ "_subscribers", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a9bc29c4a698b4613f7a93385fd41a95c", null ],
-    [ "_task", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a866552fdec62b83ff5a7d88dce7fd1df", null ]
+    [ "_task", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a866552fdec62b83ff5a7d88dce7fd1df", null ],
+    [ "subscriber_count", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a9629a023bcb6d5482c7bfad50e853066", null ]
 ];
