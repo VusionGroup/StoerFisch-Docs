@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,77,80,102"/>
-<area shape="rect" id="Node000001" href="$classrod_1_1control_1_1command__client_1_1CommandTransport.html" title=" " alt="" coords="131,5,327,45"/>
-<area shape="poly" id="edge13_Node000000_Node000001" title=" " alt="" coords="88,69,127,55,162,43,164,48,129,60,90,74"/>
-<area shape="rect" id="Node000002" href="$classrod_1_1sources_1_1base_1_1SpectrumSource.html" title=" " alt="" coords="129,69,328,109"/>
-<area shape="poly" id="edge14_Node000000_Node000002" title=" " alt="" coords="94,87,129,87,129,92,94,92"/>
-<area shape="rect" id="Node000003" href="$classrod_1_1sources_1_1base_1_1TelemetrySource.html" title=" " alt="" coords="128,133,329,173"/>
-<area shape="poly" id="edge15_Node000000_Node000003" title=" " alt="" coords="90,104,129,119,164,131,162,136,127,124,88,109"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,55,81,80"/>
+<area shape="rect" id="Node000001" href="$classpython_1_1command_1_1CommandKind.html" title=" " alt="" coords="135,5,371,31"/>
+<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="94,49,129,39,180,28,181,33,130,45,95,54"/>
+<area shape="rect" id="Node000002" href="$classpython_1_1command_1_1CommandStatus.html" title=" " alt="" coords="129,55,377,80"/>
+<area shape="poly" id="edge12_Node000000_Node000002" title=" " alt="" coords="95,65,129,65,129,70,95,70"/>
+<area shape="rect" id="Node000003" href="$classpython_1_1command_1_1OverflowPolicy.html" title=" " alt="" coords="135,104,372,129"/>
+<area shape="poly" id="edge13_Node000000_Node000003" title=" " alt="" coords="95,80,130,89,186,101,185,106,129,94,94,85"/>
 </map>

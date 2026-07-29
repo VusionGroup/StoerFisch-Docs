@@ -35,6 +35,9 @@ var annotated_dup =
       [ "TelemetryRecord", "structfisch_1_1TelemetryRecord.html", "structfisch_1_1TelemetryRecord" ],
       [ "TelemetryRing", "classfisch_1_1TelemetryRing.html", "classfisch_1_1TelemetryRing" ]
     ] ],
+    [ "hatch_build", "namespacehatch__build.html", [
+      [ "CustomBuildHook", "classhatch__build_1_1CustomBuildHook.html", "classhatch__build_1_1CustomBuildHook" ]
+    ] ],
     [ "python", "namespacepython.html", [
       [ "command", "namespacepython_1_1command.html", [
         [ "CommandError", "classpython_1_1command_1_1CommandError.html", "classpython_1_1command_1_1CommandError" ],

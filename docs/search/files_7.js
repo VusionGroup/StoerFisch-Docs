@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_5floop_5fhackrf_2ecpp_0',['main_loop_hackrf.cpp',['../main__loop__hackrf_8cpp.html',1,'']]]
+  ['iq_5frecorder_2ecpp_0',['iq_recorder.cpp',['../iq__recorder_8cpp.html',1,'']]],
+  ['iq_5frecorder_2ehpp_1',['iq_recorder.hpp',['../iq__recorder_8hpp.html',1,'']]]
 ];

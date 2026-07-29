@@ -84,6 +84,9 @@ var hierarchy =
       [ "rod.control.controller.JammerConfig", "classrod_1_1control_1_1controller_1_1JammerConfig.html", null ],
       [ "rod.control.controller.SdrConfig", "classrod_1_1control_1_1controller_1_1SdrConfig.html", null ]
     ] ],
+    [ "BuildHookInterface", null, [
+      [ "hatch_build.CustomBuildHook", "classhatch__build_1_1CustomBuildHook.html", null ]
+    ] ],
     [ "IntEnum", null, [
       [ "python.command.CommandKind", "classpython_1_1command_1_1CommandKind.html", null ],
       [ "python.command.CommandStatus", "classpython_1_1command_1_1CommandStatus.html", null ],

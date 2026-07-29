@@ -6,6 +6,7 @@ var searchData=
   ['pending_3',['pending',['../classrod_1_1control_1_1pending_1_1PendingSnapshot.html#a10e18b52802cf9b900d7d44c6ff79427',1,'rod::control::pending::PendingSnapshot']]],
   ['ping_4',['PING',['../classpython_1_1command_1_1CommandKind.html#a70314bd3d5d26573e0169538422e1601',1,'python::command::CommandKind']]],
   ['pll_5flocked_5',['pll_locked',['../structfisch_1_1BufferHealthPayload.html#a629a98915717ed0a12808e41604129fd',1,'fisch::BufferHealthPayload']]],
-  ['policy_6',['policy',['../classrod_1_1api_1_1rest_1_1OverflowBody.html#aa3f6d8478b43fe3634e0aade0c732d7a',1,'rod::api::rest::OverflowBody']]],
-  ['port_7',['port',['../classrod_1_1config_1_1Config.html#a95013f7b05fc31726c62d7adb9d34eb8',1,'rod::config::Config']]]
+  ['plugin_5fname_6',['PLUGIN_NAME',['../classhatch__build_1_1CustomBuildHook.html#a5f8bdcfb014adda2fcbbc099fe3336f9',1,'hatch_build::CustomBuildHook']]],
+  ['policy_7',['policy',['../classrod_1_1api_1_1rest_1_1OverflowBody.html#aa3f6d8478b43fe3634e0aade0c732d7a',1,'rod::api::rest::OverflowBody']]],
+  ['port_8',['port',['../classrod_1_1config_1_1Config.html#a95013f7b05fc31726c62d7adb9d34eb8',1,'rod::config::Config']]]
 ];

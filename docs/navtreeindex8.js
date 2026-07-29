@@ -1,5 +1,12 @@
 var NAVTREEINDEX8 =
 {
+"test__quantize_8py.html":[2,0,1,2,8],
+"test__quantize_8py.html#a033fdcb92694897db60d35cc08e24f36":[2,0,1,2,8,3],
+"test__quantize_8py.html#a06e9160d5c912981360b6b976da8ca5e":[2,0,1,2,8,1],
+"test__quantize_8py.html#a36de3622e388e35e6e88aeef5842e42a":[2,0,1,2,8,0],
+"test__quantize_8py.html#a6c3d5e45cf82efd78095dc4b2363bdf3":[2,0,1,2,8,2],
+"test__quantize_8py.html#a8ca60e385106177e7682c5cb5b69f7cc":[2,0,1,2,8,6],
+"test__quantize_8py.html#abde350ed1d24017e895eaa4de2715996":[2,0,1,2,8,8],
 "test__quantize_8py.html#ac04bdd9344e384945567e0432538d6ea":[2,0,1,2,8,5],
 "test__quantize_8py.html#ac0f78904ff27ed19a2f43626ed3cb0dc":[2,0,1,2,8,7],
 "test__quantize_8py.html#aff5f3ffefe50849e3eddf0915ec262d4":[2,0,1,2,8,4],

@@ -17,5 +17,6 @@ var searchData=
   ['controller_14',['controller',['../classfisch_1_1Controller.html',1,'fisch::Controller'],['../classrod_1_1control_1_1controller_1_1Controller.html',1,'rod.control.controller.Controller']]],
   ['controllerconfig_15',['ControllerConfig',['../structfisch_1_1ControllerConfig.html',1,'fisch']]],
   ['controlleroutput_16',['ControllerOutput',['../structfisch_1_1ControllerOutput.html',1,'fisch']]],
-  ['controllerstatepayload_17',['ControllerStatePayload',['../structfisch_1_1ControllerStatePayload.html',1,'fisch']]]
+  ['controllerstatepayload_17',['ControllerStatePayload',['../structfisch_1_1ControllerStatePayload.html',1,'fisch']]],
+  ['custombuildhook_18',['CustomBuildHook',['../classhatch__build_1_1CustomBuildHook.html',1,'hatch_build']]]
 ];

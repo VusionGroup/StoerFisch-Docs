@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pending_2epy_0',['pending.py',['../pending_8py.html',1,'']]],
-  ['policy_2ehpp_1',['policy.hpp',['../policy_8hpp.html',1,'']]]
+  ['main_5floop_5fhackrf_2ecpp_0',['main_loop_hackrf.cpp',['../main__loop__hackrf_8cpp.html',1,'']]]
 ];
