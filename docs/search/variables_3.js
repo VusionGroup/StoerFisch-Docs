@@ -9,7 +9,5 @@ var searchData=
   ['channel_5fspacing_5fhz_6',['CHANNEL_SPACING_HZ',['../namespacerod_1_1ble.html#ad642fe824730f63d26d1a7d6336a07e2',1,'rod::ble']]],
   ['command_5fseq_7',['command_seq',['../structfisch_1_1CommandRequest.html#a8c36386ce0a53d3e5445e7c719d62ff5',1,'fisch::CommandRequest::command_seq'],['../structfisch_1_1CommandResponse.html#a7dbc887de497f98790ebb475978a91be',1,'fisch::CommandResponse::command_seq'],['../structfisch_1_1SignalPipeline_1_1PendingRetune.html#afc0ec3965e62607cde60101d60cb602d',1,'fisch::SignalPipeline::PendingRetune::command_seq']]],
   ['command_5fsocket_8',['command_socket',['../classrod_1_1config_1_1Config.html#a22bc9417e49e45441d77e77af2ef688f',1,'rod::config::Config']]],
-  ['confirm_9',['confirm',['../classrod_1_1api_1_1rest_1_1ArmBody.html#a8653bce3cf30cd6027c3a1c8e199d6f9',1,'rod::api::rest::ArmBody']]],
-  ['controller_10',['controller',['../classrod_1_1testrun_1_1scenario_1_1ScenarioRunner.html#a02e77ae20d0e03dc75099fdd2f6367a8',1,'rod::testrun::scenario::ScenarioRunner']]],
-  ['current_5fstep_11',['current_step',['../classrod_1_1testrun_1_1scenario_1_1RunStatus.html#ad5079e4140d86e2abb9666ca9af0dc63',1,'rod::testrun::scenario::RunStatus']]]
+  ['confirm_9',['confirm',['../classrod_1_1api_1_1rest_1_1ArmBody.html#a8653bce3cf30cd6027c3a1c8e199d6f9',1,'rod::api::rest::ArmBody']]]
 ];

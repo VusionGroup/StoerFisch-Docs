@@ -107,17 +107,16 @@ Variables</h2></td></tr>
 <tr class="separator:af266a5528e39d92a79364a6b3eace0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Echter Spektral-Consumer: Wrapper um Cores's SpectralRingReader.
+<div class="textblock"><pre class="fragment">Echter Spektral-Consumer, ein Wrapper um SpectralRingReader aus dem Core.
 
-Fuer Live-Monitoring unter drop-oldest wollen wir immer den **neuesten** Frame.
-``read_frame()`` rueckt aber nur einen Slot vor und gibt ``None`` sowohl bei
-"leer" als auch bei "torn/lapped" zurueck -- die drei Faelle sind am Rueckgabe-
-wert nicht unterscheidbar (das provided-Modul hat bewusst keine ``pending``-
-Property). Deshalb drainen wir in einer **hart gedeckelten** Schleife
-(``max_drain``) bis zu einer kurzen Leer-Serie und behalten den letzten
-gueltigen Frame. Die uebersprungenen zaehlen wir separat als
-``frames_dropped_in_drain`` -- Rods eigenes Verwerfen fuers Display, getrennt
-von den Ring-internen Verlustzaehlern.
+Live unter drop-oldest wollen wir immer den neuesten Frame. read_frame() rueckt
+aber nur einen Slot vor und liefert None sowohl bei "leer" als auch bei
+torn/lapped; am Rueckgabewert sind die Faelle nicht zu unterscheiden, eine
+pending-Property gibt es bewusst nicht. Also drainen wir in einer gedeckelten
+Schleife (max_drain) bis zu einer kurzen Leer-Serie und behalten den letzten
+gueltigen Frame. Was dabei uebersprungen wird, zaehlt getrennt als
+frames_dropped_in_drain -- das ist Rods eigenes Verwerfen fuers Display und
+nicht mit den Ring-internen Verlustzaehlern zu verwechseln.
 </pre> </div><h2 class="groupheader">Variable Documentation</h2>
 <a id="af266a5528e39d92a79364a6b3eace0f2" name="af266a5528e39d92a79364a6b3eace0f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af266a5528e39d92a79364a6b3eace0f2">&#9670;&#160;</a></span>_EMPTY_STREAK</h2>
@@ -139,7 +138,7 @@ von den Ring-internen Verlustzaehlern.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00023">23</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00021">21</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>

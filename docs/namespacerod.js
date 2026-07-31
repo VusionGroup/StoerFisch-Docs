@@ -1,7 +1,8 @@
 var namespacerod =
 [
     [ "__main__", "namespacerod_1_1____main____.html", [
-      [ "main", "namespacerod_1_1____main____.html#a7bbec09fe3ef58e4aef65cabd9d1770f", null ]
+      [ "_parse_args", "namespacerod_1_1____main____.html#a49acdcab0b069c37620a007cf12abc23", null ],
+      [ "main", "namespacerod_1_1____main____.html#a96477b5afdea296038f8b4ec2cc2da2b", null ]
     ] ],
     [ "_corepath", "namespacerod_1_1__corepath.html", [
       [ "_candidates", "namespacerod_1_1__corepath.html#a555393505eb6467d4f3c586dff147c2d", null ],
@@ -20,6 +21,5 @@ var namespacerod =
     [ "config", "namespacerod_1_1config.html", "namespacerod_1_1config" ],
     [ "control", "namespacerod_1_1control.html", "namespacerod_1_1control" ],
     [ "hub", "namespacerod_1_1hub.html", "namespacerod_1_1hub" ],
-    [ "sources", "namespacerod_1_1sources.html", "namespacerod_1_1sources" ],
-    [ "testrun", "namespacerod_1_1testrun.html", "namespacerod_1_1testrun" ]
+    [ "sources", "namespacerod_1_1sources.html", "namespacerod_1_1sources" ]
 ];

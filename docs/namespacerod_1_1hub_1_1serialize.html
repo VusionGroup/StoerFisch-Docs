@@ -123,13 +123,12 @@ Variables</h2></td></tr>
 <tr class="separator:ad970f57aa5cded5d356163a31daf1a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Telemetrie-Records (numpy structured scalars) -&gt; JSON-taugliche dicts.
+<div class="textblock"><pre class="fragment">Telemetrie-Records aus numpy in JSON-taugliche dicts.
 
-Jeder Record bekommt einen ``kind``-String als Diskriminator (der Browser
-matcht darauf), plus die typunabhaengigen Felder ``sequence`` und
-``timestamp_ns``. Serverseitig erledigt: die uint64-Belegungsmaske wird zu
-``bool[40]`` aufgefaltet und die ``reserved``-Padding-Felder werden gedroppt --
-Dinge, die im Browser nichts verloren haben.
+Jeder Record bekommt einen kind-String, auf den der Browser matcht, dazu die
+typunabhaengigen Felder sequence und timestamp_ns. Zwei Dinge erledigen wir
+gleich hier, weil sie im Browser nichts verloren haben: die uint64-Belegungs-
+maske wird zu bool[40] aufgefaltet und die reserved-Padding-Felder fliegen raus.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a022a4eaa4ca49c65eb83f049129518ad" name="a022a4eaa4ca49c65eb83f049129518ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a022a4eaa4ca49c65eb83f049129518ad">&#9670;&#160;</a></span>_actuator()</h2>
@@ -154,8 +153,8 @@ Dinge, die im Browser nichts verloren haben.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Serialisiert #6 actuator_state (inkl. applied_command_seq).</pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00080">80</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00078">78</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -182,8 +181,8 @@ Dinge, die im Browser nichts verloren haben.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Serialisiert #8 buffer_health (USB/PLL).</pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00100">100</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00097">97</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -210,8 +209,8 @@ Dinge, die im Browser nichts verloren haben.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Serialisiert #5 controller_state (Zustand + Entscheidung mit Namen).</pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00065">65</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00063">63</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -238,8 +237,8 @@ Dinge, die im Browser nichts verloren haben.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Serialisiert #3 detection_event (Kanal, Flanke, RSSI).</pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00036">36</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00035">35</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -266,8 +265,8 @@ Dinge, die im Browser nichts verloren haben.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Serialisiert #4 latency (t1..t4 -&gt; µs-Segmente).</pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00047">47</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00045">45</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -294,8 +293,8 @@ Dinge, die im Browser nichts verloren haben.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Serialisiert #2 channel_occupancy (Maske -&gt; bool[40] + energy_dbm[40]).</pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00028">28</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00027">27</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -322,8 +321,8 @@ Dinge, die im Browser nichts verloren haben.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Serialisiert #7 success_metric (Restenergie/SNR).</pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00091">91</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00089">89</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -344,10 +343,10 @@ Dinge, die im Browser nichts verloren haben.
 </div><div class="memdoc">
 <pre class="fragment">Wandelt einen Telemetrie-Record in ein JSON-taugliches dict.
 
-Unbekannte Typen liefern ``kind="unknown_&lt;N&gt;"`` ohne Payload (deutet auf
-einen neueren C++-Stand hin).
+Unbekannte Typen kommen als kind="unknown_&lt;N&gt;" ohne Payload zurueck; meist
+heisst das, der C++-Stand ist neuer als dieses Modul.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00122">122</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00118">118</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -381,7 +380,7 @@ einen neueren C++-Stand hin).
 <div class="line"><span class="lineno">    8</span>    tel.RECORD_TYPE_BUFFER_HEALTH: (tel.decode_buffer_health, _buffer_health),</div>
 <div class="line"><span class="lineno">    9</span>}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00111">111</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00107">107</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>
@@ -406,7 +405,7 @@ einen neueren C++-Stand hin).
 <div class="line"><span class="lineno">    8</span>    tel.RECORD_TYPE_BUFFER_HEALTH: <span class="stringliteral">&quot;buffer_health&quot;</span>,</div>
 <div class="line"><span class="lineno">    9</span>}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00017">17</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serialize_8py_source.html#l00016">16</a> of file <a class="el" href="serialize_8py_source.html">serialize.py</a>.</p>
 
 </div>
 </div>

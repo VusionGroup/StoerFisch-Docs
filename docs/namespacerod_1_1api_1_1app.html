@@ -111,12 +111,13 @@ Variables</h2></td></tr>
 <tr class="separator:a74977fb488d5db4c22041b05f0aa1750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">FastAPI-App: verdrahtet Quellen, Hubs, Controller und die Routen.
+<div class="textblock"><pre class="fragment">FastAPI-App: verdrahtet Quellen, Hubs, Controller und Routen.
 
-Der Lifespan entscheidet Fake vs. Real, oeffnet die Ringe (mit Retry, weil der
-Core beim Start die Segmente erst anlegt), verbindet den Kommando-Socket und
-startet die beiden Hub-Tasks. Alles Langlebige haengt an ``app.state`` -- die
-Quellen sind Single-Consumer und duerfen nicht pro WebSocket existieren.
+Der Lifespan entscheidet zwischen fake und echt, oeffnet die Ringe -- mit Retry,
+weil der Core die Segmente beim Start erst anlegt --, verbindet den
+Kommando-Socket und startet die beiden Hub-Tasks. Alles Langlebige haengt an
+app.state: die Quellen sind Single-Consumer und duerfen nicht pro WebSocket
+existieren.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a41216b5e1fc8d986127c3bad511b1a72" name="a41216b5e1fc8d986127c3bad511b1a72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41216b5e1fc8d986127c3bad511b1a72">&#9670;&#160;</a></span>_connect_socket()</h2>
@@ -141,8 +142,8 @@ Quellen sind Single-Consumer und duerfen nicht pro WebSocket existieren.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Verbindet den Kommando-Socket mit Retry, bis der Core da ist (sonst Timeout).</pre> 
-<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00063">63</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
+<pre class="fragment">Probiert den Kommando-Socket, bis der Core da ist -- oder gibt auf.</pre> 
+<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00064">64</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
 
 </div>
 </div>
@@ -169,8 +170,8 @@ Quellen sind Single-Consumer und duerfen nicht pro WebSocket existieren.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Oeffnet Telemetrie- und Spektral-Ring mit Retry (Core startet evtl. noch).</pre> 
-<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00036">36</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
+<pre class="fragment">Oeffnet beide Ringe; mit Retry, falls der Core gerade erst hochfaehrt.</pre> 
+<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00037">37</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
 
 </div>
 </div>
@@ -189,15 +190,12 @@ Quellen sind Single-Consumer und duerfen nicht pro WebSocket existieren.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Baut die FastAPI-App: registriert Routen/WebSockets und mountet das
-gebaute Frontend. Die eigentliche Verdrahtung der langlebigen Laufzeit-
-Objekte (Quellen, Hubs, Controller) passiert erst im ``lifespan`` beim
-Start -- nicht hier, damit die App ohne laufenden Core importierbar bleibt.
+<pre class="fragment">Registriert Routen und WebSockets und mountet das gebaute Frontend.
 
-Args:
-    config: Optionale Konfiguration; ohne Angabe aus ``ROD_*``-Env geladen.
+Quellen, Hubs und Controller werden erst im lifespan verdrahtet, nicht hier
+-- so bleibt die App auch ohne laufenden Core importierbar.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00077">77</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00078">78</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
 
 </div>
 </div>
@@ -222,7 +220,7 @@ Args:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00033">33</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="app_8py_source.html#l00034">34</a> of file <a class="el" href="app_8py_source.html">app.py</a>.</p>
 
 </div>
 </div>

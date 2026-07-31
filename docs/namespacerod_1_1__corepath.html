@@ -109,21 +109,16 @@ Variables</h2></td></tr>
 <tr class="separator:a502f4a855b4c588951798c426f0a1beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Macht die Core's Layout-Spiegelung (``command`` / ``telemetry_layout`` /
-``spectral_layout``) bare importierbar.
+<div class="textblock"><pre class="fragment">Macht command / telemetry_layout / spectral_layout bare importierbar.
 
-Diese drei Module werden vom Core-Repo geliefert und liegen unveraendert unter
-``core/python/``. Rod importiert sie als Top-Level-Module (``import command``),
-nicht als Paket -- damit die Cross-Check-Tests von der Core Seite dieselben
-Namen treffen. Dieses Modul findet das Verzeichnis und haengt es einmalig an
-``sys.path``.
+Die drei Module kommen aus dem Core-Repo und liegen unveraendert unter
+core/python/. Rod importiert sie als Top-Level-Module (import command) und
+nicht als Paket, damit die Cross-Check-Tests auf der Core-Seite dieselben Namen
+treffen. Hier wird das Verzeichnis gesucht und einmalig an sys.path gehaengt.
 
-Suchreihenfolge:
-
-1. ``ROD_CORE_PYTHON`` (falls gesetzt) -- explizite Ueberschreibung.
-2. ``core/python`` relativ zum Repo (von hier aus nach oben gelaufen) --
-   der Normalfall bei ``uv run rod`` aus dem Checkout.
-3. ``rod/_corevendor`` neben diesem Paket -- die ins Wheel mitgelieferte Kopie.
+Gesucht wird der Reihe nach in ROD_CORE_PYTHON (explizite Ueberschreibung), in
+core/python relativ zum Repo (Normalfall bei uv run rod aus dem Checkout) und
+zuletzt in rod/_corevendor, der ins Wheel mitgelieferten Kopie.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a555393505eb6467d4f3c586dff147c2d" name="a555393505eb6467d4f3c586dff147c2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a555393505eb6467d4f3c586dff147c2d">&#9670;&#160;</a></span>_candidates()</h2>
@@ -147,9 +142,8 @@ Suchreihenfolge:
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Liefert die Suchpfade fuer die Layout-Module in Prioritaetsreihenfolge
-(ROD_CORE_PYTHON, dann core/python nach oben, dann die Wheel-Kopie).</pre> 
-<p class="definition">Definition at line <a class="el" href="__corepath_8py_source.html#l00027">27</a> of file <a class="el" href="__corepath_8py_source.html">_corepath.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="__corepath_8py_source.html#l00022">22</a> of file <a class="el" href="__corepath_8py_source.html">_corepath.py</a>.</p>
 
 </div>
 </div>
@@ -167,15 +161,8 @@ Suchreihenfolge:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Stellt sicher, dass die Layout-Module importierbar sind.
-
-Returns:
-    Das verwendete Verzeichnis.
-
-Raises:
-    ModuleNotFoundError: Wenn keine der Kandidaten die Module enthaelt.
-</pre> 
-<p class="definition">Definition at line <a class="el" href="__corepath_8py_source.html#l00046">46</a> of file <a class="el" href="__corepath_8py_source.html">_corepath.py</a>.</p>
+<pre class="fragment">Haengt das Verzeichnis mit den Layout-Modulen an sys.path und gibt es zurueck.</pre> 
+<p class="definition">Definition at line <a class="el" href="__corepath_8py_source.html#l00038">38</a> of file <a class="el" href="__corepath_8py_source.html">_corepath.py</a>.</p>
 
 </div>
 </div>
@@ -200,7 +187,7 @@ Raises:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="__corepath_8py_source.html#l00024">24</a> of file <a class="el" href="__corepath_8py_source.html">_corepath.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="__corepath_8py_source.html#l00019">19</a> of file <a class="el" href="__corepath_8py_source.html">_corepath.py</a>.</p>
 
 </div>
 </div>

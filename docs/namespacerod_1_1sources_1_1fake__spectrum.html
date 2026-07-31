@@ -111,16 +111,16 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Synthetischer Spektral-Strom fuer den Fake-Betrieb (ROD_FAKE=1).
 
-Erzeugt float32-dB-Frames wie der echte Ring: Rauschboden + zwei "BLE"-Traeger
-+ ein wandernder Stoerer. Optional richtet sich der Stoerer nach dem aktuellen
-Aktuator-Zustand der Fake-Telemetrie aus (gekoppelt ueber ein Callable), damit
-"Jammer an, Kanal N" auch im Wasserfall sichtbar wird.
+Erzeugt float32-dB-Frames wie der echte Ring: Rauschboden, zwei "BLE"-Traeger
+und ein wandernder Stoerer. Der Stoerer kann sich ueber ein Callable am
+Aktuator-Zustand der Fake-Telemetrie ausrichten, damit "Jammer an, Kanal N"
+auch im Wasserfall zu sehen ist.
 
-Ebenfalls gekoppelt ist die SDR-Sicht: Nach SET_SAMPLE_RATE / SET_CENTER_FREQ
-verschiebt sich das Fenster hier genauso wie beim echten Core, und waehrend der
-RX-Unterbrechung kommt gar kein Frame. Jeder Frame traegt die Frequenz, mit der
-er "aufgenommen" wurde -- Rod darf sich also auch im Fake nicht auf einen
-zwischengespeicherten Center-Wert verlassen.
+Genauso haengt die SDR-Sicht dran: nach einem Retune verschiebt sich das
+Fenster hier wie beim echten Core, und waehrend der RX-Unterbrechung kommt gar
+kein Frame. Jeder Frame traegt die Frequenz, mit der er "aufgenommen" wurde --
+auch im Fake darf sich niemand auf einen zwischengespeicherten Center-Wert
+verlassen.
 </pre> </div><h2 class="groupheader">Variable Documentation</h2>
 <a id="a9fd21475272dbf8c32451572b26f4778" name="a9fd21475272dbf8c32451572b26f4778"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fd21475272dbf8c32451572b26f4778">&#9670;&#160;</a></span>JammerProbe</h2>

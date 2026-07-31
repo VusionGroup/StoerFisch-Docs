@@ -103,17 +103,16 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">TX-Sicherheit: Arm-Gate + Dead-Man-Switch.
+<div class="textblock"><pre class="fragment">TX-Sicherheit: Arm-Gate und Dead-Man-Switch.
 
-Scharfschalten (TX erlauben) ist an eine lebende Control-Verbindung gekoppelt:
-Nur wer scharfgeschaltet hat (der ``owner``) haelt es mit Heartbeats am Leben.
-Bleiben die Heartbeats laenger als ``timeout_s`` aus -- etwa weil der Browser-
-Tab zu ist oder die Netzverbindung haengt -- entschaerft der Dead-Man-Switch
-automatisch.
+Scharfschalten haengt an einer lebenden Control-Verbindung. Nur wer
+scharfgeschaltet hat, der owner, haelt den Zustand mit Heartbeats am Leben.
+Bleiben sie laenger als timeout_s aus, weil der Tab zu ist oder das Netz
+haengt, entschaerft der Dead-Man von selbst.
 
-BEWUSSTE ENTSCHEIDUNG: Der physische Not-Aus laeuft NICHT ueber diese Software.
-Ein Software-Dead-Man ersetzt keinen Hardware-Not-Aus; er schuetzt nur davor,
-dass ein scharfer Sender ohne Aufsicht weiterlaeuft. Das gehoert so in der
+Bewusste Entscheidung: der physische Not-Aus laeuft nicht ueber diese Software.
+Ein Software-Dead-Man ersetzt keinen Hardware-Not-Aus, er verhindert nur, dass
+ein scharfer Sender ohne Aufsicht weiterlaeuft. So gehoert es auch in der
 Arbeit begruendet.
 </pre> </div></div><!-- contents -->
 </div><!-- doc-content -->

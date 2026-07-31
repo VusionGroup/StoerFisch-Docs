@@ -154,9 +154,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a2a2108125977d374626e29d90369b92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Single-Writer-Lease mit FIFO-Warteschlange, Verbindungs-Timeout und
-Anwesenheits-Rueckfrage gegen untaetige Writer.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00039">39</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<div class="textblock"><pre class="fragment">Single-Writer-Lease mit Warteschlange, Timeout und Anwesenheits-Rueckfrage.</pre> 
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00038">38</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adb63cf6acf79c645c4734ab83ad697dc" name="adb63cf6acf79c645c4734ab83ad697dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb63cf6acf79c645c4734ab83ad697dc">&#9670;&#160;</a></span>__init__()</h2>
@@ -201,17 +200,8 @@ Anwesenheits-Rueckfrage gegen untaetige Writer.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Args:
-    owners: Menge der lebenden Control-Owner (Telemetrie-WS). Befoerdert
-        wird nur ein Anforderer, der noch verbunden ist.
-    timeout_s: Bleibt der Verbindungs-Heartbeat laenger aus, verliert der
-        Writer das Recht (tote Verbindung).
-    presence_interval_s: So lange darf der Writer untaetig sein, bevor bei
-        weiteren Zuschauern nachgefragt wird („Bist du noch da?").
-    challenge_grace_s: Antwortfrist auf die Rueckfrage; ohne Antwort geht
-        das Recht an den naechsten Wartenden.
-</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00043">43</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00041">41</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -239,8 +229,8 @@ Anwesenheits-Rueckfrage gegen untaetige Writer.</pre>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Raeumt alle Writer-gebundenen Felder (vor Befoerderung / bei Freigabe).</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00189">189</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00178">178</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -277,9 +267,8 @@ Anwesenheits-Rueckfrage gegen untaetige Writer.</pre>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Vergibt das Schreibrecht an ``owner`` (interner Helfer). Frische
-Anwesenheit, keine offene Rueckfrage.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00178">178</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00167">167</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -306,8 +295,8 @@ Anwesenheit, keine offene Rueckfrage.</pre>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Befoerdert den naechsten noch verbundenen Anforderer zum Writer.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00196">196</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00184">184</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -336,10 +325,12 @@ Anwesenheit, keine offene Rueckfrage.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Bestaetigt AKTIVE Anwesenheit des Writers und beendet eine laufende
-Rueckfrage. Ausgeloest durch ein echtes Steuerkommando oder den
-expliziten „Ja, noch da"-Klick -- nicht durch den Auto-Heartbeat.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00105">105</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<pre class="fragment">Der Writer ist wirklich da, eine laufende Rueckfrage ist damit erledigt.
+
+Ausgeloest von einem echten Steuerkommando oder vom "Ja, noch da"-Klick,
+nicht vom automatischen Heartbeat.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00092">92</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -368,12 +359,12 @@ expliziten „Ja, noch da"-Klick -- nicht durch den Auto-Heartbeat.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Naehrt den VERBINDUNGS-Timeout aus dem automatischen WS-Heartbeat.
+<pre class="fragment">Haelt den Verbindungs-Timeout am Leben, mehr nicht.
 
-Zaehlt bewusst NICHT als Anwesenheit -- ein offener, aber unbedienter Tab
-sendet weiter Heartbeats. Menschliche Anwesenheit kommt nur ueber
-``confirm_presence`` (echtes Kommando oder „noch da"-Klick).</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00096">96</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+Als Anwesenheit zaehlt das bewusst nicht: ein offener, aber unbedienter
+Tab sendet ja weiter Heartbeats. Dafuer gibt es confirm_presence.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00083">83</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -392,8 +383,8 @@ sendet weiter Heartbeats. Menschliche Anwesenheit kommt nur ueber
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">owner-id des aktuellen Writers (None = niemand).</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00072">72</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00061">61</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -422,8 +413,8 @@ sendet weiter Heartbeats. Menschliche Anwesenheit kommt nur ueber
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">True, wenn ``owner`` gerade das Schreibrecht haelt.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00076">76</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00064">64</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -452,9 +443,8 @@ sendet weiter Heartbeats. Menschliche Anwesenheit kommt nur ueber
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Eine Verbindung ist weg: war es der Writer -&gt; abgeben + befoerdern;
-sonst nur aus der Warteschlange nehmen.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00113">113</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<pre class="fragment">Verbindung weg. War es der Writer, rueckt der naechste nach.</pre> 
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00102">102</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -483,16 +473,16 @@ sonst nur aus der Warteschlange nehmen.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Periodischer Tick (aus dem TelemetryHub). Erst der Verbindungs-Timeout
-(``poll_timeout``), dann die Anwesenheits-Rueckfrage:
+<pre class="fragment">Periodischer Tick aus dem TelemetryHub.
 
-Sind AUSSER dem Writer noch andere verbunden (``subscriber_count &gt; 1``)
-und war er laenger als ``presence_interval_s`` untaetig, wird eine
-Rueckfrage gestartet. Reagiert er nicht binnen ``challenge_grace_s`` mit
-``confirm_presence``, verliert er das Recht an den naechsten Wartenden.
-Ist er allein, wird NICHT nachgefragt -- allein stoert niemand.
+Erst der Verbindungs-Timeout, dann die Anwesenheits-Rueckfrage: sind
+ausser dem Writer noch andere verbunden und war er laenger als
+presence_interval_s untaetig, fragen wir nach. Kommt binnen
+challenge_grace_s kein confirm_presence, geht das Recht an den naechsten
+Wartenden. Ist der Writer allein, fragen wir gar nicht erst -- allein
+stoert er niemanden.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00137">137</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00127">127</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -511,10 +501,12 @@ Ist er allein, wird NICHT nachgefragt -- allein stoert niemand.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Prueft, ob der Writer verbindungstot ist (aus owners raus ODER
-Heartbeat abgelaufen), und befoerdert dann den naechsten. (Backup zu
-owner_gone fuer unsaubere Verbindungsabbrueche.)</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00122">122</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<pre class="fragment">Raeumt einen verbindungstoten Writer weg und befoerdert den naechsten.
+
+Tot heisst: nicht mehr in owners oder Heartbeat abgelaufen. Das ist die
+Absicherung fuer Verbindungsabbrueche, bei denen owner_gone ausbleibt.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00110">110</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -543,9 +535,9 @@ owner_gone fuer unsaubere Verbindungsabbrueche.)</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Gibt das Recht ab. Vom Writer -&gt; naechster rueckt nach; von einem
-Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00087">87</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<pre class="fragment">Vom Writer aufgerufen rueckt der naechste nach, von einem Wartenden
+nimmt es nur dessen Anforderung zurueck.</pre> 
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00074">74</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -574,8 +566,8 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Fordert Schreibrechte an: sofort Writer, wenn frei; sonst in die Queue.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00080">80</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<pre class="fragment">Ist frei, wird owner sofort Writer, sonst geht er in die Queue.</pre> 
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00067">67</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -594,8 +586,8 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Liefert eine unveraenderliche Momentaufnahme fuer REST/GUI.</pre> 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00165">165</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00155">155</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -620,7 +612,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00064">64</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00053">53</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -644,7 +636,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00111">111</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00100">100</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -668,7 +660,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00175">175</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00164">164</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -692,7 +684,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00110">110</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00099">99</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -716,7 +708,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00103">103</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00090">90</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -740,7 +732,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00061">61</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00050">50</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -764,7 +756,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00063">63</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00052">52</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -788,7 +780,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00175">175</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00164">164</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>
@@ -812,7 +804,7 @@ Wartenden -&gt; zieht nur seine Anforderung zurueck.</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00062">62</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lease_8py_source.html#l00051">51</a> of file <a class="el" href="lease_8py_source.html">lease.py</a>.</p>
 
 </div>
 </div>

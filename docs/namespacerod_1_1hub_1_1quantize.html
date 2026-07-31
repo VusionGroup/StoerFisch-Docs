@@ -103,13 +103,13 @@ Functions</h2></td></tr>
 <tr class="separator:aa7a24577e9eb75d280e2208ae144e552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Spektral-Quantisierung: float32-dB im Ring -&gt; uint8 auf der Leitung.
+<div class="textblock"><pre class="fragment">Spektral-Quantisierung: float32-dB im Ring, uint8 auf der Leitung.
 
-Der Ring fuehrt echte dB-Messwerte (float32). Erst kurz vor dem WebSocket
-quantisieren wir auf uint8 gegen ein server-seitiges Fenster
-(``db_floor``/``db_ceil``). Das viertelt die Bandbreite (1 kB statt 4 kB pro
-1024-Bin-Frame) und haelt Floor/Ceiling als Config -- nicht im Wire-Layout, wo
-sie beim Rescale jeden Client zwingen wuerden, das Protokoll zu kennen.
+Im Ring stehen echte dB-Messwerte als float32. Erst kurz vor dem WebSocket
+quantisieren wir gegen ein serverseitiges Fenster aus db_floor und db_ceil.
+Das viertelt die Bandbreite, 1 kB statt 4 kB pro 1024-Bin-Frame, und laesst
+Floor und Ceiling Config bleiben. Im Wire-Layout muesste sonst jeder Client
+beim Rescale das Protokoll kennen.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a44e2b58a7ae4eeb6e19bd7556223349a" name="a44e2b58a7ae4eeb6e19bd7556223349a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44e2b58a7ae4eeb6e19bd7556223349a">&#9670;&#160;</a></span>notch_dc()</h2>
@@ -136,18 +136,17 @@ sie beim Rescale jeden Client zwingen wuerden, das Protokoll zu kennen.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Blendet den DC-/Center-Bin (HackRF-LO-Leakage) kosmetisch aus.
+<pre class="fragment">Blendet den Center-Bin kosmetisch aus.
 
 Direktmisch-Empfaenger wie der HackRF legen LO-Leakage und I/Q-DC-Offset
-auf den Mittel-Bin (Baseband-0-Hz = Center-Frequenz). Der steht in jedem
-Frame erhoeht und malt so einen konstanten Mittelstrich in Wasserfall und
-Spektrum. Wir ersetzen das Fenster ``[center-half_width, center+half_width]``
-durch eine lineare Interpolation zwischen den beiden sauberen Nachbar-Bins
-direkt ausserhalb -- rein fuer die Anzeige, das ist kein Signal.
+genau auf den Mittel-Bin, also Baseband 0 Hz. Der ist damit in jedem Frame
+erhoeht und malt einen konstanten Strich durch Wasserfall und Spektrum. Wir
+ersetzen das Fenster um die Mitte durch eine lineare Interpolation zwischen
+den beiden sauberen Nachbarn direkt ausserhalb. Reine Anzeige, das ist kein
+Signal.
 
-``half_width &lt;= 0`` gibt die Bins unveraendert zurueck (Notch aus). Zu kurze
-Frames (weniger als das Fenster + zwei Nachbarn) bleiben ebenfalls
-unveraendert.
+Bei half_width &lt;= 0 bleibt alles wie es ist, der Notch ist dann aus.
+Genauso bei Frames, die zu kurz fuer Fenster plus zwei Nachbarn sind.
 </pre> 
 <p class="definition">Definition at line <a class="el" href="quantize_8py_source.html#l00015">15</a> of file <a class="el" href="quantize_8py_source.html">quantize.py</a>.</p>
 
@@ -184,11 +183,10 @@ unveraendert.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Bildet dB-Bins linear auf ``uint8`` (0..255) ab.
+<pre class="fragment">Bildet dB-Bins linear auf uint8 ab, db_floor..db_ceil auf 0..255.
 
-``db_floor`` -&gt; 0, ``db_ceil`` -&gt; 255, dazwischen linear, ausserhalb
-geklemmt. NaN wird bewusst auf den **Floor** (0) gelegt: ein fehlender
-Messwert soll als "leise" erscheinen, nicht als kuenstliches Signal.
+Alles ausserhalb wird geklemmt. NaN landet absichtlich auf 0: ein fehlender
+Messwert soll leise aussehen und nicht wie ein Signal.
 </pre> 
 <p class="definition">Definition at line <a class="el" href="quantize_8py_source.html#l00044">44</a> of file <a class="el" href="quantize_8py_source.html">quantize.py</a>.</p>
 

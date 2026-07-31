@@ -130,11 +130,11 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Single-Consumer-Quelle fuer Telemetrie-Records.
 
-``poll()`` liefert bereits serialisierte, JSON-taugliche dicts (siehe
-hub/serialize.py) -- je mit einem ``kind``-Diskriminator. Das haelt Hub und
+poll() liefert schon serialisierte, JSON-taugliche dicts (siehe
+hub/serialize.py), jedes mit einem kind-Diskriminator. So bleiben Hub und
 Fake-Quelle auf demselben Schema.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00072">72</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00067">67</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa1eedb1460a8dc5fe78e5d50d6ef1be6" name="aa1eedb1460a8dc5fe78e5d50d6ef1be6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1eedb1460a8dc5fe78e5d50d6ef1be6">&#9670;&#160;</a></span>close()</h2>
@@ -151,8 +151,8 @@ Fake-Quelle auf demselben Schema.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Gibt die Quelle frei (Shared Memory schliessen).</pre> 
-<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00093">93</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00088">88</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
 
 </div>
 </div>
@@ -171,8 +171,8 @@ Fake-Quelle auf demselben Schema.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Vom Core verworfene Records (drop-newest) seit Ring-Erstellung.</pre> 
-<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00089">89</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
+<pre class="fragment">Vom Core verworfene Records seit Ring-Erstellung.</pre> 
+<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00084">84</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
 
 </div>
 </div>
@@ -191,8 +191,8 @@ Fake-Quelle auf demselben Schema.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">``generation`` des Rings -- wechselt bei jedem Core-Neustart.</pre> 
-<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00081">81</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
+<pre class="fragment">Wechselt bei jedem Core-Neustart.</pre> 
+<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00076">76</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
 
 </div>
 </div>
@@ -211,8 +211,8 @@ Fake-Quelle auf demselben Schema.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Alle seit dem letzten Aufruf neuen Records, aelteste zuerst.</pre> 
-<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00085">85</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
+<pre class="fragment">Alles seit dem letzten Aufruf, aelteste zuerst.</pre> 
+<p class="definition">Definition at line <a class="el" href="base_8py_source.html#l00080">80</a> of file <a class="el" href="base_8py_source.html">base.py</a>.</p>
 
 </div>
 </div>

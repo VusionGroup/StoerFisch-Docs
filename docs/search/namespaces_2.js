@@ -26,8 +26,5 @@ var searchData=
   ['rod_3a_3asources_3a_3afake_5fspectrum_23',['fake_spectrum',['../namespacerod_1_1sources_1_1fake__spectrum.html',1,'rod::sources']]],
   ['rod_3a_3asources_3a_3afake_5ftelemetry_24',['fake_telemetry',['../namespacerod_1_1sources_1_1fake__telemetry.html',1,'rod::sources']]],
   ['rod_3a_3asources_3a_3ashm_5fspectral_25',['shm_spectral',['../namespacerod_1_1sources_1_1shm__spectral.html',1,'rod::sources']]],
-  ['rod_3a_3asources_3a_3ashm_5ftelemetry_26',['shm_telemetry',['../namespacerod_1_1sources_1_1shm__telemetry.html',1,'rod::sources']]],
-  ['rod_3a_3atestrun_27',['testrun',['../namespacerod_1_1testrun.html',1,'rod']]],
-  ['rod_3a_3atestrun_3a_3aexport_28',['export',['../namespacerod_1_1testrun_1_1export.html',1,'rod::testrun']]],
-  ['rod_3a_3atestrun_3a_3ascenario_29',['scenario',['../namespacerod_1_1testrun_1_1scenario.html',1,'rod::testrun']]]
+  ['rod_3a_3asources_3a_3ashm_5ftelemetry_26',['shm_telemetry',['../namespacerod_1_1sources_1_1shm__telemetry.html',1,'rod::sources']]]
 ];

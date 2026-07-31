@@ -8,7 +8,5 @@ var searchData=
   ['reserved_5',['reserved',['../structfisch_1_1CommandResponse.html#ab4ef38dd2cd8b7ab181f8aa15e587069',1,'fisch::CommandResponse::reserved'],['../structfisch_1_1SpectralRingHeader.html#a8b8d0ad873f236d603058fece10d0ea1',1,'fisch::SpectralRingHeader::reserved'],['../structfisch_1_1BufferHealthPayload.html#a4c4c8b1059f994479d68d356947af5ea',1,'fisch::BufferHealthPayload::reserved'],['../structfisch_1_1ActuatorStatePayload.html#a587b162344120a1e0c812fa17b86d2c8',1,'fisch::ActuatorStatePayload::reserved']]],
   ['residual_5fenergy_5fdbm_6',['residual_energy_dbm',['../structfisch_1_1SuccessMetricPayload.html#a1acfa48e6dcbe452d144eaa6c6d44188',1,'fisch::SuccessMetricPayload']]],
   ['router_7',['router',['../namespacerod_1_1api_1_1rest.html#a474c5a202966a57b7a7ffca43a4dc0dd',1,'rod::api::rest']]],
-  ['rows_5fcollected_8',['rows_collected',['../classrod_1_1testrun_1_1scenario_1_1RunStatus.html#abb21d3611979a2d73df87b4e372d4d37',1,'rod::testrun::scenario::RunStatus']]],
-  ['rssi_5fdbm_9',['rssi_dbm',['../structfisch_1_1DetectionEventPayload.html#abb0c84a95e95b3c621e6669cf01582a7',1,'fisch::DetectionEventPayload']]],
-  ['running_10',['running',['../classrod_1_1testrun_1_1scenario_1_1RunStatus.html#a9150b9d10cefc9f9ea881441d7c1d827',1,'rod::testrun::scenario::RunStatus']]]
+  ['rssi_5fdbm_8',['rssi_dbm',['../structfisch_1_1DetectionEventPayload.html#abb0c84a95e95b3c621e6669cf01582a7',1,'fisch::DetectionEventPayload']]]
 ];

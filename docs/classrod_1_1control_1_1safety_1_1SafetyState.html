@@ -130,9 +130,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a7b1aa574afb4fd488424a88414345432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Arm-Gate + Dead-Man. Haelt fest, ob TX erlaubt ist, wer den scharfen
-Zustand haelt (``owner``) und wann zuletzt ein Heartbeat kam.</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00031">31</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<div class="textblock"><pre class="fragment">Merkt sich, ob TX erlaubt ist, wer dafuer geradesteht und wann er sich
+zuletzt gemeldet hat.</pre> 
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00028">28</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a351f6698e52b728f2cec29bb430fd832" name="a351f6698e52b728f2cec29bb430fd832"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a351f6698e52b728f2cec29bb430fd832">&#9670;&#160;</a></span>__init__()</h2>
@@ -159,8 +159,8 @@ Zustand haelt (``owner``) und wann zuletzt ein Heartbeat kam.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Startet entschaerft; timeout_s ist die Totmann-Frist.</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00035">35</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00032">32</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -190,9 +190,11 @@ Zustand haelt (``owner``) und wann zuletzt ein Heartbeat kam.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Schaltet scharf. ``owner`` ist die Control-Verbindung, die die
-Verantwortung uebernimmt; ohne deren Heartbeats greift der Dead-Man.</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00052">52</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<pre class="fragment">Schaltet scharf; owner uebernimmt damit die Verantwortung.
+
+Ab jetzt muessen dessen Heartbeats kommen, sonst greift der Dead-Man.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00047">47</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -211,8 +213,8 @@ Verantwortung uebernimmt; ohne deren Heartbeats greift der Dead-Man.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">True, wenn TX aktuell scharfgeschaltet ist.</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00043">43</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00040">40</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -231,8 +233,8 @@ Verantwortung uebernimmt; ohne deren Heartbeats greift der Dead-Man.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Entschaerft: TX gesperrt, Owner + Heartbeat-Uhr zurueckgesetzt.</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00059">59</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<pre class="fragment">TX gesperrt, Owner und Heartbeat-Uhr zurueck auf Anfang.</pre> 
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00056">56</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -261,8 +263,8 @@ Verantwortung uebernimmt; ohne deren Heartbeats greift der Dead-Man.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Verlaengert die Totmann-Frist -- nur vom aktuellen Owner.</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00065">65</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<pre class="fragment">Verlaengert die Totmann-Frist, aber nur vom aktuellen Owner.</pre> 
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00062">62</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -281,8 +283,8 @@ Verantwortung uebernimmt; ohne deren Heartbeats greift der Dead-Man.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Kennung der Verbindung, die scharfgeschaltet hat (oder None).</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00048">48</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00044">44</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -311,8 +313,8 @@ Verantwortung uebernimmt; ohne deren Heartbeats greift der Dead-Man.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Die Control-Verbindung des Owners ist weg -&gt; sofort entschaerfen.</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00070">70</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<pre class="fragment">Verbindung des Owners ist weg, sofort entschaerfen.</pre> 
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00067">67</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -331,9 +333,8 @@ Verantwortung uebernimmt; ohne deren Heartbeats greift der Dead-Man.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Prueft die Totmann-Frist. Gibt True zurueck, wenn gerade entschaerft
-wurde (fuer Logging/Event).</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00075">75</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<pre class="fragment">Prueft die Totmann-Frist; True heisst, gerade eben entschaerft.</pre> 
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00072">72</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -352,8 +353,8 @@ wurde (fuer Logging/Event).</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Liefert eine Momentaufnahme (inkl. Sekunden seit letztem Heartbeat).</pre> 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00085">85</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00081">81</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -378,7 +379,7 @@ wurde (fuer Logging/Event).</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00038">38</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00035">35</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -402,7 +403,7 @@ wurde (fuer Logging/Event).</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00057">57</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00054">54</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -426,7 +427,7 @@ wurde (fuer Logging/Event).</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00056">56</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00053">53</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>
@@ -450,7 +451,7 @@ wurde (fuer Logging/Event).</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00037">37</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="safety_8py_source.html#l00034">34</a> of file <a class="el" href="safety_8py_source.html">safety.py</a>.</p>
 
 </div>
 </div>

@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classrod_1_1testrun_1_1scenario_1_1RunStatus.html" title=" " alt="" coords="5,5,187,45"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,77,113,102"/>
+<area shape="rect" id="Node000001" href="$classrod_1_1control_1_1command__client_1_1CommandTransportError.html" title=" " alt="" coords="161,5,388,45"/>
+<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="112,70,161,55,201,43,202,48,162,60,113,75"/>
+<area shape="rect" id="Node000002" href="$classrod_1_1control_1_1controller_1_1SweepUnsupportedError.html" title=" " alt="" coords="173,69,377,109"/>
+<area shape="poly" id="edge16_Node000000_Node000002" title=" " alt="" coords="127,87,172,87,172,92,127,92"/>
+<area shape="rect" id="Node000003" href="$classrod_1_1control_1_1controller_1_1TxSafetyError.html" title=" " alt="" coords="186,133,363,173"/>
+<area shape="poly" id="edge17_Node000000_Node000003" title=" " alt="" coords="113,104,162,119,202,131,201,136,161,124,112,109"/>
 </map>

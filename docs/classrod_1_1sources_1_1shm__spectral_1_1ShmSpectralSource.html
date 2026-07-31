@@ -123,7 +123,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Adaptiert SpectralRingReader auf das SpectrumSource-Protokoll.</pre> 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00026">26</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00024">24</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0e7346ece65bd5a2d761c58f283af7e2" name="a0e7346ece65bd5a2d761c58f283af7e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e7346ece65bd5a2d761c58f283af7e2">&#9670;&#160;</a></span>__init__()</h2>
@@ -156,12 +156,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Args:
-    shm_name: Name des Spektral-Shared-Memory-Segments (vom Core angelegt).
-    from_start: True liest ab dem aeltesten Slot (Wiedergabe); Default
-        False steigt am neuesten ein (Live-Monitoring).
-</pre> 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00029">29</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00027">27</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -181,8 +177,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Schliesst das Shared-Memory-Segment (der Core ist Owner).</pre> 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00095">95</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00083">83</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -201,8 +197,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Anzahl FFT-Bins pro Frame (aus dem Ring-Header).</pre> 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00041">41</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00035">35</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -221,8 +217,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">generation des Rings -- wechselt bei jedem Core-Neustart.</pre> 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00046">46</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00039">39</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -251,15 +247,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Drained bis zu ``max_drain`` Slots und gibt den NEUESTEN gueltigen Frame
-zurueck (uebersprungene zaehlen als ``frames_dropped_in_drain``). Bricht
-nach einer kurzen Leer-Serie ab. ``None``, wenn nichts Gueltiges kam.
+<pre class="fragment">Leert bis zu max_drain Slots und gibt den neuesten gueltigen Frame zurueck.
 
-Args:
-    max_drain: harte Obergrenze der Schleife -- verhindert, dass ein voll
-        nachlaufender Ring den Poll-Task blockiert.
+max_drain ist die Notbremse, damit ein voll nachlaufender Ring nicht den
+Poll-Task blockiert. None heisst: nichts Gueltiges dabei.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00050">50</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00042">42</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -278,8 +271,8 @@ Args:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Qualitaets-/Verlustzaehler (Ring + Rods eigene Drain-Drops).</pre> 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00083">83</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00072">72</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -304,7 +297,7 @@ Args:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00038">38</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00032">32</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -328,7 +321,7 @@ Args:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00037">37</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00031">31</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>
@@ -352,7 +345,7 @@ Args:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00036">36</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="shm__spectral_8py_source.html#l00030">30</a> of file <a class="el" href="shm__spectral_8py_source.html">shm_spectral.py</a>.</p>
 
 </div>
 </div>

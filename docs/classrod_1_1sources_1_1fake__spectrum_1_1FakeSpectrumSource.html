@@ -142,11 +142,11 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a70b0c8060ae135bf8aa81c1ed6f1c94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Synthetische ``SpectrumSource``: liefert plausible dB-Frames ohne Core/HackRF.
+<div class="textblock"><pre class="fragment">Plausible dB-Frames ohne Core und ohne HackRF.
 
-Erfuellt dasselbe Protokoll wie ``ShmSpectralSource``, damit Hub/API nicht
-unterscheiden muessen. Rauschboden + zwei stehende Traeger + optionaler,
-an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
+Erfuellt dasselbe Protokoll wie ShmSpectralSource, Hub und API muessen also
+nicht unterscheiden. Rauschboden, zwei stehende Traeger, optional ein an die
+Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
 </pre> 
 <p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00035">35</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -199,16 +199,7 @@ an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Args:
-    center_freq_hz: Start-Mittenfrequenz in Hz.
-    sample_rate_hz: Start-Samplerate in Hz (bestimmt die Fensterbreite).
-    fft_size: Anzahl Bins pro Frame.
-    jammer_probe: Callable -&gt; (enabled, active_channel, tx_gain_db) oder
-        None; blendet den Fake-Stoerer an der Aktuator-Position ein.
-    sdr_probe: Callable -&gt; (center_freq_hz, sample_rate_hz, rx_paused);
-        verschiebt das Fenster nach Retune und unterdrueckt Frames,
-        solange RX pausiert (Retune-Luecke bzw. Halbduplex-Sendung).
-</pre> 
+
 <p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00043">43</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
@@ -237,8 +228,8 @@ an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Frequenz je Bin (Hz): Fenster [center - rate/2, center + rate/2).</pre> 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00082">82</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<pre class="fragment">Frequenz je Bin, Fenster [center - rate/2, center + rate/2).</pre> 
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00070">70</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -275,8 +266,8 @@ an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Logische BLE-Kanalnummer -&gt; Mittenfrequenz (Hz).</pre> 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00088">88</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00076">76</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -295,8 +286,8 @@ an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">No-op: der Fake haelt keine Ressourcen (kein Shared Memory).</pre> 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00162">162</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00141">141</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -315,8 +306,8 @@ an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Anzahl Bins pro Frame.</pre> 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00073">73</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00062">62</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -335,8 +326,8 @@ an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Konstant 1 -- der Fake startet nie neu.</pre> 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00078">78</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00066">66</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -365,19 +356,12 @@ an die Fake-Telemetrie gekoppelter Stoerer; das Fenster folgt Retunes.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Erzeugt den naechsten synthetischen Frame.
+<pre class="fragment">Baut den naechsten synthetischen Frame.
 
-Folgt zuerst der SDR-Sonde (Retune uebernehmen); pausiert RX, kommt
-``None`` (kein Frame). Sonst: Rauschboden + zwei bewegte Traeger, und
-falls der Jammer an ist, ein dritter Peak an der Aktuator-Frequenz.
-
-Args:
-    max_drain: aus Protokollgruenden vorhanden; hier ohne Wirkung, weil
-        der Fake immer nur genau den aktuellen Frame erzeugt.
-Returns:
-    Ein ``SpectrumFrame`` oder ``None``, wenn RX gerade pausiert.
+max_drain gibt es nur, weil das Protokoll ihn verlangt -- der Fake
+erzeugt ohnehin immer genau den aktuellen Frame.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00094">94</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00081">81</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -396,8 +380,8 @@ Returns:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Ring-Kennzahlen -- im Fake ohne Verluste, nur ``frames_read`` zaehlt.</pre> 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00150">150</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00129">129</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -422,7 +406,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00062">62</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00051">51</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -446,7 +430,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00064">64</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00053">53</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -470,7 +454,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00070">70</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00059">59</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -494,7 +478,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00065">65</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00054">54</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -518,7 +502,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00069">69</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00058">58</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -542,7 +526,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00063">63</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00052">52</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -566,7 +550,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00066">66</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00055">55</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -590,7 +574,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00067">67</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00056">56</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>
@@ -614,7 +598,7 @@ Returns:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00068">68</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__spectrum_8py_source.html#l00057">57</a> of file <a class="el" href="fake__spectrum_8py_source.html">fake_spectrum.py</a>.</p>
 
 </div>
 </div>

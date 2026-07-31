@@ -104,6 +104,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrod_1_1control_1_1controller_1_1SdrConfig.html">SdrConfig</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrod_1_1control_1_1controller_1_1SweepUnsupportedError.html">SweepUnsupportedError</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrod_1_1control_1_1controller_1_1TxSafetyError.html">TxSafetyError</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -117,25 +119,23 @@ Variables</h2></td></tr>
 <tr class="separator:abc0c23d67c9ff755a14083664a9bb8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Controller: die Steuerlogik zwischen REST und dem Kommando-Transport.
+<div class="textblock"><pre class="fragment">Die Steuerlogik zwischen REST und Kommando-Transport.
 
-Haelt den streng monotonen ``command_seq``-Zaehler (unsere Verantwortung, der
-Core prueft die Monotonie nicht), baut die Frames ueber command.py, prueft
-``status == OK`` und meldet die Sequenz beim PendingTracker an. Das Scharf-
-schalten ist bewusst an START/STOP gekoppelt: ``arm`` -&gt; START, ``disarm`` und
-der Dead-Man -&gt; STOP.
+Haelt den streng monoton steigenden command_seq-Zaehler -- das ist unsere
+Aufgabe, der Core prueft die Monotonie nicht --, baut die Frames ueber
+command.py, besteht auf status == OK und meldet die Sequenz beim PendingTracker
+an. Das Scharfschalten haengt bewusst an START und STOP: arm schickt START,
+disarm und der Dead-Man schicken STOP.
 
-SDR-KONFIGURATION IST JETZT EIN KOMMANDO: Seit COMMAND_SCHEMA_VERSION 1 mit
-SET_SAMPLE_RATE (7) / SET_CENTER_FREQ (8) stellt der Core die HackRF-Hardware
-zur Laufzeit um; frueher kam beides nur per CLI und ``SdrConfig`` war reine
-Anzeige. Zwei Folgen daraus, die hier bewusst abgebildet sind:
-
-* Ein Retune unterbricht RX fuer einige Millisekunden -- waehrenddessen kommen
-  weder Spektral-Frames noch Telemetrie. Das ist normal, kein toter Core.
-* Ack-Ebene 3 kommt spaeter als bei allen anderen Kommandos: der Core meldet
-  ``applied_command_seq`` erst, wenn der Stream wieder laeuft. Wir uebernehmen
-  die neue Sicht deshalb erst nach ``status == OK`` und lassen den
-  PendingTracker die Ebene 3 nachziehen -- solange steht das UI auf "pending".
+Die SDR-Konfiguration ist inzwischen ein echtes Kommando. Frueher kam sie nur
+per CLI und SdrConfig war reine Anzeige, seit SET_SAMPLE_RATE und
+SET_CENTER_FREQ stellt der Core die Hardware zur Laufzeit um. Das hat zwei
+Folgen, die hier abgebildet sind: ein Retune unterbricht RX fuer einige
+Millisekunden, in denen weder Frames noch Telemetrie kommen -- normal, kein
+toter Core. Und die Ack-Ebene 3 kommt spaeter als sonst, weil der Core
+applied_command_seq erst meldet, wenn der Stream wieder laeuft. Wir uebernehmen
+die neue Sicht deshalb schon bei status == OK und lassen den PendingTracker
+nachziehen; solange steht das UI auf "pending".
 </pre> </div><h2 class="groupheader">Variable Documentation</h2>
 <a id="a687c12dd7dc8aced3238f9292134c546" name="a687c12dd7dc8aced3238f9292134c546"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a687c12dd7dc8aced3238f9292134c546">&#9670;&#160;</a></span>JAMMING_PATTERN_CARRIER</h2>
@@ -149,7 +149,7 @@ Anzeige. Zwei Folgen daraus, die hier bewusst abgebildet sind:
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00042">42</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00040">40</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -165,7 +165,7 @@ Anzeige. Zwei Folgen daraus, die hier bewusst abgebildet sind:
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00043">43</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00041">41</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -181,7 +181,7 @@ Anzeige. Zwei Folgen daraus, die hier bewusst abgebildet sind:
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00047">47</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00045">45</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>

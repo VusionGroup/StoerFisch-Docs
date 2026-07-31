@@ -43,12 +43,12 @@ var annotated_dup =
         [ "rest", "namespacerod_1_1api_1_1rest.html", [
           [ "ArmBody", "classrod_1_1api_1_1rest_1_1ArmBody.html", null ],
           [ "ControlBody", "classrod_1_1api_1_1rest_1_1ControlBody.html", null ],
+          [ "FreqSweepBody", "classrod_1_1api_1_1rest_1_1FreqSweepBody.html", null ],
           [ "JamBody", "classrod_1_1api_1_1rest_1_1JamBody.html", null ],
           [ "JammerBody", "classrod_1_1api_1_1rest_1_1JammerBody.html", null ],
           [ "OverflowBody", "classrod_1_1api_1_1rest_1_1OverflowBody.html", null ],
           [ "ReplayBody", "classrod_1_1api_1_1rest_1_1ReplayBody.html", null ],
-          [ "SdrBody", "classrod_1_1api_1_1rest_1_1SdrBody.html", null ],
-          [ "SweepBody", "classrod_1_1api_1_1rest_1_1SweepBody.html", null ]
+          [ "SdrBody", "classrod_1_1api_1_1rest_1_1SdrBody.html", null ]
         ] ]
       ] ],
       [ "config", "namespacerod_1_1config.html", [
@@ -65,6 +65,7 @@ var annotated_dup =
           [ "Controller", "classrod_1_1control_1_1controller_1_1Controller.html", "classrod_1_1control_1_1controller_1_1Controller" ],
           [ "JammerConfig", "classrod_1_1control_1_1controller_1_1JammerConfig.html", null ],
           [ "SdrConfig", "classrod_1_1control_1_1controller_1_1SdrConfig.html", null ],
+          [ "SweepUnsupportedError", "classrod_1_1control_1_1controller_1_1SweepUnsupportedError.html", null ],
           [ "TxSafetyError", "classrod_1_1control_1_1controller_1_1TxSafetyError.html", null ]
         ] ],
         [ "lease", "namespacerod_1_1control_1_1lease.html", [
@@ -106,14 +107,6 @@ var annotated_dup =
         ] ],
         [ "shm_telemetry", "namespacerod_1_1sources_1_1shm__telemetry.html", [
           [ "ShmTelemetrySource", "classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource.html", "classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource" ]
-        ] ]
-      ] ],
-      [ "testrun", "namespacerod_1_1testrun.html", [
-        [ "scenario", "namespacerod_1_1testrun_1_1scenario.html", [
-          [ "RunStatus", "classrod_1_1testrun_1_1scenario_1_1RunStatus.html", null ],
-          [ "Scenario", "classrod_1_1testrun_1_1scenario_1_1Scenario.html", "classrod_1_1testrun_1_1scenario_1_1Scenario" ],
-          [ "ScenarioRunner", "classrod_1_1testrun_1_1scenario_1_1ScenarioRunner.html", "classrod_1_1testrun_1_1scenario_1_1ScenarioRunner" ],
-          [ "Step", "classrod_1_1testrun_1_1scenario_1_1Step.html", null ]
         ] ]
       ] ]
     ] ]

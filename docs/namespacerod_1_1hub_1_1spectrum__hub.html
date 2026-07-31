@@ -101,18 +101,17 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">SpectrumHub: zentraler Drain des Spektral-Rings + Quantisierung.
+<div class="textblock"><pre class="fragment">Zentraler Drain des Spektral-Rings samt Quantisierung.
 
-Wie beim Telemetrie-Ring gilt Single-Consumer: nur EIN Task liest den Ring.
-Er bereitet bei ``fps`` den neuesten Frame als binaeres Wire-Paket vor
-(float64 center + uint8-Bins); die einzelnen Spectrum-WebSockets ziehen (PULL)
-nur noch das jeweils aktuelle Paket. So haengt die Ring-Leserate nicht an der
-Zahl der Browser.
+Wie beim Telemetrie-Ring liest nur ein Task, Single-Consumer. Er legt mit fps
+den neuesten Frame als binaeres Wire-Paket bereit (float64 center, dann die
+uint8-Bins), die einzelnen Spectrum-WebSockets holen sich davon nur noch das
+jeweils aktuelle. Damit haengt die Leserate nicht an der Zahl der Browser.
 
-``spectrum_meta`` wird aus ZWEI Quellen zusammengesetzt: fft_size, center und
-die Qualitaetszaehler kommen aus dem Ring; sample_rate kommt aus dem Kontroll-
-pfad (der Core fuehrt sie nicht im Ring). Ein Callable liefert die aktuelle
-sample_rate, damit eine Aenderung im SdrPanel sofort in die Skalierung greift.
+spectrum_meta kommt aus zwei Quellen: fft_size, center und die Qualitaets-
+zaehler stammen aus dem Ring, die sample_rate aus dem Kontrollpfad -- der Core
+fuehrt sie nicht im Ring mit. Sie kommt als Callable herein, damit eine
+Aenderung im SdrPanel sofort in der Skalierung landet.
 </pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

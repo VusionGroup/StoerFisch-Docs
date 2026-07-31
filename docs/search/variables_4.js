@@ -11,6 +11,5 @@ var searchData=
   ['dropped_5fnewest_5fcount_8',['dropped_newest_count',['../structfisch_1_1SpectralRingHeader.html#a235ff2c85a51bf5ee65afbc639aa2ef8',1,'fisch::SpectralRingHeader::dropped_newest_count'],['../classrod_1_1sources_1_1base_1_1SpectralStats.html#a45a717b69aef8abae09a48b409291225',1,'rod.sources.base.SpectralStats.dropped_newest_count']]],
   ['dropped_5foldest_5fcount_9',['dropped_oldest_count',['../structfisch_1_1SpectralRingHeader.html#a9a6ff3402cdcefc761a3d80e5b550d59',1,'fisch::SpectralRingHeader::dropped_oldest_count'],['../classrod_1_1sources_1_1base_1_1SpectralStats.html#aea449271ac3ad3df4135cc84210f7e9f',1,'rod.sources.base.SpectralStats.dropped_oldest_count']]],
   ['dropped_5fsamples_10',['dropped_samples',['../structfisch_1_1BufferHealthPayload.html#a494333440b1d90b7afdfd8a5415ea48e',1,'fisch::BufferHealthPayload']]],
-  ['duration_5fs_11',['duration_s',['../classrod_1_1testrun_1_1scenario_1_1Step.html#a2a0f1837cf0fa70bf7633d494f4ff905',1,'rod::testrun::scenario::Step']]],
-  ['dwell_5fs_12',['dwell_s',['../classrod_1_1api_1_1rest_1_1SweepBody.html#ab98b28617c13262a2a848cecb3a3ce22',1,'rod::api::rest::SweepBody']]]
+  ['dwell_5fus_11',['dwell_us',['../classrod_1_1api_1_1rest_1_1FreqSweepBody.html#a18a061b0c0de047c36fcba6eb6642d6a',1,'rod::api::rest::FreqSweepBody']]]
 ];

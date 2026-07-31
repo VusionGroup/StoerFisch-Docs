@@ -33,15 +33,13 @@ var hierarchy =
     [ "fisch::PipelineActuatorState", "structfisch_1_1PipelineActuatorState.html", null ],
     [ "fisch::RecorderStats", "structfisch_1_1RecorderStats.html", null ],
     [ "fisch::RingHeader", "structfisch_1_1RingHeader.html", null ],
-    [ "rod.testrun.scenario.RunStatus", "classrod_1_1testrun_1_1scenario_1_1RunStatus.html", null ],
     [ "RuntimeError", null, [
       [ "rod.control.command_client.CommandTransportError", "classrod_1_1control_1_1command__client_1_1CommandTransportError.html", null ],
+      [ "rod.control.controller.SweepUnsupportedError", "classrod_1_1control_1_1controller_1_1SweepUnsupportedError.html", null ],
       [ "rod.control.controller.TxSafetyError", "classrod_1_1control_1_1controller_1_1TxSafetyError.html", null ]
     ] ],
     [ "rod.control.safety.SafetySnapshot", "classrod_1_1control_1_1safety_1_1SafetySnapshot.html", null ],
     [ "rod.control.safety.SafetyState", "classrod_1_1control_1_1safety_1_1SafetyState.html", null ],
-    [ "rod.testrun.scenario.Scenario", "classrod_1_1testrun_1_1scenario_1_1Scenario.html", null ],
-    [ "rod.testrun.scenario.ScenarioRunner", "classrod_1_1testrun_1_1scenario_1_1ScenarioRunner.html", null ],
     [ "fisch::SdrDevice", "classfisch_1_1SdrDevice.html", null ],
     [ "rod.sources.shm_spectral.ShmSpectralSource", "classrod_1_1sources_1_1shm__spectral_1_1ShmSpectralSource.html", null ],
     [ "rod.sources.shm_telemetry.ShmTelemetrySource", "classrod_1_1sources_1_1shm__telemetry_1_1ShmTelemetrySource.html", null ],
@@ -56,7 +54,6 @@ var hierarchy =
     [ "fisch::SpectrumAnalyzer", "classfisch_1_1SpectrumAnalyzer.html", null ],
     [ "rod.sources.base.SpectrumFrame", "classrod_1_1sources_1_1base_1_1SpectrumFrame.html", null ],
     [ "rod.hub.spectrum_hub.SpectrumHub", "classrod_1_1hub_1_1spectrum__hub_1_1SpectrumHub.html", null ],
-    [ "rod.testrun.scenario.Step", "classrod_1_1testrun_1_1scenario_1_1Step.html", null ],
     [ "fisch::SuccessMetricPayload", "structfisch_1_1SuccessMetricPayload.html", null ],
     [ "rod.hub.telemetry_hub.TelemetryHub", "classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html", null ],
     [ "fisch::TelemetryRecord", "structfisch_1_1TelemetryRecord.html", null ],
@@ -64,12 +61,12 @@ var hierarchy =
     [ "BaseModel", null, [
       [ "rod.api.rest.ArmBody", "classrod_1_1api_1_1rest_1_1ArmBody.html", null ],
       [ "rod.api.rest.ControlBody", "classrod_1_1api_1_1rest_1_1ControlBody.html", null ],
+      [ "rod.api.rest.FreqSweepBody", "classrod_1_1api_1_1rest_1_1FreqSweepBody.html", null ],
       [ "rod.api.rest.JamBody", "classrod_1_1api_1_1rest_1_1JamBody.html", null ],
       [ "rod.api.rest.JammerBody", "classrod_1_1api_1_1rest_1_1JammerBody.html", null ],
       [ "rod.api.rest.OverflowBody", "classrod_1_1api_1_1rest_1_1OverflowBody.html", null ],
       [ "rod.api.rest.ReplayBody", "classrod_1_1api_1_1rest_1_1ReplayBody.html", null ],
       [ "rod.api.rest.SdrBody", "classrod_1_1api_1_1rest_1_1SdrBody.html", null ],
-      [ "rod.api.rest.SweepBody", "classrod_1_1api_1_1rest_1_1SweepBody.html", null ],
       [ "rod.control.controller.JammerConfig", "classrod_1_1control_1_1controller_1_1JammerConfig.html", null ],
       [ "rod.control.controller.SdrConfig", "classrod_1_1control_1_1controller_1_1SdrConfig.html", null ]
     ] ],

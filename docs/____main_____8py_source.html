@@ -101,29 +101,58 @@ $(document).ready(function(){initNavTree('____main_____8py_source.html',''); ini
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">from</span> __future__ <span class="keyword">import</span> annotations</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> uvicorn</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacerod_1_1config.html">rod.config</a> <span class="keyword">import</span> Config</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> argparse</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> dataclasses</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> uvicorn</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="" data-end="">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacerod_1_1____main____.html#a7bbec09fe3ef58e4aef65cabd9d1770f">   10</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1____main____.html#a7bbec09fe3ef58e4aef65cabd9d1770f">main</a>() -&gt; None:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="stringliteral">&quot;&quot;&quot;Liest die ``ROD_*``-Konfiguration und startet den uvicorn-Server mit der</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="stringliteral">    App-Factory ``create_app`` auf ``host:port``.&quot;&quot;&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    config = Config.from_env()</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    uvicorn.run(</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="stringliteral">&quot;rod.api.app:create_app&quot;</span>,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        factory=<span class="keyword">True</span>,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        host=config.host,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        port=config.port,</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        log_level=<span class="stringliteral">&quot;info&quot;</span>,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    )</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacerod_1_1config.html">rod.config</a> <span class="keyword">import</span> Config</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="" data-end="">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacerod_1_1____main____.html#a49acdcab0b069c37620a007cf12abc23">   13</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1____main____.html#a49acdcab0b069c37620a007cf12abc23">_parse_args</a>(argv: list[str] | <span class="keywordtype">None</span> = <span class="keywordtype">None</span>) -&gt; argparse.Namespace:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment"># Was nicht angegeben wird, bleibt beim ROD_*-Env-Wert.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    parser = argparse.ArgumentParser(</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        prog=<span class="stringliteral">&quot;rod&quot;</span>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        description=<span class="stringliteral">&quot;Startet den Rod-Webserver (REST + WebSockets + UI).&quot;</span>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    )</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    parser.add_argument(</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="stringliteral">&quot;-p&quot;</span>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="stringliteral">&quot;--port&quot;</span>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        type=int,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        default=<span class="keywordtype">None</span>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        help=<span class="stringliteral">&quot;TCP-Port (Default: ROD_PORT bzw. 8000)&quot;</span>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    )</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    parser.add_argument(</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="stringliteral">&quot;--host&quot;</span>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        default=<span class="keywordtype">None</span>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        help=<span class="stringliteral">&quot;Bind-Adresse (Default: ROD_HOST bzw. 0.0.0.0)&quot;</span>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    )</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> parser.parse_args(argv)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="namespacerod_1_1____main____.html#a7bbec09fe3ef58e4aef65cabd9d1770f">main</a>()</div>
-<div class="ttc" id="anamespacerod_1_1____main_____html_a7bbec09fe3ef58e4aef65cabd9d1770f"><div class="ttname"><a href="namespacerod_1_1____main____.html#a7bbec09fe3ef58e4aef65cabd9d1770f">rod.__main__.main</a></div><div class="ttdeci">None main()</div><div class="ttdef"><b>Definition</b> <a href="____main_____8py_source.html#l00010">__main__.py:10</a></div></div>
+<div class="foldopen" id="foldopen00034" data-start="" data-end="">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespacerod_1_1____main____.html#a96477b5afdea296038f8b4ec2cc2da2b">   34</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerod_1_1____main____.html#a96477b5afdea296038f8b4ec2cc2da2b">main</a>(argv: list[str] | <span class="keywordtype">None</span> = <span class="keywordtype">None</span>) -&gt; <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="stringliteral">&quot;&quot;&quot;Config aus der Umgebung lesen, CLI-Argumente drueberlegen, uvicorn starten.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    args = <a class="code hl_function" href="namespacerod_1_1____main____.html#a49acdcab0b069c37620a007cf12abc23">_parse_args</a>(argv)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    config = Config.from_env()</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    overrides = {k: v <span class="keywordflow">for</span> k, v <span class="keywordflow">in</span> ((<span class="stringliteral">&quot;host&quot;</span>, args.host), (<span class="stringliteral">&quot;port&quot;</span>, args.port)) <span class="keywordflow">if</span> v <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    config = dataclasses.replace(config, **overrides)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    uvicorn.run(</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="stringliteral">&quot;rod.api.app:create_app&quot;</span>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        factory=<span class="keyword">True</span>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        host=config.host,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        port=config.port,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        log_level=<span class="stringliteral">&quot;info&quot;</span>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    )</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="namespacerod_1_1____main____.html#a96477b5afdea296038f8b4ec2cc2da2b">main</a>()</div>
+<div class="ttc" id="anamespacerod_1_1____main_____html_a49acdcab0b069c37620a007cf12abc23"><div class="ttname"><a href="namespacerod_1_1____main____.html#a49acdcab0b069c37620a007cf12abc23">rod.__main__._parse_args</a></div><div class="ttdeci">argparse.Namespace _parse_args(list[str]|None argv=None)</div><div class="ttdef"><b>Definition</b> <a href="____main_____8py_source.html#l00013">__main__.py:13</a></div></div>
+<div class="ttc" id="anamespacerod_1_1____main_____html_a96477b5afdea296038f8b4ec2cc2da2b"><div class="ttname"><a href="namespacerod_1_1____main____.html#a96477b5afdea296038f8b4ec2cc2da2b">rod.__main__.main</a></div><div class="ttdeci">None main(list[str]|None argv=None)</div><div class="ttdef"><b>Definition</b> <a href="____main_____8py_source.html#l00034">__main__.py:34</a></div></div>
 <div class="ttc" id="anamespacerod_1_1config_html"><div class="ttname"><a href="namespacerod_1_1config.html">rod.config</a></div><div class="ttdef"><b>Definition</b> <a href="config_8py_source.html#l00001">config.py:1</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

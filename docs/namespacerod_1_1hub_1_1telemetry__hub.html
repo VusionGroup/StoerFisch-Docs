@@ -109,18 +109,18 @@ Variables</h2></td></tr>
 <tr class="separator:aa5c159e761b48c924c595d13447066c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">TelemetryHub: der EINE Poll-Task, der den Telemetrie-Ring liest und an alle
-WebSockets faechert.
+<div class="textblock"><pre class="fragment">Der eine Poll-Task, der den Telemetrie-Ring liest und an alle WebSockets verteilt.
 
-Warum zentral? Der Ring ist Single-Consumer (ein read_index) -- zwei parallele
-Leser wuerden sich Records klauen. Also pollt genau dieser Task, haelt je
-``kind`` den letzten Wert als Snapshot (damit ein frisch verbundener Browser
-sofort ein vollstaendiges Bild bekommt) und verteilt an pro-WebSocket-Queues.
-Laeuft eine Queue ueber (Browser zu langsam), wird ihr AELTESTER Eintrag
-verworfen -- Aktualitaet schlaegt Vollstaendigkeit im Live-Bild.
+Zentral deshalb, weil der Ring Single-Consumer ist: es gibt nur einen
+read_index, zwei parallele Leser wuerden sich gegenseitig Records wegnehmen.
+Also pollt genau dieser Task, merkt sich je kind den letzten Wert als Snapshot,
+damit ein frisch verbundener Browser sofort ein vollstaendiges Bild bekommt,
+und schiebt alles in eine Queue pro WebSocket. Laeuft eine Queue ueber, weil
+ein Browser nicht hinterherkommt, fliegt ihr aeltester Eintrag raus -- im
+Live-Bild ist Aktualitaet mehr wert als Vollstaendigkeit.
 
-Nebenbei zieht der Hub aus jedem ActuatorState (#6) die applied_command_seq in
-den PendingTracker und pollt den Dead-Man-Switch.
+Nebenbei zieht der Hub die applied_command_seq aus jedem ActuatorState in den
+PendingTracker und pollt den Dead-Man-Switch.
 </pre> </div><h2 class="groupheader">Variable Documentation</h2>
 <a id="aa5c159e761b48c924c595d13447066c4" name="aa5c159e761b48c924c595d13447066c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5c159e761b48c924c595d13447066c4">&#9670;&#160;</a></span>_QUEUE_MAXSIZE</h2>

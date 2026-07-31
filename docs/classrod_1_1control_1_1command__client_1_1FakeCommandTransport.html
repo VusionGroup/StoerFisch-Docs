@@ -130,11 +130,10 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">In-Process-Kommandopfad fuer ROD_FAKE=1.
 
-Validiert wie der Core (zustandslose Checks) und reicht angenommene
-Kommandos an die Fake-Telemetrie weiter, damit applied_command_seq
-nachzieht.
+Validiert wie der Core und reicht angenommene Kommandos an die
+Fake-Telemetrie weiter, damit applied_command_seq nachzieht.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00126">126</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00117">117</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acb9381da2109f83b39c3abf57218002d" name="acb9381da2109f83b39c3abf57218002d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb9381da2109f83b39c3abf57218002d">&#9670;&#160;</a></span>__init__()</h2>
@@ -161,8 +160,8 @@ nachzieht.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Initialisiert den Transport (verbunden wird erst in connect()).</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00134">134</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00124">124</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -200,10 +199,12 @@ nachzieht.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Zustandslose Validierung wie ``validateCommand()`` im Core: unbekannter
-Kind, Kanal-/Gain-/Policy-/Retune-/Jamming-/Replay-Grenzen. Haelt Fake und
-echten Core deckungsgleich, damit Tests gegen den Fake aussagekraeftig sind.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00175">175</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<pre class="fragment">Zustandslose Validierung, so wie validateCommand() im Core.
+
+Muss deckungsgleich bleiben, sonst sagen Tests gegen den Fake nichts
+ueber das Verhalten am echten Core aus.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00163">163</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -222,8 +223,8 @@ echten Core deckungsgleich, damit Tests gegen den Fake aussagekraeftig sind.</pr
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">True, solange die Verbindung steht.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00141">141</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00130">130</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -242,8 +243,8 @@ echten Core deckungsgleich, damit Tests gegen den Fake aussagekraeftig sind.</pr
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Beendet den Transport und gibt Ressourcen frei.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00216">216</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00217">217</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -262,8 +263,8 @@ echten Core deckungsgleich, damit Tests gegen den Fake aussagekraeftig sind.</pr
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Aktiviert den In-Process-Transport (kein echter Socket).</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00150">150</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00137">137</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -282,8 +283,8 @@ echten Core deckungsgleich, damit Tests gegen den Fake aussagekraeftig sind.</pr
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">generation des Cores; None, bis die erste Antwort kam.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00146">146</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00134">134</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -312,9 +313,8 @@ echten Core deckungsgleich, damit Tests gegen den Fake aussagekraeftig sind.</pr
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Validiert wie der Core und reicht angenommene Kommandos an die
-Fake-Telemetrie weiter (damit applied_command_seq nachzieht).</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00154">154</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00141">141</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -339,7 +339,7 @@ Fake-Telemetrie weiter (damit applied_command_seq nachzieht).</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00137">137</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00126">126</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -363,7 +363,7 @@ Fake-Telemetrie weiter (damit applied_command_seq nachzieht).</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00138">138</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00127">127</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ Fake-Telemetrie weiter (damit applied_command_seq nachzieht).</pre>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00136">136</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00125">125</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>

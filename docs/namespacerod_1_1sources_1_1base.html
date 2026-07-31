@@ -109,10 +109,10 @@ Classes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Quellen-Abstraktion.
 
-Rod kennt zwei Datenquellen -- Spektrum und Telemetrie -- und jede in zwei
-Auspraegungen: echt (Shared Memory, vom Core beschrieben) und fake (synthetisch,
-fuer Entwicklung ohne Core/HackRF). Damit Hub und API nicht wissen muessen,
-welche gerade laeuft, reden sie ausschliesslich ueber diese Protokolle.
+Es gibt zwei Datenquellen, Spektrum und Telemetrie, jede in zwei Auspraegungen:
+echt aus dem Shared Memory des Cores oder synthetisch fuer die Entwicklung ohne
+Core und HackRF. Hub und API reden nur ueber diese Protokolle und muessen
+deshalb nicht wissen, welche Variante gerade laeuft.
 </pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

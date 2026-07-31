@@ -115,16 +115,15 @@ Variables</h2></td></tr>
 <tr class="separator:a7dd0551bc8199deb9fa827fb21f6f7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Umrechnung BLE-Kanalnummer &lt;-&gt; Frequenz / Position.
+<div class="textblock"><pre class="fragment">Umrechnung zwischen BLE-Kanalnummer und Frequenz bzw. Position.
 
-Der Core liefert ueberall LOGISCHE BLE-Kanalnummern 0..39 (nicht Frequenz-
-positionen); die drei ADV-Kanaele 37/38/39 liegen verstreut (2402 / 2426 /
-2480 MHz). Dieses Modul rechnet zwischen beidem um, damit Plots die Kanaele in
-Frequenzreihenfolge zeichnen koennen -- sonst stuende "Kanal 37" faelschlich
-rechts statt physikalisch ganz links.
+Der Core liefert ueberall logische BLE-Kanalnummern 0..39, keine Frequenz-
+positionen, und die drei ADV-Kanaele 37/38/39 liegen verstreut bei 2402, 2426
+und 2480 MHz. Ohne die Umrechnung stuende Kanal 37 im Plot ganz rechts statt
+physikalisch ganz links.
 
-Kopie von ``include/util/ble_channels.hpp``
-das Frontend haelt dieselbe Tabelle in ``web/src/plots/channelBar.ts`` (FREQ_ORDER).
+Kopie von include/util/ble_channels.hpp; das Frontend haelt dieselbe Tabelle in
+web/src/plots/channelBar.ts als FREQ_ORDER.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="aee49a4b69b504ba3ef761b8f0320f1bf" name="aee49a4b69b504ba3ef761b8f0320f1bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee49a4b69b504ba3ef761b8f0320f1bf">&#9670;&#160;</a></span>ble_channel_freq_hz()</h2>
@@ -142,7 +141,7 @@ das Frontend haelt dieselbe Tabelle in ``web/src/plots/channelBar.ts`` (FREQ_ORD
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Mittenfrequenz eines logischen BLE-Kanals in Hz.</pre> 
-<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00035">35</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00034">34</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
 
 </div>
 </div>
@@ -161,8 +160,8 @@ das Frontend haelt dieselbe Tabelle in ``web/src/plots/channelBar.ts`` (FREQ_ORD
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Logische BLE-Kanalnummer -&gt; Position in Frequenzreihenfolge (0..39).</pre> 
-<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00020">20</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
+<pre class="fragment">Position des Kanals in Frequenzreihenfolge, 0..39.</pre> 
+<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00019">19</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
 
 </div>
 </div>
@@ -179,7 +178,7 @@ das Frontend haelt dieselbe Tabelle in ``web/src/plots/channelBar.ts`` (FREQ_ORD
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00015">15</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00014">14</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
 
 </div>
 </div>
@@ -195,7 +194,7 @@ das Frontend haelt dieselbe Tabelle in ``web/src/plots/channelBar.ts`` (FREQ_ORD
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00016">16</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00015">15</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
 
 </div>
 </div>
@@ -214,7 +213,7 @@ das Frontend haelt dieselbe Tabelle in ``web/src/plots/channelBar.ts`` (FREQ_ORD
 <div class="line"><span class="lineno">    2</span>    sorted(range(NUM_CHANNELS), key=ble_freq_index)</div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00041">41</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00040">40</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
 
 </div>
 </div>
@@ -230,7 +229,7 @@ das Frontend haelt dieselbe Tabelle in ``web/src/plots/channelBar.ts`` (FREQ_ORD
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00017">17</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ble_8py_source.html#l00016">16</a> of file <a class="el" href="ble_8py_source.html">ble.py</a>.</p>
 
 </div>
 </div>

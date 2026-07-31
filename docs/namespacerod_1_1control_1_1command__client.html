@@ -121,17 +121,17 @@ Variables</h2></td></tr>
 <tr class="separator:a99c727d5aff3732d23576ef8c997c7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Kanal (1): Kommandos ueber den Unix Domain Socket.
+<div class="textblock"><pre class="fragment">Kanal 1: Kommandos ueber den Unix Domain Socket.
 
-Der Core nimmt genau EINEN Client an und beantwortet Requests streng
-sequentiell (40 Byte rein, 32 Byte raus). Wir serialisieren Zugriffe deshalb
-ueber ein asyncio.Lock -- so kann eine langsame Antwort keine zweite Anfrage
-ueberholen. Bricht der Core weg, liefert das Lesen EOF; daran erkennen wir den
-Tod des Cores am zuverlaessigsten.
+Der Core nimmt genau einen Client an und beantwortet streng der Reihe nach, 40
+Byte rein, 32 Byte raus. Deshalb serialisieren wir die Zugriffe ueber ein
+asyncio.Lock, sonst koennte eine zweite Anfrage eine langsame Antwort
+ueberholen. Bricht der Core weg, liefert das Lesen EOF -- daran erkennt man
+seinen Tod am zuverlaessigsten.
 
-Zwei Implementierungen hinter demselben Protokoll: die echte Socket-Variante und
-eine In-Process-Fake-Variante, die Kommandos direkt an die Fake-Telemetrie
-weiterreicht (fuer ROD_FAKE=1).
+Hinter demselben Protokoll stecken zwei Implementierungen: die echte
+Socket-Variante und eine In-Process-Variante fuer ROD_FAKE=1, die Kommandos
+direkt an die Fake-Telemetrie weiterreicht.
 </pre> </div><h2 class="groupheader">Variable Documentation</h2>
 <a id="ab8a8a8e97d72304ca2d96a96908e7354" name="ab8a8a8e97d72304ca2d96a96908e7354"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab8a8a8e97d72304ca2d96a96908e7354">&#9670;&#160;</a></span>MAX_CENTER_FREQ_HZ</h2>
@@ -145,7 +145,7 @@ weiterreicht (fuer ROD_FAKE=1).
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00030">30</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00029">29</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -161,7 +161,7 @@ weiterreicht (fuer ROD_FAKE=1).
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00028">28</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00027">27</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -177,7 +177,7 @@ weiterreicht (fuer ROD_FAKE=1).
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00029">29</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00028">28</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -193,7 +193,7 @@ weiterreicht (fuer ROD_FAKE=1).
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00027">27</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00026">26</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ weiterreicht (fuer ROD_FAKE=1).
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00033">33</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00032">32</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>

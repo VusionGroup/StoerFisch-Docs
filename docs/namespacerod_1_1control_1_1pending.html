@@ -103,13 +103,14 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Ack-Ebene 3: angefordert vs. angewendet.
+<div class="textblock"><pre class="fragment">Ack-Ebene 3: angefordert gegen angewendet.
 
-Der Socket bestaetigt nur "gueltig befunden" (Ebene 2). Ob ein Kommando
-tatsaechlich WIRKT, steht erst im TelemetryRing: ActuatorState.applied_command_seq
-(#6) traegt die command_seq des zuletzt uebernommenen Kommandos. Dieser Tracker
-haelt beide Zahlen zusammen, damit die GUI "angefordert #N" -&gt; "aktiv #N" zeigen
-kann -- die Ist-/Wunsch-Anzeige, die bei einem Remote-Stoersender noetig ist.
+Der Socket bestaetigt nur, dass ein Kommando gueltig war -- das ist Ebene 2. Ob
+es wirklich wirkt, steht erst in der Telemetrie: ActuatorState traegt in
+applied_command_seq die Sequenz des zuletzt uebernommenen Kommandos. Dieser
+Tracker haelt beide Zahlen nebeneinander, damit die GUI "angefordert #N" und
+"aktiv #N" zeigen kann. Bei einem Stoersender am anderen Ende der Leitung will
+man diesen Unterschied sehen.
 </pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

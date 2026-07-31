@@ -121,17 +121,16 @@ Variables</h2></td></tr>
 
 Erzeugt Records aller Typen und reagiert auf Kommandos: START/STOP schalten den
 Regelkreis, SET_TX_GAIN/SET_TARGET setzen Aktuator-Felder, und jedes angewandte
-Kommando spiegelt seine ``command_seq`` in ``applied_command_seq`` zurueck --
-damit der pending-&gt;applied-Weg (Ack-Ebene 3) auch ohne Core testbar ist.
+Kommando spiegelt seine command_seq in applied_command_seq zurueck. Damit ist
+der Weg von pending nach applied (Ack-Ebene 3) auch ohne Core testbar.
 
-Der Fake bildet #7 SuccessMetric ab, obwohl der echte Core ihn derzeit nicht
-schreibt -- so laesst sich der UI-Pfad trotzdem ueben.
+SuccessMetric (#7) liefert der Fake mit, obwohl der echte Core ihn derzeit gar
+nicht schreibt -- so laesst sich der UI-Pfad trotzdem ueben.
 
-SET_SAMPLE_RATE / SET_CENTER_FREQ werden bewusst MIT ihrer unangenehmen Seite
-nachgebildet: ein Retune stellt echte Hardware um, deshalb schweigt der Fake fuer
-``_RETUNE_GAP_S`` (RX-Unterbrechung) und meldet ``applied_command_seq`` erst
-danach. Waere das hier "sofort", wuerde Rod gegen ein zu freundliches Modell
-entwickelt und die Wartelogik am echten Core zum ersten Mal getestet.
+Retunes sind absichtlich mit ihrer unangenehmen Seite nachgebaut: echte
+Hardware braucht Zeit, also schweigt der Fake fuer _RETUNE_GAP_S und meldet
+applied_command_seq erst danach. Waere das hier sofort fertig, wuerde die
+Wartelogik zum ersten Mal am echten Core getestet.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a00792b273eb91c70703af9be33e3c7bb" name="a00792b273eb91c70703af9be33e3c7bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00792b273eb91c70703af9be33e3c7bb">&#9670;&#160;</a></span>tel_cmd()</h2>
@@ -147,8 +146,8 @@ entwickelt und die Wartelogik am echten Core zum ersten Mal getestet.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Lazy-Import von CommandKind (command.py liegt in core/python).</pre> 
-<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00357">357</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00375">375</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
 
 </div>
 </div>
@@ -173,7 +172,7 @@ entwickelt und die Wartelogik am echten Core zum ersten Mal getestet.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00026">26</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00025">25</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
 
 </div>
 </div>
@@ -197,7 +196,7 @@ entwickelt und die Wartelogik am echten Core zum ersten Mal getestet.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00027">27</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00026">26</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
 
 </div>
 </div>
@@ -221,7 +220,7 @@ entwickelt und die Wartelogik am echten Core zum ersten Mal getestet.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00030">30</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fake__telemetry_8py_source.html#l00029">29</a> of file <a class="el" href="fake__telemetry_8py_source.html">fake_telemetry.py</a>.</p>
 
 </div>
 </div>

@@ -25,6 +25,5 @@ var searchData=
   ['droppedcount_22',['droppedCount',['../classfisch_1_1TelemetryRing.html#a09fb250cfbf6d2c8eb7a67b92fb9fa88',1,'fisch::TelemetryRing']]],
   ['droppednewestcount_23',['droppedNewestCount',['../classfisch_1_1SpectralRing.html#a2713d54ff4090d9d0021daa592f5b151',1,'fisch::SpectralRing']]],
   ['droppedoldestcount_24',['droppedOldestCount',['../classfisch_1_1SpectralRing.html#aee955963b8213e1ac3b1d43298395c31',1,'fisch::SpectralRing']]],
-  ['duration_5fs_25',['duration_s',['../classrod_1_1testrun_1_1scenario_1_1Step.html#a2a0f1837cf0fa70bf7633d494f4ff905',1,'rod::testrun::scenario::Step']]],
-  ['dwell_5fs_26',['dwell_s',['../classrod_1_1api_1_1rest_1_1SweepBody.html#ab98b28617c13262a2a848cecb3a3ce22',1,'rod::api::rest::SweepBody']]]
+  ['dwell_5fus_25',['dwell_us',['../classrod_1_1api_1_1rest_1_1FreqSweepBody.html#a18a061b0c0de047c36fcba6eb6642d6a',1,'rod::api::rest::FreqSweepBody']]]
 ];

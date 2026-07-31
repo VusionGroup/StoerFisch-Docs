@@ -130,10 +130,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aac45e436cce9cc61efe0180540550055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Gemeinsames Protokoll beider Transporte: Verbindung auf-/abbauen und einen
-40-Byte-Frame senden, der eine ``CommandResponse`` liefert. Erlaubt dem
-Controller, echt vs. fake nicht zu unterscheiden.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00041">41</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<div class="textblock"><pre class="fragment">Verbindung auf- und abbauen, 40-Byte-Frames senden, Antwort zurueck.
+
+Damit muss der Controller nicht wissen, ob er gerade echt oder fake redet.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00040">40</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac55d6eecc4b145ae8b8b0939e0260e6c" name="ac55d6eecc4b145ae8b8b0939e0260e6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac55d6eecc4b145ae8b8b0939e0260e6c">&#9670;&#160;</a></span>alive()</h2>
@@ -150,7 +151,7 @@ Controller, echt vs. fake nicht zu unterscheiden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">True, solange die Verbindung steht.</pre> 
+
 <p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00047">47</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
@@ -170,8 +171,8 @@ Controller, echt vs. fake nicht zu unterscheiden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Schliesst die Verbindung und gibt Ressourcen frei.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00064">64</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00058">58</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -190,8 +191,8 @@ Controller, echt vs. fake nicht zu unterscheiden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Baut die Verbindung auf (Socket oeffnen bzw. Fake aktivieren).</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00056">56</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00054">54</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -210,8 +211,8 @@ Controller, echt vs. fake nicht zu unterscheiden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">``generation`` des Cores; None, bis die erste Antwort kam.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00052">52</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<pre class="fragment">None, bis die erste Antwort da war.</pre> 
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00050">50</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -240,8 +241,8 @@ Controller, echt vs. fake nicht zu unterscheiden.</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Sendet einen 40-Byte-Frame und liefert die ``CommandResponse``.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00060">60</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00056">56</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>

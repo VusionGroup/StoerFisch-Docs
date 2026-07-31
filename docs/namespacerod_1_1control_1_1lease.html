@@ -103,24 +103,23 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Schreibrecht-Lease: genau EIN Writer, alle anderen sind Zuschauer.
+<div class="textblock"><pre class="fragment">Schreibrecht-Lease: genau einer darf steuern, alle anderen schauen zu.
 
-Wer als Erster Schreibrechte anfordert und noch keiner sie hat, wird Writer;
-weitere Anforderer landen in einer FIFO-Warteschlange. Der Writer verliert das
-Recht, wenn er es (1) abgibt (release), (2) seine Verbindung weg ist (owner_gone
-oder Heartbeat-Timeout) oder (3) auf eine Anwesenheits-Rueckfrage nicht reagiert
--- dann rueckt der naechste noch verbundene Anforderer nach. Alle Steuer-
-Endpunkte pruefen gegen den aktuellen Writer; Zuschauer koennen nur lesen.
+Wer zuerst anfragt und noch keinen Writer vorfindet, wird Writer; alle weiteren
+landen in einer FIFO-Warteschlange. Das Recht ist wieder weg, wenn der Writer es
+abgibt, seine Verbindung stirbt oder er auf die Anwesenheits-Rueckfrage nicht
+reagiert -- dann rueckt der naechste noch verbundene Anforderer nach. Die
+Steuer-Endpunkte pruefen alle gegen den aktuellen Writer, Zuschauer duerfen nur
+lesen.
 
-Zwei Timeouts, die man auseinanderhalten muss:
-
-* **Verbindungs-Timeout** (``timeout_s``): naehrt sich aus dem AUTOMATISCHEN
-  WebSocket-Heartbeat (2 Hz). Faellt der aus, ist die Verbindung tot -&gt; weg.
-* **Anwesenheits-Rueckfrage** (``presence_interval_s`` + ``challenge_grace_s``):
-  Sind ausser dem Writer noch andere verbunden und war er lange UNTAETIG (kein
-  Kommando, kein „noch da"-Klick), wird nachgefragt. Bleibt die Antwort aus,
-  wird das Recht weitergereicht. Der automatische Heartbeat zaehlt hier bewusst
-  NICHT als Anwesenheit -- sonst behielte ein AFK-Tab das Recht ewig.
+Wichtig ist, die beiden Timeouts auseinanderzuhalten. Der Verbindungs-Timeout
+(timeout_s) haengt am automatischen WebSocket-Heartbeat mit 2 Hz: bleibt der
+aus, ist die Verbindung tot. Die Anwesenheits-Rueckfrage
+(presence_interval_s plus challenge_grace_s) greift, wenn ausser dem Writer noch
+jemand verbunden ist und der Writer lange nichts getan hat -- kein Kommando,
+kein "noch da"-Klick. Bleibt die Antwort aus, wandert das Recht weiter. Der
+automatische Heartbeat zaehlt dabei bewusst nicht als Anwesenheit, sonst
+behielte ein vergessener Tab das Schreibrecht fuer immer.
 </pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

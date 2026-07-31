@@ -113,14 +113,14 @@ Collaboration diagram for rod.control.controller.TxSafetyError:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Aktives Senden wurde ohne scharfgeschalteten Owner angefordert.
+<div class="textblock"><pre class="fragment">Senden angefordert, ohne dass ein Owner scharfgeschaltet hat.
 
-Anders als frueher ist Senden echt (Jamming/Replay stellen den HackRF auf
-TX). Der Dead-Man-Switch existiert genau dafuer -- deshalb ist scharfgeschaltet
-(``arm``) Voraussetzung fuer START_JAMMING/START_REPLAY, nicht nur fuer den
-Regelkreis. Ein toter Owner entschaerft und stoppt damit auch die Sendung.
+Senden ist echt: Jamming und Replay stellen den HackRF auf TX. Genau dafuer
+gibt es den Dead-Man, deshalb ist arm auch fuer START_JAMMING und
+START_REPLAY Voraussetzung und nicht nur fuer den Regelkreis. Faellt der
+Owner weg, entschaerft das und beendet damit auch die Sendung.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00071">71</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00075">75</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>StoerFisch-Rod/src/rod/control/<a class="el" href="controller_8py_source.html">controller.py</a></li>
 </ul>

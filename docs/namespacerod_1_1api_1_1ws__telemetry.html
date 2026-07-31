@@ -107,17 +107,16 @@ Variables</h2></td></tr>
 <tr class="separator:acecb875590e05589c2e5b747cd48d54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">WebSocket /ws/telemetry: JSON-Fan-out + Heartbeat-Empfang.
+<div class="textblock"><pre class="fragment">WebSocket /ws/telemetry: JSON-Fan-out und Heartbeat-Empfang.
 
-Beim Verbinden bekommt der Client zuerst die Snapshots (letzter Wert je kind),
-danach den Live-Strom. Der Client sendet periodische Heartbeats zurueck; die
-naehren den Dead-Man-Switch, solange TX scharf ist. Faellt die Verbindung, wird
-der Owner ausgetragen und -- falls er scharfgeschaltet hatte -- sofort
-entschaerft.
+Beim Verbinden bekommt der Client zuerst die Snapshots, also den letzten Wert je
+kind, danach den Live-Strom. Zurueck kommen periodische Heartbeats, die den
+Dead-Man am Leben halten, solange TX scharf ist. Faellt die Verbindung, wird der
+Owner ausgetragen und, falls er scharfgeschaltet hatte, sofort entschaerft.
 
-Der ``owner``-Query-Parameter ist die Client-Kennung: dieselbe ID nutzt der
-Client fuer /api/tx/arm, sodass Scharfschalten und Heartbeat an dieselbe lebende
-Verbindung gebunden sind.
+Der owner-Query-Parameter ist die Client-Kennung. Dieselbe ID nutzt der Client
+fuer /api/tx/arm, so haengen Scharfschalten und Heartbeat an derselben lebenden
+Verbindung.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="aa2303b55a2a083ce8607659c36027929" name="aa2303b55a2a083ce8607659c36027929"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2303b55a2a083ce8607659c36027929">&#9670;&#160;</a></span>telemetry_ws()</h2>
@@ -134,14 +133,8 @@ Verbindung gebunden sind.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">WebSocket-Endpunkt fuer den Telemetrie-Strom.
 
-Meldet den Client beim Hub an, spielt erst die Snapshots nach, dann den
-Live-Strom (sender-Task), und naehrt aus den Heartbeats des Clients den
-Dead-Man (receiver-Task). Beim Verbindungsende: Owner austragen und -- falls
-scharfgeschaltet -- ueber ``owner_gone`` sofort entschaerfen.
-</pre> 
-<p class="definition">Definition at line <a class="el" href="ws__telemetry_8py_source.html#l00025">25</a> of file <a class="el" href="ws__telemetry_8py_source.html">ws_telemetry.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__telemetry_8py_source.html#l00024">24</a> of file <a class="el" href="ws__telemetry_8py_source.html">ws_telemetry.py</a>.</p>
 
 </div>
 </div>
@@ -166,7 +159,7 @@ scharfgeschaltet -- ueber ``owner_gone`` sofort entschaerfen.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ws__telemetry_8py_source.html#l00022">22</a> of file <a class="el" href="ws__telemetry_8py_source.html">ws_telemetry.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ws__telemetry_8py_source.html#l00021">21</a> of file <a class="el" href="ws__telemetry_8py_source.html">ws_telemetry.py</a>.</p>
 
 </div>
 </div>

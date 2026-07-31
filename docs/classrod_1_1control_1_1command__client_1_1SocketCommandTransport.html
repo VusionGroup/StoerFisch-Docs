@@ -129,7 +129,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Echte Verbindung zum Core-Socket.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00069">69</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00061">61</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac41f5a8c7efae817513483590b8d93fe" name="ac41f5a8c7efae817513483590b8d93fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac41f5a8c7efae817513483590b8d93fe">&#9670;&#160;</a></span>__init__()</h2>
@@ -156,8 +156,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Initialisiert den Transport (verbunden wird erst in connect()).</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00072">72</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00064">64</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -177,8 +177,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">True, solange die Verbindung steht.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00082">82</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00074">74</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -197,8 +197,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Beendet den Transport und gibt Ressourcen frei.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00115">115</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00107">107</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -217,8 +217,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Oeffnet die Unix-Socket-Verbindung zum Core.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00091">91</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00081">81</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -237,8 +237,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">generation des Cores; None, bis die erste Antwort kam.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00087">87</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00078">78</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -267,9 +267,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Sendet einen Frame und liest die Antwort -- unter Lock, damit sich
-Anfragen nicht ueberholen. EOF beim Lesen =&gt; Core tot =&gt; CommandTransportError.</pre> 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00096">96</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<pre class="fragment">Frame raus, Antwort rein, das Ganze unter Lock.
+
+EOF beim Lesen heisst, der Core ist weg; daraus wird ein
+CommandTransportError.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00085">85</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -294,7 +297,7 @@ Anfragen nicht ueberholen. EOF beim Lesen =&gt; Core tot =&gt; CommandTransportE
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00078">78</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00070">70</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -318,7 +321,7 @@ Anfragen nicht ueberholen. EOF beim Lesen =&gt; Core tot =&gt; CommandTransportE
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00112">112</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00104">104</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -342,7 +345,7 @@ Anfragen nicht ueberholen. EOF beim Lesen =&gt; Core tot =&gt; CommandTransportE
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00077">77</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00069">69</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -366,7 +369,7 @@ Anfragen nicht ueberholen. EOF beim Lesen =&gt; Core tot =&gt; CommandTransportE
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00074">74</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00066">66</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -390,7 +393,7 @@ Anfragen nicht ueberholen. EOF beim Lesen =&gt; Core tot =&gt; CommandTransportE
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00093">93</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00082">82</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>
@@ -414,7 +417,7 @@ Anfragen nicht ueberholen. EOF beim Lesen =&gt; Core tot =&gt; CommandTransportE
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00093">93</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="command__client_8py_source.html#l00082">82</a> of file <a class="el" href="command__client_8py_source.html">command_client.py</a>.</p>
 
 </div>
 </div>

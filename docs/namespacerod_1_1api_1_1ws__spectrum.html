@@ -107,16 +107,16 @@ Variables</h2></td></tr>
 <tr class="separator:a33d3ac5048f6f428d2bbc5c226aec531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">WebSocket /ws/spectrum: binaerer PULL der quantisierten Frames.
+<div class="textblock"><pre class="fragment">WebSocket /ws/spectrum: die quantisierten Frames, binaer.
 
-Beim Verbinden geht einmal ``spectrum_meta`` als JSON raus (fft_size,
-sample_rate, Fenster, Qualitaetszaehler). Danach schickt der Server bei jedem
-neuen Frame ein Binaerpaket: 8 Byte float64 center + N Byte uint8-Bins. Der
-Client zeichnet die Bins direkt aufs Canvas -- ausdruecklich NICHT durch den
-Preact-State, der ist fuer die langsamen Daten.
+Beim Verbinden geht einmal spectrum_meta als JSON raus, mit fft_size,
+sample_rate, Fenster und Qualitaetszaehlern. Danach kommt zu jedem neuen Frame
+ein Binaerpaket: 8 Byte float64 center, dann N Byte uint8-Bins. Die Bins
+zeichnet der Client direkt aufs Canvas und ausdruecklich nicht ueber den
+React-State, der ist fuer die langsamen Daten da.
 
-Meta wird ~1x/s nachgeschickt, damit ein geaendertes Fenster, ein gewechselter
-center-Wert und die Verlustzaehler aktuell bleiben.
+Etwa einmal pro Sekunde geht meta erneut raus, damit ein geaendertes Fenster,
+ein gewechselter center-Wert und die Verlustzaehler aktuell bleiben.
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ad7e44a53afedc2eb53263961e0349c82" name="ad7e44a53afedc2eb53263961e0349c82"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7e44a53afedc2eb53263961e0349c82">&#9670;&#160;</a></span>spectrum_ws()</h2>
@@ -133,12 +133,7 @@ center-Wert und die Verlustzaehler aktuell bleiben.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">WebSocket-Endpunkt fuer den Spektrum-Strom (PULL).
 
-Schickt einmal ``spectrum_meta`` (JSON), dann bei ``fps`` das jeweils neueste
-Wire-Paket des Hubs -- aber nur, wenn die Sequenz sich geaendert hat (kein
-doppeltes Senden). Meta geht ~1x/s erneut raus (Fenster/Center/Zaehler).
-</pre> 
 <p class="definition">Definition at line <a class="el" href="ws__spectrum_8py_source.html#l00024">24</a> of file <a class="el" href="ws__spectrum_8py_source.html">ws_spectrum.py</a>.</p>
 
 </div>
