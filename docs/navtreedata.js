@@ -25,6 +25,27 @@
 var NAVTREE =
 [
   [ "StoerFisch", "index.html", [
+    [ "StoerFisch", "md_README.html", [
+      [ "Voraussetzungen", "md_README.html#autotoc_md2", [
+        [ "Gemeinsam", "md_README.html#autotoc_md3", null ],
+        [ "Rod", "md_README.html#autotoc_md4", null ],
+        [ "Core (nur für den Echtbetrieb)", "md_README.html#autotoc_md5", null ]
+      ] ],
+      [ "Bauen", "md_README.html#autotoc_md7", [
+        [ "Core", "md_README.html#autotoc_md8", null ],
+        [ "Rod", "md_README.html#autotoc_md9", null ]
+      ] ],
+      [ "Starten", "md_README.html#autotoc_md11", [
+        [ "Core + HackRF", "md_README.html#autotoc_md12", null ],
+        [ "Aus dem Wheel (frischer Rechner)", "md_README.html#autotoc_md13", null ],
+        [ "Mehrbenutzer", "md_README.html#autotoc_md14", null ]
+      ] ],
+      [ "Konfiguration", "md_README.html#autotoc_md16", [
+        [ "Rod — <tt>ROD_*</tt>-Umgebungsvariablen (Auszug)", "md_README.html#autotoc_md17", null ],
+        [ "Core — CLI-Flags (Auszug)", "md_README.html#autotoc_md18", null ]
+      ] ],
+      [ "Fehlersuche", "md_README.html#autotoc_md20", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -63,8 +84,8 @@ var NAVTREEINDEX =
 "classrod_1_1control_1_1safety_1_1SafetyState.html#a0f5aeaeb1e3bb84b8df519d3ec044623",
 "classrod_1_1sources_1_1shm__spectral_1_1ShmSpectralSource.html#a35dd31e8f66eef2478ee3123da085a82",
 "functions_vars_i.html",
-"rest_8py.html#a12df912723ee14d66a4a405f556cf8c8",
-"structfisch_1_1SignalPipeline_1_1PendingRetune.html"
+"namespaces.html",
+"structfisch_1_1RingHeader.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

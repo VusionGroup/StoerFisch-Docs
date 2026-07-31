@@ -7,5 +7,6 @@ var searchData=
   ['note_4',['note',['../classrod_1_1testrun_1_1scenario_1_1Step.html#a4b7e55bd6b6c24369fb26a30ef2ad25b',1,'rod::testrun::scenario::Step']]],
   ['notrunning_5',['NotRunning',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ae457ff7a83d0a8681fa483f898788515',1,'fisch']]],
   ['num_5fchannels_6',['NUM_CHANNELS',['../namespacerod_1_1ble.html#a09b48e01567cb9d272a97be616b18f46',1,'rod::ble']]],
-  ['num_5fsamples_7',['num_samples',['../structfisch_1_1IqBlock.html#a159d5221e544e89e0f5051fbf24af630',1,'fisch::IqBlock']]]
+  ['num_5fsamples_7',['num_samples',['../structfisch_1_1IqBlock.html#a159d5221e544e89e0f5051fbf24af630',1,'fisch::IqBlock']]],
+  ['nur_20für_20den_20echtbetrieb_8',['Core (nur für den Echtbetrieb)',['../md_README.html#autotoc_md5',1,'']]]
 ];

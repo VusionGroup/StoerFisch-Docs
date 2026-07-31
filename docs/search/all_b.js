@@ -16,10 +16,11 @@ var searchData=
   ['kmincenterfreqhz_13',['kMinCenterFreqHz',['../namespacefisch.html#a4c94e470d3740474a81cf786c0ef42f8',1,'fisch']]],
   ['kminsampleratehz_14',['kMinSampleRateHz',['../namespacefisch.html#ab1f2de65fd3e562e142364f5e7bbaffd',1,'fisch']]],
   ['kmintxgaindb_15',['kMinTxGainDb',['../namespacefisch.html#ab00b58fc17cf3dfb141d9e1bb1e0f33f',1,'fisch']]],
-  ['kpayloadsize_16',['kPayloadSize',['../namespacefisch.html#a42d92f9a8b7a547cfda15a2292ff185c',1,'fisch']]],
-  ['kqueuecapacity_17',['kQueueCapacity',['../classfisch_1_1CommandChannel.html#a2e437f066d483eac2156279514f0f8ac',1,'fisch::CommandChannel']]],
-  ['kringmagic_18',['kRingMagic',['../namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e',1,'fisch']]],
-  ['kschemaversion_19',['kSchemaVersion',['../namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd',1,'fisch']]],
-  ['kspectralmagic_20',['kSpectralMagic',['../namespacefisch.html#afe56f759144a682466557fc57b09d363',1,'fisch']]],
-  ['kspectralschemaversion_21',['kSpectralSchemaVersion',['../namespacefisch.html#ac05357c8788dcd5ec237d456ea3b9910',1,'fisch']]]
+  ['konfiguration_16',['Konfiguration',['../md_README.html#autotoc_md16',1,'']]],
+  ['kpayloadsize_17',['kPayloadSize',['../namespacefisch.html#a42d92f9a8b7a547cfda15a2292ff185c',1,'fisch']]],
+  ['kqueuecapacity_18',['kQueueCapacity',['../classfisch_1_1CommandChannel.html#a2e437f066d483eac2156279514f0f8ac',1,'fisch::CommandChannel']]],
+  ['kringmagic_19',['kRingMagic',['../namespacefisch.html#a38d6b6e7d8239fc8e1335748b331fa2e',1,'fisch']]],
+  ['kschemaversion_20',['kSchemaVersion',['../namespacefisch.html#a2e2038405e0507ee3ad034cce78505cd',1,'fisch']]],
+  ['kspectralmagic_21',['kSpectralMagic',['../namespacefisch.html#afe56f759144a682466557fc57b09d363',1,'fisch']]],
+  ['kspectralschemaversion_22',['kSpectralSchemaVersion',['../namespacefisch.html#ac05357c8788dcd5ec237d456ea3b9910',1,'fisch']]]
 ];
