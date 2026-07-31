@@ -125,11 +125,11 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kopfdaten des Ringpuffers, liegen am Anfang des Shared-Memory- Segments. Enthält Metadaten zur Validierung sowie die Producer-/Consumer-Indizes. </p>
-<p>write_index/read_index sind std::atomic, damit Producer und Consumer ohne Lock synchronisieren können (siehe Memory-Ordering-Hinweis oben). Auf Python-Seite werden diese als schlichte, alignte uint64 gelesen &ndash; auf x86-64 ist das Lesen eines einzelnen alignten 64-Bit-Worts atomar genug für diesen Zweck; das ist eine bewusste, dokumentierte Annahme.</p>
-<p>PUBLIKATIONS-REGEL für <code>magic</code>: Der Producer schreibt <code>magic</code> als ALLERLETZTES Feld mit einem Release-Store. Damit gilt für den Consumer: "magic == kRingMagic gesehen" impliziert "alle anderen Header-Felder sind
-bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit gültigem magic, aber noch uninitialisierter capacity_slots lesen. (Bei einem frisch per ftruncate() angelegten, nullgefüllten Segment würde das zufällig noch am schema_version-Check scheitern &ndash; auf einem wiederverwendeten Segment nicht mehr. Deshalb explizit.) </p>
+<p>write_index/read_index sind std::atomic, damit Producer und Consumer ohne Lock synchronisieren können Auf Python-Seite werden diese als schlichte, alignte uint64 gelesen.</p>
+<p>Der Producer schreibt <code>magic</code> als ALLERLETZTES Feld mit einem Release-Store. Damit gilt für den Consumer: "magic == kRingMagic gesehen" impliziert "alle anderen Header-Felder sind
+bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit gültigem magic, aber noch uninitialisierter capacity_slots lesen. (Bei einem frisch per ftruncate() angelegten, nullgefüllten Segment würde das zufällig noch am schema_version-Check scheitern. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00262">262</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00232">232</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a29d857905a41fa617bc0febe183a54ad" name="a29d857905a41fa617bc0febe183a54ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29d857905a41fa617bc0febe183a54ad">&#9670;&#160;</a></span>capacity_slots</h2>
@@ -144,7 +144,7 @@ bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit 
 </div><div class="memdoc">
 <p>Anzahl Slots im Ring (Potenz von 2 empfohlen) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00265">265</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00235">235</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -162,7 +162,7 @@ bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit 
 
 <p>von #8 mitgeloggte Drop-Statistik </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00273">273</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00242">242</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -177,9 +177,9 @@ bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Kennung dieser konkreten Core-Instanz (Wall-Clock-ns beim Anlegen). Ändert sich bei jedem Core-Neustart. Dient dazu, dass ein Consumer feststellen kann, ob er noch am aktuellen Core hängt &ndash; siehe TelemetryRingReader.check_stale() in python/telemetry_layout.py. </p>
+<p>Kennung dieser konkreten Core-Instanz (Wall-Clock-ns beim Anlegen). Ändert sich bei jedem Core-Neustart. Dient dazu, dass ein Consumer feststellen kann, ob er noch am aktuellen Core hängt </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00270">270</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00239">239</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +197,7 @@ bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit 
 
 <p>kRingMagic; wird als LETZTES geschrieben (Release) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00263">263</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00233">233</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit 
 
 <p>nächster ungelesener Slot (Consumer) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00272">272</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00241">241</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -233,7 +233,7 @@ bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit 
 
 <p>muss kSchemaVersion sein </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00264">264</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00234">234</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -251,7 +251,7 @@ bereits vollständig sichtbar". Ohne diese Regel könnte Python ein Segment mit 
 
 <p>nächster freier Slot (Producer) </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00271">271</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00240">240</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>

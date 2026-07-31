@@ -125,10 +125,10 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>SPSC-Ringpuffer-Producer für Telemetrie-Records. </p>
-<p>RAII: Konstruktor erstellt und mappt das Shared-Memory-Segment, Destruktor unmappt und schließt das File-Descriptor (aber unlinkt NICHT automatisch &ndash; siehe <a class="el" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">destroy()</a>).</p>
+<p>RAII: Konstruktor erstellt und mappt das Shared-Memory-Segment, Destruktor unmappt und schließt das File-Descriptor (aber unlinkt NICHT automatisch, siehe <a class="el" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">destroy()</a>).</p>
 <p>Threading: Diese Klasse ist NICHT threadsicher für mehrere Producer. Sie ist für genau einen Schreiber (den Housekeeping-Thread aus dem Core, nicht den zeitkritischen RX-Thread direkt) ausgelegt. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00306">306</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00275">275</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac01a17736ba01305aaf652427267968f" name="ac01a17736ba01305aaf652427267968f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac01a17736ba01305aaf652427267968f">&#9670;&#160;</a></span>TelemetryRing() <span class="overload">[1/2]</span></h2>
@@ -157,7 +157,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Erstellt ein FRISCHES Shared-Memory-Segment und initialisiert den Ring-Header. Wirft std::runtime_error bei Systemfehlern. </p>
-<p>Ein evtl. vorhandenes Segment gleichen Namens (z.B. Leiche nach einem Core-Absturz) wird zuerst per shm_unlink() aus dem Namensraum entfernt und danach mit O_EXCL neu angelegt. Wichtig: Das Segment wird NICHT in-place reinitialisiert. Grund: Hängt noch ein alter Python-Prozess am Altsegment, würden wir ihm sonst die Indizes unter den Füßen zurücksetzen. Durch unlink+neu behält der Altprozess sein Mapping auf die alten Pages &ndash; verwaist und eingefroren, aber unbeschädigt. Dass er verwaist ist, erkennt er über check_stale() (Python-Seite).</p>
+<p>Ein evtl. vorhandenes Segment gleichen Namens (z.B. Leiche nach einem Core-Absturz) wird zuerst per shm_unlink() aus dem Namensraum entfernt und danach mit O_EXCL neu angelegt. Wichtig: Das Segment wird NICHT in-place reinitialisiert.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">shm_name</td><td>Name des Segments, z.B. "/vusion_telemetry". Muss mit genau einem '/' beginnen (POSIX shm_open-Konvention); auf der Python-Seite wird der Name ohne führenden '/' übergeben. </td></tr>
@@ -184,7 +184,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Schließt die Mapping/File-Descriptoren. Unlinkt das Segment NICHT &ndash; dafür explizit <a class="el" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">destroy()</a> aufrufen, um Race Conditions mit einem gerade lesenden Python-Prozess zu vermeiden. </p>
+<p>Schließt die Mapping/File-Descriptoren. Unlinkt das Segment NICHT, dafür explizit <a class="el" href="classfisch_1_1TelemetryRing.html#a3dec6cc6f8355f0618ffee425e7fe9ed">destroy()</a> aufrufen, um Race Conditions mit einem gerade lesenden Python-Prozess zu vermeiden. </p>
 
 <p class="definition">Definition at line <a class="el" href="telemetry__ring_8cpp_source.html#l00076">76</a> of file <a class="el" href="telemetry__ring_8cpp_source.html">telemetry_ring.cpp</a>.</p>
 

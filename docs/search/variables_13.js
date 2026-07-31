@@ -20,5 +20,8 @@ var searchData=
   ['step_5fdb_17',['step_db',['../classrod_1_1api_1_1rest_1_1SweepBody.html#a59c1acc94fe2113a5d9a3f3fb73d4f5a',1,'rod::api::rest::SweepBody']]],
   ['steps_18',['steps',['../classrod_1_1testrun_1_1scenario_1_1Scenario.html#a92b2af4e433368c5640bfecb2bbd97bd',1,'rod::testrun::scenario::Scenario']]],
   ['stop_5fdb_19',['stop_db',['../classrod_1_1api_1_1rest_1_1SweepBody.html#a5b75721e6c22b816b124c98b89bf30ab',1,'rod::api::rest::SweepBody']]],
-  ['subscriber_5fcount_20',['subscriber_count',['../classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a9629a023bcb6d5482c7bfad50e853066',1,'rod::hub::telemetry_hub::TelemetryHub']]]
+  ['subscriber_5fcount_20',['subscriber_count',['../classrod_1_1hub_1_1telemetry__hub_1_1TelemetryHub.html#a9629a023bcb6d5482c7bfad50e853066',1,'rod::hub::telemetry_hub::TelemetryHub']]],
+  ['sweep_5fdwell_5fus_21',['sweep_dwell_us',['../structfisch_1_1CommandRequest.html#a19791be7624fc84e8f3fd9596f5dd937',1,'fisch::CommandRequest']]],
+  ['sweep_5fend_5fhz_22',['sweep_end_hz',['../structfisch_1_1CommandRequest.html#a6c47eab6db21b5aec4151eb3d2003550',1,'fisch::CommandRequest']]],
+  ['sweep_5fstart_5fhz_23',['sweep_start_hz',['../structfisch_1_1CommandRequest.html#a9bde310fefd90376aa033ea7ed04ce4b',1,'fisch::CommandRequest']]]
 ];

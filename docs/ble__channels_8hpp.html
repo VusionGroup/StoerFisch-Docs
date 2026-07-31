@@ -120,7 +120,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="298,59,298,93,293,93,293,59"/>
 <area shape="rect" href="signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="5,181,183,221"/>
 <area shape="poly" title=" " alt="" coords="234,53,200,72,168,95,148,116,130,140,105,183,101,180,126,137,144,113,164,91,197,68,231,49"/>
-<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="294,269,462,309"/>
+<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="294,269,462,309"/>
 <area shape="poly" title=" " alt="" coords="372,49,402,67,427,92,447,124,456,154,454,186,443,222,427,249,406,271,402,267,422,246,438,220,449,185,451,155,442,126,423,95,398,71,369,53"/>
 <area shape="poly" title=" " alt="" coords="239,141,139,184,137,179,237,136"/>
 <area shape="rect" href="spectral__analzyer_8cpp.html" title=" " alt="" coords="207,181,429,221"/>
@@ -163,10 +163,8 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Zentrale Umrechnung zwischen BLE-Kanalnummer, Frequenz-Index und Frequenz. EINE Quelle der Wahrheit für alle Module. </p>
-<p>DER KERNPUNKT, DER LEICHT FALSCH GEMACHT WIRD: BLE hat 40 Kanäle, 2 MHz Abstand, von 2402 bis 2480 MHz. Die physikalische Reihenfolge (der "Frequenz-Index" k: f = 2402 + 2k MHz) ist NICHT dieselbe wie die BLE-Kanalnummer. Die drei Advertising-Kanäle 37/38/39 sitzen physikalisch VERSTREUT zwischen den Data-Kanälen:</p>
-<p>Frequenz Index k BLE-Kanal Typ 2402 MHz 0 37 Advertising 2404 MHz 1 0 Data 2406 MHz 2 1 Data ... ... ... Data 2424 MHz 11 10 Data 2426 MHz 12 38 Advertising &lt;- mitten drin! 2428 MHz 13 11 Data ... ... ... Data 2478 MHz 38 36 Data 2480 MHz 39 39 Advertising</p>
-<p>Wer einfach (f - 2402) / 2 rechnet, bekommt den FREQUENZ-INDEX und nennt ihn fälschlich BLE-Kanal. Für einen BLE-Störsender ist aber die logische Kanalnummer relevant ("Data-Kanal 5 ist belegt"), nicht die Frequenzposition.</p>
-<p>Quelle: STMicroelectronics PM0271 Rev 13, S.5; Bluetooth Core Spec (f_c = 2402 + 2k MHz, k = Frequenz-Index). Mehrfach gegengeprüft. </p>
+<p>Frequenz Index k BLE-Kanal Typ 2402 MHz 0 37 Advertising 2404 MHz 1 0 Data 2406 MHz 2 1 Data ... ... ... Data 2424 MHz 11 10 Data 2426 MHz 12 38 Advertising 2428 MHz 13 11 Data ... ... ... Data 2478 MHz 38 36 Data 2480 MHz 39 39 Advertising</p>
+<p>Quelle: STMicroelectronics PM0271 Rev 13, S.5; Bluetooth Core Spec (f_c = 2402 + 2k MHz, k = Frequenz-Index). </p>
 
 <p class="definition">Definition in file <a class="el" href="ble__channels_8hpp_source.html">ble_channels.hpp</a>.</p>
 </div></div><!-- contents -->

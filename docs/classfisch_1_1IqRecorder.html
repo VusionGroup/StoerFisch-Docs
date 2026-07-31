@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classfisch_1_1IqRecorder.html',''); in
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classfisch_1_1IqRecorder-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">fisch::IqRecorder Class Reference</div></div>
@@ -127,7 +128,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="iq__recorder_8hpp_source.html#l00043">43</a> of file <a class="el" href="iq__recorder_8hpp_source.html">iq_recorder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iq__recorder_8hpp_source.html#l00040">40</a> of file <a class="el" href="iq__recorder_8hpp_source.html">iq_recorder.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaf6dcd112923c2cba2738cf11dcf171d" name="aaf6dcd112923c2cba2738cf11dcf171d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf6dcd112923c2cba2738cf11dcf171d">&#9670;&#160;</a></span>IqRecorder() <span class="overload">[1/2]</span></h2>
@@ -156,7 +157,7 @@ Public Member Functions</h2></td></tr>
 <p>Konstruktor. Startet noch keine Aufnahme (siehe <a class="el" href="classfisch_1_1IqRecorder.html#af82af6eab90ad451929d338808abcc32" title="Startet eine Aufnahme in ein neues Datei-Paar.">start()</a>). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ring_capacity_bytes</td><td>Größe des internen Byte-Rings. Muss eine Zweierpotenz sein. </td></tr>
+    <tr><td class="paramname">ring_capacity_bytes</td><td>Größe des internen Byte-Rings. Muss eine Zweierpotenz sein. Faustregel: mehrere hundert Millisekunden bei eurer Sample-Rate, um Disk-Latenzspitzen zu überbrücken. Bei 40 MB/s (20 Msps) sind 16 MiB ~ 400 ms. Standard 16 MiB. </td></tr>
   </table>
   </dd>
 </dl>
@@ -260,7 +261,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="iq__recorder_8cpp_source.html#l00123">123</a> of file <a class="el" href="iq__recorder_8cpp_source.html">iq_recorder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iq__recorder_8cpp_source.html#l00126">126</a> of file <a class="el" href="iq__recorder_8cpp_source.html">iq_recorder.cpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +290,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Ob gerade aufgezeichnet wird. </p>
 
-<p class="definition">Definition at line <a class="el" href="iq__recorder_8hpp_source.html#l00095">95</a> of file <a class="el" href="iq__recorder_8hpp_source.html">iq_recorder.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iq__recorder_8hpp_source.html#l00096">96</a> of file <a class="el" href="iq__recorder_8hpp_source.html">iq_recorder.hpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +358,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">dir</td><td>Zielverzeichnis (CLI: &ndash;recording-dir). </td></tr>
     <tr><td class="paramname">sample_rate_hz</td><td>aktuelle Sample-Rate, kommt in die .meta. </td></tr>
-    <tr><td class="paramname">center_freq_hz</td><td>aktuelle Center-Frequenz, kommt in die .meta. </td></tr>
+    <tr><td class="paramname">center_freq_hz</td><td>aktuelle Center-Frequenz, kommt in die .meta. WICHTIG für die spätere Wiedergabe: Die Frequenzverschiebung beim Replay rechnet gegen genau diesen Wert. </td></tr>
   </table>
   </dd>
 </dl>
@@ -392,7 +393,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Aktuelle Statistik (threadsicher). </p>
 
-<p class="definition">Definition at line <a class="el" href="iq__recorder_8cpp_source.html#l00225">225</a> of file <a class="el" href="iq__recorder_8cpp_source.html">iq_recorder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iq__recorder_8cpp_source.html#l00266">266</a> of file <a class="el" href="iq__recorder_8cpp_source.html">iq_recorder.cpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +414,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Stoppt die laufende Aufnahme: Ring leeren, Datei + finale .meta schließen, Schreib-Thread beenden. Idempotent. </p>
 
-<p class="definition">Definition at line <a class="el" href="iq__recorder_8cpp_source.html#l00101">101</a> of file <a class="el" href="iq__recorder_8cpp_source.html">iq_recorder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="iq__recorder_8cpp_source.html#l00104">104</a> of file <a class="el" href="iq__recorder_8cpp_source.html">iq_recorder.cpp</a>.</p>
 
 </div>
 </div>

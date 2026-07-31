@@ -139,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <p>RAII: Konstruktor legt das Segment an und initialisiert den Header; Destruktor unmappt und schließt, unlinkt aber NICHT (dafür <a class="el" href="classfisch_1_1SpectralRing.html#a13cb98ab1eb97cd8b0e0680116bdd1db">destroy()</a>).</p>
 <p>Threading: genau EIN Schreiber. Vorgesehener Aufrufer ist der RX-/Control-Thread; <a class="el" href="classfisch_1_1SpectralRing.html#a00b93918a36119af7150ce34fa911598" title="Schreibt einen Frame. Blockiert nie.">push()</a> ist wait-free (keine Locks, keine Syscalls) und blockiert unter keiner Policy. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00146">146</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00135">135</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aec3f45953c056e9a650999315159120b" name="aec3f45953c056e9a650999315159120b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec3f45953c056e9a650999315159120b">&#9670;&#160;</a></span>SpectralRing() <span class="overload">[1/2]</span></h2>
@@ -191,7 +191,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00041">41</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00040">40</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -210,7 +210,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00116">116</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00115">115</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +257,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Unlinkt das Segment. Nur vom Owner aufrufen, und erst wenn kein Consumer mehr gemappt hat. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00235">235</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00234">234</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Anzahl unter drop-newest verworfener Frames (aktuellster Frame verloren). </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00219">219</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00218">218</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -315,7 +315,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Anzahl unter drop-oldest überschriebener Frames (ältester Frame verloren). </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00223">223</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00222">222</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -342,7 +342,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00231">231</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00230">230</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Kennung dieser Ring-Instanz (analog <a class="el" href="classfisch_1_1TelemetryRing.html#a0486a0a668e4b33d2f40ccccf3dda582">TelemetryRing::generation()</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00227">227</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00226">226</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +426,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Aktuell gesetzte Policy. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00214">214</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00213">213</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -492,7 +492,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true wenn geschrieben, false wenn verworfen oder bin_count falsch. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00136">136</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00135">135</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Setzt die Policy zur Laufzeit. Wirkt ab dem nächsten <a class="el" href="classfisch_1_1SpectralRing.html#a00b93918a36119af7150ce34fa911598" title="Schreibt einen Frame. Blockiert nie.">push()</a>. Threadsicher: einzelner atomarer Store. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00209">209</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8cpp_source.html#l00208">208</a> of file <a class="el" href="spectral__ring_8cpp_source.html">spectral_ring.cpp</a>.</p>
 
 </div>
 </div>

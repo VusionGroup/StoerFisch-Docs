@@ -62,9 +62,9 @@ var NAVTREEINDEX =
 "classfisch_1_1SpectrumAnalyzer.html#aa10d95c19863c2ebcfca7764b846d052",
 "classrod_1_1control_1_1safety_1_1SafetyState.html#a0f5aeaeb1e3bb84b8df519d3ec044623",
 "classrod_1_1sources_1_1shm__spectral_1_1ShmSpectralSource.html#a35dd31e8f66eef2478ee3123da085a82",
-"functions_vars_l.html",
-"rest_8py.html#a3cade9193a1b2d09d206192b3e4b6dfa",
-"structfisch_1_1SpectralFrame.html"
+"functions_vars_i.html",
+"rest_8py.html#a12df912723ee14d66a4a405f556cf8c8",
+"structfisch_1_1SignalPipeline_1_1PendingRetune.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

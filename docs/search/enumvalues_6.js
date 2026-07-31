@@ -7,5 +7,6 @@ var searchData=
   ['invalidgain_4',['InvalidGain',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a327c36153b3f4221843badf676c4c09d',1,'fisch']]],
   ['invalidpattern_5',['InvalidPattern',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121ad1ce9254e48e9dabe6d8c52029b52839',1,'fisch']]],
   ['invalidpolicy_6',['InvalidPolicy',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121aa021763f4cdb62145be4d266a4554c4c',1,'fisch']]],
-  ['invalidsamplerate_7',['InvalidSampleRate',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d',1,'fisch']]]
+  ['invalidsamplerate_7',['InvalidSampleRate',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d',1,'fisch']]],
+  ['invalidsweep_8',['InvalidSweep',['../namespacefisch.html#a71079e4415ffadaa8576261ece2e4121a647304f764665ab0588fdcef82e89e36',1,'fisch']]]
 ];

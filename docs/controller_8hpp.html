@@ -128,7 +128,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="251,57,209,95,206,91,247,53"/>
 <area shape="rect" href="controller_8cpp.html" title="Implementierung des Closed&#45;Loop&#45;Controllers (siehe Header für die Zustandsmaschine und die Strategie&#45;..." alt="" coords="300,93,447,133"/>
 <area shape="poly" title=" " alt="" coords="313,53,354,91,351,95,309,57"/>
-<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,181,173,221"/>
+<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="5,181,173,221"/>
 <area shape="poly" title=" " alt="" coords="157,144,113,183,109,179,153,140"/>
 <area shape="rect" href="signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="197,181,373,221"/>
 <area shape="poly" title=" " alt="" coords="220,140,265,179,262,183,217,144"/>
@@ -170,9 +170,7 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Closed-Loop-Regelkreis: entscheidet auf Basis der Kanal-Belegung, welchen Kanal der Störsender (Jammer) angreift. Entspricht [1.3.2]/[1.3.4] im PSP. </p>
-<p>Der Controller ist das Herz des "spannendsten Analysepunkts" aus dem Transkript: Er schließt die Schleife zwischen Messung (ChannelTracker) und Aktor (Jammer-Zustand). Diese Klasse liefert die REINE Entscheidungslogik &ndash; ohne Hardware, ohne Threads, ohne Shared Memory -, damit sie isoliert gegen synthetische Belegungssequenzen testbar ist (was der Transkript-Plan als "Unit-Tests vor Hardware im Loop" ausdrücklich vorsah).</p>
-<p>BEWUSST EINFACHE STRATEGIE (State Machine, nicht PID): Die konkrete Reglerstrategie ist eine fachliche Kernentscheidung der Arbeit. Diese Implementierung liefert eine nachvollziehbare, gut dokumentierte Basis-Strategie ("verfolge den energiereichsten belegten Kanal"), die als Ausgangspunkt und Vergleichsbaseline dient. Sie ist so strukturiert, dass eine anspruchsvollere Strategie (Prädiktion des Hop-Musters, PID-artige Nachführung) die decide()-Methode ersetzen kann, ohne die Schnittstelle zu ändern.</p>
-<p>ZUSTANDSMASCHINE: Idle &ndash; Regelkreis nicht aktiv (Start-Kommando fehlt/Stop empfangen). Searching&ndash; aktiv, aber (noch) kein belegter Kanal gefunden. Tracking &ndash; ein Zielkanal ist gewählt und wird verfolgt. Lost &ndash; Ziel war da, ist aber verschwunden; kurze Haltezeit, bevor zurück zu Searching (gegen Flattern bei Hop-Lücken). </p>
+<p>Idle &ndash; Regelkreis nicht aktiv (Start-Kommando fehlt/Stop empfangen). Searching&ndash; aktiv, aber (noch) kein belegter Kanal gefunden. Tracking &ndash; ein Zielkanal ist gewählt und wird verfolgt. Lost &ndash; Ziel war da, ist aber verschwunden; kurze Haltezeit, bevor zurück zu Searching (gegen Flattern bei Hop-Lücken). </p>
 
 <p class="definition">Definition in file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 </div></div><!-- contents -->

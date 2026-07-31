@@ -8,6 +8,9 @@ var structfisch_1_1CommandRequest =
     [ "pattern_id", "structfisch_1_1CommandRequest.html#a4d4321eafc361217cb9767e6db8fc0ee", null ],
     [ "sample_rate_hz", "structfisch_1_1CommandRequest.html#a0498905f17433a8962ed71b0c99ea49f", null ],
     [ "schema_version", "structfisch_1_1CommandRequest.html#aa4be48993e83da33ab026ea86b8fc19f", null ],
+    [ "sweep_dwell_us", "structfisch_1_1CommandRequest.html#a19791be7624fc84e8f3fd9596f5dd937", null ],
+    [ "sweep_end_hz", "structfisch_1_1CommandRequest.html#a6c47eab6db21b5aec4151eb3d2003550", null ],
+    [ "sweep_start_hz", "structfisch_1_1CommandRequest.html#a9bde310fefd90376aa033ea7ed04ce4b", null ],
     [ "target_channel", "structfisch_1_1CommandRequest.html#a4215a3cede736ba054aaa5b704870f2d", null ],
     [ "tx_gain_db", "structfisch_1_1CommandRequest.html#ad1fdc1d110f9b48a1780ca57c7ee610f", null ]
 ];

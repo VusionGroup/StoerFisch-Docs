@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title="Transport für den Kommandopfad Rod (Python) &#45;&gt; Core (C++), über einen Unix Domain Socket." alt="" coords="119,5,366,45"/>
 <area shape="rect" id="Node000002" href="$command__channel_8cpp.html" title="Implementierung von CommandChannel (siehe command_channel.hpp für die vollständige Dokumentation von ..." alt="" coords="5,93,251,133"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,56,155,95,152,91,205,52"/>
-<area shape="rect" id="Node000003" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="275,93,443,133"/>
+<area shape="rect" id="Node000003" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="275,93,443,133"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="281,52,335,91,331,95,278,56"/>
 </map>

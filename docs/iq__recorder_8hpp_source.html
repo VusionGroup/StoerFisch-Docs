@@ -99,93 +99,109 @@ $(document).ready(function(){initNavTree('iq__recorder_8hpp_source.html',''); in
 <div class="contents">
 <a href="iq__recorder_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefisch.html">fisch</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html">   37</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structfisch_1_1RecorderStats.html">RecorderStats</a> {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html#a6882b7d50d613229a9668c8b89483423">   38</a></span>    std::uint64_t <a class="code hl_variable" href="structfisch_1_1RecorderStats.html#a6882b7d50d613229a9668c8b89483423">bytes_written</a> = 0;   </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html#ae75036829ce7332d1c962a40f4bbede9">   39</a></span>    std::uint64_t <a class="code hl_variable" href="structfisch_1_1RecorderStats.html#ae75036829ce7332d1c962a40f4bbede9">bytes_dropped</a> = 0;   </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html#affb6fb0a5ebc61f0a00a68ea7936c1df">   40</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structfisch_1_1RecorderStats.html#affb6fb0a5ebc61f0a00a68ea7936c1df">active</a> = <span class="keyword">false</span>;               </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefisch.html">fisch</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html">   34</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structfisch_1_1RecorderStats.html">RecorderStats</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html#a6882b7d50d613229a9668c8b89483423">   35</a></span>    std::uint64_t <a class="code hl_variable" href="structfisch_1_1RecorderStats.html#a6882b7d50d613229a9668c8b89483423">bytes_written</a> = 0;   </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html#ae75036829ce7332d1c962a40f4bbede9">   36</a></span>    std::uint64_t <a class="code hl_variable" href="structfisch_1_1RecorderStats.html#ae75036829ce7332d1c962a40f4bbede9">bytes_dropped</a> = 0;   </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structfisch_1_1RecorderStats.html#affb6fb0a5ebc61f0a00a68ea7936c1df">   37</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structfisch_1_1RecorderStats.html#affb6fb0a5ebc61f0a00a68ea7936c1df">active</a> = <span class="keyword">false</span>;               </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a> {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>(std::size_t ring_capacity_bytes = (16u &lt;&lt; 20));</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="classfisch_1_1IqRecorder.html#a60eee83ecfb6a2a9dc065a7dc97ee49d">~IqRecorder</a>();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html#ae1a9fa974525c006a1ef42ee5bfff435">   56</a></span>    <a class="code hl_function" href="classfisch_1_1IqRecorder.html#ae1a9fa974525c006a1ef42ee5bfff435">IqRecorder</a>(<span class="keyword">const</span> <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1">   57</a></span>    <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>&amp; <a class="code hl_function" href="classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::string <a class="code hl_function" href="classfisch_1_1IqRecorder.html#af82af6eab90ad451929d338808abcc32">start</a>(<span class="keyword">const</span> std::string&amp; dir,</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                      std::uint32_t sample_rate_hz,</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                      std::uint64_t center_freq_hz);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#a80e94bb96ed327c079842d56d93d0d34">stop</a>();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#afb530a9c7e9e954f82f00e33d4632239">feed</a>(<span class="keyword">const</span> std::int8_t* data, std::size_t bytes) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_struct" href="structfisch_1_1RecorderStats.html">RecorderStats</a> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#aa47f1c2c090fab6920208bed391600b5">stats</a>() const noexcept;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html#af7950c1b88ec685f1cff7c140f899eb3">   95</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#af7950c1b88ec685f1cff7c140f899eb3">isRecording</a>() const noexcept {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> active_.load(std::memory_order_acquire);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>(std::size_t ring_capacity_bytes = (16u &lt;&lt; 20));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="classfisch_1_1IqRecorder.html#a60eee83ecfb6a2a9dc065a7dc97ee49d">~IqRecorder</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html#ae1a9fa974525c006a1ef42ee5bfff435">   55</a></span>    <a class="code hl_function" href="classfisch_1_1IqRecorder.html#ae1a9fa974525c006a1ef42ee5bfff435">IqRecorder</a>(<span class="keyword">const</span> <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1">   56</a></span>    <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>&amp; <a class="code hl_function" href="classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classfisch_1_1IqRecorder.html">IqRecorder</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    std::string <a class="code hl_function" href="classfisch_1_1IqRecorder.html#af82af6eab90ad451929d338808abcc32">start</a>(<span class="keyword">const</span> std::string&amp; dir,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                      std::uint32_t sample_rate_hz,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                      std::uint64_t center_freq_hz);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#a80e94bb96ed327c079842d56d93d0d34">stop</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#afb530a9c7e9e954f82f00e33d4632239">feed</a>(<span class="keyword">const</span> std::int8_t* data, std::size_t bytes) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_struct" href="structfisch_1_1RecorderStats.html">RecorderStats</a> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#aa47f1c2c090fab6920208bed391600b5">stats</a>() const noexcept;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classfisch_1_1IqRecorder.html#af7950c1b88ec685f1cff7c140f899eb3">   96</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfisch_1_1IqRecorder.html#af7950c1b88ec685f1cff7c140f899eb3">isRecording</a>() const noexcept {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> active_.load(std::memory_order_acquire);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
 </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">void</span> writerLoop();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> writeMeta();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">const</span> std::size_t capacity_;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">const</span> std::size_t mask_;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::vector&lt;std::int8_t&gt; ring_;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// SPSC-Indizes: write_ nur vom Producer (feed), read_ nur vom Consumer</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// (writerLoop). Beide sehen beide Indizes atomar.</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    std::atomic&lt;std::size_t&gt; write_{0};</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    std::atomic&lt;std::size_t&gt; read_{0};</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    std::atomic&lt;bool&gt; active_{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    std::atomic&lt;bool&gt; stop_requested_{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    std::thread writer_;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    std::FILE* file_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    std::string base_path_;      </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::uint32_t sample_rate_hz_ = 0;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    std::uint64_t center_freq_hz_ = 0;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    std::uint64_t start_unix_ns_ = 0;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    std::atomic&lt;std::uint64_t&gt; bytes_written_{0};</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    std::atomic&lt;std::uint64_t&gt; bytes_dropped_{0};</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
-</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> writerLoop();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> writeMeta();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">const</span> std::size_t capacity_;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">const</span> std::size_t mask_;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    std::vector&lt;std::int8_t&gt; ring_;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// SPSC-Indizes: write_ nur vom Producer (feed), read_ nur vom Consumer</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// (writerLoop). Beide sehen beide Indizes atomar.</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    std::atomic&lt;std::size_t&gt; write_{0};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    std::atomic&lt;std::size_t&gt; read_{0};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    std::atomic&lt;bool&gt; active_{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    std::atomic&lt;bool&gt; stop_requested_{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    std::thread writer_;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    std::FILE* file_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::string base_path_;      </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    std::uint32_t sample_rate_hz_ = 0;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    std::uint64_t center_freq_hz_ = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    std::uint64_t start_unix_ns_ = 0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    std::atomic&lt;std::uint64_t&gt; bytes_written_{0};</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    std::atomic&lt;std::uint64_t&gt; bytes_dropped_{0};</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
-<div class="ttc" id="aclassfisch_1_1IqRecorder_html"><div class="ttname"><a href="classfisch_1_1IqRecorder.html">fisch::IqRecorder</a></div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00043">iq_recorder.hpp:43</a></div></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">struct </span>DropEvent {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        std::uint64_t at_sample;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        std::uint64_t missing_samples;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    };</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">// Feste Kapazität, im Callback ohne Allokation befüllbar. 4096 Lücken sind</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment">// reichlich; mehr deutet auf ein grundlegendes Durchsatzproblem hin, das</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="comment">// die Aufnahme ohnehin unbrauchbar macht. Bei Überlauf zählt drop_events_</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="comment">// _overflow_ weiter, aber wir speichern keine Details mehr.</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> std::size_t kMaxDropEvents = 4096;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    DropEvent drop_events_[kMaxDropEvents];</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    std::atomic&lt;std::size_t&gt; drop_event_count_{0};</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    std::atomic&lt;std::uint64_t&gt; drop_events_overflow_{0};</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    std::atomic&lt;std::uint64_t&gt; accepted_bytes_{0};</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>};</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
+<div class="ttc" id="aclassfisch_1_1IqRecorder_html"><div class="ttname"><a href="classfisch_1_1IqRecorder.html">fisch::IqRecorder</a></div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00040">iq_recorder.hpp:40</a></div></div>
 <div class="ttc" id="aclassfisch_1_1IqRecorder_html_a136da175d7c147fe7a8bd27fe7f282c1"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#a136da175d7c147fe7a8bd27fe7f282c1">fisch::IqRecorder::operator=</a></div><div class="ttdeci">IqRecorder &amp; operator=(const IqRecorder &amp;)=delete</div></div>
 <div class="ttc" id="aclassfisch_1_1IqRecorder_html_a60eee83ecfb6a2a9dc065a7dc97ee49d"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#a60eee83ecfb6a2a9dc065a7dc97ee49d">fisch::IqRecorder::~IqRecorder</a></div><div class="ttdeci">~IqRecorder()</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00053">iq_recorder.cpp:53</a></div></div>
-<div class="ttc" id="aclassfisch_1_1IqRecorder_html_a80e94bb96ed327c079842d56d93d0d34"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#a80e94bb96ed327c079842d56d93d0d34">fisch::IqRecorder::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stoppt die laufende Aufnahme: Ring leeren, Datei + finale .meta schließen, Schreib-Thread beenden....</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00101">iq_recorder.cpp:101</a></div></div>
-<div class="ttc" id="aclassfisch_1_1IqRecorder_html_aa47f1c2c090fab6920208bed391600b5"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#aa47f1c2c090fab6920208bed391600b5">fisch::IqRecorder::stats</a></div><div class="ttdeci">RecorderStats stats() const noexcept</div><div class="ttdoc">Aktuelle Statistik (threadsicher).</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00225">iq_recorder.cpp:225</a></div></div>
+<div class="ttc" id="aclassfisch_1_1IqRecorder_html_a80e94bb96ed327c079842d56d93d0d34"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#a80e94bb96ed327c079842d56d93d0d34">fisch::IqRecorder::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stoppt die laufende Aufnahme: Ring leeren, Datei + finale .meta schließen, Schreib-Thread beenden....</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00104">iq_recorder.cpp:104</a></div></div>
+<div class="ttc" id="aclassfisch_1_1IqRecorder_html_aa47f1c2c090fab6920208bed391600b5"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#aa47f1c2c090fab6920208bed391600b5">fisch::IqRecorder::stats</a></div><div class="ttdeci">RecorderStats stats() const noexcept</div><div class="ttdoc">Aktuelle Statistik (threadsicher).</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00266">iq_recorder.cpp:266</a></div></div>
 <div class="ttc" id="aclassfisch_1_1IqRecorder_html_ae1a9fa974525c006a1ef42ee5bfff435"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#ae1a9fa974525c006a1ef42ee5bfff435">fisch::IqRecorder::IqRecorder</a></div><div class="ttdeci">IqRecorder(const IqRecorder &amp;)=delete</div></div>
-<div class="ttc" id="aclassfisch_1_1IqRecorder_html_af7950c1b88ec685f1cff7c140f899eb3"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#af7950c1b88ec685f1cff7c140f899eb3">fisch::IqRecorder::isRecording</a></div><div class="ttdeci">bool isRecording() const noexcept</div><div class="ttdoc">Ob gerade aufgezeichnet wird.</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00095">iq_recorder.hpp:95</a></div></div>
+<div class="ttc" id="aclassfisch_1_1IqRecorder_html_af7950c1b88ec685f1cff7c140f899eb3"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#af7950c1b88ec685f1cff7c140f899eb3">fisch::IqRecorder::isRecording</a></div><div class="ttdeci">bool isRecording() const noexcept</div><div class="ttdoc">Ob gerade aufgezeichnet wird.</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00096">iq_recorder.hpp:96</a></div></div>
 <div class="ttc" id="aclassfisch_1_1IqRecorder_html_af82af6eab90ad451929d338808abcc32"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#af82af6eab90ad451929d338808abcc32">fisch::IqRecorder::start</a></div><div class="ttdeci">std::string start(const std::string &amp;dir, std::uint32_t sample_rate_hz, std::uint64_t center_freq_hz)</div><div class="ttdoc">Startet eine Aufnahme in ein neues Datei-Paar.</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00057">iq_recorder.cpp:57</a></div></div>
-<div class="ttc" id="aclassfisch_1_1IqRecorder_html_afb530a9c7e9e954f82f00e33d4632239"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#afb530a9c7e9e954f82f00e33d4632239">fisch::IqRecorder::feed</a></div><div class="ttdeci">void feed(const std::int8_t *data, std::size_t bytes) noexcept</div><div class="ttdoc">Nimmt einen Block roher int8-IQ-Bytes entgegen. AUS DEM RX-CALLBACK aufzurufen. Wait-free: kopiert in...</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00123">iq_recorder.cpp:123</a></div></div>
-<div class="ttc" id="anamespacefisch_html"><div class="ttname"><a href="namespacefisch.html">fisch</a></div><div class="ttdef"><b>Definition</b> <a href="command_8hpp_source.html#l00030">command.hpp:30</a></div></div>
-<div class="ttc" id="astructfisch_1_1RecorderStats_html"><div class="ttname"><a href="structfisch_1_1RecorderStats.html">fisch::RecorderStats</a></div><div class="ttdoc">Aufnahme-Statistik, jederzeit threadsicher abfragbar (für Telemetrie oder eine Statuszeile).</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00037">iq_recorder.hpp:37</a></div></div>
-<div class="ttc" id="astructfisch_1_1RecorderStats_html_a6882b7d50d613229a9668c8b89483423"><div class="ttname"><a href="structfisch_1_1RecorderStats.html#a6882b7d50d613229a9668c8b89483423">fisch::RecorderStats::bytes_written</a></div><div class="ttdeci">std::uint64_t bytes_written</div><div class="ttdoc">tatsächlich auf Platte geschrieben</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00038">iq_recorder.hpp:38</a></div></div>
-<div class="ttc" id="astructfisch_1_1RecorderStats_html_ae75036829ce7332d1c962a40f4bbede9"><div class="ttname"><a href="structfisch_1_1RecorderStats.html#ae75036829ce7332d1c962a40f4bbede9">fisch::RecorderStats::bytes_dropped</a></div><div class="ttdeci">std::uint64_t bytes_dropped</div><div class="ttdoc">verworfen, weil der Ring voll war</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00039">iq_recorder.hpp:39</a></div></div>
-<div class="ttc" id="astructfisch_1_1RecorderStats_html_affb6fb0a5ebc61f0a00a68ea7936c1df"><div class="ttname"><a href="structfisch_1_1RecorderStats.html#affb6fb0a5ebc61f0a00a68ea7936c1df">fisch::RecorderStats::active</a></div><div class="ttdeci">bool active</div><div class="ttdoc">läuft gerade eine Aufnahme?</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00040">iq_recorder.hpp:40</a></div></div>
+<div class="ttc" id="aclassfisch_1_1IqRecorder_html_afb530a9c7e9e954f82f00e33d4632239"><div class="ttname"><a href="classfisch_1_1IqRecorder.html#afb530a9c7e9e954f82f00e33d4632239">fisch::IqRecorder::feed</a></div><div class="ttdeci">void feed(const std::int8_t *data, std::size_t bytes) noexcept</div><div class="ttdoc">Nimmt einen Block roher int8-IQ-Bytes entgegen. AUS DEM RX-CALLBACK aufzurufen. Wait-free: kopiert in...</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8cpp_source.html#l00126">iq_recorder.cpp:126</a></div></div>
+<div class="ttc" id="anamespacefisch_html"><div class="ttname"><a href="namespacefisch.html">fisch</a></div><div class="ttdef"><b>Definition</b> <a href="command_8hpp_source.html#l00026">command.hpp:26</a></div></div>
+<div class="ttc" id="astructfisch_1_1RecorderStats_html"><div class="ttname"><a href="structfisch_1_1RecorderStats.html">fisch::RecorderStats</a></div><div class="ttdoc">Aufnahme-Statistik, jederzeit threadsicher abfragbar (für Telemetrie oder eine Statuszeile).</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00034">iq_recorder.hpp:34</a></div></div>
+<div class="ttc" id="astructfisch_1_1RecorderStats_html_a6882b7d50d613229a9668c8b89483423"><div class="ttname"><a href="structfisch_1_1RecorderStats.html#a6882b7d50d613229a9668c8b89483423">fisch::RecorderStats::bytes_written</a></div><div class="ttdeci">std::uint64_t bytes_written</div><div class="ttdoc">tatsächlich auf Platte geschrieben</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00035">iq_recorder.hpp:35</a></div></div>
+<div class="ttc" id="astructfisch_1_1RecorderStats_html_ae75036829ce7332d1c962a40f4bbede9"><div class="ttname"><a href="structfisch_1_1RecorderStats.html#ae75036829ce7332d1c962a40f4bbede9">fisch::RecorderStats::bytes_dropped</a></div><div class="ttdeci">std::uint64_t bytes_dropped</div><div class="ttdoc">verworfen, weil der Ring voll war</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00036">iq_recorder.hpp:36</a></div></div>
+<div class="ttc" id="astructfisch_1_1RecorderStats_html_affb6fb0a5ebc61f0a00a68ea7936c1df"><div class="ttname"><a href="structfisch_1_1RecorderStats.html#affb6fb0a5ebc61f0a00a68ea7936c1df">fisch::RecorderStats::active</a></div><div class="ttdeci">bool active</div><div class="ttdoc">läuft gerade eine Aufnahme?</div><div class="ttdef"><b>Definition</b> <a href="iq__recorder_8hpp_source.html#l00037">iq_recorder.hpp:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

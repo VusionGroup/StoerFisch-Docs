@@ -123,11 +123,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a0aa6d141c0f8c9a8e453fc0d4f33cbaf" id="r_a0aa6d141c0f8c9a8e453fc0d4f33cbaf"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfisch_1_1SpectrumAnalyzer.html#a0aa6d141c0f8c9a8e453fc0d4f33cbaf">kFloorDb</a> = -140.0f</td></tr>
+<tr class="memdesc:a0aa6d141c0f8c9a8e453fc0d4f33cbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Untergrenze für "kein Signal" in dB. Bins/Kanäle ohne Energie bzw. außerhalb des Bereichs bekommen diesen Wert statt -inf.  <br /></td></tr>
 <tr class="separator:a0aa6d141c0f8c9a8e453fc0d4f33cbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00034">34</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00032">32</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a069f597084328a9327e9b6d55d055d59" name="a069f597084328a9327e9b6d55d055d59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a069f597084328a9327e9b6d55d055d59">&#9670;&#160;</a></span>SpectrumAnalyzer()</h2>
@@ -170,7 +171,7 @@ Static Public Attributes</h2></td></tr>
 <p>Konstruktor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fft_size</td><td>Anzahl FFT-Bins. MUSS Zweierpotenz sein (Radix-2). </td></tr>
+    <tr><td class="paramname">fft_size</td><td>Anzahl FFT-Bins. MUSS Zweierpotenz sein. </td></tr>
     <tr><td class="paramname">sample_rate</td><td>Samplerate in Hz, für die Frequenzzuordnung der Bins. </td></tr>
     <tr><td class="paramname">center_freq</td><td>Mitten-Frequenz in Hz, um Bins realen Frequenzen und damit BLE-Kanälen zuzuordnen. </td></tr>
     <tr><td class="paramname">window</td><td>Fensterfunktion (Standard: Hann). </td></tr>
@@ -212,7 +213,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00098">98</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00096">96</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +268,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00078">78</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00076">76</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
 
 </div>
 </div>
@@ -298,7 +299,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Verarbeitet einen IQ-Block zu Magnituden in dB. </p>
-<p>Nimmt die ersten fft_size komplexen Samples des Blocks (verwirft den Rest oder, falls zu wenige, füllt mit Nullen &ndash; siehe Rückgabe). Wendet das Fenster an, rechnet die FFT, bildet 20*log10(|X|) je Bin und legt das Ergebnis fftshift-geordnet (negative Frequenzen links, DC in der Mitte) in <code>out_magnitudes_db</code> ab.</p>
+<p>Nimmt die ersten fft_size komplexen Samples des Blocks (verwirft den Rest oder, falls zu wenige, füllt mit Nullen). Wendet das Fenster an, rechnet die FFT, bildet 20*log10(|X|) je Bin und legt das Ergebnis fftshift-geordnet (negative Frequenzen links, DC in der Mitte) in <code>out_magnitudes_db</code> ab.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">block</td><td>IQ-Eingang (interleaved float I/Q). </td></tr>
@@ -347,10 +348,10 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Ändert Mitten-Frequenz und/oder Samplerate zur Laufzeit. </p>
-<p>Sicher zur Laufzeit aufrufbar, WEIL diese beiden Werte nur in die Frequenzzuordnung (<a class="el" href="classfisch_1_1SpectrumAnalyzer.html#a27ed7a2d474a0d2d1dc1ee0a89340dc6" title="Verarbeitet einen IQ-Block zu Magnituden in dB.">process()</a>/channelEnergies()) eingehen, nicht in die vorberechneten FFT-Strukturen (Fenster, Bit-Reversal) &ndash; die hängen ausschließlich an fft_size, das sich nicht ändert. Es wird also nichts neu allokiert.</p>
+<p>Sicher zur Laufzeit aufrufbar, WEIL diese beiden Werte nur in die Frequenzzuordnung (<a class="el" href="classfisch_1_1SpectrumAnalyzer.html#a27ed7a2d474a0d2d1dc1ee0a89340dc6" title="Verarbeitet einen IQ-Block zu Magnituden in dB.">process()</a>/channelEnergies()) eingehen, nicht in die vorberechneten FFT-Strukturen (Fenster, Bit-Reversal), die hängen ausschließlich an fft_size, das sich nicht ändert. Es wird also nichts neu allokiert.</p>
 <p>ACHTUNG THREADING: NICHT threadsicher gegenüber <a class="el" href="classfisch_1_1SpectrumAnalyzer.html#a27ed7a2d474a0d2d1dc1ee0a89340dc6" title="Verarbeitet einen IQ-Block zu Magnituden in dB.">process()</a>. Der Aufrufer muss sicherstellen, dass <a class="el" href="classfisch_1_1SpectrumAnalyzer.html#a27ed7a2d474a0d2d1dc1ee0a89340dc6" title="Verarbeitet einen IQ-Block zu Magnituden in dB.">process()</a> gerade nicht läuft (im HackRF-Binary: RX ist während des Retunes gestoppt). </p>
 
-<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00093">93</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00091">91</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,7 +378,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00099">99</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00097">97</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
 
 </div>
 </div>
@@ -401,9 +402,10 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Untergrenze für "kein Signal" in dB. Bins/Kanäle ohne Energie bzw. außerhalb des Bereichs bekommen diesen Wert statt -inf. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00103">103</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectrum__analyzer_8hpp_source.html#l00101">101</a> of file <a class="el" href="spectrum__analyzer_8hpp_source.html">spectrum_analyzer.hpp</a>.</p>
 
 </div>
 </div>

@@ -134,7 +134,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" title="SPSC&#45;Ringpuffer im Shared Memory für den hochratigen Spektral&#45;/ FFT&#45;Strom (#1 der Korrelationsanalyse..." alt="" coords="119,5,313,45"/>
 <area shape="rect" href="signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="127,93,305,133"/>
 <area shape="poly" title=" " alt="" coords="219,59,219,93,213,93,213,59"/>
-<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,181,173,221"/>
+<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="5,181,173,221"/>
 <area shape="poly" title=" " alt="" coords="163,55,138,72,117,95,106,116,98,139,92,181,87,181,93,138,101,114,112,92,134,68,160,50"/>
 <area shape="rect" href="spectral__ring_8cpp.html" title="Implementierung von SpectralRing/SpectralRingReader. Siehe spectral_ring.hpp für Design&#45;Begründungen ..." alt="" coords="329,93,522,133"/>
 <area shape="poly" title=" " alt="" coords="276,48,381,91,378,96,274,53"/>
@@ -179,7 +179,7 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>SPSC-Ringpuffer im Shared Memory für den hochratigen Spektral-/ FFT-Strom (#1 der Korrelationsanalyse). </p>
-<p>Zweiter, vom TelemetryRing getrennter Ring. Grund für die Trennung: Der Massenstrom (#1) darf den Event-Strom (#2-#8) nicht verdrängen. Ein 1024-Punkt-Spektrum sind 4 KB pro Record, der feste 64-Byte-Payload des TelemetryRecord reicht dafür um Größenordnungen nicht.</p>
+<p>Zweiter, vom TelemetryRing getrennter Ring.</p>
 <p>UNTERSCHIEDE ZUM TelemetryRing</p>
 <ol type="1">
 <li>VARIABLE SLOT-GRÖSSE. Die Slot-Größe hängt von <code>fft_size</code> ab, die erst zur Laufzeit feststeht. Deshalb kein typisiertes Array, sondern Byte-Offset-Arithmetik: slot_i = base + sizeof(Header) + i*record_stride. <code>fft_size</code> und <code>record_stride</code> stehen im Header, Python baut sein numpy-dtype daraus zur Laufzeit (siehe python/spectral_layout.py).</li>

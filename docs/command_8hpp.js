@@ -16,7 +16,9 @@ var command_8hpp =
       [ "StopRecording", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa0711c4b9ecefa0a637e6a7b6c3759859", null ],
       [ "StartJamming", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa7f4abc3dfd2f163681df3f0327aacae3", null ],
       [ "StartReplay", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa3149f9c06c3db5bb6888534232fd20b5", null ],
-      [ "StopTransmit", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0", null ]
+      [ "StopTransmit", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0", null ],
+      [ "StartSweep", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caa43201ff88586a92a7ca9ea39352a7194", null ],
+      [ "StopSweep", "command_8hpp.html#a01b3e4f4a6281957d632878a2aefc9caab0552096e015a880cd7a13fabacbbac8", null ]
     ] ],
     [ "CommandStatus", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121", [
       [ "Ok", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121aa60852f204ed8028c1c58808b746d115", null ],
@@ -27,6 +29,7 @@ var command_8hpp =
       [ "InvalidPolicy", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121aa021763f4cdb62145be4d266a4554c4c", null ],
       [ "InvalidSampleRate", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a6f14c8f0fe6351c721943e4365a4fb7d", null ],
       [ "InvalidFrequency", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121ac3b03efc3eaa590f88945364781491a5", null ],
+      [ "InvalidSweep", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121a647304f764665ab0588fdcef82e89e36", null ],
       [ "InvalidPattern", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121ad1ce9254e48e9dabe6d8c52029b52839", null ],
       [ "NotRunning", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121ae457ff7a83d0a8681fa483f898788515", null ],
       [ "AlreadyRunning", "command_8hpp.html#a71079e4415ffadaa8576261ece2e4121adcf8635f774078c5b7d83e7627eff502", null ],

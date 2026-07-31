@@ -1,5 +1,5 @@
 <map id="StoerFisch&#45;Core/include/util/tx_source.hpp" name="StoerFisch&#45;Core/include/util/tx_source.hpp">
 <area shape="rect" id="Node000001" title="Quellen für den Sendebetrieb: Jammer (aktives Blockieren eines Kanals) und IqFilePlayer (Waveform&#45;Rep..." alt="" coords="5,5,180,45"/>
-<area shape="rect" id="Node000002" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="9,93,177,133"/>
+<area shape="rect" id="Node000002" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="9,93,177,133"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,59,95,93,90,93,90,59"/>
 </map>

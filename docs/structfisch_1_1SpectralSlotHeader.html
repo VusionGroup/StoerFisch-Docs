@@ -116,9 +116,8 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kopfdaten eines einzelnen Slots. Direkt dahinter folgen <code>fft_size</code> floats mit den Bin-Magnituden. </p>
-<p>Metadaten bewusst minimal gehalten: nur, was die Auswertung zwingend braucht, um einen Frame zeitlich und spektral einzuordnen. Ein zusätzliches Feld hier ist eine inkompatible Layout-Änderung und erfordert einen Bump von kSpectralSchemaVersion. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00107">107</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00096">96</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="adf2f34c708bf7b31f97a9f6f0b3255c0" name="adf2f34c708bf7b31f97a9f6f0b3255c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf2f34c708bf7b31f97a9f6f0b3255c0">&#9670;&#160;</a></span>center_freq_hz</h2>
@@ -134,7 +133,7 @@ Public Attributes</h2></td></tr>
 
 <p>Mittenfrequenz des RX-Sweeps für diesen Frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00119">119</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00108">108</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -151,7 +150,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Seqlock-Zähler. GERADE = Slot konsistent lesbar, UNGERADE = Producer schreibt gerade. Der Wert steigt mit jeder Überschreibung um 2, sodass der Consumer auch "vollständig überschrieben, während ich las" erkennt. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00111">111</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00100">100</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -168,7 +167,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Fortlaufende Frame-Nummer (entspricht dem write_index beim Schreiben). Lücken darin sind für den Consumer der direkte Nachweis verlorener Frames &ndash; unabhängig von den Drop-Zählern im Header. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00116">116</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00105">105</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -186,7 +185,7 @@ Public Attributes</h2></td></tr>
 
 <p>CLOCK_MONOTONIC beim Erzeugen des Frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00118">118</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spectral__ring_8hpp_source.html#l00107">107</a> of file <a class="el" href="spectral__ring_8hpp_source.html">spectral_ring.hpp</a>.</p>
 
 </div>
 </div>

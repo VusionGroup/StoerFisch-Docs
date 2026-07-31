@@ -119,10 +119,10 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Spielt eine .cs8-Aufnahme als Sendesignal ab (Waveform-Replay). </p>
-<p>Die Datei wird beim Öffnen komplett in den Speicher geladen (eine kurze BLE-Aufnahme ist klein; für lange Aufnahmen wäre ein streamender Reader nötig &ndash; bewusst später). <a class="el" href="classfisch_1_1IqFilePlayer.html#add7c190ce3ea461b9a6f266ee27b763a">fill()</a> kopiert dann fortlaufend aus dem Speicher in den TX-Puffer.</p>
-<p>LOOP: optional. Ohne Loop liefert <a class="el" href="classfisch_1_1IqFilePlayer.html#add7c190ce3ea461b9a6f266ee27b763a">fill()</a> nach dem Dateiende 0 Bytes -&gt; der TX-Stream endet. Mit Loop beginnt es von vorn (klassisches Replay-Jamming). </p>
+<p>Die Datei wird beim Öffnen komplett in den Speicher geladen</p>
+<p>LOOP: optional. Ohne Loop liefert <a class="el" href="classfisch_1_1IqFilePlayer.html#add7c190ce3ea461b9a6f266ee27b763a">fill()</a> nach dem Dateiende 0 Bytes -&gt; der TX-Stream endet. Mit Loop beginnt es von vorn </p>
 
-<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00115">115</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00109">109</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a27172412c25e66f15c4fa692d3a2a1cc" name="a27172412c25e66f15c4fa692d3a2a1cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27172412c25e66f15c4fa692d3a2a1cc">&#9670;&#160;</a></span>IqFilePlayer()</h2>
@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Anzahl geladener Bytes (2 pro komplexem Sample). </p>
 
-<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00172">172</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00166">166</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Füllt den Puffer aus den Dateidaten. TxCallback-kompatibel. </p><dl class="section return"><dt>Returns</dt><dd>Anzahl gefüllter Bytes; 0 signalisiert Ende (nur ohne Loop). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00145">145</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00139">139</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Ob die (nicht geloopte) Wiedergabe das Dateiende erreicht hat. </p>
 
-<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00169">169</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00163">163</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
 
 </div>
 </div>
@@ -290,7 +290,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true bei Erfolg, false wenn die Datei nicht lesbar/leer ist. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00124">124</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tx__source_8hpp_source.html#l00118">118</a> of file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>
 
 </div>
 </div>

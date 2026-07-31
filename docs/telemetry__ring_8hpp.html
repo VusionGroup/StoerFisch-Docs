@@ -134,7 +134,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" title="SPSC&#45;Ringpuffer (Single&#45;Producer/Single&#45;Consumer) im POSIX Shared Memory, für den Telemetrie&#45;/Event&#45;D..." alt="" coords="107,5,325,45"/>
 <area shape="rect" href="signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="127,101,305,141"/>
 <area shape="poly" title=" " alt="" coords="219,59,219,101,213,101,213,59"/>
-<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,196,173,236"/>
+<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="5,196,173,236"/>
 <area shape="poly" title=" " alt="" coords="162,54,137,72,117,95,104,120,97,147,92,196,86,195,91,146,99,118,112,92,134,68,159,50"/>
 <area shape="rect" href="telemetry__ring_8cpp.html" title="Implementierung des TelemetryRing&#45;Producers (siehe telemetry_ring.hpp für die vollständige Dokumentat..." alt="" coords="329,93,487,148"/>
 <area shape="poly" title=" " alt="" coords="268,49,355,91,353,96,266,54"/>
@@ -210,15 +210,10 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>SPSC-Ringpuffer (Single-Producer/Single-Consumer) im POSIX Shared Memory, für den Telemetrie-/Event-Datenstrom C++ -&gt; Python. </p>
-<p>Entspricht dem "data" / "raw bytes"-Pfad im Architekturdiagramm (Core (C++) -&gt; shared memory -&gt; Rod (Python)). Dieser Ring ist für die niedrigratigen Telemetrie-Records (#2-#8 der Korrelationsanalyse: Kanal-Belegung, Detektions-Events, Latenz-Zeitstempel, Regler-Zustand, Aktor-Zustand, Erfolgs-Metrik, Buffer-Health) gedacht.</p>
-<p>WICHTIG: Der hochratige FFT-/Spektral-Strom (#1) gehört NICHT in diesen Ring, sondern in einen zweiten, separaten Ringpuffer mit eigenem Layout (größere Slots, ggf. andere Overflow-Policy). Sonst verdrängt der Massenstrom die Events. Siehe Notiz "Zwei Ringpuffer" aus der Korrelationsanalyse.</p>
-<p>Ownership-Regel (wichtig wegen Python resource_tracker):</p><ul>
-<li>Nur der Producer (C++, dieser Header) ruft create() auf und ist Eigentümer des Segments -&gt; nur er darf destroy()/unlink() aufrufen.</li>
-<li>Python öffnet das Segment ausschließlich mit multiprocessing.shared_memory.SharedMemory(name=..., create=False) und ruft NIEMALS unlink() auf. Siehe python/telemetry_layout.py.</li>
-</ul>
+<p>WICHTIG: Der hochratige FFT-/Spektral-Strom (#1) gehört NICHT in diesen Ring, sondern in einen zweiten, separaten Ringpuffer mit eigenem Layout (größere Slots, ggf. andere Overflow-Policy). Sonst verdrängt der Massenstrom die Events.</p>
 <p>Speicher-Ordering:</p><ul>
 <li>Producer: Slot vollständig schreiben, DANACH write_index mit memory_order_release vorrücken.</li>
-<li>Consumer: write_index mit memory_order_acquire lesen, DANACH Slot lesen. read_index wird mit memory_order_release vorgerückt. Damit ist garantiert, dass der Consumer nie einen halb geschriebenen Slot sieht (kein "torn read"). </li>
+<li>Consumer: write_index mit memory_order_acquire lesen, DANACH Slot lesen. read_index wird mit memory_order_release vorgerückt. </li>
 </ul>
 
 <p class="definition">Definition in file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>

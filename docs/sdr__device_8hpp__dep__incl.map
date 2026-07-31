@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="365,57,330,95,326,91,361,54"/>
 <area shape="rect" id="Node000003" href="$signal__pipeline_8hpp.html" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="5,181,183,221"/>
 <area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="281,52,231,70,183,96,159,115,138,139,107,183,103,179,134,135,156,112,181,91,229,65,279,47"/>
-<area shape="rect" id="Node000004" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="294,269,462,309"/>
+<area shape="rect" id="Node000004" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="294,269,462,309"/>
 <area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="420,54,433,72,443,92,454,128,458,158,455,187,443,222,427,249,406,271,402,267,422,246,438,220,450,186,453,158,449,129,438,94,429,75,416,57"/>
 <area shape="rect" id="Node000007" href="$sdr__device_8cpp.html" title="Implementierung des HackRF&#45;Wrappers (siehe sdr_device.hpp für die Design&#45;Begründungen und die Callbac..." alt="" coords="504,93,692,133"/>
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="448,48,553,91,551,96,446,53"/>

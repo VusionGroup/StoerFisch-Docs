@@ -133,7 +133,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="tx__source_8hpp__dep__incl.png" border="0" usemap="#aStoerFisch-Core_2include_2util_2tx__source_8hppdep" alt=""/></div>
 <map name="aStoerFisch-Core_2include_2util_2tx__source_8hppdep" id="aStoerFisch-Core_2include_2util_2tx__source_8hppdep">
 <area shape="rect" title="Quellen für den Sendebetrieb: Jammer (aktives Blockieren eines Kanals) und IqFilePlayer (Waveform&#45;Rep..." alt="" coords="5,5,180,45"/>
-<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="9,93,177,133"/>
+<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="9,93,177,133"/>
 <area shape="poly" title=" " alt="" coords="95,59,95,93,90,93,90,59"/>
 </map>
 </div>
@@ -156,8 +156,7 @@ Namespaces</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Quellen für den Sendebetrieb: Jammer (aktives Blockieren eines Kanals) und IqFilePlayer (Waveform-Replay einer .cs8-Aufnahme). </p>
-<p>Beide liefern über fill() interleaved int8-I/Q-Bytes, passend zum TxCallback des SdrDevice. fill() läuft im libusb-TX-Kontext &ndash; also wait-free, keine Allokation, kein blockierendes I/O im heißen Pfad.</p>
-<p>BETRIEBSMODELL (ein HackRF, halbduplex): Senden und Empfangen schließen sich aus. Der main_loop stoppt RX, bevor er eine dieser Quellen über startTx() aktiviert. Es gibt daher hier KEIN Selbst-Verfolgungs-Problem &ndash; der RX ist während des Sendens ohnehin aus.</p>
+<p>Beide liefern über fill() interleaved int8-I/Q-Bytes, passend zum TxCallback des SdrDevice. fill() läuft im libusb-TX-Kontext &ndash; also wait-free, keine Allokation, kein blockierendes I/O im heißen Pfad. Senden und Empfangen schließen sich aus. Der main_loop stoppt RX, bevor er eine dieser Quellen über startTx() aktiviert. Es gibt daher hier KEIN Selbst-Verfolgungs-Problem, der RX ist während des Sendens ohnehin aus.</p>
 <p>FREQUENZ: Die Quellen erzeugen ein BASISBAND-Signal (um DC). Auf welchem BLE-Kanal es tatsächlich landet, bestimmt die TX-Center-Frequenz des HackRF (hackrf_set_freq), die der main_loop vor startTx() auf den Zielkanal setzt. Für den Jammer heißt das: Kanal wählen = TX-Frequenz auf bleChannelCenterHz() setzen. Für den Player: Aufnahme lag im Basisband, Wiedergabe-Center-Frequenz = gewünschter Zielkanal -&gt; die Verschiebung passiert rein über die HW. </p>
 
 <p class="definition">Definition in file <a class="el" href="tx__source_8hpp_source.html">tx_source.hpp</a>.</p>

@@ -119,10 +119,8 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Payload für #6 (ActuatorState): Zustand des Jammers zum Zeitpunkt der Änderung &ndash; Basis für die Tracking-Genauigkeit (Korrelation c) und die Leistungs-/Wirkungs-Kurve (Korrelation d). </p>
-<p><code>applied_command_seq</code> ist zugleich die Rückmeldung "Kommando wirkt jetzt" an Rod (Ack-Ebene 3, siehe <a class="el" href="command_8hpp.html" title="Wire-Schema des Kommandopfads Rod (Python) -&gt; Core (C++).">command.hpp</a>): Der RX-Thread trägt hier die command_seq des zuletzt tatsächlich übernommenen Kommandos ein. Damit braucht der Kommandopfad KEINE synchrone Bestätigung vom RX-Thread &ndash; die Wirkung wird ohnehin über die Telemetrie sichtbar, ohne Cross-Thread-Synchronisation und ohne Risiko fürs Latenzbudget.</p>
-<p><code>reserved</code> ist explizites Padding: ohne die 3 Byte würde der Compiler das Struct implizit auffüllen &ndash; das numpy-dtype müsste das exakt nachbilden. Explizit ist robuster als sich auf gleiches Compiler-Verhalten auf beiden Seiten zu verlassen. </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00198">198</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00172">172</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ac6b1a826b16e3a84c7e55c4334ead75e" name="ac6b1a826b16e3a84c7e55c4334ead75e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6b1a826b16e3a84c7e55c4334ead75e">&#9670;&#160;</a></span>active_channel</h2>
@@ -136,7 +134,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00199">199</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00173">173</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -154,7 +152,7 @@ Public Attributes</h2></td></tr>
 
 <p>command_seq des zuletzt übernommenen Kommandos </p>
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00202">202</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00176">176</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -170,7 +168,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00203">203</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00177">177</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -186,7 +184,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00201">201</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00175">175</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +200,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00204">204</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00178">178</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>
@@ -218,7 +216,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00200">200</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="telemetry__ring_8hpp_source.html#l00174">174</a> of file <a class="el" href="telemetry__ring_8hpp_source.html">telemetry_ring.hpp</a>.</p>
 
 </div>
 </div>

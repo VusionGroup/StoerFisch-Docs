@@ -1,5 +1,5 @@
 <map id="StoerFisch&#45;Core/src/main_loop_hackrf.cpp" name="StoerFisch&#45;Core/src/main_loop_hackrf.cpp">
-<area shape="rect" id="Node000001" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="2013,5,2181,45"/>
+<area shape="rect" id="Node000001" title="Core&#45;Binary." alt="" coords="2013,5,2181,45"/>
 <area shape="rect" id="Node000002" href="$ble__channels_8hpp.html" title="Zentrale Umrechnung zwischen BLE&#45;Kanalnummer, Frequenz&#45;Index und Frequenz. EINE Quelle der Wahrheit f..." alt="" coords="700,255,860,280"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2013,31,1861,35,1661,46,1435,66,1209,96,1066,121,1005,139,931,169,861,208,806,248,803,244,858,204,928,164,1004,134,1065,116,1208,91,1435,60,1661,41,1861,30,2013,25"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="940,401,1007,427"/>

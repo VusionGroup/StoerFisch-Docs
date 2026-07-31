@@ -182,7 +182,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="signal__pipeline_8hpp__dep__incl.png" border="0" usemap="#aStoerFisch-Core_2include_2util_2signal__pipeline_8hppdep" alt=""/></div>
 <map name="aStoerFisch-Core_2include_2util_2signal__pipeline_8hppdep" id="aStoerFisch-Core_2include_2util_2signal__pipeline_8hppdep">
 <area shape="rect" title="Verbindet SpectrumAnalyzer &#45;&gt; ChannelTracker &#45;&gt; Controller zu einer Einheit und schreibt die Ergebnis..." alt="" coords="98,5,275,45"/>
-<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,93,173,133"/>
+<area shape="rect" href="main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="5,93,173,133"/>
 <area shape="poly" title=" " alt="" coords="157,56,113,95,109,91,153,52"/>
 <area shape="rect" href="signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="197,93,373,133"/>
 <area shape="poly" title=" " alt="" coords="220,52,265,91,262,95,217,56"/>
@@ -209,8 +209,6 @@ Namespaces</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Verbindet SpectrumAnalyzer -&gt; ChannelTracker -&gt; Controller zu einer Einheit und schreibt die Ergebnisse in SpectralRing + TelemetryRing. </p>
-<p>Diese Klasse ist die eigentliche Verdrahtung der Signalkette, herausgezogen aus dem RX-Callback, damit sie OHNE Hardware und ohne Threads testbar ist: man ruft processIqBlock() mit synthetischen oder aufgezeichneten IQ-Daten auf und prüft, was in die Ringe geschrieben wurde.</p>
-<p>Der HackRF-RX-Callback (in <a class="el" href="main__loop__hackrf_8cpp.html" title="Core-Binary mit ECHTER HackRF-Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt...">main_loop_hackrf.cpp</a>) tut dann nur noch: IqBlock entgegennehmen und an processIqBlock() weiterreichen. Alle Callback- Einschränkungen (nicht blockieren, keine libhackrf-Aufrufe) sind erfüllt, weil processIqBlock() nur rechnet und wait-free in die Ringe pusht.</p>
 <p>THREADING: für den Aufruf aus GENAU EINEM Thread (dem RX/Control-Thread) gedacht. Kommandos werden über applyCommand() eingespeist, das vom selben Thread VOR processIqBlock() aufgerufen wird &ndash; so bleibt der gesamte Regelzustand single-threaded und braucht keine Locks. </p>
 
 <p class="definition">Definition in file <a class="el" href="signal__pipeline_8hpp_source.html">signal_pipeline.hpp</a>.</p>

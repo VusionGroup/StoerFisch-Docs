@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,57,209,95,206,91,247,53"/>
 <area shape="rect" id="Node000005" href="$controller_8cpp.html" title="Implementierung des Closed&#45;Loop&#45;Controllers (siehe Header für die Zustandsmaschine und die Strategie&#45;..." alt="" coords="300,93,447,133"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="313,53,354,91,351,95,309,57"/>
-<area shape="rect" id="Node000003" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary mit ECHTER HackRF&#45;Signalkette (im Gegensatz zu main_loop.cpp, das ein synthetisches Spekt..." alt="" coords="5,181,173,221"/>
+<area shape="rect" id="Node000003" href="$main__loop__hackrf_8cpp.html" title="Core&#45;Binary." alt="" coords="5,181,173,221"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,144,113,183,109,179,153,140"/>
 <area shape="rect" id="Node000004" href="$signal__pipeline_8cpp.html" title="Implementierung der Signalkette (siehe Header für die Verdrahtung)." alt="" coords="197,181,373,221"/>
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="220,140,265,179,262,183,217,144"/>

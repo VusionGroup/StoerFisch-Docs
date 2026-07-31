@@ -12,8 +12,10 @@ var searchData=
   ['startjamming_9',['StartJamming',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa7f4abc3dfd2f163681df3f0327aacae3',1,'fisch']]],
   ['startrecording_10',['StartRecording',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa1be0cafca6f3374b24cc833bac2c7380',1,'fisch']]],
   ['startreplay_11',['StartReplay',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa3149f9c06c3db5bb6888534232fd20b5',1,'fisch']]],
-  ['stop_12',['Stop',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa11a755d598c0c417f9a36758c3da7481',1,'fisch']]],
-  ['stoprecording_13',['StopRecording',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa0711c4b9ecefa0a637e6a7b6c3759859',1,'fisch']]],
-  ['stoptransmit_14',['StopTransmit',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0',1,'fisch']]],
-  ['successmetric_15',['SuccessMetric',['../namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3',1,'fisch']]]
+  ['startsweep_12',['StartSweep',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa43201ff88586a92a7ca9ea39352a7194',1,'fisch']]],
+  ['stop_13',['Stop',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa11a755d598c0c417f9a36758c3da7481',1,'fisch']]],
+  ['stoprecording_14',['StopRecording',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa0711c4b9ecefa0a637e6a7b6c3759859',1,'fisch']]],
+  ['stopsweep_15',['StopSweep',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caab0552096e015a880cd7a13fabacbbac8',1,'fisch']]],
+  ['stoptransmit_16',['StopTransmit',['../namespacefisch.html#a01b3e4f4a6281957d632878a2aefc9caa14d6c0c6f973edd712eafa1a11a1a6a0',1,'fisch']]],
+  ['successmetric_17',['SuccessMetric',['../namespacefisch.html#a21c1dd70df07f14d742f28734ec72f58af3be4fba9edc212dffa3e8b2af0633d3',1,'fisch']]]
 ];
